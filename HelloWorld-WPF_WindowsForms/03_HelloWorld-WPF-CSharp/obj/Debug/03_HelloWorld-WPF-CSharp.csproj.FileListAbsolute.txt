@@ -1,0 +1,15 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\bin\Debug\03_HelloWorld-WPF-CSharp.exe.config
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\bin\Debug\03_HelloWorld-WPF-CSharp.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\bin\Debug\03_HelloWorld-WPF-CSharp.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.csprojAssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\MainWindow.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\App.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp_MarkupCompile.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp_MarkupCompile.lref
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\MainWindow.baml
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.g.resources
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\_03_HelloWorld_WPF_CSharp.Properties.Resources.resources
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.csproj.GenerateResource.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.pdb

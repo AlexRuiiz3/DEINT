@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_HelloWorld-WPF-CSharp", "03_HelloWorld-WPF-CSharp\03_HelloWorld-WPF-CSharp.csproj", "{3EDF19DC-D851-4FF9-8A5C-15900F95CCBD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HelloWorld_VB_WindowsForms", "HelloWorld_VB_WindowsForms\HelloWorld_VB_WindowsForms.vbproj", "{6ABF4575-43BE-4284-B374-B4A592559F58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EDF19DC-D851-4FF9-8A5C-15900F95CCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDF19DC-D851-4FF9-8A5C-15900F95CCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDF19DC-D851-4FF9-8A5C-15900F95CCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDF19DC-D851-4FF9-8A5C-15900F95CCBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ABF4575-43BE-4284-B374-B4A592559F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABF4575-43BE-4284-B374-B4A592559F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABF4575-43BE-4284-B374-B4A592559F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABF4575-43BE-4284-B374-B4A592559F58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56C6BA63-EC0D-4AF5-8C9E-5A03E3E0130B}
+	EndGlobalSection
+EndGlobal

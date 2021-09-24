@@ -1,0 +1,12 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\bin\Debug\HelloWorld_VB_WindowsForms.exe.config
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\bin\Debug\HelloWorld_VB_WindowsForms.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\bin\Debug\HelloWorld_VB_WindowsForms.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\bin\Debug\HelloWorld_VB_WindowsForms.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.vbprojAssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.HolaMundo.resources
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.Resources.resources
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.vbproj.GenerateResource.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.vbproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\HelloWorld_VB_WindowsForms\obj\Debug\HelloWorld_VB_WindowsForms.pdb
