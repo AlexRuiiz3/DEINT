@@ -29,5 +29,14 @@ namespace _03_HelloWorld_WPF_CSharp
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            String textBox = TextBox.Text;
+
+            MessageBox.Show("Hola "+textBox);
+
+        }
     }
 }

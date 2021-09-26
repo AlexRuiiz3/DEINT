@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="TitleWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="367,140,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="356,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Hola mundo" HorizontalAlignment="Left" Margin="367,31,0,0" VerticalAlignment="Top"/>
+        <Button Content="Soy un boton" HorizontalAlignment="Left" Margin="377,136,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="356,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Hola mundo WPF" HorizontalAlignment="Left" Margin="367,31,0,0" VerticalAlignment="Top"/>
+        <Calendar HorizontalAlignment="Left" Margin="512,28,0,0" VerticalAlignment="Top"/>
+        <Slider HorizontalAlignment="Left" Margin="356,205,0,0" VerticalAlignment="Top" Width="139" Height="25"/>
 
     </Grid>
 </Window>
