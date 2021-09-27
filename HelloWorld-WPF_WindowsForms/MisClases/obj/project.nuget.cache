@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wdtIz2vx8hXp2tJh6rWnq3FoQmysRUaUK07nN0VQ9GdOKhIZ3Oz9hI+DpR5de9CVXpB/1qNt/pJ7FEsURkuhKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\HelloWorld-WPF_WindowsForms\\MisClases\\MisClases.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aruiz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

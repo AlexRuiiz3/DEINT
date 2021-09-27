@@ -1,4 +1,6 @@
-﻿Public Class HolaMundo
+﻿Imports MisClases
+
+Public Class HolaMundo
 
     ''' <summary>
     ''' 
@@ -18,10 +20,16 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim name As String
+        Dim oPersona As ClsPersona 'oPersona con la o para indicar que es un objeto 
 
-        name = CajaTexto.Text
+        If CajaTexto.Text.Equals("") Then
+            MessageBox.Show("Defina un nombre")
+        Else
+            oPersona = New ClsPersona(CajaTexto.Text)
+            MessageBox.Show("Hola " + oPersona.Nombre)
+        End If
 
-        MessageBox.Show("Hola " + name)
+
         'otra forma MsgBox("Hola " + name)'
 
     End Sub

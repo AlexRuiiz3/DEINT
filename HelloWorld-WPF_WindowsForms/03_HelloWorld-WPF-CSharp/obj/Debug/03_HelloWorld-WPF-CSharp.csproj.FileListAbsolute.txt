@@ -28,3 +28,6 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\HelloWorld-WPF_WindowsFor
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.csproj.CoreCompileInputs.cache
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.exe
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\bin\Debug\MisClases.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\bin\Debug\MisClases.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-WPF_WindowsForms\03_HelloWorld-WPF-CSharp\obj\Debug\03_HelloWorld-WPF-CSharp.csproj.CopyComplete
