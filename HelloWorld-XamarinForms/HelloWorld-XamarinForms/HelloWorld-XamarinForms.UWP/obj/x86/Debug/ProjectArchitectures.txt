@@ -1,0 +1,1 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.UWP\HelloWorld-XamarinForms.UWP.csproj;x86
