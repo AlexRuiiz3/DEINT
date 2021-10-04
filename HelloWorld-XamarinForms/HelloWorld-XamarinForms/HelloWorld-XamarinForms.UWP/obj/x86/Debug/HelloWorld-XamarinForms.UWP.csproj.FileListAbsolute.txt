@@ -311,3 +311,5 @@ C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-Xamarin
 C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160679180000000.json
 C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.UWP\bin\x86\Debug\Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.UWP\bin\x86\Debug\Entidades.pdb

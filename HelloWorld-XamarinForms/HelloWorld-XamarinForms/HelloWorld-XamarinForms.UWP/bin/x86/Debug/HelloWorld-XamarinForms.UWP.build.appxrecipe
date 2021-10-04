@@ -541,6 +541,9 @@
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\bin\Debug\netstandard2.0\HelloWorld-XamarinForms.dll">
       <PackagePath>HelloWorld-XamarinForms.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\bin\Debug\netstandard2.0\Entidades.dll">
+      <PackagePath>Entidades.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>

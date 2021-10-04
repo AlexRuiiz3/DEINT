@@ -12,3 +12,6 @@ C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-Xamarin
 C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\obj\Debug\netstandard2.0\HelloWorld-XamarinForms.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\obj\Debug\netstandard2.0\ref\HelloWorld-XamarinForms.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\obj\Debug\netstandard2.0\HelloWorld-XamarinForms.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms\obj\Debug\netstandard2.0\HelloWorld-XamarinForms.csproj.CopyComplete

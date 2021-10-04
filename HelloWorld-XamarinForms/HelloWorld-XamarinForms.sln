@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld-XamarinForms.UWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld-XamarinForms.Android", "HelloWorld-XamarinForms\HelloWorld-XamarinForms.Android\HelloWorld-XamarinForms.Android.csproj", "{12B8C8C7-9CC2-4175-957B-E141EC872220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld-XamarinForms", "HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.csproj", "{34143DAA-1D3B-48AD-9E2C-5550C9729412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld-XamarinForms", "HelloWorld-XamarinForms\HelloWorld-XamarinForms\HelloWorld-XamarinForms.csproj", "{34143DAA-1D3B-48AD-9E2C-5550C9729412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,22 @@ Global
 		{34143DAA-1D3B-48AD-9E2C-5550C9729412}.Release|x86.ActiveCfg = Release|Any CPU
 		{34143DAA-1D3B-48AD-9E2C-5550C9729412}.Release|x86.Build.0 = Release|Any CPU
 		{34143DAA-1D3B-48AD-9E2C-5550C9729412}.Release|x86.Deploy.0 = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|x64.Build.0 = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|ARM.Build.0 = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|x64.ActiveCfg = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|x64.Build.0 = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFC9980C-22BC-4535-AA5F-EED72BC17E1E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

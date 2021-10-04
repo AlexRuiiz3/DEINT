@@ -1,0 +1,9 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\HelloWorld-XamarinForms\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
