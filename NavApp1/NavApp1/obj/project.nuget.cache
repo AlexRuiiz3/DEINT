@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GpLjuxJKHpjvKCF5v7KZnBjpfZfsvXoEfKdqVN4xwXSQMdrSA/Be4JIAppQTSb9XDwkaiMeZWoNuREyG3wQQjw==",
+  "dgSpecHash": "rg2IVLxvsfFNBSqSAjRQkzDP2yjIkNLvuPPpb2Fnzu3F3OettVvpQlYAEUxL59ags9Fnm5NdxEUxIdMlyIB+2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aruiz\\source\\repos\\NavApp1\\NavApp1\\NavApp1.csproj",
+  "projectFilePath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\NavApp1\\NavApp1\\NavApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.8-rel-28605-00\\microsoft.net.native.compiler.2.2.8-rel-28605-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.10\\microsoft.net.uwpcoreruntimesdk.2.2.10.nupkg.sha512",

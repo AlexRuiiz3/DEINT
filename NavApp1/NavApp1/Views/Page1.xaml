@@ -18,6 +18,4 @@
                      HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
-    
-
 </Page>

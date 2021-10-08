@@ -1,1 +1,1 @@
-C:\Users\aruiz\source\repos\NavApp1\NavApp1\NavApp1.csproj;x86
+C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\NavApp1.csproj;x86

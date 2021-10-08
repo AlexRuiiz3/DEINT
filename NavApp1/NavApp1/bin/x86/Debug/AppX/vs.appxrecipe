@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>34697737-d577-4417-8daa-5240a6f8d029</PackageIdentityName>
     <PackageIdentityPublisher>CN=aruiz</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\aruiz\source\repos\NavApp1\NavApp1\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>5040B8EFA2C959965E9C1B531E080228737E0EF83DA859E7E3DD636F167483BD</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>34697737-d577-4417-8daa-5240a6f8d029_1.0.0.0_x86__bddrey0yjgrxy</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>34697737-d577-4417-8daa-5240a6f8d029_bddrey0yjgrxy!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-06T11:46:36.417</Modified>
+      <Modified>2021-10-08T08:25:52.857</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\NavApp1.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\NavApp1.exe">
       <PackagePath>entrypoint\NavApp1.exe</PackagePath>
-      <Modified>2021-10-06T11:46:35.597</Modified>
+      <Modified>2021-10-08T08:25:51.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,71 +46,71 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T16:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2021-10-06T11:02:14.340</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2020-09-30T09:00:24.217</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-09-30T09:00:24.241</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-09-30T09:00:24.244</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-09-30T09:00:24.246</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-09-30T09:00:24.249</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-09-30T09:00:24.251</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2020-09-30T09:00:24.257</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\NavApp1.xr.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\NavApp1.xr.xml">
       <PackagePath>NavApp1.xr.xml</PackagePath>
       <Modified>2021-10-06T11:45:21.591</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-10-06T11:44:58.235</Modified>
+      <Modified>2021-10-08T08:25:51.573</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Views\Page1.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Views\Page1.xbf">
       <PackagePath>Views\Page1.xbf</PackagePath>
-      <Modified>2021-10-06T11:44:58.235</Modified>
+      <Modified>2021-10-08T08:25:51.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Views\Page2.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Views\Page2.xbf">
       <PackagePath>Views\Page2.xbf</PackagePath>
-      <Modified>2021-10-06T11:46:35.320</Modified>
+      <Modified>2021-10-08T08:25:51.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T15:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-10-06T11:14:55.464</Modified>
+      <Modified>2021-10-08T08:25:52.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Core\NavApp1.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Core\NavApp1.exe">
       <PackagePath>NavApp1.exe</PackagePath>
-      <Modified>2021-10-06T11:46:36.410</Modified>
+      <Modified>2021-10-08T08:25:52.847</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

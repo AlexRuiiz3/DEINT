@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>34697737-d577-4417-8daa-5240a6f8d029</PackageIdentityName>
     <PackageIdentityPublisher>CN=aruiz</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\aruiz\source\repos\NavApp1\NavApp1\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\NavApp1.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\NavApp1.exe">
       <PackagePath>entrypoint\NavApp1.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.10\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,55 +34,55 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\NavApp1.xr.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\NavApp1.xr.xml">
       <PackagePath>NavApp1.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Views\Page1.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Views\Page1.xbf">
       <PackagePath>Views\Page1.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Views\Page2.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Views\Page2.xbf">
       <PackagePath>Views\Page2.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\source\repos\NavApp1\NavApp1\bin\x86\Debug\Core\NavApp1.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\NavApp1\NavApp1\bin\x86\Debug\Core\NavApp1.exe">
       <PackagePath>NavApp1.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

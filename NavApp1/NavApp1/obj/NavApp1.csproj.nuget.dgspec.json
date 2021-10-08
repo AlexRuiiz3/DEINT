@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aruiz\\source\\repos\\NavApp1\\NavApp1\\NavApp1.csproj": {}
+    "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\NavApp1\\NavApp1\\NavApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aruiz\\source\\repos\\NavApp1\\NavApp1\\NavApp1.csproj": {
+    "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\NavApp1\\NavApp1\\NavApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\source\\repos\\NavApp1\\NavApp1\\NavApp1.csproj",
+        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\NavApp1\\NavApp1\\NavApp1.csproj",
         "projectName": "NavApp1",
-        "projectPath": "C:\\Users\\aruiz\\source\\repos\\NavApp1\\NavApp1\\NavApp1.csproj",
+        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\NavApp1\\NavApp1\\NavApp1.csproj",
         "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\source\\repos\\NavApp1\\NavApp1\\obj\\",
+        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\NavApp1\\NavApp1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
