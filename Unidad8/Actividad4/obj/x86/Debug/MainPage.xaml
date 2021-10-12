@@ -38,7 +38,7 @@
                         <Rectangle Fill="Blue" Width="100" Height="100"></Rectangle>
                     </Border>
                     <Border BorderBrush="Black" BorderThickness="2" Margin="10">
-                        <Rectangle Fill="Green" Width="100" Height="100"></Rectangle>
+                        <Rectangle Fill="Green" Width="100" Height="100" ></Rectangle>
                     </Border>
                 </VariableSizedWrapGrid>
 
