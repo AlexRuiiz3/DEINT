@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wf/Zpd0fznpjN+KHR4zQ4WggH9iEGBVIKCF9MXvqroRAbmjQ/xwPTGnwP8+zMs5WHIMig4xKkUpzks2aCHsQcA==",
+  "dgSpecHash": "CxtdrOJ+mDl8yu8TMqihKIaxpzSC0MkpHi1bQWxYI/gJeNqKJInbwrSaFEJlk7sHrB6JG2DRCMdIlRTYz2QIWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad8\\Actividad3\\Actividad3.csproj",
+  "projectFilePath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad8\\Actividad3\\Actividad3.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.10-rel-29722-00\\microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",

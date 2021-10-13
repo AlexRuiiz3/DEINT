@@ -19,11 +19,5 @@
         <Button Content="Button7"></Button>
         <Button Content="Button8"></Button>
         <Button Content="Button9"></Button>
-        <Button Content="Button10"></Button>
-        <Button Content="Button11"></Button>
-        <Button Content="Button12"></Button>
-        <Button Content="Button13"></Button>
-        <Button Content="Button14"></Button>
-        <Button Content="Button15"></Button>
     </VariableSizedWrapGrid>
 </Page>

@@ -8,6 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
     <RelativePanel>
 
         <Border x:Name="BloqueTexto1" BorderBrush="Black" BorderThickness="2" Width="Auto" Margin="10,10,10,5"  RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
@@ -18,7 +19,7 @@
             <TextBlock Text="Building a responsive UI is actually not that hard when you use XAML in Visual Studio. Using static content can help to ensure that the UI responds appropriately to changing window sizes" TextWrapping="Wrap" Margin="10,0,10,0"></TextBlock>
         </Border>
 
-        <Border x:Name="BloqueTexto3" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="30" Margin="10,5,10,10" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+        <Border x:Name="BloqueTexto3" BorderBrush="Black" BorderThickness="2"  Height="30" Margin="10,5,10,10" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
             <TextBlock ></TextBlock>
         </Border>
 
@@ -43,29 +44,33 @@
                 </VariableSizedWrapGrid>
 
 
-                <StackPanel Grid.Column="1" Orientation="Vertical">
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10,10,10,5" Height="Auto">
+
+                <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
+
+                    <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,0,5" Height="Auto">
                         <TextBlock Text="This is my first TextBlock. It contains the same basic text as the others" TextWrapping="Wrap" Margin="10,10,10,30" Height="58"></TextBlock>
                     </Border>
 
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10,5" Height="Auto">
+                        <Border BorderBrush="Black" BorderThickness="2" Margin="0,5,0,5" Height="Auto">
                         <TextBlock Text="This is my second TextBlock. It contains the same basic text as the others" TextWrapping="Wrap" Margin="10,10,10,30" Height="58"></TextBlock>
                     </Border>
 
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10,5" Height="Auto">
+                    <Border BorderBrush="Black" BorderThickness="2" Margin="0,5,0,5" Height="Auto">
                         <TextBlock Text="This is my third TextBlock. It contains the same basic text as the others" TextWrapping="Wrap" Margin="10,10,10,30" Height="58"></TextBlock>
                     </Border>
 
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10,5,10,0" Height="Auto">
+                    <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,5,0" Height="Auto">
                         <TextBlock Text="This is my forth TextBlock. It contains the same basic text as the others" TextWrapping="Wrap" Margin="10,10,10,30" Height="58"></TextBlock>
                     </Border>
 
                 </StackPanel>
+
+
             </Grid>
         </Border>
 
 
 
     </RelativePanel>
-
+    </ScrollViewer>
 </Page>

@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
 
-    <Border BorderBrush="Blue" CornerRadius="10" BorderThickness="4" Margin="15" Background="Beige">
+    <Border BorderBrush="Blue" CornerRadius="20" BorderThickness="4" Margin="15" Background="Beige">
         <StackPanel HorizontalAlignment="Center" >
             <Button Content="Hello world(with padding" BorderBrush="Black" Padding="15" Margin="0,50,0,5" ></Button>
             <Button Content="Button2" HorizontalAlignment="Center" Margin="0,0,0,5"></Button>

@@ -12,7 +12,7 @@
         <Rectangle x:ConnectionId='2' x:Name="RectangleRed" Fill="Red" Height="200" Width="200"/>
         <Rectangle x:ConnectionId='3' x:Name="RectangleBlue" Fill="Blue" Height="200" Width="500" RelativePanel.RightOf="RectangleRed"/>
         <Rectangle x:ConnectionId='4' x:Name="RectangleGreen" Fill="Green" Height="200" Width="700" RelativePanel.Below="RectangleRed" RelativePanel.AlignLeftWithPanel="True"/>
-        <Rectangle x:ConnectionId='5' x:Name="RectangleYellow" Fill="Yellow" Height="Auto" Width="Auto" RelativePanel.Below="RectangleGreen" RelativePanel.RightOf="RectangleRed" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+        <Rectangle x:ConnectionId='5' x:Name="RectangleYellow" Fill="Yellow"  RelativePanel.Below="RectangleGreen" RelativePanel.RightOf="RectangleRed" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
     </RelativePanel>
 </Page>
 

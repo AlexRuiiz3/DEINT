@@ -48,16 +48,14 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
+    <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
+      <RootProperty Name="Symbol" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Glyph" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
-      <RootProperty Name="Symbol" />
     </RootType>
     <RootType FullName="Actividad5.MainPage" />
   </Roots.RootTypes>

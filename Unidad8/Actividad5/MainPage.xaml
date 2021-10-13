@@ -29,35 +29,31 @@
         <Button Background="White" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWith="Download" RelativePanel.AlignRightWith="Download">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xebe7;"></FontIcon>
         </Button>
-
-
-
-
-
-        <StackPanel Orientation="Vertical" RelativePanel.AlignLeftWith="Search" RelativePanel.AlignRightWith="Search">
+        
+        <StackPanel Orientation="Vertical" RelativePanel.AlignLeftWith="Search" RelativePanel.AlignRightWith="Search" >
             <Button Background="White">
                 <SymbolIcon Symbol="Add"></SymbolIcon>
             </Button>
-            <TextBlock Text="Añadir" ></TextBlock>
-            
+            <TextBlock Text="Añadir" HorizontalAlignment="Left"></TextBlock>
         </StackPanel>
 
         <ListBox RelativePanel.Above="LeftArrow" RelativePanel.Below="Check" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="Search" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" >
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando1 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando2 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando3 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando4 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando5 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando6 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando7 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando8 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando9 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando10 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando11 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando12 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando13 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando14 Galiana"></ListViewItem>
+            <ListViewItem Content="Fernando15 Galiana"></ListViewItem>
+
         </ListBox>
 
 

@@ -43,3 +43,47 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad8\Actividad5\obj\x8
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad8\Actividad5\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad8\Actividad5\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad8\Actividad5\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\App.xbf
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\MainPage.xbf
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Actividad5.xr.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Actividad5.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Actividad5.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\resources.pri
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\AppxManifest.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Core\Actividad5.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Core\AppxManifest.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Actividad5.build.appxrecipe
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\System.Runtime.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\Actividad5.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\App.g.i.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\App.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\MainPage.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\App.xaml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\MainPage.xaml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\App.xbf
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\MainPage.xbf
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\Actividad5.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\Actividad5.exe
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\Actividad5.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\priconfig.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\resources.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\pri.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\qualifiers.txt
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad5\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
