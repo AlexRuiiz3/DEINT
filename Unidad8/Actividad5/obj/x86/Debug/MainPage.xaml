@@ -26,18 +26,12 @@
         <Button x:ConnectionId='6' x:Name="LeftArrow" Background="White" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWith="Delete" RelativePanel.AlignRightWith="Delete">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xec52;"></FontIcon>
         </Button>
-        <Button Background="White" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWith="Download" RelativePanel.AlignRightWith="Download">
+        <Button x:ConnectionId='7' x:Name="RightArrow" Background="White" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWith="Download" RelativePanel.AlignRightWith="Download">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xebe7;"></FontIcon>
         </Button>
-        
-        <StackPanel Orientation="Vertical" RelativePanel.AlignLeftWith="Search" RelativePanel.AlignRightWith="Search" >
-            <Button Background="White">
-                <SymbolIcon Symbol="Add"></SymbolIcon>
-            </Button>
-            <TextBlock Text="Añadir" HorizontalAlignment="Left"></TextBlock>
-        </StackPanel>
 
-        <ListBox RelativePanel.Above="LeftArrow" RelativePanel.Below="Check" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="Search" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+
+        <ListBox x:ConnectionId='8' x:Name="List" RelativePanel.Above="LeftArrow" RelativePanel.Below="Check" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="Search" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" >
             <ListViewItem Content="Fernando1 Galiana"></ListViewItem>
             <ListViewItem Content="Fernando2 Galiana"></ListViewItem>
             <ListViewItem Content="Fernando3 Galiana"></ListViewItem>
@@ -53,10 +47,14 @@
             <ListViewItem Content="Fernando13 Galiana"></ListViewItem>
             <ListViewItem Content="Fernando14 Galiana"></ListViewItem>
             <ListViewItem Content="Fernando15 Galiana"></ListViewItem>
-
         </ListBox>
 
-
+        <StackPanel Orientation="Vertical" RelativePanel.Above="RightArrow" RelativePanel.AlignLeftWith="Search" RelativePanel.AlignRightWith="Search" >
+            <Button Background="White" HorizontalAlignment="Center">
+                <SymbolIcon Symbol="Add"></SymbolIcon>
+            </Button>
+            <TextBlock Text="Añadir" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
 
     </RelativePanel>
 </Page>
