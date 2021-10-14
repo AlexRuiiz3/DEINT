@@ -8,7 +8,29 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <AppBarButton Icon="Add"></AppBarButton>
+            <AppBarButton Icon="Save"></AppBarButton>
+            <AppBarButton Icon="Delete"></AppBarButton>
+        </StackPanel>
+
+        <RelativePanel Grid.Row="1" Margin="5">
+            <TextBlock x:Name="textNombre" Text="Nombre: " Margin="80,0,0,0"/>
+            <TextBox x:Name="textBoxNombre"  RelativePanel.RightOf="textNombre"></TextBox>
+
+            <TextBlock x:Name="textApellidos" Text="Apellidos: " RelativePanel.Below="textNombre" RelativePanel.AlignRightWith="textNombre"/>
+            <TextBox x:Name="textBoxApellidos" RelativePanel.RightOf="textApellidos" RelativePanel.AlignLeftWith="textBoxNombre" RelativePanel.AlignRightWith="textBoxNombre"></TextBox>
+            
+            <TextBlock x:Name="textFechaNacim" Text="Fecha nacimiento: " RelativePanel.Below="textApellidos"/>
+            <TextBox x:Name="textBoxFechaNacim" RelativePanel.RightOf="textFechaNacim" RelativePanel.AlignLeftWith="textBoxNombre" RelativePanel.AlignRightWith="textBoxNombre"></TextBox>
+        </RelativePanel>
     </Grid>
+
 </Page>
