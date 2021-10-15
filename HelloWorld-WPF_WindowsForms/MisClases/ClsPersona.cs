@@ -5,6 +5,7 @@ namespace MisClases
     public class ClsPersona
     {
 
+
         #region Atributos privados
         private String nombre;
         #endregion
@@ -50,7 +51,6 @@ namespace MisClases
          * 3.public String nombre {get => nombre; set => nombre = value;}
          */
 
-
-
+        public override String ToString() => nombre;
     }
 }

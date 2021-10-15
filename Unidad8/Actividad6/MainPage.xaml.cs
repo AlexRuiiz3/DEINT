@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using AccesoDatos;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -25,6 +26,13 @@ namespace Actividad6
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        public void LlenarListBox()
+        {
+            ClsListados listadoPersonas = new ClsListados();
+            listadoPersonas.getListadoCompletoPersonas();
+
         }
     }
 }

@@ -8,53 +8,36 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
     <RelativePanel>
-        <Button x:ConnectionId='2' x:Name="Check" Margin="20" Background="White" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True">
-            <FontIcon  FontFamily="Segoe MDL2 Assets" Glyph="&#xe73e;"></FontIcon>
-        </Button>
-        <Button x:ConnectionId='3' x:Name="Delete" Margin="20" Background="White" RelativePanel.RightOf="Check">
-            <SymbolIcon Symbol="Delete" ></SymbolIcon>
-        </Button>
-        <Button x:ConnectionId='4' x:Name="Download" Margin="20" Background="White" RelativePanel.RightOf="Delete">
-            <SymbolIcon Symbol="Download"></SymbolIcon>
-        </Button>
-        <Button x:ConnectionId='5' x:Name="Search"  Margin="20" Background="White" RelativePanel.RightOf="Download">
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"/>
-        </Button>
+        <StackPanel x:ConnectionId='2' x:Name="StackTop" Background="Cyan"  Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <Button x:ConnectionId='5' x:Name="Check" Margin="20" Background="White">
+                <FontIcon  FontFamily="Segoe MDL2 Assets" Glyph="&#xe73e;"></FontIcon>
+            </Button>
+            <Button x:ConnectionId='6' x:Name="Delete" Margin="20" Background="White" RelativePanel.RightOf="Check">
+                <SymbolIcon Symbol="Delete" ></SymbolIcon>
+            </Button>
+            <Button x:ConnectionId='7' x:Name="Download" Margin="20" Background="White" RelativePanel.RightOf="Delete">
+                <SymbolIcon Symbol="Download"></SymbolIcon>
+            </Button>
+            <Button x:ConnectionId='8' x:Name="Search"  Margin="20" Background="White" RelativePanel.RightOf="Download">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"/>
+            </Button>
+        </StackPanel>
 
-        <Button x:ConnectionId='6' x:Name="LeftArrow" Background="White" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWith="Delete" RelativePanel.AlignRightWith="Delete">
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xec52;"></FontIcon>
-        </Button>
-        <Button x:ConnectionId='7' x:Name="RightArrow" Background="White" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWith="Download" RelativePanel.AlignRightWith="Download">
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xebe7;"></FontIcon>
-        </Button>
+        <StackPanel x:ConnectionId='3' x:Name="StackBelow" Background="Cyan" Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <Button Background="White" Margin="100,0,0,0">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xec52;" ></FontIcon>
+            </Button>
+            <Button Background="White" Margin="20,0,0,0">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xebe7;" ></FontIcon>
+            </Button>
+        </StackPanel>
 
+        <ListBox x:ConnectionId='4' x:Name="List" RelativePanel.Above="StackBelow" RelativePanel.Below="StackTop" Background="White" RelativePanel.AlignLeftWithPanel="True" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxWidth="300">
 
-        <ListBox x:ConnectionId='8' x:Name="List" RelativePanel.Above="LeftArrow" RelativePanel.Below="Check" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="Search" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" >
-            <ListViewItem Content="Fernando1 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando2 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando3 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando4 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando5 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando6 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando7 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando8 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando9 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando10 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando11 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando12 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando13 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando14 Galiana"></ListViewItem>
-            <ListViewItem Content="Fernando15 Galiana"></ListViewItem>
         </ListBox>
 
-        <StackPanel Orientation="Vertical" RelativePanel.Above="RightArrow" RelativePanel.AlignLeftWith="Search" RelativePanel.AlignRightWith="Search" >
-            <Button Background="White" HorizontalAlignment="Center">
-                <SymbolIcon Symbol="Add"></SymbolIcon>
-            </Button>
-            <TextBlock Text="Añadir" HorizontalAlignment="Center"></TextBlock>
-        </StackPanel>
+        <AppBarButton Icon="Add" Label="Añadir" RelativePanel.AlignRightWith="List" RelativePanel.Above="StackBelow"></AppBarButton>
 
     </RelativePanel>
 </Page>

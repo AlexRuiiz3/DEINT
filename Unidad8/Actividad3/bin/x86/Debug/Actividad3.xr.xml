@@ -11,6 +11,8 @@
       <RootProperty Name="Children" />
       <RootMethod Name="GetRightOf" />
       <RootMethod Name="SetRightOf" />
+      <RootMethod Name="GetAlignRightWith" />
+      <RootMethod Name="SetAlignRightWith" />
       <RootMethod Name="GetBelow" />
       <RootMethod Name="SetBelow" />
       <RootMethod Name="GetAlignLeftWithPanel" />

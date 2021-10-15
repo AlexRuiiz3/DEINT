@@ -31,21 +31,19 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <VariableSizedWrapGrid Grid.Column="0" Orientation="Horizontal">
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10">
-                        <Rectangle Fill="Orange" Width="100" Height="100"></Rectangle>
-                    </Border>
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10">
-                        <Rectangle Fill="Blue" Width="100" Height="100"></Rectangle>
-                    </Border>
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="10">
-                        <Rectangle Fill="Green" Width="100" Height="100" ></Rectangle>
-                    </Border>
-                </VariableSizedWrapGrid>
+                    <VariableSizedWrapGrid Grid.Column="0" Orientation="Horizontal">
+                        <Border BorderBrush="Black" BorderThickness="2" Margin="10">
+                            <Rectangle Fill="Orange" Width="100" Height="100"></Rectangle>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="2" Margin="10">
+                            <Rectangle Fill="Blue" Width="100" Height="100"></Rectangle>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="2" Margin="10">
+                            <Rectangle Fill="Green" Width="100" Height="100" ></Rectangle>
+                        </Border>
+                    </VariableSizedWrapGrid>
 
-
-
-                <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
+                    <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
 
                     <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,0,5" Height="Auto">
                         <TextBlock Text="This is my first TextBlock. It contains the same basic text as the others" TextWrapping="Wrap" Margin="10,10,10,30" Height="58"></TextBlock>

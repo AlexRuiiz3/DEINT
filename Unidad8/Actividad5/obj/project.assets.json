@@ -306,6 +306,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -791,6 +814,29 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
         }
       }
     },
@@ -1279,6 +1325,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1766,6 +1835,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2251,6 +2343,29 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
         }
       }
     },
@@ -2739,6 +2854,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3224,6 +3362,29 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
         }
       }
     },
@@ -3711,6 +3872,29 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MisClases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "MisClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MisClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MisClases.dll": {}
         }
       }
     }
@@ -8150,11 +8334,23 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "Dal/1.0.0": {
+      "type": "project",
+      "path": "../Dal/Dal.csproj",
+      "msbuildProject": "../Dal/Dal.csproj"
+    },
+    "MisClases/1.0.0": {
+      "type": "project",
+      "path": "../../HelloWorld-WPF_WindowsForms/MisClases/MisClases.csproj",
+      "msbuildProject": "../../HelloWorld-WPF_WindowsForms/MisClases/MisClases.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12"
+      "Dal >= 1.0.0",
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
+      "MisClases >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8193,7 +8389,14 @@
       },
       "frameworks": {
         "uap10.0.17763": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\HelloWorld-WPF_WindowsForms\\MisClases\\MisClases.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\HelloWorld-WPF_WindowsForms\\MisClases\\MisClases.csproj"
+            },
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad8\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad8\\Dal\\Dal.csproj"
+            }
+          }
         }
       }
     },

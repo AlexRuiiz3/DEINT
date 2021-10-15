@@ -154,6 +154,16 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HelloWorld-WPF_WindowsForms\MisClases\MisClases.csproj">
+      <Project>{2c64e865-48d7-4dc3-b1a4-3148529c7549}</Project>
+      <Name>MisClases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dal\Dal.csproj">
+      <Project>{a5ce23f7-cde9-4122-8c39-4214e3b91da1}</Project>
+      <Name>Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
