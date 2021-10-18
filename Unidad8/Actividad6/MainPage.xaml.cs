@@ -41,11 +41,12 @@ namespace Actividad6
             if (Validaciones.Validacion.comprobarCadenaVaciaONull(textBoxNombre.Text)) {
 
 
-                datosValidos = false;
+                datosValidos = false; 
+                textBlockErrorNombre.Text = "El nombre no puede estar vacio";
             }
             else
             {
-                textBlockErrorNombre.Text = "El nombre no puede estar vacio";
+                textBlockErrorNombre.Text = "El nombre es correcto";
             }
 
             if (Validaciones.Validacion.comprobarCadenaVaciaONull(textBoxApellidos.Text))
@@ -53,10 +54,11 @@ namespace Actividad6
 
 
                 datosValidos = false;
+                textBlockErrorApellidos.Text = "El apellido no puede estar vacio";
             }
             else 
             {
-                textBlockErrorApellidos.Text = "El apellido no puede estar vacio";
+                textBlockErrorApellidos.Text = "El apellido es valido";
             }
 
 
