@@ -1,4 +1,4 @@
 ﻿[*.{cs,vb}]
 
 # IDE0130: El espacio de nombres no coincide con la estructura de carpetas
-dotnet_style_namespace_match_folder = true
+dotnet_style_namespace_match_folder = false

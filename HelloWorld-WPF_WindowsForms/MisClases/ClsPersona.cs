@@ -5,9 +5,9 @@ namespace MisClases
     public class ClsPersona
     {
 
-
         #region Atributos privados
         private String nombre;
+        private String apellidos;
         #endregion
 
 
@@ -15,12 +15,14 @@ namespace MisClases
         //Constructro por defecto
         public ClsPersona() {
             nombre = "";
+            apellidos = "";
         }
 
         //Constructor con parametros
-        public ClsPersona(String nombre) {
+        public ClsPersona(String nombre, String apellidos) {
 
             this.nombre = nombre;
+            this.apellidos = apellidos;
         }
         #endregion
 
@@ -32,6 +34,14 @@ namespace MisClases
             get { return nombre; }
             set { nombre = value; }
         }
+
+        public String Apellidos
+        {
+            get { return apellidos; }
+            set { apellidos = value; }
+        }
+
+
         #endregion
 
         /* Otras formas
@@ -50,7 +60,5 @@ namespace MisClases
          * 
          * 3.public String nombre {get => nombre; set => nombre = value;}
          */
-
-        public override String ToString() => nombre;
     }
 }

@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <StackPanel x:ConnectionId='2' x:Name="StackTop" Background="Cyan"  Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+        <StackPanel x:ConnectionId='2' x:Name="StackTop" Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True">
             <Button x:ConnectionId='5' x:Name="Check" Margin="20" Background="White">
                 <FontIcon  FontFamily="Segoe MDL2 Assets" Glyph="&#xe73e;"></FontIcon>
             </Button>
@@ -24,7 +24,7 @@
             </Button>
         </StackPanel>
 
-        <StackPanel x:ConnectionId='3' x:Name="StackBelow" Background="Cyan" Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+        <StackPanel x:ConnectionId='3' x:Name="StackBelow" Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
             <Button Background="White" Margin="100,0,0,0">
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xec52;" ></FontIcon>
             </Button>
@@ -33,11 +33,14 @@
             </Button>
         </StackPanel>
 
-        <ListBox x:ConnectionId='4' x:Name="List" RelativePanel.Above="StackBelow" RelativePanel.Below="StackTop" Background="White" RelativePanel.AlignLeftWithPanel="True" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxWidth="300">
+        
+        <ListBox x:ConnectionId='4' x:Name="ListBoxPersonas" RelativePanel.Above="StackBelow" RelativePanel.Below="StackTop" 
+                 Background="White" RelativePanel.AlignLeftWithPanel="True" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                 MaxWidth="300" DisplayMemberPath="Nombre"><!-- DisplayMember sirve para indicar en este caso que de las personas que tiene la lista se mostrara su atributo(De la Persona) Nombre-->
 
         </ListBox>
-
-        <AppBarButton Icon="Add" Label="Añadir" RelativePanel.AlignRightWith="List" RelativePanel.Above="StackBelow"></AppBarButton>
+        
+        <AppBarButton Icon="Add" Label="Añadir" RelativePanel.AlignRightWith="ListBoxPersonas" RelativePanel.Above="StackBelow"></AppBarButton>
 
     </RelativePanel>
 </Page>

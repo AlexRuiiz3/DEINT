@@ -26,15 +26,15 @@ namespace Actividad5
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             LlenarListBox();
         }
 
         public void LlenarListBox()
         {
             ClsListados listadoPersonas = new ClsListados();
-            
-            List.ItemsSource = listadoPersonas.getListadoCompletoPersonas();
+
+            ListBoxPersonas.ItemsSource = listadoPersonas.getListadoCompletoPersonas();
 
         }
     }

@@ -9,28 +9,41 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
-            <AppBarButton Icon="Add"></AppBarButton>
-            <AppBarButton Icon="Save"></AppBarButton>
-            <AppBarButton Icon="Delete"></AppBarButton>
+    <RelativePanel>
+
+        <StackPanel x:Name="StackButton" Orientation="Horizontal" Margin="5">
+            <AppBarButton Icon="Add" Click="onClickButtonAdd"></AppBarButton>
+            <AppBarButton Icon="Save" Click="onClickButtonSave"></AppBarButton>
+            <AppBarButton Icon="Delete" Click="onClickButtonDelete"></AppBarButton>
         </StackPanel>
 
-        <RelativePanel Grid.Row="1" Margin="5">
-            <TextBlock x:Name="textNombre" Text="Nombre: " Margin="80,0,0,0"/>
-            <TextBox x:Name="textBoxNombre"  RelativePanel.RightOf="textNombre"></TextBox>
+        <Grid RelativePanel.Below="StackButton" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
 
-            <TextBlock x:Name="textApellidos" Text="Apellidos: " RelativePanel.Below="textNombre" RelativePanel.AlignRightWith="textNombre"/>
-            <TextBox x:Name="textBoxApellidos" RelativePanel.RightOf="textApellidos" RelativePanel.AlignLeftWith="textBoxNombre" RelativePanel.AlignRightWith="textBoxNombre"></TextBox>
-            
-            <TextBlock x:Name="textFechaNacim" Text="Fecha nacimiento: " RelativePanel.Below="textApellidos"/>
-            <TextBox x:Name="textBoxFechaNacim" RelativePanel.RightOf="textFechaNacim" RelativePanel.AlignLeftWith="textBoxNombre" RelativePanel.AlignRightWith="textBoxNombre"></TextBox>
-        </RelativePanel>
-    </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Nombre: " Margin="80,8,0,0"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Apellidos: " Margin="75,8,0,0"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Fecha de nacimiento: " Margin="5,8,0,0"/>
+
+            <TextBox Grid.Column="1" Grid.Row="0" Name="textBoxNombre" Margin="10,0,10,10" MinWidth="650"></TextBox>
+            <TextBox Grid.Column="1" Grid.Row="1" Name="textBoxApellidos" Margin="10,0,10,10" MinWidth="650"></TextBox>
+            <TextBox Grid.Column="1" Grid.Row="2" Name="textBoxFechaNacim" Margin="10,0,10,10" MinWidth="650"></TextBox>
+
+            <TextBlock Name="textBlockErrorNombre" Foreground="Red" Grid.Column="2" Grid.Row="0" Text="Los datos no son correctos"/>
+            <TextBlock Name="textBlockErrorApellidos" Foreground="Red" Grid.Column="2" Grid.Row="1" Text="Los datos no son correctos"/>
+            <TextBlock Name="textBlockErrorFechaNacimiento" Foreground="Red" Grid.Column="2" Grid.Row="2" Text="Los datos no son correctos" />
+
+
+        </Grid>
+    </RelativePanel>
 
 </Page>

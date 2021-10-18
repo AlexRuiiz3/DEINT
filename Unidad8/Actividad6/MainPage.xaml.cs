@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using AccesoDatos;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -25,13 +24,59 @@ namespace Actividad6
     {
         public MainPage()
         {
-            this.InitializeComponent();
+           InitializeComponent();
         }
 
-        public void LlenarListBox()
+        private void onClickButtonAdd(object sender, RoutedEventArgs e)
         {
-            ClsListados listadoPersonas = new ClsListados();
-            listadoPersonas.getListadoCompletoPersonas();
+            textBoxNombre.Text = "";
+            textBoxApellidos.Text = "";
+            textBoxFechaNacim.Text = "";
+        }
+
+        private void onClickButtonSave(object sender, RoutedEventArgs e)
+        {
+            Boolean datosValidos = true;
+
+            if (Validaciones.Validacion.comprobarCadenaVaciaONull(textBoxNombre.Text)) {
+
+
+                datosValidos = false;
+            }
+            else
+            {
+                textBlockErrorNombre.Text = "El nombre no puede estar vacio";
+            }
+
+            if (Validaciones.Validacion.comprobarCadenaVaciaONull(textBoxApellidos.Text))
+            {
+
+
+                datosValidos = false;
+            }
+            else 
+            {
+                textBlockErrorApellidos.Text = "El apellido no puede estar vacio";
+            }
+
+
+            if (Validaciones.Validacion.comprobarCadenaVaciaONull(textBoxNombre.Text))
+            {
+
+
+                datosValidos = false;
+            }
+
+            if (datosValidos) {
+                
+
+
+            }
+
+        }
+
+        private void onClickButtonDelete(object sender, RoutedEventArgs e)
+        {
 
         }
     }
