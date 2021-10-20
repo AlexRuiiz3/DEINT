@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-18T12:00:04.616</Modified>
+      <Modified>2021-10-20T08:03:02.690</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\Actividad6.exe">
       <PackagePath>entrypoint\Actividad6.exe</PackagePath>
-      <Modified>2021-10-18T12:00:04.272</Modified>
+      <Modified>2021-10-20T08:03:02.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -86,15 +86,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\Actividad6.xr.xml">
       <PackagePath>Actividad6.xr.xml</PackagePath>
-      <Modified>2021-10-18T12:00:04.163</Modified>
+      <Modified>2021-10-20T07:59:36.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-10-18T11:45:29.649</Modified>
+      <Modified>2021-10-20T08:03:02.293</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-10-18T12:00:04.185</Modified>
+      <Modified>2021-10-20T08:03:02.293</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +102,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-10-18T11:45:29.828</Modified>
+      <Modified>2021-10-20T07:27:37.413</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad8\Actividad6\bin\x86\Debug\Core\Actividad6.exe">
       <PackagePath>Actividad6.exe</PackagePath>
-      <Modified>2021-10-18T12:00:04.613</Modified>
+      <Modified>2021-10-20T08:03:02.688</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
