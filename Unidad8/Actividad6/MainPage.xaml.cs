@@ -135,7 +135,7 @@ namespace Actividad6
         ///              mensaje se exito.
         /// </summary>
         /// <param name="command"></param>
-        private void CommandOkEliminarDatos(IUICommand command) 
+        private void CommandOkEliminarDatos(IUICommand command)
         {
             textBoxNombre.Text = "";
             textBoxApellidos.Text = "";
