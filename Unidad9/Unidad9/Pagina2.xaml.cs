@@ -31,5 +31,16 @@ namespace Unidad9
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void Button_Click_EnviarNotificacion(object sender, RoutedEventArgs e)
+        {
+            InfoNotification.Value++;
+        }
+        private void Button_Click_EliminarNotificacion(object sender, RoutedEventArgs e)
+        {
+            if (InfoNotification.Value > 0) {
+                InfoNotification.Value--;
+            }
+        }
     }
 }

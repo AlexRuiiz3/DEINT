@@ -4,11 +4,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Unidad9"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Content="Volver" Click="Button_Click"></Button>
-    </Grid>
+    <RelativePanel>
+        <NavigationView x:Name="NavigationView" PaneDisplayMode="Top" Width="Auto" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" Icon="Home"></NavigationViewItem>
+                <NavigationViewItem Content="Save" Icon="Save"></NavigationViewItem>
+                <NavigationViewItem>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Notification"></TextBlock>
+                        <SymbolIcon Symbol="Mail"></SymbolIcon>
+                        <muxc:InfoBadge Margin="10,0,0,0" x:Name="InfoNotification" Value="0"></muxc:InfoBadge> 
+                    </StackPanel>
+                    
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            
+        </NavigationView>
+        
+        <Button x:Name="ButtonVolver" Content="Volver" Click="Button_Click" Width="Auto" RelativePanel.Below="NavigationView" RelativePanel.AlignHorizontalCenterWithPanel="True"></Button>
+        <Button x:Name="ButtonEnviarNotificacion" Content="Enviar notificacion" Click="Button_Click_EnviarNotificacion" Width="Auto" RelativePanel.Below="ButtonVolver"></Button>
+        <Button Content="Eliminar notificacion" Click="Button_Click_EliminarNotificacion" Width="Auto" RelativePanel.RightOf="ButtonEnviarNotificacion" RelativePanel.Below="ButtonVolver"></Button>
+
+    </RelativePanel>
 </Page>
