@@ -4,31 +4,25 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Unidad9"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <NavigationView x:ConnectionId='2' x:Name="NavigationView" PaneDisplayMode="Top" Width="Auto" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+        <NavigationView x:ConnectionId='2' x:Name="NavigationView" PaneDisplayMode="Top" Width="Auto" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"                                         >
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" Icon="Home"></NavigationViewItem>
-                <NavigationViewItem Content="Save" Icon="Save"></NavigationViewItem>
+                <NavigationViewItem x:ConnectionId='3' Name="Home" Icon="Home"></NavigationViewItem>
+                <NavigationViewItem x:ConnectionId='4' Name="Save" Icon="Save"></NavigationViewItem>
                 <NavigationViewItem>
                     <StackPanel Orientation="Horizontal" >
                         <TextBlock Text="Notification"></TextBlock>
                         <SymbolIcon Symbol="Mail"></SymbolIcon>
-                        <muxc:InfoBadge x:ConnectionId='6' Margin="10,0,0,0" x:Name="InfoNotification" Value="0"></muxc:InfoBadge> 
                     </StackPanel>
-                    
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-
-            
+            <Frame x:ConnectionId='5' x:Name="ContentFrame"/>
         </NavigationView>
         
-        <Button x:ConnectionId='3' x:Name="ButtonVolver" Content="Volver"                      Width="Auto" RelativePanel.Below="NavigationView" RelativePanel.AlignHorizontalCenterWithPanel="True"></Button>
-        <Button x:ConnectionId='4' x:Name="ButtonEnviarNotificacion" Content="Enviar notificacion"                                         Width="Auto" RelativePanel.Below="ButtonVolver"></Button>
-        <Button x:ConnectionId='5' Content="Eliminar notificacion"                                           Width="Auto" RelativePanel.RightOf="ButtonEnviarNotificacion" RelativePanel.Below="ButtonVolver"></Button>
 
     </RelativePanel>
 </Page>

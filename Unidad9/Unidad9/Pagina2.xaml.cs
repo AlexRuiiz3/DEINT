@@ -32,15 +32,23 @@ namespace Unidad9
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void Button_Click_EnviarNotificacion(object sender, RoutedEventArgs e)
+        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-            InfoNotification.Value++;
-        }
-        private void Button_Click_EliminarNotificacion(object sender, RoutedEventArgs e)
-        {
-            if (InfoNotification.Value > 0) {
-                InfoNotification.Value--;
+            var item = args.InvokedItemContainer as NavigationViewItem;
+
+            if (item.Name == "Home")
+            {
+
+                ContentFrame.Navigate(typeof(PageHome), null);
+
             }
+
+            if (item.Name == "Save")
+            {
+
+                ContentFrame.Navigate(typeof(PageSave), null);
+            }
+
         }
     }
 }

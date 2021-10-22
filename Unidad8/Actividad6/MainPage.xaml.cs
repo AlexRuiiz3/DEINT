@@ -119,6 +119,7 @@ namespace Actividad6
 
             if (!textBoxNombre.Text.Equals("") || !textBoxApellidos.Text.Equals("") || !textBoxFechaNacim.Text.Equals(""))
             {
+                //Mejor con el content dialog 
                 var messageDialog = new MessageDialog("¿Quieres eliminar a esa persona?", "Eliminar datos persona");
                 UICommand commadButtonOk = new UICommand("Ok", new UICommandInvokedHandler(CommandOkEliminarDatos));
                 messageDialog.Commands.Add(commadButtonOk);

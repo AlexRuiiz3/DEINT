@@ -30,9 +30,9 @@
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Grid.Row="0" Text="Nombre: " Margin="80,8,0,0"/>
-            <TextBlock Grid.Column="0" Grid.Row="1" Text="Apellidos: " Margin="75,8,0,0"/>
-            <TextBlock Grid.Column="0" Grid.Row="2" Text="Fecha de nacimiento: " Margin="5,8,0,0"/>
+            <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Nombre:"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Apellidos:"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Fecha de nacimiento:"/>
 
             <TextBox Grid.Column="1" Grid.Row="0" Name="textBoxNombre" Margin="10,0,10,10" MinWidth="650"></TextBox>
             <TextBox Grid.Column="1" Grid.Row="1" Name="textBoxApellidos" Margin="10,0,10,10" MinWidth="650"></TextBox>
