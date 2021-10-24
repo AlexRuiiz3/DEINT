@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="Actividad3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Actividad3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" IsEnabled="False">
+
+
+    <RelativePanel>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="AnchoMenor550">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="StackButtons.(RelativePanel.AlignRightWithPanel)" Value="True"/>
+                        <Setter Target="StackButtons.Orientation" Value="Horizontal"/>
+                        <Setter Target="StackImagenes.Visibility" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="AnchoMayorIgual550">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="550"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="StackButtons.(RelativePanel.AlignBottomWithPanel)" Value="True"/>
+                        <Setter Target="StackButtons.Orientation" Value="Vertical"/>
+                        <Setter Target="GridImagenes.Visibility" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <StackPanel Name="StackButtons" Background="LightBlue" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" Width="Auto" Height="Auto">
+            <AppBarButton Icon="Add" Label="Añadir"></AppBarButton>
+            <AppBarButton Icon="Go" Label="Ir"></AppBarButton>
+            <AppBarButton Icon="Globe" Label="Objetivo"></AppBarButton>
+            <AppBarButton Icon="Add" Label="Añadir"></AppBarButton>
+        </StackPanel>
+
+
+        <ScrollViewer Name="ScrollStackImagenes" VerticalScrollBarVisibility="Visible" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="StackButtons" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" >
+            <StackPanel Name="StackImagenes" Orientation="Vertical">
+                <Rectangle Height="300" Width="Auto" Fill="Red"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Yellow"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Green"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Black"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Orange"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Pink"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Blue"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Maroon"></Rectangle>
+                <Rectangle Height="300" Width="Auto" Fill="Gray"></Rectangle>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Grid x:Name="GridImagenes" Visibility="Collapsed" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.RightOf="StackButtons">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.Column="0" Grid.Row="0" Height="Auto" Width="Auto" Fill="Red"></Rectangle>
+            <Rectangle Grid.Column="1" Grid.Row="0" Height="Auto" Width="Auto" Fill="Yellow"></Rectangle>
+            <Rectangle Grid.Column="2" Grid.Row="0" Height="Auto" Width="Auto" Fill="Green"></Rectangle>
+            <Rectangle Grid.Column="0" Grid.Row="1" Height="Auto" Width="Auto" Fill="Black"></Rectangle>
+            <Rectangle Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" Fill="Orange"></Rectangle>
+            <Rectangle Grid.Column="2" Grid.Row="1" Height="Auto" Width="Auto" Fill="Pink"></Rectangle>
+            <Rectangle Grid.Column="0" Grid.Row="2" Height="Auto" Width="Auto" Fill="Blue"></Rectangle>
+            <Rectangle Grid.Column="1" Grid.Row="2" Height="Auto" Width="Auto" Fill="Maroon"></Rectangle>
+            <Rectangle Grid.Column="2" Grid.Row="2" Height="Auto" Width="Auto" Fill="Gray"></Rectangle>
+        </Grid>
+    </RelativePanel>
+</Page>

@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Unidad9.Pagina2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unidad9"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <NavigationView x:ConnectionId='2' x:Name="NavigationView" PaneDisplayMode="Top" Width="Auto" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"                                         >
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:ConnectionId='3' Name="Home" Icon="Home"></NavigationViewItem>
+                <NavigationViewItem x:ConnectionId='4' Name="Save" Icon="Save"></NavigationViewItem>
+                <NavigationViewItem>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Notification"></TextBlock>
+                        <SymbolIcon Symbol="Mail"></SymbolIcon>
+                    </StackPanel>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:ConnectionId='5' x:Name="ContentFrame"/>
+        </NavigationView>
+        
+
+    </RelativePanel>
+</Page>
+
