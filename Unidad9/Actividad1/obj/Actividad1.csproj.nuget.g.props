@@ -5,13 +5,14 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\AlexRuiz\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages;C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\aruiz\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages;C:\Program Files (x86)\Microsoft\Xamarin\NuGet\;C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.10.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.11.1</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\AlexRuiz\.nuget\packages\" />
+    <SourceRoot Include="C:\Users\aruiz\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\" />
   </ItemGroup>
   <PropertyGroup>
@@ -25,8 +26,8 @@
     <Import Project="C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.netcore.universalwindowsplatform\6.2.12\build\Microsoft.NETCore.UniversalWindowsPlatform.props" Condition="Exists('C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.netcore.universalwindowsplatform\6.2.12\build\Microsoft.NETCore.UniversalWindowsPlatform.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_Web_WebView2 Condition=" '$(PkgMicrosoft_Web_WebView2)' == '' ">C:\Users\AlexRuiz\.nuget\packages\microsoft.web.webview2\1.0.1018-prerelease</PkgMicrosoft_Web_WebView2>
-    <PkgMicrosoft_UI_Xaml Condition=" '$(PkgMicrosoft_UI_Xaml)' == '' ">C:\Users\AlexRuiz\.nuget\packages\microsoft.ui.xaml\2.8.0-prerelease.210927001</PkgMicrosoft_UI_Xaml>
+    <PkgMicrosoft_Web_WebView2 Condition=" '$(PkgMicrosoft_Web_WebView2)' == '' ">C:\Users\aruiz\.nuget\packages\microsoft.web.webview2\1.0.1018-prerelease</PkgMicrosoft_Web_WebView2>
+    <PkgMicrosoft_UI_Xaml Condition=" '$(PkgMicrosoft_UI_Xaml)' == '' ">C:\Users\aruiz\.nuget\packages\microsoft.ui.xaml\2.8.0-prerelease.210927001</PkgMicrosoft_UI_Xaml>
     <PkgMicrosoft_Net_Native_SharedLibrary-x86 Condition=" '$(PkgMicrosoft_Net_Native_SharedLibrary-x86)' == '' ">C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.sharedlibrary-x86\1.7.3</PkgMicrosoft_Net_Native_SharedLibrary-x86>
     <PkgMicrosoft_Net_Native_SharedLibrary-x64 Condition=" '$(PkgMicrosoft_Net_Native_SharedLibrary-x64)' == '' ">C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.sharedlibrary-x64\1.7.3</PkgMicrosoft_Net_Native_SharedLibrary-x64>
     <PkgMicrosoft_Net_Native_SharedLibrary-arm Condition=" '$(PkgMicrosoft_Net_Native_SharedLibrary-arm)' == '' ">C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.sharedlibrary-arm\1.7.3</PkgMicrosoft_Net_Native_SharedLibrary-arm>

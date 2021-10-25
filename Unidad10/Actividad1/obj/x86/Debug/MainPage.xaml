@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Actividad1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Actividad1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical">
+        <Slider x:ConnectionId='2' Name="Slider" Orientation="Horizontal" TickFrequency="5" Minimum="1" Maximum="100" TickPlacement="BottomRight"></Slider>
+        <TextBlock Text="Simple Text" FontSize="{Binding ElementName=Slider,Path=Value}"></TextBlock>
+        <TextBox x:ConnectionId='3' Name="TxtBox" Text="{Binding ElementName=Slider,Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="Auto"></TextBox>
+    </StackPanel>
+</Page>
+
