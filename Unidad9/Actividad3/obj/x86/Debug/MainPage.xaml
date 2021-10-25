@@ -44,18 +44,17 @@
             <AppBarButton Icon="Add" Label="Añadir"></AppBarButton>
         </StackPanel>
 
-
         <ScrollViewer x:ConnectionId='5' Name="ScrollStackImagenes" VerticalScrollBarVisibility="Visible" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="StackButtons" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" >
             <StackPanel x:ConnectionId='7' Name="StackImagenes" Orientation="Vertical">
-                <Rectangle Height="300" Width="Auto" Fill="Red"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Yellow"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Green"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Black"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Orange"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Pink"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Blue"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Maroon"></Rectangle>
-                <Rectangle Height="300" Width="Auto" Fill="Gray"></Rectangle>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen1.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen2.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen3.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen1.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen2.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen3.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen1.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen2.jpg"></Image>
+                <Image Height="Auto" Width="Auto" Source="/Assets/Imagen3.jpg"></Image>
             </StackPanel>
         </ScrollViewer>
 
@@ -72,15 +71,15 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Rectangle Grid.Column="0" Grid.Row="0" Height="Auto" Width="Auto" Fill="Red"></Rectangle>
-            <Rectangle Grid.Column="1" Grid.Row="0" Height="Auto" Width="Auto" Fill="Yellow"></Rectangle>
-            <Rectangle Grid.Column="2" Grid.Row="0" Height="Auto" Width="Auto" Fill="Green"></Rectangle>
-            <Rectangle Grid.Column="0" Grid.Row="1" Height="Auto" Width="Auto" Fill="Black"></Rectangle>
-            <Rectangle Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" Fill="Orange"></Rectangle>
-            <Rectangle Grid.Column="2" Grid.Row="1" Height="Auto" Width="Auto" Fill="Pink"></Rectangle>
-            <Rectangle Grid.Column="0" Grid.Row="2" Height="Auto" Width="Auto" Fill="Blue"></Rectangle>
-            <Rectangle Grid.Column="1" Grid.Row="2" Height="Auto" Width="Auto" Fill="Maroon"></Rectangle>
-            <Rectangle Grid.Column="2" Grid.Row="2" Height="Auto" Width="Auto" Fill="Gray"></Rectangle>
+            <Image Grid.Column="0" Grid.Row="0" Height="Auto" Width="Auto" Source="/Assets/Imagen1.jpg"></Image>
+            <Image Grid.Column="1" Grid.Row="0" Height="Auto" Width="Auto" Source="/Assets/Imagen2.jpg"></Image>
+            <Image Grid.Column="2" Grid.Row="0" Height="Auto" Width="Auto" Source="/Assets/Imagen3.jpg"></Image>
+            <Image Grid.Column="0" Grid.Row="1" Height="Auto" Width="Auto" Source="/Assets/Imagen1.jpg"></Image>
+            <Image Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" Source="/Assets/Imagen2.jpg"></Image>
+            <Image Grid.Column="2" Grid.Row="1" Height="Auto" Width="Auto" Source="/Assets/Imagen3.jpg"></Image>
+            <Image Grid.Column="0" Grid.Row="2" Height="Auto" Width="Auto" Source="/Assets/Imagen1.jpg"></Image>
+            <Image Grid.Column="1" Grid.Row="2" Height="Auto" Width="Auto" Source="/Assets/Imagen2.jpg"></Image>
+            <Image Grid.Column="2" Grid.Row="2" Height="Auto" Width="Auto" Source="/Assets/Imagen3.jpg"></Image>
         </Grid>
     </RelativePanel>
 </Page>

@@ -1,5 +1,7 @@
 WinMetadata\Windows.winmd
 Assets\Imagen1.jpg
+Assets\Imagen2.jpg
+Assets\Imagen3.jpg
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
@@ -10,5 +12,7 @@ Assets\Wide310x150Logo.scale-200.png
 Actividad3.xr.xml
 App.xbf
 BlankPage1.xbf
+BlankPage2.xbf
 MainPage.xbf
+MainPageGrid.xbf
 Properties\Default.rd.xml
