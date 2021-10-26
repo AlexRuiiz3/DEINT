@@ -16,19 +16,25 @@
 
         <StackPanel Orientation="Vertical" Width="Auto" RelativePanel.Below="stackPanelTop" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True">
 
-            <TextBlock Text="Sign in" FontSize="35" Margin="5,20,0,10"/>
-            <TextBlock Text="Sign in with your organizational account" FontSize="20" Margin="5,10,0,10"/>
+            <TextBlock Text="Sign in" FontSize="35" Margin="5,20"/>
+            <TextBlock Text="Sign in with your organizational account" FontSize="20" Margin="5,10,0,50"/>
 
-            <TextBox MinWidth="470" Margin="5,10"></TextBox>
-            <PasswordBox Margin="5,0"/>
+            <TextBlock Text="Usuario" Margin="5" FontWeight="Bold"></TextBlock>
+            <TextBox x:ConnectionId='3' x:Name="txtbUsuarioLogin" MinWidth="470" Margin="5,0,5,0"></TextBox>
+            <TextBlock x:ConnectionId='4' x:Name="txtblErrorUsuarioLogin" Text="Nombre de usuario no valido." Foreground="Red" Visibility="Collapsed" Margin="5"></TextBlock>
+
+            <TextBlock Text="Contraseña" Margin="5,15,0,0" FontWeight="Bold" ></TextBlock>
+            <PasswordBox x:ConnectionId='5' x:Name="pswbContrasenhaLogin" Margin="5,0"/>
+            <TextBlock x:ConnectionId='6' x:Name="txtblErrorPasswordLogin" Text="Contraseña no valida." Foreground="Red" Visibility="Collapsed" Margin="5"></TextBlock>
+
 
             <StackPanel Orientation="Horizontal" Margin="5,10">
-                <CheckBox></CheckBox>
-                <TextBlock Text="Keep me signed in"></TextBlock>
+                <CheckBox MinWidth="20"></CheckBox>
+                <TextBlock Text="Keep me signed in" VerticalAlignment="Center"></TextBlock>
             </StackPanel>
 
-            <Button Content="Sign in" Margin="5,10"></Button>
-            <TextBlock Text="Can't access your account?" Margin="5,10"></TextBlock>
+            <Button x:ConnectionId='7' Content="Sign in" Margin="5,10"                             ></Button>
+            <TextBlock Text="Can't access your account?" Foreground="Blue" Margin="5,10"></TextBlock>
         </StackPanel>
 
     </RelativePanel>

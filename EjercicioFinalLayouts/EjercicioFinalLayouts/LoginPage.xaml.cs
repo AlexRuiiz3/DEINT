@@ -24,7 +24,31 @@ namespace EjercicioFinalLayouts
     {
         public LoginPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+        }
+
+        private void Button_IniciarSesion(object sender, RoutedEventArgs e)
+        {
+            Boolean datosValidos = true;
+
+            if (String.IsNullOrEmpty(txtbUsuarioLogin.Text) ) {
+                txtblErrorUsuarioLogin.Visibility = Visibility.Visible;
+                datosValidos = false;
+            }
+            else {
+                txtblErrorUsuarioLogin.Visibility = Visibility.Collapsed;
+            }
+            if (String.IsNullOrEmpty(pswbContrasenhaLogin.Password)) {
+                txtblErrorPasswordLogin.Visibility = Visibility.Visible;
+                datosValidos = false;
+            }
+            else {
+                txtblErrorPasswordLogin.Visibility = Visibility.Collapsed;
+            }
+
+            if (datosValidos) {
+                Frame.Navigate(typeof(CitasPage));
+            }
         }
     }
 }
