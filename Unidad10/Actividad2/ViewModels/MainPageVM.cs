@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Actividad2.ViewModels
 {
-    public class MainPageVM 
+    public class MainPageVM
     {
 
-        ClsPersona persona;
+        private ClsPersona oPersona = new ClsPersona();
 
-        public ClsPersona Persona { get => persona; set => persona = value; }
+        public ClsPersona OPersona { get => oPersona; set => oPersona = value; }
 
+        
     }
 }

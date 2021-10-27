@@ -8,13 +8,16 @@
     xmlns:vm="using:Actividad2.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <!--xmlns:vm="using:Actividad2.ViewModels" es el namespace donde estan las clases viewModels-->
 
     <Page.DataContext>
-        <vm:MainPageVM></vm:MainPageVM>
+        <!--Para decirle que en la carpeta Actividad2.ViewModels se quiere coger las clases que se pongan dentro-->
+        <vm:MainPageVM/>
     </Page.DataContext>
     
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
@@ -23,11 +26,15 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Nombre:" Grid.Row="0" Grid.Column="0" Margin="10"></TextBlock>
-        <TextBox Grid.Row="0" Grid.Column="1" Margin="0,0,0,50"></TextBox>
+        <TextBlock Name="NombreXAML" Text="Nombre:" Grid.Row="0" Grid.Column="0" Margin="10"></TextBlock>
+        <!--Cuando se escribe algo se llama al set, UpdateSourceTrigger=PropertyChanged para que cada vez que se escriba se haga el set en c#-->
+        <TextBox Name="NombreBoxXAML" Grid.Row="0" Grid.Column="1" Text="{Binding OPersona.Nombre, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,50"></TextBox>
 
         <TextBlock Text="Apellidos:" Grid.Row="1" Grid.Column="0" Margin="10"></TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="1" ></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding OPersona.Apellidos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,50"></TextBox>
+
+        <TextBlock Text="Nombre:" Grid.Row="2" Grid.Column="0" Margin="10"></TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1"  Text="{Binding ElementName=NombreBoxXAML, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
     </Grid>
 </Page>
