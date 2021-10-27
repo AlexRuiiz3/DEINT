@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <StackPanel Name="stackPanelTop" Background="Black" Orientation="Horizontal"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+        <StackPanel x:ConnectionId='2' Name="stackPanelTop" Background="Black" Orientation="Horizontal"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True">
             <Image Source="/Assets/Icono.png" MaxWidth="90" MaxHeight="80"/>
             <TextBlock  HorizontalTextAlignment="Center" Text="Solarizr" Foreground="White" FontSize="40" Margin="10,0,0,0" VerticalAlignment="Center"/>
         </StackPanel>
@@ -20,12 +20,12 @@
             <TextBlock Text="Sign in with your organizational account" FontSize="20" Margin="5,10,0,50"/>
 
             <TextBlock Text="Usuario" Margin="5" FontWeight="Bold"></TextBlock>
-            <TextBox x:Name="txtbUsuarioLogin" MinWidth="470" Margin="5,0,5,0"></TextBox>
-            <TextBlock x:Name="txtblErrorUsuarioLogin" Text="Nombre de usuario no valido." Foreground="Red" Visibility="Collapsed" Margin="5"></TextBlock>
+            <TextBox x:ConnectionId='3' x:Name="txtbUsuarioLogin" MinWidth="470" Margin="5,0,5,0"></TextBox>
+            <TextBlock x:ConnectionId='4' x:Name="txtblErrorUsuarioLogin" Text="Nombre de usuario no valido." Foreground="Red" Visibility="Collapsed" Margin="5"></TextBlock>
 
             <TextBlock Text="Contraseña" Margin="5,15,0,0" FontWeight="Bold" ></TextBlock>
-            <PasswordBox x:Name="pswbContrasenhaLogin" Margin="5,0"/>
-            <TextBlock x:Name="txtblErrorPasswordLogin" Text="Contraseña no valida." Foreground="Red" Visibility="Collapsed" Margin="5"></TextBlock>
+            <PasswordBox x:ConnectionId='5' x:Name="pswbContrasenhaLogin" Margin="5,0"/>
+            <TextBlock x:ConnectionId='6' x:Name="txtblErrorPasswordLogin" Text="Contraseña no valida." Foreground="Red" Visibility="Collapsed" Margin="5"></TextBlock>
 
 
             <StackPanel Orientation="Horizontal" Margin="5,10">
@@ -33,7 +33,7 @@
                 <TextBlock Text="Keep me signed in" VerticalAlignment="Center"></TextBlock>
             </StackPanel>
 
-            <Button Content="Sign in" Margin="5,10" Click="Button_IniciarSesion"></Button>
+            <Button x:ConnectionId='7' Content="Sign in" Margin="5,10"                             ></Button>
             <TextBlock Foreground="Blue" Margin="5,10">
                 <Hyperlink>Can't access your account?</Hyperlink>
             </TextBlock>
@@ -42,3 +42,4 @@
 
     </RelativePanel>
 </Page>
+

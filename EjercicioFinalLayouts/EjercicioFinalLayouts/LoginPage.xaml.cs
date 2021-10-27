@@ -31,14 +31,14 @@ namespace EjercicioFinalLayouts
         {
             Boolean datosValidos = true;
 
-            if (String.IsNullOrEmpty(txtbUsuarioLogin.Text) ) {
+            if (String.IsNullOrEmpty(txtbUsuarioLogin.Text) || txtbUsuarioLogin.Text.Contains(" ")) {
                 txtblErrorUsuarioLogin.Visibility = Visibility.Visible;
                 datosValidos = false;
             }
             else {
                 txtblErrorUsuarioLogin.Visibility = Visibility.Collapsed;
             }
-            if (String.IsNullOrEmpty(pswbContrasenhaLogin.Password)) {
+            if (String.IsNullOrEmpty(pswbContrasenhaLogin.Password) || pswbContrasenhaLogin.Password.Contains(" ")) {
                 txtblErrorPasswordLogin.Visibility = Visibility.Visible;
                 datosValidos = false;
             }
