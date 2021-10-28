@@ -1,1 +1,4 @@
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Dal\Dal.csproj;x86
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\EjercicioFinalLayouts.csproj;x86
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\Entidades.csproj;x86
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\Entidades.csproj;x86
