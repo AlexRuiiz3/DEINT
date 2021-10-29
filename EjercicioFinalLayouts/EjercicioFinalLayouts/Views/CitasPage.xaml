@@ -5,16 +5,21 @@
     xmlns:local="using:EjercicioFinalLayouts"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm ="using:EjercicioFinalLayouts.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.DataContext>
+        <vm:CitasViewVM/>
+    </Page.DataContext>
+    
     <RelativePanel>
 
         <StackPanel Name="stackTop" Background="Black" Orientation="Horizontal"  MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
 
             <Button>
                 <!--No uso Appbarbutton porque no puedo cambiar el tamaño del icono-->
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="LightGray" FontSize="35"></FontIcon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="Orange" FontSize="35"></FontIcon>
             </Button>
 
             <TextBlock x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
@@ -25,7 +30,8 @@
                   SelectionMode="Single" RelativePanel.AlignLeftWithPanel="True" 
                   RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="stackTop" RelativePanel.Above="stackBelow"
                   VerticalAlignment="Center" HorizontalAlignment="Center"
-                  ItemClick="GridCitas_ItemClick">
+                  ItemClick="GridCitas_ItemClick"
+                  ItemsSource="{Binding Citas}">
 
             <GridView.ItemContainerStyle>
                 <Style TargetType="GridViewItem">
@@ -42,16 +48,16 @@
             <GridView.ItemTemplate>
                 <DataTemplate x:Name="DataTemplateGridCitas">
                     <Grid Width="Auto">
-                        <StackPanel Orientation="Horizontal" BorderBrush="LightGray" BorderThickness="8" CornerRadius="5">
+                        <StackPanel Orientation="Horizontal" BorderBrush="LightGray" BorderThickness="8" CornerRadius="5" MinWidth="400">
                             <Image Source="/Assets/Ubicacion.png" MaxWidth="200" MaxHeight="300" Margin="10,0"></Image>
-                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock x:Name="txtBDiaSemana" Text="{Binding DiaSemana}" FontSize="20"></TextBlock>
                                 <TextBlock x:Name="txtBDia" Text="{Binding Dia}" FontSize="18"></TextBlock>
-                                <TextBlock x:Name="txtBDiaSemana" Text="{Binding DiaSemana}"  FontSize="18"></TextBlock>
                                 <TextBlock x:Name="txtBMes" Text="{Binding Mes}" FontSize="18"></TextBlock>
                                 <TextBlock x:Name="txtBHorario" Text="{Binding Horario}" FontSize="18"></TextBlock>
-                                <TextBlock x:Name="txtBDireccion" Text="{Binding Direccion}"  FontSize="18"></TextBlock>
                                 <TextBlock x:Name="txtBCodigoPostal" Text="{Binding CodigoPostal}" FontSize="18" Margin="0,0,0,20"></TextBlock>
-                            </StackPanel>
+                                <TextBlock x:Name="txtBDireccion" Text="{Binding Direccion}" FontSize="18"></TextBlock>
+                                </StackPanel>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
@@ -59,10 +65,9 @@
         </GridView>
 
         <StackPanel Name="stackBelow" Background="Black" MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-
             <TextBlock x:Name="txtBNumeroNotificaciones" Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-20"></TextBlock>
             <Button HorizontalAlignment="Right">
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="LightGray" FontSize="35"></FontIcon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="Orange" FontSize="35"></FontIcon>
             </Button>
         </StackPanel>
     </RelativePanel>

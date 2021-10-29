@@ -39,11 +39,21 @@ namespace EjercicioFinalLayouts.Views
 
         public DetallesCitaViewVM DetallesCitaViewVM{get;set;}
 
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_SeleccionarFotos(object sender, RoutedEventArgs e)
         {
             ListaFotos.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_IncluirFotos(object sender, RoutedEventArgs e)
         {
             if (ListaFotos.Visibility == Visibility)//Si "hay" fotos selecionadas se envian 
@@ -54,18 +64,35 @@ namespace EjercicioFinalLayouts.Views
                 txtbFotosIncluidas.Visibility = Visibility.Collapsed;
             }
         }
-
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_EliminarFotos(object sender, RoutedEventArgs e)
         {
             ListaFotos.Visibility = Visibility.Collapsed;
             txtbFotosIncluidas.Visibility = Visibility.Collapsed;
         }
-
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_EnviarInforme(object sender, RoutedEventArgs e)
         {
             var dialog = new MessageDialog("Datos enviados correctamente");
 
             await dialog.ShowAsync();
+        }
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_VolverPaginaCitas(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CitasPage));
         }
     }
 }

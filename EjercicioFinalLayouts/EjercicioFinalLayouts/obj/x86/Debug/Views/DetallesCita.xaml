@@ -16,10 +16,10 @@
                         RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" 
                         RelativePanel.AlignTopWithPanel="True">
                 <Button>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="LightGray" 
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="Orange" 
                               FontSize="35"></FontIcon>
                 </Button>
-                <TextBlock x:ConnectionId='19' x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" 
+                <TextBlock x:ConnectionId='20' x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" 
                            Foreground="White" FontSize="25"/>
             </StackPanel>
 
@@ -27,48 +27,49 @@
             <StackPanel RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="stackTop" 
                         RelativePanel.Above="stackBelow" RelativePanel.AlignLeftWithPanel="True" HorizontalAlignment="Center">
 
+                <!--Grid con datos de la Cita-->
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <TextBlock x:ConnectionId='11' Grid.Row="0" Grid.Column="0"                                                       FontWeight="Bold" FontSize="20"></TextBlock>
-                    <TextBlock x:ConnectionId='12' Grid.Row="0" Grid.Column="1"                                                 
+                    <TextBlock x:ConnectionId='12' Grid.Row="0" Grid.Column="0"                                                       FontWeight="Bold" FontSize="20"></TextBlock>
+                    <TextBlock x:ConnectionId='13' Grid.Row="0" Grid.Column="1"                                                 
                                VerticalAlignment="Center" FontWeight="Bold" FontSize="15"></TextBlock>
                     
                     <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Source="/Assets/Ubicacion.png" MaxHeight="200" MaxWidth="300"></Image>
 
-                    <TextBlock x:ConnectionId='13' Grid.Row="2" Grid.Column="0"                                                       ></TextBlock>
-                    <TextBlock x:ConnectionId='14' Grid.Row="2" Grid.Column="1"                                                 ></TextBlock>
-                    <TextBlock x:ConnectionId='15' Grid.Row="3" Grid.Column="0"                                                 ></TextBlock>
-                    <TextBlock x:ConnectionId='16' Grid.Row="3" Grid.Column="1"                                                     ></TextBlock>
-                    <TextBlock x:ConnectionId='17' Grid.Row="4" Grid.Column="0"                                                       ></TextBlock>
-                    <TextBlock x:ConnectionId='18' Grid.Row="4" Grid.Column="1"                                                          ></TextBlock>
+                    <TextBlock x:ConnectionId='14' Grid.Row="2" Grid.Column="0"                                                       ></TextBlock>
+                    <TextBlock x:ConnectionId='15' Grid.Row="2" Grid.Column="1"                                                 ></TextBlock>
+                    <TextBlock x:ConnectionId='16' Grid.Row="3" Grid.Column="0"                                                 ></TextBlock>
+                    <TextBlock x:ConnectionId='17' Grid.Row="3" Grid.Column="1"                                                     ></TextBlock>
+                    <TextBlock x:ConnectionId='18' Grid.Row="4" Grid.Column="0"                                                       ></TextBlock>
+                    <TextBlock x:ConnectionId='19' Grid.Row="4" Grid.Column="1"                                                          ></TextBlock>
                 </Grid>
 
-                <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
                         <TextBlock Text="Seleccionar fotos" Margin="0,10,0,0" ></TextBlock>
-                        <Button x:ConnectionId='9' BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Center"                                 Margin="0,10">
+                        <Button x:ConnectionId='10' Background="White" BorderBrush="Black" BorderThickness="3" CornerRadius="5" HorizontalAlignment="Center"                                 Margin="0,10">
                             <SymbolIcon Symbol="Camera"></SymbolIcon>
                         </Button>
-                        <Image x:ConnectionId='10' x:Name="ListaFotos" Source="/Assets/Icono.png" Visibility="Collapsed" MaxHeight="100" MaxWidth="100"></Image>
+                        <Image x:ConnectionId='11' x:Name="ListaFotos" Source="/Assets/Icono.png" Visibility="Collapsed" MaxHeight="200" MaxWidth="200"></Image>
                     </StackPanel>
 
-                    <Button x:ConnectionId='6' Content="Incluir fotos" HorizontalAlignment="Center"                             Margin="0,10"></Button>
-                    <TextBlock x:ConnectionId='7' x:Name="txtbFotosIncluidas" Text="Fotos Incluidas" Foreground="Green" Visibility="Collapsed" Margin="0,5" HorizontalAlignment="Center"></TextBlock>
-                    <Button x:ConnectionId='8' Content="Eliminar fotos" HorizontalAlignment="Center"                              Margin="0,10"></Button>
+                    <Button x:ConnectionId='7' Content="Incluir fotos" HorizontalAlignment="Center"                             Margin="0,10"></Button>
+                    <TextBlock x:ConnectionId='8' x:Name="txtbFotosIncluidas" Text="Fotos Incluidas" Foreground="Green" Visibility="Collapsed" Margin="0,5" HorizontalAlignment="Center"></TextBlock>
+                    <Button x:ConnectionId='9' Content="Eliminar fotos" HorizontalAlignment="Center"                              Margin="0,10"></Button>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical" Margin="0,10">
+                <StackPanel Margin="0,10">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe70f;"/>
                         <TextBlock Text="Observaciones" FontSize="20" Margin="5"></TextBlock>
@@ -76,13 +77,16 @@
                     <TextBox MinHeight="200" MaxHeight="350" MaxWidth="350" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"></TextBox>
                 </StackPanel>
                 <Button x:ConnectionId='5' Content="Enviar informe" HorizontalAlignment="Center"                              Margin="0,10"></Button>
+                <Button x:ConnectionId='6' HorizontalAlignment="Center"                                  Margin="0,20" Background="White">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe830;" FontSize="35"></FontIcon>
+                </Button>
             </StackPanel>
 
             <!--Stack Panel Barra de abajo-->
             <StackPanel x:ConnectionId='3' Name="stackBelow" Background="Black" MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                 <TextBlock x:ConnectionId='4' x:Name="txtBNumeroNotificaciones" Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-20"></TextBlock>
                 <Button HorizontalAlignment="Right">
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="LightGray" FontSize="35"></FontIcon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="Orange" FontSize="35"></FontIcon>
                 </Button>
             </StackPanel>
             

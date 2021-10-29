@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>ALEXRUIZ</Machine>
-    <WindowsUser>AlexRuiz</WindowsUser>
+    <Machine>107-19</Machine>
+    <WindowsUser>aruiz</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>49be4665-2851-4b21-9472-b943ecddef77</PackageIdentityName>
     <PackageIdentityPublisher>CN=AlexRuiz</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>4C3409C8178DE6B3FF2231EB4AD2BE8F18F4BD10D89A9DD38E6E01ACAA2E6D0E</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>66F1D974DE8C27A6460B902F3065023760952506AF33836C73706B87519AA493</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>49be4665-2851-4b21-9472-b943ecddef77_1.0.0.0_x86__mvrn06xam109c</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>49be4665-2851-4b21-9472-b943ecddef77_mvrn06xam109c!App</RegisteredUserModeAppID>
     <RegisteredPackageID>49be4665-2851-4b21-9472-b943ecddef77</RegisteredPackageID>
@@ -27,118 +27,118 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T21:40:16.725</Modified>
+      <Modified>2021-10-29T10:45:48.535</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\EjercicioFinalLayouts.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\EjercicioFinalLayouts.exe">
       <PackagePath>entrypoint\EjercicioFinalLayouts.exe</PackagePath>
-      <Modified>2021-10-28T21:40:15.245</Modified>
+      <Modified>2021-10-29T10:45:47.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-04T23:15:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Dal\bin\x86\Debug\Dal.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Dal\bin\x86\Debug\Dal.dll">
       <PackagePath>Dal.dll</PackagePath>
-      <Modified>2021-10-28T19:51:13.959</Modified>
+      <Modified>2021-10-29T08:59:30.368</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Entidades.dll">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Entidades.dll">
       <PackagePath>Entidades.dll</PackagePath>
-      <Modified>2021-10-28T19:51:12.830</Modified>
+      <Modified>2021-10-29T08:16:14.012</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Icono.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Icono.png">
       <PackagePath>Assets\Icono.png</PackagePath>
-      <Modified>2021-10-25T16:16:50.956</Modified>
+      <Modified>2021-10-26T11:54:03.146</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Ubicacion.PNG">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Ubicacion.PNG">
       <PackagePath>Assets\Ubicacion.PNG</PackagePath>
-      <Modified>2021-10-28T16:49:03.872</Modified>
+      <Modified>2021-10-29T08:14:40.408</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-09-26T16:47:59.753</Modified>
+      <Modified>2021-10-26T11:54:03.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-26T16:47:59.757</Modified>
+      <Modified>2021-10-26T11:54:03.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-26T16:47:59.758</Modified>
+      <Modified>2021-10-26T11:54:03.159</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-26T16:47:59.758</Modified>
+      <Modified>2021-10-26T11:54:03.159</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-26T16:47:59.759</Modified>
+      <Modified>2021-10-26T11:54:03.159</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-26T16:47:59.760</Modified>
+      <Modified>2021-10-26T11:54:03.160</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-09-26T16:47:59.761</Modified>
+      <Modified>2021-10-26T11:54:03.160</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\ImageBackground.jpg">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Assets\ImageBackground.jpg">
       <PackagePath>Assets\ImageBackground.jpg</PackagePath>
-      <Modified>2021-10-25T15:17:08.141</Modified>
+      <Modified>2021-10-26T11:54:03.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-10-25T15:16:21.516</Modified>
+      <Modified>2021-10-26T11:54:03.188</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\EjercicioFinalLayouts.xr.xml">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\EjercicioFinalLayouts.xr.xml">
       <PackagePath>EjercicioFinalLayouts.xr.xml</PackagePath>
-      <Modified>2021-10-28T21:31:01.070</Modified>
+      <Modified>2021-10-29T10:45:47.783</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-10-28T21:30:22.906</Modified>
+      <Modified>2021-10-29T10:45:47.793</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\CitasPage.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\CitasPage.xbf">
       <PackagePath>Views\CitasPage.xbf</PackagePath>
-      <Modified>2021-10-28T21:40:15.152</Modified>
+      <Modified>2021-10-29T10:45:47.793</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCita.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCita.xbf">
       <PackagePath>Views\DetallesCita.xbf</PackagePath>
-      <Modified>2021-10-28T21:30:22.907</Modified>
+      <Modified>2021-10-29T10:45:47.794</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\LoginPage.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
-      <Modified>2021-10-28T21:30:22.908</Modified>
+      <Modified>2021-10-29T10:45:47.794</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-10-28T21:30:22.908</Modified>
+      <Modified>2021-10-29T10:45:47.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-10-28T21:40:16.322</Modified>
+      <Modified>2021-10-29T09:09:11.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Core\EjercicioFinalLayouts.exe">
+    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Core\EjercicioFinalLayouts.exe">
       <PackagePath>EjercicioFinalLayouts.exe</PackagePath>
-      <Modified>2021-10-28T21:40:16.720</Modified>
+      <Modified>2021-10-29T10:45:48.533</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
@@ -198,36 +198,36 @@
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.29231.0</Version>
+      <Version>14.0.30035.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.29231.0</Version>
+      <Version>14.0.30035.0</Version>
       <Architecture>ARM64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.29231.0</Version>
+      <Version>14.0.30035.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.29231.0</Version>
+      <Version>14.0.30035.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>

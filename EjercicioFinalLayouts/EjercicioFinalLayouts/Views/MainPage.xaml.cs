@@ -26,7 +26,11 @@ namespace EjercicioFinalLayouts.Views
         {
             this.InitializeComponent();
         }
-
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_Login(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(LoginPage));

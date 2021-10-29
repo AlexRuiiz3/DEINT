@@ -28,10 +28,13 @@ namespace EjercicioFinalLayouts.Views
         public CitasPage()
         {
             this.InitializeComponent();
-
-            GridCitas.ItemsSource = GestoraCitas.obtenerCitas();
         }
 
+        /// <summary>
+        /// Evento asociado a un ItemClick
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GridCitas_ItemClick(object sender, ItemClickEventArgs e)
         {
             Cita citaSeleccionada = (Cita)e.ClickedItem;

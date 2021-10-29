@@ -191,7 +191,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Gestion\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

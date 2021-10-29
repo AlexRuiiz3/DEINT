@@ -26,7 +26,11 @@ namespace EjercicioFinalLayouts.Views
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Evento asociado a un boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_IniciarSesion(object sender, RoutedEventArgs e)
         {
             Boolean datosValidos = true;

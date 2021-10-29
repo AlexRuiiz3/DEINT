@@ -22,3 +22,27 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Ent
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\qualifiers.txt
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Entidades.pri
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\Entidades.csproj.CopyComplete
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\priconfig.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\resources.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\pri.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\qualifiers.txt
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\Entidades\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt

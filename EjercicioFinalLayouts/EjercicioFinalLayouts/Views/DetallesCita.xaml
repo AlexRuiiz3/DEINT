@@ -16,7 +16,7 @@
                         RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" 
                         RelativePanel.AlignTopWithPanel="True">
                 <Button>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="LightGray" 
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="Orange" 
                               FontSize="35"></FontIcon>
                 </Button>
                 <TextBlock x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" 
@@ -27,13 +27,14 @@
             <StackPanel RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="stackTop" 
                         RelativePanel.Above="stackBelow" RelativePanel.AlignLeftWithPanel="True" HorizontalAlignment="Center">
 
+                <!--Grid con datos de la Cita-->
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -54,13 +55,13 @@
                     <TextBlock Grid.Row="4" Grid.Column="1" Text="{x:Bind Path=DetallesCitaViewVM.Cita.CodigoPostal}"></TextBlock>
                 </Grid>
 
-                <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
                         <TextBlock Text="Seleccionar fotos" Margin="0,10,0,0" ></TextBlock>
-                        <Button BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Center" Click="Button_SeleccionarFotos" Margin="0,10">
+                        <Button Background="White" BorderBrush="Black" BorderThickness="3" CornerRadius="5" HorizontalAlignment="Center" Click="Button_SeleccionarFotos" Margin="0,10">
                             <SymbolIcon Symbol="Camera"></SymbolIcon>
                         </Button>
-                        <Image x:Name="ListaFotos" Source="/Assets/Icono.png" Visibility="Collapsed" MaxHeight="100" MaxWidth="100"></Image>
+                        <Image x:Name="ListaFotos" Source="/Assets/Icono.png" Visibility="Collapsed" MaxHeight="200" MaxWidth="200"></Image>
                     </StackPanel>
 
                     <Button Content="Incluir fotos" HorizontalAlignment="Center" Click="Button_IncluirFotos" Margin="0,10"></Button>
@@ -68,7 +69,7 @@
                     <Button Content="Eliminar fotos" HorizontalAlignment="Center" Click="Button_EliminarFotos" Margin="0,10"></Button>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical" Margin="0,10">
+                <StackPanel Margin="0,10">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe70f;"/>
                         <TextBlock Text="Observaciones" FontSize="20" Margin="5"></TextBlock>
@@ -76,13 +77,16 @@
                     <TextBox MinHeight="200" MaxHeight="350" MaxWidth="350" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"></TextBox>
                 </StackPanel>
                 <Button Content="Enviar informe" HorizontalAlignment="Center" Click="Button_EnviarInforme" Margin="0,10"></Button>
+                <Button HorizontalAlignment="Center" Click="Button_VolverPaginaCitas" Margin="0,20" Background="White">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe830;" FontSize="35"></FontIcon>
+                </Button>
             </StackPanel>
 
             <!--Stack Panel Barra de abajo-->
             <StackPanel Name="stackBelow" Background="Black" MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                 <TextBlock x:Name="txtBNumeroNotificaciones" Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-20"></TextBlock>
                 <Button HorizontalAlignment="Right">
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="LightGray" FontSize="35"></FontIcon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="Orange" FontSize="35"></FontIcon>
                 </Button>
             </StackPanel>
             
