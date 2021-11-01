@@ -18,7 +18,6 @@
             <TextBlock Text="Welcome to Solarizr" Foreground="White" FontSize="40"/>
             <Button HorizontalAlignment="Center" Content="Login" Foreground="Azure" BorderBrush="White" BorderThickness="3"
                     Width="Auto" FontSize="20" Background="Transparent" Margin="0,40" Click="Button_Click_Login"/>
-
         </StackPanel>
     </RelativePanel>
 </Page>

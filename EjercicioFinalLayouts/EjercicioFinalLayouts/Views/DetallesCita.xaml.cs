@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using EjercicioFinalLayouts.ViewModels;
 using Windows.UI.Popups;
+using Entidades;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,70 +30,66 @@ namespace EjercicioFinalLayouts.Views
             this.InitializeComponent();
 
         }
-
+        /// <summary>
+        /// Metodo para coger el parametro que recibe esta view.
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            DetallesCitaViewVM = (DetallesCitaViewVM)e.Parameter;
-           
+            Cita = (Cita)e.Parameter;
         }
 
-        public DetallesCitaViewVM DetallesCitaViewVM{get;set;}
+        private Cita Cita { get;set;}
+
 
         /// <summary>
-        /// Evento asociado a un boton
+        /// Metodo asociado al elemento seleccionado de Navigationview
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_SeleccionarFotos(object sender, RoutedEventArgs e)
+        /// <param name="args"></param>
+        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-            ListaFotos.Visibility = Visibility.Visible;
-        }
+            String content = args.InvokedItem as String;
 
-        /// <summary>
-        /// Evento asociado a un boton
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_IncluirFotos(object sender, RoutedEventArgs e)
-        {
-            if (ListaFotos.Visibility == Visibility)//Si "hay" fotos selecionadas se envian 
-            {
-                txtbFotosIncluidas.Visibility = Visibility.Visible;
+            if (!String.IsNullOrEmpty(content)) {
+
+                switch (content) {
+                    case "Cita":
+                        ContNavigationView.Navigate(typeof(DetallesCitaNav_Cita), Cita);
+                    break;
+
+                    case "Fotos":
+                        ContNavigationView.Navigate(typeof(DetallesCitaNav_Fotos));
+                    break;
+
+                    case "Anotaciones":
+                        ContNavigationView.Navigate(typeof(DetallesCitaNav_Anotaciones));
+                    break;
+
+                }
+
             }
-            else {
-                txtbFotosIncluidas.Visibility = Visibility.Collapsed;
-            }
         }
-        /// <summary>
-        /// Evento asociado a un boton
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_EliminarFotos(object sender, RoutedEventArgs e)
-        {
-            ListaFotos.Visibility = Visibility.Collapsed;
-            txtbFotosIncluidas.Visibility = Visibility.Collapsed;
-        }
-        /// <summary>
-        /// Evento asociado a un boton
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private async void Button_EnviarInforme(object sender, RoutedEventArgs e)
-        {
-            var dialog = new MessageDialog("Datos enviados correctamente");
 
-            await dialog.ShowAsync();
-        }
         /// <summary>
-        /// Evento asociado a un boton
+        /// Metodo asociado al boton de atras de NavigationView
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_VolverPaginaCitas(object sender, RoutedEventArgs e)
+        /// <param name="args"></param>
+        private void NavigationView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
             Frame.Navigate(typeof(CitasPage));
+        }
+
+        /// <summary>
+        /// Metodo para que NavigationView tenga una pagina que mostrar por defecto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NavigationView_Loaded(object sender, RoutedEventArgs e)
+        {
+            ContNavigationView.Navigate(typeof(DetallesCitaNav_Cita), Cita);
         }
     }
 }

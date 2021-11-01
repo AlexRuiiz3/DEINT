@@ -120,12 +120,21 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CitasViewVM.cs" />
-    <Compile Include="ViewModels\DetallesCitaViewVM.cs" />
+    <Compile Include="ViewModels\DetallesCitaNavCitaViewVM.cs" />
     <Compile Include="Views\CitasPage.xaml.cs">
       <DependentUpon>CitasPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DetallesCita.xaml.cs">
       <DependentUpon>DetallesCita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetallesCitaNav_Anotaciones.xaml.cs">
+      <DependentUpon>DetallesCitaNav_Anotaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetallesCitaNav_Cita.xaml.cs">
+      <DependentUpon>DetallesCitaNav_Cita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetallesCitaNav_Fotos.xaml.cs">
+      <DependentUpon>DetallesCitaNav_Fotos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -163,6 +172,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DetallesCita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetallesCitaNav_Anotaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetallesCitaNav_Cita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetallesCitaNav_Fotos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

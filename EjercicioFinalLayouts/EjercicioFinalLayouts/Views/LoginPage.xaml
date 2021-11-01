@@ -8,22 +8,9 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <ScrollViewer Name="scrollViewer" VerticalScrollBarVisibility="Visible">
+    <ScrollViewer Name="scrollViewer" VerticalScrollBarVisibility="Auto">
         <RelativePanel>
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup>
-                    <VisualState x:Name="AnchoSuperior500">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowHeight="500"></AdaptiveTrigger>
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                            <Setter Target="scrollViewer.VerticalScrollBarVisibility" Value="Hidden"></Setter>
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-
-            <StackPanel Name="stackPanelTop" Background="Black" Orientation="Horizontal" 
+            <StackPanel Name="stackPanelTop" Background="LightBlue" Orientation="Horizontal" 
                         RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" 
                         RelativePanel.AlignTopWithPanel="True">
                 <Image Source="/Assets/Icono.png" MaxWidth="90" MaxHeight="80"/>
@@ -42,7 +29,7 @@
                 <TextBlock x:Name="txtblErrorUsuarioLogin" Text="Nombre de usuario no valido." Foreground="Red"
                            Visibility="Collapsed" Margin="5"></TextBlock>
 
-                <TextBlock Text="Contraseña" Margin="5,15,0,0" FontWeight="Bold" ></TextBlock>
+                <TextBlock Text="Contraseña" Margin="5,15,0,0" FontWeight="Bold"></TextBlock>
                 <PasswordBox x:Name="pswbContrasenhaLogin" Margin="5,0"/>
                 <TextBlock x:Name="txtblErrorPasswordLogin" Text="Contraseña no valida." Foreground="Red" 
                            Visibility="Collapsed" Margin="5"></TextBlock>
@@ -54,10 +41,10 @@
 
                 <Button Content="Sign in" Margin="5,10" Click="Button_IniciarSesion"></Button>
                 <TextBlock Foreground="Blue" Margin="5,10">
-                <Hyperlink>Can't access your account?</Hyperlink>
+                    <Hyperlink>Can't access your account?</Hyperlink>
                 </TextBlock>
             </StackPanel>
-            
+
         </RelativePanel>
     </ScrollViewer>
 </Page>

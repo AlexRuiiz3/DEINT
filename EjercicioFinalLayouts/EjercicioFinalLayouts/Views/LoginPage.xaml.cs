@@ -42,6 +42,7 @@ namespace EjercicioFinalLayouts.Views
             else {
                 txtblErrorUsuarioLogin.Visibility = Visibility.Collapsed;
             }
+
             if (String.IsNullOrEmpty(pswbContrasenhaLogin.Password) || pswbContrasenhaLogin.Password.Contains(" ")) {
                 txtblErrorPasswordLogin.Visibility = Visibility.Visible;
                 datosValidos = false;

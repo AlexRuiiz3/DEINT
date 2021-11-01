@@ -12,24 +12,30 @@
     <Page.DataContext>
         <vm:CitasViewVM/>
     </Page.DataContext>
-    
-    <RelativePanel>
 
-        <StackPanel x:ConnectionId='2' Name="stackTop" Background="Black" Orientation="Horizontal"  MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
 
-            <Button>
+
+        <StackPanel x:ConnectionId='2' Name="stackTop" Background="LightBlue" Orientation="Horizontal"  MinHeight="50" Grid.Row="0">
+            <Button Background="Transparent">
                 <!--No uso Appbarbutton porque no puedo cambiar el tamaño del icono-->
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="Orange" FontSize="35"></FontIcon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="DarkOrange" FontSize="35"></FontIcon>
             </Button>
-
-            <TextBlock x:ConnectionId='14' x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
-
+            <TextBlock x:ConnectionId='13' x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
         </StackPanel>
 
+        <TextBlock Text="CITAS DISPONIBLES" Grid.Row="1" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+        
         <GridView x:ConnectionId='3' x:Name="GridCitas" IsItemClickEnabled="True" 
-                  SelectionMode="Single" RelativePanel.AlignLeftWithPanel="True" 
-                  RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="stackTop" RelativePanel.Above="stackBelow"
-                  VerticalAlignment="Center" HorizontalAlignment="Center"
+                  HorizontalAlignment="Center"
+                  SelectionMode="Single"
+                  Grid.Row="2"
                                                  
                   ItemsSource="{Binding Citas}">
 
@@ -41,35 +47,33 @@
 
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <ItemsWrapGrid MaximumRowsOrColumns="3" Orientation="Horizontal"/>
+                    <ItemsWrapGrid MaximumRowsOrColumns="2" Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </GridView.ItemsPanel>
 
             <GridView.ItemTemplate>
                 <DataTemplate x:Name="DataTemplateGridCitas">
-                    <Grid Width="Auto">
-                        <StackPanel Orientation="Horizontal" BorderBrush="LightGray" BorderThickness="8" CornerRadius="5" MinWidth="400">
-                            <Image Source="/Assets/Ubicacion.png" MaxWidth="200" MaxHeight="300" Margin="10,0"></Image>
-                            <StackPanel VerticalAlignment="Center">
-                                <TextBlock x:Name="txtBDiaSemana" Text="{Binding DiaSemana}" FontSize="20"></TextBlock>
-                                <TextBlock x:Name="txtBDia" Text="{Binding Dia}" FontSize="18"></TextBlock>
-                                <TextBlock x:Name="txtBMes" Text="{Binding Mes}" FontSize="18"></TextBlock>
-                                <TextBlock x:Name="txtBHorario" Text="{Binding Horario}" FontSize="18"></TextBlock>
-                                <TextBlock x:Name="txtBCodigoPostal" Text="{Binding CodigoPostal}" FontSize="18" Margin="0,0,0,20"></TextBlock>
-                                <TextBlock x:Name="txtBDireccion" Text="{Binding Direccion}" FontSize="18"></TextBlock>
-                                </StackPanel>
+                    <StackPanel Orientation="Horizontal" BorderBrush="LightSkyBlue" BorderThickness="6" CornerRadius="3">
+                        <Image Source="/Assets/Ubicacion.png" MaxWidth="270" MaxHeight="270" Margin="0,3,10,3"></Image>
+                        <StackPanel VerticalAlignment="Center" Width="180">
+                            <TextBlock x:Name="txtBDiaSemana" Text="{Binding DiaSemana}" FontSize="20"></TextBlock>
+                            <TextBlock x:Name="txtBDia" Text="{Binding Dia}" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="txtBMes" Text="{Binding Mes}" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="txtBHorario" Text="{Binding Horario}" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="txtBDireccion" Text="{Binding Direccion}" TextWrapping="Wrap" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="txtBCodigoPostal" Text="{Binding CodigoPostal}" FontSize="18" Margin="0,0,0,20"></TextBlock>
                         </StackPanel>
-                    </Grid>
+                    </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
 
-        <StackPanel x:ConnectionId='4' Name="stackBelow" Background="Black" MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-            <TextBlock x:ConnectionId='5' x:Name="txtBNumeroNotificaciones" Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-20"></TextBlock>
-            <Button HorizontalAlignment="Right">
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="Orange" FontSize="35"></FontIcon>
+        <StackPanel x:ConnectionId='4' Name="stackBelow" Background="LightBlue" MinHeight="50" Grid.Row="3">
+            <TextBlock Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-25"></TextBlock>
+            <Button HorizontalAlignment="Right" Background="Transparent">
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="DarkOrange" FontSize="35"></FontIcon>
             </Button>
         </StackPanel>
-    </RelativePanel>
+    </Grid>
 </Page>
 

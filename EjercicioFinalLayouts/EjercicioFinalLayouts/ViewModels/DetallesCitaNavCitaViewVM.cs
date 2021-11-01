@@ -7,20 +7,25 @@ using Entidades;
 
 namespace EjercicioFinalLayouts.ViewModels
 {
-    public class DetallesCitaViewVM
+    public class DetallesCitaNavCitaViewVM
     {
 
+        #region Atributos
         private Cita cita;
         private String nombreCliente;
         private String telefono;
+        #endregion
 
-        public DetallesCitaViewVM(Cita cita, String nombreCliente, String telefono) {
+        #region Constructor con parametros
+        public DetallesCitaNavCitaViewVM(Cita cita, String nombreCliente, String telefono) {
             this.cita = cita;
             this.nombreCliente = nombreCliente;
             this.telefono = telefono;
         
         }
+        #endregion
 
+        #region Metodos fundamentales
         public Cita Cita
         {
             get { return cita; }
@@ -37,6 +42,6 @@ namespace EjercicioFinalLayouts.ViewModels
             get { return telefono; }
             set { telefono = value; }
         }
-
+        #endregion
     }
 }

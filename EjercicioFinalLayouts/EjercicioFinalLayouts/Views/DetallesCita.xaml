@@ -2,94 +2,21 @@
     x:Class="EjercicioFinalLayouts.Views.DetallesCita"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:EjercicioFinalLayouts.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
-    <ScrollViewer VerticalScrollBarVisibility="Visible">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
         <RelativePanel>
-            <!--Stack Panel Barra de arriba-->
-            <StackPanel Name="stackTop" Background="Black" Orientation="Horizontal"  MinHeight="55" 
-                        RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" 
-                        RelativePanel.AlignTopWithPanel="True">
-                <Button>
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="Orange" 
-                              FontSize="35"></FontIcon>
-                </Button>
-                <TextBlock x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" 
-                           Foreground="White" FontSize="25"/>
-            </StackPanel>
-
-            <!--Stack Panel Central con datos-->
-            <StackPanel RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="stackTop" 
-                        RelativePanel.Above="stackBelow" RelativePanel.AlignLeftWithPanel="True" HorizontalAlignment="Center">
-
-                <!--Grid con datos de la Cita-->
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Bind Path=DetallesCitaViewVM.NombreCliente}" FontWeight="Bold" FontSize="20"></TextBlock>
-                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Bind Path=DetallesCitaViewVM.Telefono}"
-                               VerticalAlignment="Center" FontWeight="Bold" FontSize="15"></TextBlock>
-                    
-                    <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Source="/Assets/Ubicacion.png" MaxHeight="200" MaxWidth="300"></Image>
-
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="{x:Bind Path=DetallesCitaViewVM.Cita.DiaSemana}"></TextBlock>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{x:Bind Path=DetallesCitaViewVM.Cita.Dia}"></TextBlock>
-                    <TextBlock Grid.Row="3" Grid.Column="0" Text="{x:Bind Path=DetallesCitaViewVM.Cita.Mes}"></TextBlock>
-                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{x:Bind Path=DetallesCitaViewVM.Cita.Horario}"></TextBlock>
-                    <TextBlock Grid.Row="4" Grid.Column="0" Text="{x:Bind Path=DetallesCitaViewVM.Cita.Direccion}"></TextBlock>
-                    <TextBlock Grid.Row="4" Grid.Column="1" Text="{x:Bind Path=DetallesCitaViewVM.Cita.CodigoPostal}"></TextBlock>
-                </Grid>
-
-                <StackPanel>
-                    <StackPanel HorizontalAlignment="Center">
-                        <TextBlock Text="Seleccionar fotos" Margin="0,10,0,0" ></TextBlock>
-                        <Button Background="White" BorderBrush="Black" BorderThickness="3" CornerRadius="5" HorizontalAlignment="Center" Click="Button_SeleccionarFotos" Margin="0,10">
-                            <SymbolIcon Symbol="Camera"></SymbolIcon>
-                        </Button>
-                        <Image x:Name="ListaFotos" Source="/Assets/Icono.png" Visibility="Collapsed" MaxHeight="200" MaxWidth="200"></Image>
-                    </StackPanel>
-
-                    <Button Content="Incluir fotos" HorizontalAlignment="Center" Click="Button_IncluirFotos" Margin="0,10"></Button>
-                    <TextBlock x:Name="txtbFotosIncluidas" Text="Fotos Incluidas" Foreground="Green" Visibility="Collapsed" Margin="0,5" HorizontalAlignment="Center"></TextBlock>
-                    <Button Content="Eliminar fotos" HorizontalAlignment="Center" Click="Button_EliminarFotos" Margin="0,10"></Button>
-                </StackPanel>
-
-                <StackPanel Margin="0,10">
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe70f;"/>
-                        <TextBlock Text="Observaciones" FontSize="20" Margin="5"></TextBlock>
-                    </StackPanel>
-                    <TextBox MinHeight="200" MaxHeight="350" MaxWidth="350" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"></TextBox>
-                </StackPanel>
-                <Button Content="Enviar informe" HorizontalAlignment="Center" Click="Button_EnviarInforme" Margin="0,10"></Button>
-                <Button HorizontalAlignment="Center" Click="Button_VolverPaginaCitas" Margin="0,20" Background="White">
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe830;" FontSize="35"></FontIcon>
-                </Button>
-            </StackPanel>
-
-            <!--Stack Panel Barra de abajo-->
-            <StackPanel Name="stackBelow" Background="Black" MinHeight="55" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-                <TextBlock x:Name="txtBNumeroNotificaciones" Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-20"></TextBlock>
-                <Button HorizontalAlignment="Right">
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="Orange" FontSize="35"></FontIcon>
-                </Button>
-            </StackPanel>
-            
+            <NavigationView Loaded="NavigationView_Loaded" PaneDisplayMode="Top" IsBackEnabled="True" BackRequested="NavigationView_BackRequested" ItemInvoked="NavigationView_ItemInvoked" RelativePanel.AlignLeftWithPanel="True"  RelativePanel.AlignRightWithPanel="True">
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Content="Cita" Icon="Map" VerticalContentAlignment="Center"/>
+                    <NavigationViewItem Content="Fotos" Icon="Camera"/>
+                    <NavigationViewItem Content="Anotaciones" Icon="Edit"/>
+                </NavigationView.MenuItems>
+                <Frame x:Name="ContNavigationView"/>
+            </NavigationView>
         </RelativePanel>
     </ScrollViewer>
 </Page>

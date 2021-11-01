@@ -1,29 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj": {}
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj": {
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj",
+        "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj",
-        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Dal\\obj\\",
+        "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Dal\\Dal.csproj",
+        "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.17763"
@@ -35,8 +33,8 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
-              "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj"
+              "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -81,26 +79,24 @@
         }
       }
     },
-    "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\EjercicioFinalLayouts\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\EjercicioFinalLayouts\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.17763"

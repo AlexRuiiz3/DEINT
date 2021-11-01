@@ -13,6 +13,9 @@ App.xbf
 EjercicioFinalLayouts.xr.xml
 Views\CitasPage.xbf
 Views\DetallesCita.xbf
+Views\DetallesCitaNav_Anotaciones.xbf
+Views\DetallesCitaNav_Cita.xbf
+Views\DetallesCitaNav_Fotos.xbf
 Views\LoginPage.xbf
 Views\MainPage.xbf
 Properties\Default.rd.xml

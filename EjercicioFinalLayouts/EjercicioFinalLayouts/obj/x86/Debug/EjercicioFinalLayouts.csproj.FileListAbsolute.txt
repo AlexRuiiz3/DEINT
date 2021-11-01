@@ -133,3 +133,18 @@ C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayout
 C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\aruiz\Documents\GitHub\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Cita.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Cita.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Cita.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Cita.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCitaNav_Cita.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Anotaciones.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Anotaciones.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Fotos.g.i.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Fotos.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Anotaciones.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Fotos.xaml
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Anotaciones.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\obj\x86\Debug\Views\DetallesCitaNav_Fotos.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCitaNav_Anotaciones.xbf
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCitaNav_Fotos.xbf

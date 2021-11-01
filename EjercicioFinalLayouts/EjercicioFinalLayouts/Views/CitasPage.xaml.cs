@@ -12,9 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Dal;
 using Entidades;
-using EjercicioFinalLayouts.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,11 +35,7 @@ namespace EjercicioFinalLayouts.Views
         /// <param name="e"></param>
         private void GridCitas_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Cita citaSeleccionada = (Cita)e.ClickedItem;
-
-            DetallesCitaViewVM detallesCitaViewVM = new DetallesCitaViewVM(citaSeleccionada, "Hasido Elotro", "645813975");
-            
-            Frame.Navigate(typeof(DetallesCita), detallesCitaViewVM);
+            Frame.Navigate(typeof(DetallesCita), (Cita)e.ClickedItem);//Se pasa a DetallesCita el objeto Cita seleccionado
         }
     }
 }
