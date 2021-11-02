@@ -19,7 +19,20 @@ namespace Actividad4.Models
         {
             nombre = "";
             apellidos = "";
+            fechaNacimiento = "";
+            direccion = "";
+            telefono = "";
         }
+
+        public ClsPersona(String nombre, String apellidos, String fechaNacimiento, String direccion, String telefono) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.fechaNacimiento = fechaNacimiento;
+            this.direccion = direccion;
+            this.telefono = telefono;
+        
+        }
+ 
 
         #region Metodos Fundamentales
         public String Nombre { 
