@@ -19,7 +19,7 @@ namespace Dal
         /// Postcondiciones: Este metodo se trata de una funcion por lo tanto devuelve un valor, en este cado una 
         ///                  lista de objetos de tipo Cita.
         /// </summary>
-        /// <returns>citas</returns>
+        /// <returns>List<Cita>citas</returns>
         public static List<Cita> obtenerCitas() {
             List<Cita> citas = new List<Cita>();
 
