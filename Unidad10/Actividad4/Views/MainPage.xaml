@@ -6,12 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:Actividad4.ViewModels" 
-    xmlns:local2="using:Actividad4.Models"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.DataContext>
-        <vm:MainPageViewVM x:Name="MainPageViewVM"/>
+        <vm:MainPageViewVM/>
     </Page.DataContext>
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
@@ -31,24 +30,24 @@
 
         <RelativePanel>
             <ListView Name="LstPersonas" ItemsSource="{Binding ListaPersonas}" BorderBrush="Black" 
-                  BorderThickness="1" ItemClick="LstPersonas_ItemClick" IsItemClickEnabled="True">
+                  BorderThickness="1" SelectedItem="{Binding PersonaSeleccionada, Mode=TwoWay}">
                 <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="local2:ClsPersona">
+                    <DataTemplate>
                         <!--DataTyper es para definir que en la plantilla de datos se usara una ClsPersona entonces hay que usar x:Bind -->
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{x:Bind Nombre}" Margin="0,0,5,0"></TextBlock>
-                            <TextBlock Text="{x:Bind Apellidos}" ></TextBlock>
+                            <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"></TextBlock>
+                            <TextBlock Text="{Binding Apellidos}" ></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Grid Name="GridDatosPersona" RelativePanel.Below="LstPersonas" Background="Salmon" Margin="15,0,0,0">
+            <Grid Name="GridDatosPersona" RelativePanel.Below="LstPersonas" Background="Moccasin" Margin="15,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="250"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions >
+                <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -58,20 +57,20 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Nombre:" Margin="0,5"></TextBlock>
-                <TextBox  Grid.Row="0" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.Nombre}" ></TextBox>
+                <TextBox Grid.Row="0" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.Nombre, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
 
-                <TextBlock  Grid.Row="1" Grid.Column="0" Text="Apellidos:" Margin="0,5"></TextBlock>
-                <TextBox  Grid.Row="1" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBox>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Apellidos:" Margin="0,5"></TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Fecha Nacimiento:" Margin="0,5"></TextBlock>
-                <TextBox  Grid.Row="2" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.FechaNacimiento}"></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
-                <TextBlock  Grid.Row="3" Grid.Column="0" Text="Telefono:" Margin="0,5"></TextBlock>
-                <TextBox  Grid.Row="3" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.Telefono}"></TextBox>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Telefono:" Margin="0,5"></TextBlock>
+                <TextBox Grid.Row="3" Grid.Column="1" Margin="10,5" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
-                <TextBlock  Grid.Row="4" Grid.Column="0"  Text="Direccion:" Margin="0,5"></TextBlock>
+                <TextBlock Grid.Row="4" Grid.Column="0"  Text="Direccion:" Margin="0,5"></TextBlock>
                 <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
-                    <TextBox Margin="0,5,0,0" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding PersonaSeleccionada.Direccion}"></TextBox>
+                    <TextBox Margin="0,5,0,0" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 </ScrollViewer>
 
             </Grid>

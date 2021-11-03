@@ -11,12 +11,13 @@ namespace Actividad4.ViewModels
 {
     public class MainPageViewVM : INotifyPropertyChanged
     {
-        private ObservableCollection<ClsPersona> listaPersonas = ClsListados.obtenerPersonas();
+        private ObservableCollection<ClsPersona> listaPersonas = new ObservableCollection<ClsPersona>(ClsListados.obtenerPersonas());
         private ClsPersona personaSeleccionada;
 
         public ObservableCollection<ClsPersona> ListaPersonas { get { return listaPersonas; } }
 
-        public ClsPersona PersonaSeleccionada {
+        public ClsPersona PersonaSeleccionada
+        {
 
             get { return personaSeleccionada; }
             set { 

@@ -10,11 +10,17 @@ namespace Actividad4.Models
     public class ClsListados
     {
         /// <summary>
-        /// 
-        /// </summary>
+        /// Cabecera: public static List<ClsPersona> obtenerPersonas() 
+        /// Comentario: Este metodo se encarga de generar una lista de objetos ClsPersona
+        /// Entradas: Ninguna
+        /// Salidas: List<ClsPersona> personas
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Este metodo se trata de una funcion por lo que se devuelve un valor, en este caso 
+        ///                  una lista con objetos de tipo ClsPersona
+        /// summary>
         /// <returns>List<ClsPersona> personas</returns>
-        public static ObservableCollection<ClsPersona> obtenerPersonas() {
-            ObservableCollection<ClsPersona> personas = new ObservableCollection<ClsPersona>();
+        public static List<ClsPersona> obtenerPersonas() {
+            List<ClsPersona> personas = new List<ClsPersona>();
 
             personas.Add(new ClsPersona("Alejandro","Ruiz","29/12/2000","Direccion calle","999999999"));
             personas.Add(new ClsPersona("Nombre1", "Apellido1", "29/12/2000", "Direccion calle1", "111111111"));

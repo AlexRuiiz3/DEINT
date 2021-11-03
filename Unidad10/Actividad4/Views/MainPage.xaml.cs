@@ -28,16 +28,5 @@ namespace Actividad4.Views
             this.InitializeComponent();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LstPersonas_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            ClsPersona persona = (ClsPersona)e.ClickedItem;
-
-            MainPageViewVM.PersonaSeleccionada = persona;
-        }
     }
 }
