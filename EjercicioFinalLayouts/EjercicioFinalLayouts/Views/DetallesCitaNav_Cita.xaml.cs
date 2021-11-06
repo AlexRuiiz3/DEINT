@@ -25,6 +25,9 @@ namespace EjercicioFinalLayouts.Views
     /// </summary>
     public sealed partial class DetallesCitaNav_Cita : Page
     {
+
+        public DetallesCitaNavCitaViewVM DetallesCitaNavCitaViewVM { get; set; }
+
         public DetallesCitaNav_Cita()
         {
             this.InitializeComponent();
@@ -42,7 +45,5 @@ namespace EjercicioFinalLayouts.Views
               ViewModel aqui*/
             DetallesCitaNavCitaViewVM = new DetallesCitaNavCitaViewVM((Cita)e.Parameter, "Mariano Rajoy", "645813975");
         }
-
-        public DetallesCitaNavCitaViewVM DetallesCitaNavCitaViewVM { get; set; }
     }
 }

@@ -40,14 +40,13 @@ namespace EjercicioFinalLayouts.Views
         /// <param name="e"></param>
         private void Button_SeleccionarFotos(object sender, RoutedEventArgs e)
         {
-            //Aqui deberia de abrirse la galeria y seleccionar una foto
             txtbFotosIncluidas.Visibility = Visibility.Collapsed;
-            gridViewFotos.Items.Add("/Assets/icono.png");
+            gridViewFotos.Items.Add("/Assets/icono.png"); //Aqui se deberia de llamar a la galeria, para poder seleccionar una foto e incluirla
             
         }
 
         /// <summary>
-        /// Evento asociado a un boton
+        /// Evento asociado al boton Incluir fotos 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

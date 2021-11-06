@@ -14,7 +14,7 @@ namespace EjercicioFinalLayouts.ViewModels
         private List<Cita> citas = GestoraCitas.obtenerCitas();
         #endregion
 
-        #region Metodos fundamentales
+        #region Metodos fundamentales(Propiedades)
         public List<Cita> Citas {
 
             get { return citas; }

@@ -27,7 +27,7 @@ namespace EjercicioFinalLayouts.Views
             InitializeComponent();
         }
         /// <summary>
-        /// Evento asociado a un boton
+        /// Evento asociado al boton Sign in, el cual llevara a la view de todas las citas cuando el usuario y contraseña sean validos
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -35,7 +35,7 @@ namespace EjercicioFinalLayouts.Views
         {
             Boolean datosValidos = true;
 
-            if (String.IsNullOrEmpty(txtbUsuarioLogin.Text) || txtbUsuarioLogin.Text.Contains(" ")) {
+            if (String.IsNullOrEmpty(txtbUsuarioLogin.Text) || txtbUsuarioLogin.Text.Contains(" ")){ //Usuario
                 txtblErrorUsuarioLogin.Visibility = Visibility.Visible;
                 datosValidos = false;
             }
@@ -43,7 +43,7 @@ namespace EjercicioFinalLayouts.Views
                 txtblErrorUsuarioLogin.Visibility = Visibility.Collapsed;
             }
 
-            if (String.IsNullOrEmpty(pswbContrasenhaLogin.Password) || pswbContrasenhaLogin.Password.Contains(" ")) {
+            if (String.IsNullOrEmpty(pswbContrasenhaLogin.Password) || pswbContrasenhaLogin.Password.Contains(" ")){ //Password
                 txtblErrorPasswordLogin.Visibility = Visibility.Visible;
                 datosValidos = false;
             }

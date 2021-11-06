@@ -25,13 +25,15 @@ namespace EjercicioFinalLayouts.Views
     /// </summary>
     public sealed partial class DetallesCita : Page
     {
+        private Cita Cita { get; set; } 
+
         public DetallesCita()
         {
             this.InitializeComponent();
 
         }
         /// <summary>
-        /// Metodo para coger el parametro que recibe esta view.
+        /// Metodo para coger el parametro que recibe esta view. En este caso una Cita
         /// </summary>
         /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -39,9 +41,6 @@ namespace EjercicioFinalLayouts.Views
             base.OnNavigatedTo(e);
             Cita = (Cita)e.Parameter;
         }
-
-        private Cita Cita { get;set;}
-
 
         /// <summary>
         /// Metodo asociado al elemento seleccionado de Navigationview
@@ -51,7 +50,6 @@ namespace EjercicioFinalLayouts.Views
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             String content = args.InvokedItem as String;
-
             if (!String.IsNullOrEmpty(content)) {
 
                 switch (content) {
@@ -68,12 +66,11 @@ namespace EjercicioFinalLayouts.Views
                     break;
 
                 }
-
             }
         }
 
         /// <summary>
-        /// Metodo asociado al boton de atras de NavigationView
+        /// Metodo asociado al boton de atras de NavigationView, el cual llevara a la view de las citas
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
@@ -83,7 +80,8 @@ namespace EjercicioFinalLayouts.Views
         }
 
         /// <summary>
-        /// Metodo para que NavigationView tenga una pagina que mostrar por defecto
+        /// Metodo para que NavigationView tenga una pagina que mostrar por defecto, en este caso la view con los detalles de la cita 
+        /// seleccionada
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

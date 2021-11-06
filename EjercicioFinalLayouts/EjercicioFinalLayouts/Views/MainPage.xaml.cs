@@ -27,7 +27,7 @@ namespace EjercicioFinalLayouts.Views
             this.InitializeComponent();
         }
         /// <summary>
-        /// Evento asociado a un boton
+        /// Evento asociado al boton Login, el cual llevara a la view de login 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

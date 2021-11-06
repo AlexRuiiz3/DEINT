@@ -21,21 +21,21 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Name="stackTop" Background="LightBlue" Orientation="Horizontal"  MinHeight="50" Grid.Row="0">
+        <StackPanel x:ConnectionId='2' Name="stackTop" Background="LightBlue" Orientation="Horizontal"  MinHeight="50" Grid.Row="0">
             <Button Background="Transparent">
                 <!--No uso Appbarbutton porque no puedo cambiar el tamaño del icono-->
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe77b;" Foreground="DarkOrange" FontSize="35"></FontIcon>
             </Button>
-            <TextBlock x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
+            <TextBlock x:ConnectionId='13' x:Name="txtBNombreUsuario" Text="Fernando Galiana" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
         </StackPanel>
 
         <TextBlock Text="CITAS DISPONIBLES" Grid.Row="1" HorizontalAlignment="Center" FontSize="30"></TextBlock>
         
-        <GridView x:Name="GridCitas" IsItemClickEnabled="True" 
+        <GridView x:ConnectionId='3' x:Name="GridCitas" IsItemClickEnabled="True" 
                   HorizontalAlignment="Center"
                   SelectionMode="Single"
                   Grid.Row="2"
-                  ItemClick="GridCitas_ItemClick"
+                                                 
                   ItemsSource="{Binding Citas}">
 
             <GridView.ItemContainerStyle>
@@ -67,7 +67,7 @@
             </GridView.ItemTemplate>
         </GridView>
 
-        <StackPanel Name="stackBelow" Background="LightBlue" MinHeight="50" Grid.Row="3">
+        <StackPanel x:ConnectionId='4' Name="stackBelow" Background="LightBlue" MinHeight="50" Grid.Row="3">
             <TextBlock Text="2" FontSize="20" HorizontalAlignment="Right" Foreground="Red" Margin="0,0,5,-25"></TextBlock>
             <Button HorizontalAlignment="Right" Background="Transparent">
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEdac;" Foreground="DarkOrange" FontSize="35"></FontIcon>
@@ -75,3 +75,4 @@
         </StackPanel>
     </Grid>
 </Page>
+

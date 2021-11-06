@@ -10,7 +10,7 @@ namespace Entidades
     public class Cita
     {
 
-        #region Attibutos
+        #region Atributos
         private String diaSemana;
         private int dia;
         private String mes;
@@ -30,7 +30,7 @@ namespace Entidades
         }
         #endregion
 
-        #region Metodos fundamentales
+        #region Metodos fundamentales(Propiedades)
         //diaSemana
         public String DiaSemana
         {

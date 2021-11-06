@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="EjercicioFinalLayouts.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EjercicioFinalLayouts"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <RelativePanel.Background>
+            <ImageBrush ImageSource="/Assets/ImageBackground.jpg"></ImageBrush>
+        </RelativePanel.Background>
+
+        <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+            <TextBlock Text="Hello" Foreground="White" FontSize="60"/>
+            <TextBlock Text="Welcome to Solarizr" Foreground="White" FontSize="40"/>
+            <Button x:ConnectionId='2' HorizontalAlignment="Center" Content="Login" Foreground="Azure" BorderBrush="White" BorderThickness="3"
+                    Width="Auto" FontSize="20" Background="Transparent" Margin="0,40"                           />
+        </StackPanel>
+    </RelativePanel>
+</Page>
+

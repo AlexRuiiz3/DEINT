@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-01T12:56:11.285</Modified>
+      <Modified>2021-11-06T19:25:55.897</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\EjercicioFinalLayouts.exe">
       <PackagePath>entrypoint\EjercicioFinalLayouts.exe</PackagePath>
-      <Modified>2021-11-01T12:56:09.899</Modified>
+      <Modified>2021-11-06T19:25:54.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Dal\bin\x86\Debug\Dal.dll">
       <PackagePath>Dal.dll</PackagePath>
-      <Modified>2021-11-01T12:04:11.329</Modified>
+      <Modified>2021-11-06T19:22:01.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\Entidades\bin\x86\Debug\Entidades.dll">
       <PackagePath>Entidades.dll</PackagePath>
-      <Modified>2021-11-01T12:04:10.005</Modified>
+      <Modified>2021-11-06T19:22:00.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -106,39 +106,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\EjercicioFinalLayouts.xr.xml">
       <PackagePath>EjercicioFinalLayouts.xr.xml</PackagePath>
-      <Modified>2021-11-01T12:56:09.784</Modified>
+      <Modified>2021-11-06T19:22:08.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.809</Modified>
+      <Modified>2021-11-06T19:25:54.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\CitasPage.xbf">
       <PackagePath>Views\CitasPage.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.809</Modified>
+      <Modified>2021-11-06T19:25:54.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCita.xbf">
       <PackagePath>Views\DetallesCita.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.809</Modified>
+      <Modified>2021-11-06T19:25:54.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCitaNav_Anotaciones.xbf">
       <PackagePath>Views\DetallesCitaNav_Anotaciones.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.810</Modified>
+      <Modified>2021-11-06T19:25:54.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCitaNav_Cita.xbf">
       <PackagePath>Views\DetallesCitaNav_Cita.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.810</Modified>
+      <Modified>2021-11-06T19:25:54.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\DetallesCitaNav_Fotos.xbf">
       <PackagePath>Views\DetallesCitaNav_Fotos.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.810</Modified>
+      <Modified>2021-11-06T19:25:54.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.810</Modified>
+      <Modified>2021-11-06T19:25:54.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-11-01T12:56:09.810</Modified>
+      <Modified>2021-11-06T19:25:54.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -150,7 +150,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\EjercicioFinalLayouts\EjercicioFinalLayouts\bin\x86\Debug\Core\EjercicioFinalLayouts.exe">
       <PackagePath>EjercicioFinalLayouts.exe</PackagePath>
-      <Modified>2021-11-01T12:56:11.280</Modified>
+      <Modified>2021-11-06T19:25:55.888</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

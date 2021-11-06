@@ -25,7 +25,7 @@ namespace EjercicioFinalLayouts.ViewModels
         }
         #endregion
 
-        #region Metodos fundamentales
+        #region Metodos fundamentales(Propiedades)
         public Cita Cita
         {
             get { return cita; }

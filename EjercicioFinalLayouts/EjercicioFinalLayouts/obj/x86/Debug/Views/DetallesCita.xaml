@@ -9,16 +9,17 @@
 
     <ScrollViewer HorizontalScrollBarVisibility="Auto">
         <RelativePanel>
-            <NavigationView Loaded="NavigationView_Loaded" PaneDisplayMode="Top" IsBackEnabled="True" 
-                            BackRequested="NavigationView_BackRequested" ItemInvoked="NavigationView_ItemInvoked" 
+            <NavigationView x:ConnectionId='2'                                PaneDisplayMode="Top" IsBackEnabled="True" 
+                                                                                                                  
                             RelativePanel.AlignLeftWithPanel="True"  RelativePanel.AlignRightWithPanel="True">
                 <NavigationView.MenuItems>
                     <NavigationViewItem Content="Cita" Icon="Map"/>
                     <NavigationViewItem Content="Fotos" Icon="Camera"/>
                     <NavigationViewItem Content="Anotaciones" Icon="Edit"/>
                 </NavigationView.MenuItems>
-                <Frame x:Name="ContNavigationView"/>
+                <Frame x:ConnectionId='3' x:Name="ContNavigationView"/>
             </NavigationView>
         </RelativePanel>
     </ScrollViewer>
 </Page>
+

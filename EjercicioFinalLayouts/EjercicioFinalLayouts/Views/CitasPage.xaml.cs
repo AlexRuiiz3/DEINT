@@ -29,7 +29,8 @@ namespace EjercicioFinalLayouts.Views
         }
 
         /// <summary>
-        /// Evento asociado a un ItemClick
+        /// Evento click asociado a los elementos de un gridView, el cual se activara cuando se haga click en un elemento 
+        /// y llevara a la view detalles cita
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

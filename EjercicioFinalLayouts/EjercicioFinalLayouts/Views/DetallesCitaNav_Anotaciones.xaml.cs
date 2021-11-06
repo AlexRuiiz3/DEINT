@@ -30,7 +30,7 @@ namespace EjercicioFinalLayouts.Views
         }
 
         /// <summary>
-        /// Evento asociado a un boton
+        /// Evento asociado al boton enviar informe.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

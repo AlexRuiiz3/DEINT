@@ -166,7 +166,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
       <RootProperty Name="Content" />
       <RootProperty Name="Icon" />
-      <RootProperty Name="VerticalContentAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="EjercicioFinalLayouts.Views.DetallesCita" />
