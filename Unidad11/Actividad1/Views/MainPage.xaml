@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Actividad1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Actividad1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <ListView ItemsSource="{x:Bind Path=MainPageVM.ListadoPersonas} ">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Apellidos}" Margin="0,0,5,0"></TextBlock>
+                        <TextBlock Text="{Binding Edad}" Margin="0,0,5,0"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <AppBarButton Icon="Delete" Label="Eliminar" Click="{x:Bind Path=MainPageVM.button_EliminarPersona}"></AppBarButton>
+        
+    </StackPanel>
+</Page>
