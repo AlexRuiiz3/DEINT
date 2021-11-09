@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="Actividad1.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <ListView Name="ListView" ItemsSource="{x:Bind Path=MainPageVM.ListadoPersonas}">
+        <ListView x:ConnectionId='2' Name="ListView"                                                       >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -20,6 +20,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <AppBarButton Icon="Delete" Label="Eliminar" Tag="{Binding SelectedItem, ElementName=ListView}" Click="{x:Bind Path=MainPageVM.button_EliminarPersona}"></AppBarButton>
+        <AppBarButton x:ConnectionId='3' Icon="Delete" Label="Eliminar" Tag="{Binding SelectedItem, ElementName=ListView}"                                                        ></AppBarButton>
     </StackPanel>
 </Page>
+
