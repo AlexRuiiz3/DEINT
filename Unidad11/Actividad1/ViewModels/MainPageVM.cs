@@ -16,8 +16,11 @@ namespace Actividad1.ViewModels
     public class MainPageVM : clsVMBase
     {
         private ObservableCollection<ClsPersona> listadoPersonas = GestoraPersonas.obtenerPersonas();
-
+        private ClsPersona personaSeleccionada;
         public ObservableCollection<ClsPersona> ListadoPersonas { get { return listadoPersonas; } set { listadoPersonas = value; } }
+        
+        public ClsPersona PersonaSeleccionada { get { return personaSeleccionada; } set { personaSeleccionada = value; } }
+        
         /// <summary>
         /// 
         /// </summary>
@@ -26,13 +29,12 @@ namespace Actividad1.ViewModels
         public void button_EliminarPersona(object sender, RoutedEventArgs e)
         {
             bool eliminada = false;
-            ClsPersona persona = (ClsPersona)((AppBarButton)sender).Tag;
 
-            if (persona != null)
+            if (personaSeleccionada != null)
             {
                 for (int i = 0; i < listadoPersonas.Count && !eliminada; i++)
                 {
-                    if (persona.Equals(listadoPersonas.ElementAt(i)))
+                    if (personaSeleccionada.Equals(listadoPersonas.ElementAt(i)))
                     {
                         listadoPersonas.RemoveAt(i);
                         eliminada = true;

@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <ListView Name="ListView" ItemsSource="{x:Bind Path=MainPageVM.ListadoPersonas}">
+        <ListView Name="ListView" ItemsSource="{x:Bind Path=MainPageVM.ListadoPersonas}" SelectedItem="{x:Bind MainPageVM.PersonaSeleccionada,Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -20,6 +20,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <AppBarButton Icon="Delete" Label="Eliminar" Tag="{Binding SelectedItem, ElementName=ListView}" Click="{x:Bind Path=MainPageVM.button_EliminarPersona}"></AppBarButton>
+        <AppBarButton Icon="Delete" Label="Eliminar" Click="{x:Bind MainPageVM.button_EliminarPersona}"></AppBarButton>
     </StackPanel>
 </Page>

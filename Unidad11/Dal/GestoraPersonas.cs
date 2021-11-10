@@ -15,7 +15,7 @@ namespace Dal
             ObservableCollection<ClsPersona> listaPersonas = new ObservableCollection<ClsPersona>();
 
             listaPersonas.Add(new ClsPersona("Persona1","Apellido1",20));
-            listaPersonas.Add(new ClsPersona("Persona2", "Apellido2", 20));
+            listaPersonas.Add(new ClsPersona("Persona2", "Apellido21", 20));
             listaPersonas.Add(new ClsPersona("Persona3", "Apellido3", 20));
             listaPersonas.Add(new ClsPersona("Persona4", "Apellido4", 20));
             listaPersonas.Add(new ClsPersona("Persona5", "Apellido5", 20));

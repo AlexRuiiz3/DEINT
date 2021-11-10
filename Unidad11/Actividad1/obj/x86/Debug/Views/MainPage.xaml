@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <ListView x:ConnectionId='2' Name="ListView"                                                       >
+        <ListView x:ConnectionId='2' Name="ListView"                                                                                                                          >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -20,7 +20,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <AppBarButton x:ConnectionId='3' Icon="Delete" Label="Eliminar" Tag="{Binding SelectedItem, ElementName=ListView}"                                                        ></AppBarButton>
+        <AppBarButton x:ConnectionId='3' Icon="Delete" Label="Eliminar"                                                   ></AppBarButton>
     </StackPanel>
 </Page>
 

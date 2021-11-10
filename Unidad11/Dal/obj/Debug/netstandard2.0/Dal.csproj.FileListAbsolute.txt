@@ -8,7 +8,6 @@ C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.
 C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.AssemblyInfoInputs.cache
 C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.AssemblyInfo.cs
 C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.csproj.CoreCompileInputs.cache
-C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.csproj.CopyComplete
 C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.pdb
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad11\Dal\bin\Debug\netstandard2.0\Dal.deps.json
