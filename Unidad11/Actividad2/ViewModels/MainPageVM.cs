@@ -14,6 +14,7 @@ namespace Actividad2.ViewModels
 {
     public class MainPageVM : clsVMBase
     {
+        private String textBoxBuscar;
         private ObservableCollection<ClsPersona> listaPersonasOriginal;
         private ObservableCollection<ClsPersona> listaPersonasBuscadas;
         private DelegateCommand filtrarCommand;
@@ -35,10 +36,14 @@ namespace Actividad2.ViewModels
             }
         }
 
-        public String textBoxBuscar
+        public String TextBoxBuscar
         {
-            get { return ""; }
-            set { filtrarCommand.RaiseCanExecuteChanged(); }
+            get { return textBoxBuscar; }
+            set
+            {
+                textBoxBuscar = value;
+                filtrarCommand.RaiseCanExecuteChanged();
+            }
         }
 
         public DelegateCommand FiltrarCommand
@@ -48,19 +53,38 @@ namespace Actividad2.ViewModels
                 return filtrarCommand = new DelegateCommand(filtrarCommand_Executed, filtrarCommand_CanExecute);
             }
         }
-
+        /// <summary>
+        /// Cabecera:
+        /// Comentario:
+        /// </summary>
         private void filtrarCommand_Executed()
         {
 
-            ListaPersonas = new ObservableCollection<ClsPersona>(from p in listaPersonasOriginal
-                                                                 where p.Nombre.Contains("1") || p.Apellidos.Contains("1")
-                                                                 select p);
+                ListaPersonas = new ObservableCollection<ClsPersona>(from persona in listaPersonasOriginal
+                                                                     where persona.Nombre.Contains(textBoxBuscar) ||
+                                                                           persona.Apellidos.Contains(textBoxBuscar)
+                                                                     select persona);
+
+             
+            
+
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>bool texBoxBuscarLleno</returns>
         private bool filtrarCommand_CanExecute()
         {
-            bool algoEscrito = true;
+            bool texBoxBuscarLleno = true;
 
-            return algoEscrito;
+            if (String.IsNullOrEmpty(textBoxBuscar))
+            {
+                texBoxBuscarLleno = false;
+                ListaPersonas = listaPersonasOriginal;
+
+            }
+            return texBoxBuscarLleno;
         }
     }
 }

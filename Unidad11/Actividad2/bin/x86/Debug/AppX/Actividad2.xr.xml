@@ -6,6 +6,7 @@
     <RootPropertyPathName Name="Apellidos" />
     <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="FiltrarCommand" />
+    <RootPropertyPathName Name="TextBoxBuscar" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -36,6 +37,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -47,6 +49,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="MinWidth" />
       <RootProperty Name="MaxHeight" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />

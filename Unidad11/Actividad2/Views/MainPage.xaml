@@ -15,7 +15,7 @@
     
     <RelativePanel>
         <StackPanel Name="StackPanel" Orientation="Horizontal">
-            <TextBox MinWidth="250" MaxHeight="250"></TextBox>
+            <TextBox MinWidth="250" MaxHeight="250" Text="{Binding TextBoxBuscar,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <AppBarButton Icon="Find" Command="{Binding FiltrarCommand}"></AppBarButton>
         </StackPanel>
 
