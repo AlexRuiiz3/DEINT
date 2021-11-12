@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Actividad2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-12T10:04:07.546</Modified>
+      <Modified>2021-11-12T12:13:42.002</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Actividad2\bin\x86\Debug\Actividad2.exe">
       <PackagePath>entrypoint\Actividad2.exe</PackagePath>
-      <Modified>2021-11-12T10:04:07.199</Modified>
+      <Modified>2021-11-12T12:13:41.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -98,11 +98,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Actividad2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-12T10:04:07.153</Modified>
+      <Modified>2021-11-12T12:05:25.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Actividad2\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-11-12T10:04:07.153</Modified>
+      <Modified>2021-11-12T12:05:25.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Actividad2\bin\x86\Debug\Core\Actividad2.exe">
       <PackagePath>Actividad2.exe</PackagePath>
-      <Modified>2021-11-12T10:04:07.543</Modified>
+      <Modified>2021-11-12T12:13:42.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

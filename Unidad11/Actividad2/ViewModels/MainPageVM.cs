@@ -43,7 +43,12 @@ namespace Actividad2.ViewModels
             {
                 textBoxBuscar = value;
                 filtrarCommand.RaiseCanExecuteChanged();
-                
+
+                if (String.IsNullOrEmpty(textBoxBuscar))
+                {
+                    ListaPersonas = listaPersonasOriginal;
+
+                }
             }
         }
 
@@ -74,14 +79,7 @@ namespace Actividad2.ViewModels
         /// <returns>bool texBoxBuscarLleno</returns>
         private bool filtrarCommand_CanExecute()
         {
-            bool texBoxBuscarLleno = true;
-
-            if (String.IsNullOrEmpty(textBoxBuscar)) //Si en el contenido del textBox no ha nada
-            {
-                texBoxBuscarLleno = false;
-                ListaPersonas = listaPersonasOriginal;
-            }
-            return texBoxBuscarLleno;
+            return !String.IsNullOrEmpty(textBoxBuscar);
         }
     }
 }
