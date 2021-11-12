@@ -4,20 +4,21 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.UI.Xaml;
 using Entidades;
 using Dal;
-using Actividad2.ViewModels.Utilidades;
+using Actividad3.ViewModels.Utilidades;
 
-
-namespace Actividad2.ViewModels
+namespace Actividad3.ViewModels
 {
     public class MainPageVM : clsVMBase
     {
+
         private String textBoxBuscar;
         private ObservableCollection<ClsPersona> listaPersonasOriginal;
         private ObservableCollection<ClsPersona> listaPersonasBuscadas;
         private DelegateCommand filtrarCommand;
+        private DelegateCommand eleminarCommand;
+        private ClsPersona personaSeleccionada;
 
         //Constructor
         public MainPageVM()
@@ -43,7 +44,7 @@ namespace Actividad2.ViewModels
             {
                 textBoxBuscar = value;
                 filtrarCommand.RaiseCanExecuteChanged();
-                
+
             }
         }
 
@@ -83,5 +84,31 @@ namespace Actividad2.ViewModels
             }
             return texBoxBuscarLleno;
         }
+
+        public DelegateCommand EliminarCommand
+        {
+            get
+            {
+                return eleminarCommand = new DelegateCommand(eliminarCommand_Execute, eliminarCommand_CanExecute);
+            }
+        }
+
+
+        private void eliminarCommand_Execute()
+        {
+
+        }
+
+        private bool eliminarCommand_CanExecute()
+        {
+            bool hayPersona = false;
+
+            if (personaSeleccionada != null) {
+                hayPersona = true;
+            }
+
+            return hayPersona;
+        }
+
     }
 }

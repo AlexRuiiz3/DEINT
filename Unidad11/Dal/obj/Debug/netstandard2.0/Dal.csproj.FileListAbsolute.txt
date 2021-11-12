@@ -22,3 +22,4 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad11\Dal\obj\Debug\ne
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.csproj.CopyComplete
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Dal\obj\Debug\netstandard2.0\Dal.csproj.CopyComplete

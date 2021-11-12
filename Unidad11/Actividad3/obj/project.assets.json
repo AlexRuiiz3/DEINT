@@ -306,6 +306,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -791,6 +814,29 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     },
@@ -1279,6 +1325,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1766,6 +1835,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2251,6 +2343,29 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     },
@@ -2739,6 +2854,29 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3224,6 +3362,29 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     },
@@ -3711,6 +3872,29 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dal.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     }
@@ -8151,36 +8335,51 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "Dal/1.0.0": {
+      "type": "project",
+      "path": "../Dal/Dal.csproj",
+      "msbuildProject": "../Dal/Dal.csproj"
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
+      "Dal >= 1.0.0",
+      "Entidades >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AlexRuiz\\.nuget\\packages\\": {},
+    "C:\\Users\\aruiz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Actividad3\\Actividad3.csproj",
+      "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Actividad3\\Actividad3.csproj",
       "projectName": "Actividad3",
-      "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Actividad3\\Actividad3.csproj",
-      "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Actividad3\\obj\\",
+      "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Actividad3\\Actividad3.csproj",
+      "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Actividad3\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
@@ -8191,7 +8390,14 @@
       },
       "frameworks": {
         "uap10.0.17763": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Dal\\Dal.csproj"
+            },
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       }
     },

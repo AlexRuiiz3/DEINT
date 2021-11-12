@@ -8355,28 +8355,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AlexRuiz\\.nuget\\packages\\": {},
+    "C:\\Users\\aruiz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Actividad2\\Actividad2.csproj",
+      "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Actividad2\\Actividad2.csproj",
       "projectName": "Actividad2",
-      "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Actividad2\\Actividad2.csproj",
-      "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Actividad2\\obj\\",
+      "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Actividad2\\Actividad2.csproj",
+      "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Actividad2\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
@@ -8388,11 +8391,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Dal\\Dal.csproj": {
-              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Dal\\Dal.csproj"
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Dal\\Dal.csproj"
             },
-            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad11\\Entidades\\Entidades.csproj"
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad11\\Entidades\\Entidades.csproj"
             }
           }
         }
