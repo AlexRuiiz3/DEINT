@@ -12,24 +12,42 @@
     <Page.DataContext>
         <vm:MainPageVM/>
     </Page.DataContext>
-    
-    <RelativePanel>
-        <StackPanel Name="StackPanel" Orientation="Horizontal">
-            <TextBox MinWidth="250" MaxHeight="250" Text="{Binding TextBoxBuscar,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            <AppBarButton Icon="Find" Command="{Binding FiltrarCommand}"></AppBarButton>
-            <AppBarButton Icon="Delete" Command="{Binding FiltrarCommand}"></AppBarButton>
-        </StackPanel>
 
-        <ListView RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="StackPanel" RelativePanel.Below="StackPanel" ItemsSource="{Binding ListaPersonas,Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"></TextBlock>
-                        <TextBlock Text="{Binding Apellidos}" Margin="0,0,5,0"></TextBlock>
-                        <TextBlock Text="{Binding Edad}" Margin="0,0,5,0"></TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+    <RelativePanel>
+        <StackPanel>
+
+            <MenuBar>
+                <MenuBarItem Title="Editar Persona">
+                    <MenuFlyoutItem Text="Eliminar" Command="{Binding EliminarCommand}"/>
+                </MenuBarItem>
+            </MenuBar>
+            
+            <StackPanel Name="StackPanel" Orientation="Horizontal">
+                <TextBox MinWidth="250" MaxHeight="250" Text="{Binding TextBoxBuscar,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <AppBarButton Icon="Find" Command="{Binding FiltrarCommand}"></AppBarButton>
+                <AppBarButton Icon="Delete" Command="{Binding EliminarCommand}"></AppBarButton>
+            </StackPanel>
+
+            <ListView RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="StackPanel" RelativePanel.Below="StackPanel" 
+                  ItemsSource="{Binding ListaPersonas,Mode=TwoWay}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
+                  RightTapped="ListView_RightTapped">
+                <ListView.Resources>
+                    <MenuFlyout x:Name="MenuFlyoutListView">
+                        <MenuFlyoutItem Text="Eliminar" Command="{Binding EliminarCommand}"/>
+                    </MenuFlyout>
+                </ListView.Resources>
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"></TextBlock>
+                            <TextBlock Text="{Binding Apellidos}" Margin="0,0,5,0"></TextBlock>
+                            <TextBlock Text="{Binding Edad}" Margin="0,0,5,0"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackPanel>
     </RelativePanel>
 </Page>

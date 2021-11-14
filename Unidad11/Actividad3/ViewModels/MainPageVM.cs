@@ -12,7 +12,6 @@ namespace Actividad3.ViewModels
 {
     public class MainPageVM : clsVMBase
     {
-
         private String textBoxBuscar;
         private ObservableCollection<ClsPersona> listaPersonasOriginal;
         private ObservableCollection<ClsPersona> listaPersonasBuscadas;
@@ -25,6 +24,7 @@ namespace Actividad3.ViewModels
         {
             listaPersonasOriginal = GestoraPersonas.obtenerPersonas();
             listaPersonasBuscadas = listaPersonasOriginal;
+            eleminarCommand = new DelegateCommand(eliminarCommand_Execute, eliminarCommand_CanExecute);
         }
 
         public ObservableCollection<ClsPersona> ListaPersonas
@@ -44,7 +44,17 @@ namespace Actividad3.ViewModels
             {
                 textBoxBuscar = value;
                 filtrarCommand.RaiseCanExecuteChanged();
+            }
+        }
 
+        public ClsPersona PersonaSeleccionada
+        {
+
+            get { return personaSeleccionada; }
+            set
+            {
+                personaSeleccionada = value;
+                eleminarCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -61,12 +71,10 @@ namespace Actividad3.ViewModels
         /// </summary>
         private void filtrarCommand_Executed()
         {
-
             ListaPersonas = new ObservableCollection<ClsPersona>(from persona in listaPersonasOriginal
                                                                  where persona.Nombre.Contains(textBoxBuscar) ||
                                                                        persona.Apellidos.Contains(textBoxBuscar)
                                                                  select persona);
-
         }
 
         /// <summary>
@@ -89,25 +97,27 @@ namespace Actividad3.ViewModels
         {
             get
             {
-                return eleminarCommand = new DelegateCommand(eliminarCommand_Execute, eliminarCommand_CanExecute);
+                return eleminarCommand;
             }
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void eliminarCommand_Execute()
         {
-
+            int posicionPersona = listaPersonasBuscadas.IndexOf(personaSeleccionada);
+            listaPersonasBuscadas.RemoveAt(posicionPersona);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns> bool </returns>
         private bool eliminarCommand_CanExecute()
         {
-            bool hayPersona = false;
-
-            if (personaSeleccionada != null) {
-                hayPersona = true;
-            }
-
-            return hayPersona;
+            return (personaSeleccionada != null);
         }
 
     }

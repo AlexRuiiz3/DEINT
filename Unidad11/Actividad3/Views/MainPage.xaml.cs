@@ -26,5 +26,17 @@ namespace Actividad3
         {
             this.InitializeComponent();
         }
+
+        /// <summary>
+        /// Metodo que se encarga de hacer que se muestre el menu contextual que tiene asociado un ListView
+        /// al hacer click derecho en cualquier elemento del ListView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListView_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            ListView listView = (ListView) sender;
+            MenuFlyoutListView.ShowAt(listView,e.GetPosition(listView));
+        }
     }
 }
