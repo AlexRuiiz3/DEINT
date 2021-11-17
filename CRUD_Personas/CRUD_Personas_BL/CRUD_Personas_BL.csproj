@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CRUD_Personas_Dal\CRUD_Personas_Dal.csproj" />
+    <ProjectReference Include="..\CRUD_Personas_Entidades\CRUD_Personas_Entidades.csproj" />
+  </ItemGroup>
+
 </Project>

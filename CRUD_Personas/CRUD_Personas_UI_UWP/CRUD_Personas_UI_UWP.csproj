@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Utilidades\clsVMBase.cs" />
+    <Compile Include="ViewModels\Utilidades\DelegateCommand.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -156,7 +158,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="ViewModels\Utilidades\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRUD_Personas_BL\CRUD_Personas_BL.csproj">
+      <Project>{e7ebd4a5-2792-4cdb-8414-efe631ea7133}</Project>
+      <Name>CRUD_Personas_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRUD_Personas_Entidades\CRUD_Personas_Entidades.csproj">
+      <Project>{07b4c3db-1363-4bf9-a315-8a3a35efe49a}</Project>
+      <Name>CRUD_Personas_Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
