@@ -27,14 +27,9 @@ namespace Actividad3.ViewModels
             eleminarCommand = new DelegateCommand(eliminarCommand_Execute, eliminarCommand_CanExecute);
         }
 
-        public ObservableCollection<ClsPersona> ListaPersonas
+        public ObservableCollection<ClsPersona> ListaPersonasBuscadas
         {
             get { return listaPersonasBuscadas; }
-            set
-            {
-                listaPersonasBuscadas = value;
-                NotifyPropertyChanged("ListaPersonas");
-            }
         }
 
         public String TextBoxBuscar
@@ -71,10 +66,11 @@ namespace Actividad3.ViewModels
         /// </summary>
         private void filtrarCommand_Executed()
         {
-            ListaPersonas = new ObservableCollection<ClsPersona>(from persona in listaPersonasOriginal
-                                                                 where persona.Nombre.Contains(textBoxBuscar) ||
-                                                                       persona.Apellidos.Contains(textBoxBuscar)
+            listaPersonasBuscadas = new ObservableCollection<ClsPersona>(from persona in listaPersonasOriginal
+                                                                 where persona.Nombre.ToLower().Contains(textBoxBuscar) ||
+                                                                       persona.Apellidos.ToLower().Contains(textBoxBuscar)
                                                                  select persona);
+            NotifyPropertyChanged("ListaPersonasBuscadas");
         }
 
         /// <summary>
@@ -85,10 +81,11 @@ namespace Actividad3.ViewModels
         {
             bool texBoxBuscarLleno = true;
 
-            if (String.IsNullOrEmpty(textBoxBuscar)) //Si en el contenido del textBox no ha nada
+            if (String.IsNullOrEmpty(textBoxBuscar)) //Si en el contenido del textBox no hay nada
             {
                 texBoxBuscarLleno = false;
-                ListaPersonas = listaPersonasOriginal;
+                listaPersonasBuscadas = listaPersonasOriginal;
+                NotifyPropertyChanged("ListaPersonasBuscadas");
             }
             return texBoxBuscarLleno;
         }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="ListaPersonas" />
+    <RootPropertyPathName Name="ListaPersonasBuscadas" />
     <RootPropertyPathName Name="Edad" />
     <RootPropertyPathName Name="Apellidos" />
     <RootPropertyPathName Name="Nombre" />

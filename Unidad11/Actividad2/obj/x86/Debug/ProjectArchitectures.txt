@@ -1,1 +1,1 @@
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad11\Actividad2\Actividad2.csproj;x86
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad11\Actividad2\Actividad2.csproj;x86

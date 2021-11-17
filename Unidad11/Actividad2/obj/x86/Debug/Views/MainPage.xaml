@@ -19,7 +19,7 @@
             <AppBarButton Icon="Find" Command="{Binding FiltrarCommand}"></AppBarButton>
         </StackPanel>
 
-        <ListView RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="StackPanel" RelativePanel.Below="StackPanel" ItemsSource="{Binding ListaPersonas,Mode=TwoWay}">
+        <ListView RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="StackPanel" RelativePanel.Below="StackPanel" ItemsSource="{Binding ListaPersonasBuscadas,Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

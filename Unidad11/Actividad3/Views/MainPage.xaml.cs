@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Actividad3.ViewModels;
+using Entidades;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,6 +25,7 @@ namespace Actividad3
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -36,6 +40,11 @@ namespace Actividad3
         private void ListView_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
             ListView listView = (ListView) sender;
+            //Modificar la persona seleccionada del viewModel y que se vea reflejada en el listview
+            listView.SelectedItem = (ClsPersona) (e.OriginalSource as FrameworkElement).DataContext;
+
+            //FrameworkElement como objects pero hace referencia a que es un elemento de xaml 
+
             MenuFlyoutListView.ShowAt(listView,e.GetPosition(listView));
         }
     }

@@ -29,7 +29,7 @@
             </StackPanel>
 
             <ListView RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="StackPanel" RelativePanel.Below="StackPanel" 
-                  ItemsSource="{Binding ListaPersonas,Mode=TwoWay}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
+                  ItemsSource="{Binding ListaPersonasBuscadas,Mode=TwoWay}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
                   RightTapped="ListView_RightTapped">
                 <ListView.Resources>
                     <MenuFlyout x:Name="MenuFlyoutListView">

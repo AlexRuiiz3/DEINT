@@ -26,14 +26,14 @@ namespace Actividad2.ViewModels
             listaPersonasBuscadas = listaPersonasOriginal;
         }
 
-        public ObservableCollection<ClsPersona> ListaPersonas
+        public ObservableCollection<ClsPersona> ListaPersonasBuscadas
         {
             get { return listaPersonasBuscadas; }
-            set
-            {
+            /*set
+            { Mejor no poner set y notificar la propiedad privada cuando cambie
                 listaPersonasBuscadas = value;
-                NotifyPropertyChanged("ListaPersonas");
-            }
+                NotifyPropertyChanged("ListaPersonasBuscadas");
+            }*/
         }
 
         public String TextBoxBuscar
@@ -46,8 +46,8 @@ namespace Actividad2.ViewModels
 
                 if (String.IsNullOrEmpty(textBoxBuscar))
                 {
-                    ListaPersonas = listaPersonasOriginal;
-
+                    listaPersonasBuscadas = listaPersonasOriginal;
+                    NotifyPropertyChanged("ListaPersonasBuscadas");
                 }
             }
         }
@@ -66,11 +66,11 @@ namespace Actividad2.ViewModels
         private void filtrarCommand_Executed()
         {
 
-            ListaPersonas = new ObservableCollection<ClsPersona>(from persona in listaPersonasOriginal
-                                                                 where persona.Nombre.Contains(textBoxBuscar) ||
-                                                                       persona.Apellidos.Contains(textBoxBuscar)
+            listaPersonasBuscadas = new ObservableCollection<ClsPersona>(from persona in listaPersonasOriginal
+                                                                 where persona.Nombre.ToLower().Contains(textBoxBuscar) ||
+                                                                       persona.Apellidos.ToLower().Contains(textBoxBuscar)
                                                                  select persona);
-
+            NotifyPropertyChanged("ListaPersonasBuscadas");
         }
 
         /// <summary>
