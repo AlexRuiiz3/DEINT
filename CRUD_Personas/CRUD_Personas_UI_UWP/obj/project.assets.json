@@ -306,6 +306,43 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -791,6 +828,43 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         }
       }
     },
@@ -1279,6 +1353,43 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1766,6 +1877,43 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2251,6 +2399,43 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         }
       }
     },
@@ -2739,6 +2924,43 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3224,6 +3446,43 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         }
       }
     },
@@ -3711,6 +3970,43 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "CRUD_Personas_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Dal": "1.0.0",
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_BL.dll": {}
+        }
+      },
+      "CRUD_Personas_Dal/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "CRUD_Personas_Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Dal.dll": {}
+        }
+      },
+      "CRUD_Personas_Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         }
       }
     }
@@ -8151,10 +8447,27 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "CRUD_Personas_BL/1.0.0": {
+      "type": "project",
+      "path": "../CRUD_Personas_BL/CRUD_Personas_BL.csproj",
+      "msbuildProject": "../CRUD_Personas_BL/CRUD_Personas_BL.csproj"
+    },
+    "CRUD_Personas_Dal/1.0.0": {
+      "type": "project",
+      "path": "../CRUD_Personas_Dal/CRUD_Personas_Dal.csproj",
+      "msbuildProject": "../CRUD_Personas_Dal/CRUD_Personas_Dal.csproj"
+    },
+    "CRUD_Personas_Entidades/1.0.0": {
+      "type": "project",
+      "path": "../CRUD_Personas_Entidades/CRUD_Personas_Entidades.csproj",
+      "msbuildProject": "../CRUD_Personas_Entidades/CRUD_Personas_Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
+      "CRUD_Personas_BL >= 1.0.0",
+      "CRUD_Personas_Entidades >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12"
     ]
   },
@@ -8194,7 +8507,14 @@
       },
       "frameworks": {
         "uap10.0.17763": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_BL\\CRUD_Personas_BL.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_BL\\CRUD_Personas_BL.csproj"
+            },
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_Entidades\\CRUD_Personas_Entidades.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_Entidades\\CRUD_Personas_Entidades.csproj"
+            }
+          }
         }
       }
     },

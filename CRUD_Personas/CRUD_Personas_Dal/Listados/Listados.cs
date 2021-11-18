@@ -11,7 +11,7 @@ namespace CRUD_Personas_Dal
     public class Listados
     {
 
-        public static List<ClsPersona> obtenerPersonas()
+        public static List<ClsPersona> obtenerPersonasDAL()
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand sqlCommand;
@@ -32,7 +32,7 @@ namespace CRUD_Personas_Dal
                                                     sqlDataReader[2].ToString(),
                                                     sqlDataReader[3].ToString(),
                                                     sqlDataReader[4].ToString(),
-                                                    0,
+                                                    new byte[0],
                                                     sqlDataReader[6].ToString(),
                                                     sqlDataReader.GetInt16(7)));
             }

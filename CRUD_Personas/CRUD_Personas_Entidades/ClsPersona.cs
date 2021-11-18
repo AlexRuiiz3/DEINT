@@ -5,7 +5,6 @@ using System.Web;
 
 namespace CRUD_Personas_Entidades
 {
-    //[Table("Personas")]
     public class ClsPersona
     {
         public ClsPersona() {
@@ -14,20 +13,20 @@ namespace CRUD_Personas_Entidades
             Apellidos = "";
             Telefono = "";
             Direccion = "";
-            Foto = 0;
+            Foto = new byte[0];
             FechaNacimiento = "";
             IdDepartamento = 0;
         }
 
-        public ClsPersona(int id, string nombre, string apellidos, string telefono, string direccion, int foto, string fechaNacimiento, int idDepartamento) {
-            this.ID = id;
-            this.Nombre = nombre;
-            this.Apellidos = apellidos;
-            this.Telefono = telefono;
-            this.Direccion = direccion;
-            this.Foto = foto;
-            this.FechaNacimiento = fechaNacimiento;
-            this.IdDepartamento = idDepartamento;
+        public ClsPersona(int id, string nombre, string apellidos, string telefono, string direccion, byte[] foto, string fechaNacimiento, int idDepartamento) {
+            ID = id;
+            Nombre = nombre;
+            Apellidos = apellidos;
+            Telefono = telefono;
+            Direccion = direccion;
+            Foto = foto;
+            FechaNacimiento = fechaNacimiento;
+            IdDepartamento = idDepartamento;
         }
         
         public int ID { get; set; }
@@ -35,7 +34,7 @@ namespace CRUD_Personas_Entidades
         public string Apellidos { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
-        public int Foto { get; set; }
+        public byte[] Foto { get; set; }
         public string FechaNacimiento { get; set; }
         public int IdDepartamento { get; set; }
     }
