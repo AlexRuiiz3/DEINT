@@ -119,12 +119,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\NavigationViewPersonasVM.cs" />
     <Compile Include="ViewModels\Utilidades\clsVMBase.cs" />
     <Compile Include="ViewModels\Utilidades\DelegateCommand.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\NavigationViewDepartamentos.xaml.cs">
+      <DependentUpon>NavigationViewDepartamentos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationViewPersonas.xaml.cs">
+      <DependentUpon>NavigationViewPersonas.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -149,6 +156,14 @@
     <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NavigationViewDepartamentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NavigationViewPersonas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

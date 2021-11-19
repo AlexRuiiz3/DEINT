@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using CRUD_Personas_Dal.Conexion;
 
 
 namespace CRUD_Personas_Dal
@@ -13,32 +14,47 @@ namespace CRUD_Personas_Dal
 
         public static List<ClsPersona> obtenerPersonasDAL()
         {
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand sqlCommand;
-            SqlDataReader sqlDataReader;
             List<ClsPersona> listaPersonas = new List<ClsPersona>();
-
-            conexion.ConnectionString = "server=servidoralexbasedatos.database.windows.net;" +
-                                        "database=SistemaGestion;uid=saboresdelatierra;pwd=#Mitesoro;";
-            conexion.Open();
-
-            sqlCommand = new SqlCommand("SELECT * FROM Personas", conexion);
-            sqlDataReader = sqlCommand.ExecuteReader();
-
-            while (sqlDataReader.Read())
+            try
             {
-                listaPersonas.Add(new ClsPersona(sqlDataReader.GetInt16(0),
-                                                    sqlDataReader[1].ToString(),
-                                                    sqlDataReader[2].ToString(),
-                                                    sqlDataReader[3].ToString(),
-                                                    sqlDataReader[4].ToString(),
-                                                    new byte[0],
-                                                    sqlDataReader[6].ToString(),
-                                                    sqlDataReader.GetInt16(7)));
-            }
-            sqlDataReader.Close();
-            conexion.Close();
+                SqlConnection conexion = clsMyConnection.establecerConexion();
+                SqlCommand sqlCommand;
+                SqlDataReader sqlDataReader;
+                ClsPersona persona;
 
+                sqlCommand = new SqlCommand("SELECT * FROM Personas", conexion);
+
+                /* 
+                ClsPersona c = null;
+                SqlCommand sqlCommandEjemplo = new SqlCommand("UPDATE Personas SET Nombre = Prueba1 WHERE ID = @id AND Nombre = @nombre", conexion);
+                sqlCommandEjemplo.Parameters.Add("@id",System.Data.SqlDbType.Int).Value = c.ID;
+                sqlCommandEjemplo.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = c.Nombre;
+                */
+                sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    persona = new ClsPersona();
+                    persona.ID = sqlDataReader.GetInt16(0);
+                    persona.Nombre = sqlDataReader[1].ToString();
+                    persona.Apellidos = sqlDataReader[2].ToString();
+                    persona.Telefono = sqlDataReader[3].ToString();
+                    persona.Direccion = sqlDataReader[4].ToString();
+                    if (sqlDataReader.GetValue(5) != System.DBNull.Value) { 
+                        persona.Foto = (byte[])sqlDataReader.GetValue(5); 
+                    }
+                    persona.FechaNacimiento = sqlDataReader[6].ToString();
+
+                    persona.IdDepartamento = sqlDataReader.GetInt16(7);
+                    
+                    listaPersonas.Add(persona);
+                }
+                sqlDataReader.Close();
+                clsMyConnection.cerrarConexion(conexion);
+            }
+            catch (SqlException e) {
+                
+            }
             return listaPersonas;
         }
     }
