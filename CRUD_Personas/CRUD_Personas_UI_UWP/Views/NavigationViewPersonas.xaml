@@ -58,6 +58,6 @@
             <Image Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Source="{Binding Imagen}" MaxHeight="100" MaxWidth="100"></Image>
         </Grid>-->
 
-        <Image RelativePanel.RightOf="ListView" Loaded="{Binding holaAsync}" MaxHeight="100" MaxWidth="100"></Image>
+        <Image RelativePanel.RightOf="ListView" Source="{Binding Imagen}" MaxHeight="200" MaxWidth="200"></Image>
     </RelativePanel>
 </Page>

@@ -12,10 +12,11 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
+using CRUD_Personas_UI_UWP.ViewModels.Utilidades;
 
 namespace CRUD_Personas_UI_UWP.ViewModels
 {
-    public class NavigationViewPersonasVM 
+    public class NavigationViewPersonasVM
     {
 
         private List<ClsPersona> listaPersonas;
@@ -35,30 +36,24 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             get { return personaSeleccionada; }
             set { value = PersonaSeleccionada; }
         }
-        /*
-        public async ImageSource Imagen()
+        
+        public ImageSource Imagen
         {
             get {
-                //ImageSource imagen;
-                BitmapImage imagen2 = new BitmapImage(); ;
-                //if (personaSeleccionada != null && personaSeleccionada.Foto.Length > 0) {
-
-                BitmapImage image = new BitmapImage();
-                using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
-                {
-                    await stream.WriteAsync(bytes.AsBuffer());
-                    stream.Seek(0);
-                    await image.SetSourceAsync(stream);
-                }
-                return image;
+                return prepararImagenAsync().Result;
             }
-        }*/
-        public void holaAsync() {
-
-
+        }
+        private async Task<ImageSource> prepararImagenAsync() { 
             //if (personaSeleccionada != null && personaSeleccionada.Foto.Length > 0) {
 
-
+            using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+            { 
+                BitmapImage imagen = new BitmapImage();
+                await stream.WriteAsync(personaSeleccionada.Foto.AsBuffer());
+                stream.Seek(0);
+                imagen.SetSource(stream);
+                return imagen;
+            }
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>107-19</Machine>
-    <WindowsUser>aruiz</WindowsUser>
+    <Machine>ALEXRUIZ</Machine>
+    <WindowsUser>AlexRuiz</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>b6af61fe-0695-4713-b4f1-84f64fedbce2</PackageIdentityName>
     <PackageIdentityPublisher>CN=aruiz</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>67A3A30AE8E7814911C938FAB7D8A42199AA7DDE8AED0EA868C6AE1A62CC6F2A</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>546F3D6C5E359DEDAE20CDDCBEB57A753ED8CDFCF9338BE3AA76D2AFFC7ACF2F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>b6af61fe-0695-4713-b4f1-84f64fedbce2_1.0.0.0_x86__bddrey0yjgrxy</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>b6af61fe-0695-4713-b4f1-84f64fedbce2_bddrey0yjgrxy!App</RegisteredUserModeAppID>
     <RegisteredPackageID>b6af61fe-0695-4713-b4f1-84f64fedbce2</RegisteredPackageID>
@@ -27,106 +27,122 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-19T12:05:33.046</Modified>
+      <Modified>2021-11-21T21:08:58.099</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\CRUD_Personas_UI_UWP.exe">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\CRUD_Personas_UI_UWP.exe">
       <PackagePath>entrypoint\CRUD_Personas_UI_UWP.exe</PackagePath>
-      <Modified>2021-11-19T12:05:32.554</Modified>
+      <Modified>2021-11-21T21:08:57.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-04T23:15:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\bin\Debug\netstandard2.0\CRUD_Personas_BL.dll">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+      <PackagePath>System.Data.SqlClient.dll</PackagePath>
+      <Modified>2021-08-16T19:22:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+      <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
+      <Modified>2019-11-15T08:54:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2019-11-15T08:37:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+      <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
+      <Modified>2019-11-15T08:53:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_BL\bin\Debug\netstandard2.0\CRUD_Personas_BL.dll">
       <PackagePath>CRUD_Personas_BL.dll</PackagePath>
-      <Modified>2021-11-19T11:30:00.439</Modified>
+      <Modified>2021-11-21T19:41:45.929</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Entidades\bin\Debug\netstandard2.0\CRUD_Personas_Entidades.dll">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Entidades\bin\Debug\netstandard2.0\CRUD_Personas_Entidades.dll">
       <PackagePath>CRUD_Personas_Entidades.dll</PackagePath>
-      <Modified>2021-11-19T10:54:06.758</Modified>
+      <Modified>2021-11-21T19:41:45.206</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\bin\Debug\netstandard2.0\CRUD_Personas_Dal.dll">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_BL\bin\Debug\netstandard2.0\CRUD_Personas_Dal.dll">
       <PackagePath>CRUD_Personas_Dal.dll</PackagePath>
-      <Modified>2021-11-19T11:30:00.192</Modified>
+      <Modified>2021-11-21T19:41:45.571</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-11-17T12:30:23.811</Modified>
+      <Modified>2021-11-20T10:02:11.908</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-10-08T09:23:17.721</Modified>
+      <Modified>2021-11-20T10:02:11.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-08T09:23:17.723</Modified>
+      <Modified>2021-11-20T10:02:11.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-08T09:23:17.724</Modified>
+      <Modified>2021-11-20T10:02:11.904</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-08T09:23:17.724</Modified>
+      <Modified>2021-11-20T10:02:11.904</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-08T09:23:17.725</Modified>
+      <Modified>2021-11-20T10:02:11.905</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-08T09:23:17.725</Modified>
+      <Modified>2021-11-20T10:02:11.905</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-08T09:23:17.726</Modified>
+      <Modified>2021-11-20T10:02:11.905</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\CRUD_Personas_UI_UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\CRUD_Personas_UI_UWP.xr.xml">
       <PackagePath>CRUD_Personas_UI_UWP.xr.xml</PackagePath>
-      <Modified>2021-11-19T12:04:10.231</Modified>
+      <Modified>2021-11-21T20:49:09.274</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-19T12:05:32.492</Modified>
+      <Modified>2021-11-21T20:49:09.298</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Views\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-11-19T12:05:32.493</Modified>
+      <Modified>2021-11-21T20:49:09.299</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Views\NavigationViewDepartamentos.xbf">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Views\NavigationViewDepartamentos.xbf">
       <PackagePath>Views\NavigationViewDepartamentos.xbf</PackagePath>
-      <Modified>2021-11-19T12:05:32.493</Modified>
+      <Modified>2021-11-21T20:49:09.299</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Views\NavigationViewPersonas.xbf">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Views\NavigationViewPersonas.xbf">
       <PackagePath>Views\NavigationViewPersonas.xbf</PackagePath>
-      <Modified>2021-11-19T12:05:32.493</Modified>
+      <Modified>2021-11-21T21:08:57.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-19T12:05:32.679</Modified>
+      <Modified>2021-11-21T19:44:23.300</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Core\CRUD_Personas_UI_UWP.exe">
+    <AppxPackagedFile Include="C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\Core\CRUD_Personas_UI_UWP.exe">
       <PackagePath>CRUD_Personas_UI_UWP.exe</PackagePath>
-      <Modified>2021-11-19T12:05:33.044</Modified>
+      <Modified>2021-11-21T21:08:58.090</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
@@ -186,36 +202,36 @@
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>ARM64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
