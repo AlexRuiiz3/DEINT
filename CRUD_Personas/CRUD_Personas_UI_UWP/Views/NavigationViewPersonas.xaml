@@ -72,7 +72,7 @@
                     <TextBlock Text="Eliminar" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent">
+            <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent" Click="ButtonImage_Click">
                 <Image Source="{Binding Imagen,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxHeight="100" MaxWidth="100"></Image>
             </Button>
         </Grid>
