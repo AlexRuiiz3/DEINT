@@ -128,3 +128,12 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Person
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\System.Data.SqlClient.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\FxResources.System.Data.SqlClient.SR.resw
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\FxResources.System.Diagnostics.DiagnosticSource.SR.resw
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\resources.en-us.resfiles
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\resources.en-us.resfiles.intermediate

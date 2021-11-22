@@ -5,16 +5,19 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using CRUD_Personas_Dal.Conexion;
-
+using System.Collections.ObjectModel;
 
 namespace CRUD_Personas_Dal
 {
-    public class Listados
+    public class ListadosDAL
     {
-
-        public static List<ClsPersona> obtenerPersonasDAL()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>ObservableCollection<ClsPersona> listaPersonas</returns>
+        public static ObservableCollection<ClsPersona> obtenerPersonas()
         {
-            List<ClsPersona> listaPersonas = new List<ClsPersona>();
+            ObservableCollection<ClsPersona> listaPersonas = new ObservableCollection<ClsPersona>();
             try
             {
                 SqlConnection conexion = clsMyConnection.establecerConexion();
@@ -23,13 +26,6 @@ namespace CRUD_Personas_Dal
                 ClsPersona persona;
 
                 sqlCommand = new SqlCommand("SELECT * FROM Personas", conexion);
-
-                /* 
-                ClsPersona c = null;
-                SqlCommand sqlCommandEjemplo = new SqlCommand("UPDATE Personas SET Nombre = Prueba1 WHERE ID = @id AND Nombre = @nombre", conexion);
-                sqlCommandEjemplo.Parameters.Add("@id",System.Data.SqlDbType.Int).Value = c.ID;
-                sqlCommandEjemplo.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = c.Nombre;
-                */
                 sqlDataReader = sqlCommand.ExecuteReader();
 
                 while (sqlDataReader.Read())
@@ -52,8 +48,8 @@ namespace CRUD_Personas_Dal
                 sqlDataReader.Close();
                 clsMyConnection.cerrarConexion(conexion);
             }
-            catch (SqlException e) {
-                
+            catch (SqlException) {
+                throw;
             }
             return listaPersonas;
         }

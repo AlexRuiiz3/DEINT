@@ -7,17 +7,20 @@ using CRUD_Personas_Entidades;
 
 namespace CRUD_Personas_Dal.Gestora
 {
-    public class GestoraPersonas
+    public class GestoraPersonasDAL
     {
         /// <summary>
         /// 
         /// </summary>
         /// <param name="persona"></param>
-        public static void guardarPersona(ClsPersona persona) {
-            SqlConnection conexion = clsMyConnection.establecerConexion();
+        public static void guardarPersona(ClsPersona persona)
+        {
+            SqlConnection conexion;
+            SqlCommand command;
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO Personas VALUES (@Nombre,@Apellidos,@Telefono,@Direccion,@Foto,@FechaNacimiento,@IdDepartamento)");
+                conexion = clsMyConnection.establecerConexion();
+                command = new SqlCommand("INSERT INTO Personas VALUES (@Nombre,@Apellidos,@Telefono,@Direccion,@Foto,@FechaNacimiento,@IdDepartamento)");
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
                 command.Parameters.Add("@Apellidos", System.Data.SqlDbType.VarChar).Value = persona.Apellidos;
                 command.Parameters.Add("@Telefono", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
@@ -25,8 +28,11 @@ namespace CRUD_Personas_Dal.Gestora
                 command.Parameters.Add("@Foto", System.Data.SqlDbType.VarBinary).Value = persona.Foto;
                 command.Parameters.Add("@FechaNacimiento", System.Data.SqlDbType.Date).Value = persona.FechaNacimiento;
                 command.Parameters.Add("@IdDepartamento", System.Data.SqlDbType.Int).Value = persona.IdDepartamento;
+
+                clsMyConnection.cerrarConexion(conexion);
             }
-            catch (Exception) { 
+            catch (Exception)
+            {
                 throw;
             }
         }
@@ -36,21 +42,24 @@ namespace CRUD_Personas_Dal.Gestora
         /// </summary>
         /// <param name="idPersona"></param>
         /// <returns>bool eliminada</returns>
-        public static bool eliminarPersona(int idPersona)
+        public static int eliminarPersona(int idPersona)
         {
-            bool eliminada = false;
-            SqlConnection conexion = clsMyConnection.establecerConexion();
+            SqlConnection conexion;
+            SqlCommand command;
+            int eliminaciones = 0;
             try
             {
-                SqlCommand command = new SqlCommand("DELETE Personas WHERE ID = @id");
+                conexion = clsMyConnection.establecerConexion();
+                command = new SqlCommand("DELETE Personas WHERE ID = @id");
                 command.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = idPersona;
-                eliminada = command.ExecuteNonQuery() > 0;
+                eliminaciones = command.ExecuteNonQuery();
+                clsMyConnection.cerrarConexion(conexion);
             }
             catch (Exception)
             {
                 throw;
             }
-            return eliminada;
+            return eliminaciones;
         }
 
         /// <summary>
@@ -58,13 +67,15 @@ namespace CRUD_Personas_Dal.Gestora
         /// </summary>
         /// <param name="persona"></param>
         /// <returns>bool editada</returns>
-        public static bool editarPersona(ClsPersona persona)
+        public static int editarPersona(ClsPersona persona)
         {
-            bool editada = false;
-            SqlConnection conexion = clsMyConnection.establecerConexion();
+            SqlConnection conexion;
+            SqlCommand command;
+            int actualizaciones = 0;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE PERSONAS SET Nombre = @Nombre, Apellidos = @Apellidos, Telefono = @Telefono, " +
+                conexion = clsMyConnection.establecerConexion();
+                command = new SqlCommand("UPDATE PERSONAS SET Nombre = @Nombre, Apellidos = @Apellidos, Telefono = @Telefono, " +
                     "Direccion = @Direccion,Foto = @Foto, FechaNacimiento = @FechaNacimiento, IdDepartamento = @IdDepartamento WHERE ID = @Id");
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = persona.ID;
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
@@ -74,13 +85,14 @@ namespace CRUD_Personas_Dal.Gestora
                 command.Parameters.Add("@Foto", System.Data.SqlDbType.VarBinary).Value = persona.Foto;
                 command.Parameters.Add("@FechaNacimiento", System.Data.SqlDbType.Date).Value = persona.FechaNacimiento;
                 command.Parameters.Add("@IdDepartamento", System.Data.SqlDbType.Int).Value = persona.IdDepartamento;
-                editada = command.ExecuteNonQuery() > 0;
+                actualizaciones = command.ExecuteNonQuery();
+                clsMyConnection.cerrarConexion(conexion);
             }
             catch (Exception)
             {
                 throw;
             }
-            return editada;
+            return actualizaciones;
         }
     }
 }

@@ -11,4 +11,5 @@ CRUD_Personas_UI_UWP.xr.xml
 Views\MainPage.xbf
 Views\NavigationViewDepartamentos.xbf
 Views\NavigationViewPersonas.xbf
+Images\ImagenDefault.png
 Properties\Default.rd.xml

@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <NavigationView Loaded="NavigationView_Loaded" PaneDisplayMode="Top" ItemInvoked="NavigationView_ItemInvoked" >
+        <NavigationView RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" 
+                        PaneDisplayMode="Top" ItemInvoked="NavigationView_ItemInvoked" Loaded="NavigationView_Loaded">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Personas" Icon="Contact"/>
                 <NavigationViewItem Content="Departamento" Icon="Home"/>

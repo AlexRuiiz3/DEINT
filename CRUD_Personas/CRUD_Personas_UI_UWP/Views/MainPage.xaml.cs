@@ -27,10 +27,12 @@ namespace CRUD_Personas_UI_UWP
         public MainPage()
         {
             this.InitializeComponent();
-            Listados.obtenerPersonasBL();
-            
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             String contenido = args.InvokedItem as string;
@@ -39,9 +41,11 @@ namespace CRUD_Personas_UI_UWP
             {
                 switch (contenido)
                 {
-
                     case "Personas":
                         ContNavigationView.Navigate(typeof(NavigationViewPersonas));
+                        break;
+                    case "Departamentos":
+                        ContNavigationView.Navigate(typeof(NavigationViewDepartamentos));
                         break;
                 }
             }

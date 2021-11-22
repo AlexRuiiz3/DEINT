@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRUD_Personas_Dal.Gestora
+namespace CRUD_Personas_BL.Gestora
 {
-    class GestoraDepartamento
+    public class GestoraDepartamentoBL
     {
     }
 }

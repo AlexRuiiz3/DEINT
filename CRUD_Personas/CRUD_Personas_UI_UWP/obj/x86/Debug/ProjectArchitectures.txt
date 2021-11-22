@@ -1,1 +1,1 @@
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\CRUD_Personas_UI_UWP.csproj;x86
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\CRUD_Personas_UI_UWP.csproj;x86

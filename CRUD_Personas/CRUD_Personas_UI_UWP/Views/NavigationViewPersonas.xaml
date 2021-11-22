@@ -15,7 +15,8 @@
 
     <RelativePanel>
 
-        <ListView Name="ListView" ItemsSource="{Binding ListaPersonas}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
+        <ListView Name="ListView" ItemsSource="{Binding ListaPersonas}" 
+                  SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -25,9 +26,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-<!--
+
         <Grid RelativePanel.RightOf="ListView">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -40,24 +42,39 @@
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Nombre: "></TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding PersonaSeleccionada.Nombre}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,5" Text="Nombre: "></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Nombre}"></TextBlock>
 
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Apellidos: "></TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,5" Text="Apellidos: "></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBlock>
 
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Telefono: "></TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding PersonaSeleccionada.Telefono}"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,5" Text="Telefono: "></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Telefono}"></TextBlock>
 
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Direccion: "></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding PersonaSeleccionada.Direccion}"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,5" Text="Direccion: "></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Direccion}"></TextBlock>
 
-            <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha nacimiento: "></TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding PersonaSeleccionada.FechaNacimiento}"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,5" Text="Fecha nacimiento: "></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.FechaNacimiento}"></TextBlock>
 
-            <Image Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Source="{Binding Imagen}" MaxHeight="100" MaxWidth="100"></Image>
-        </Grid>-->
+            <Button Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" Background="Transparent"
+                    Command="{Binding EliminarCommand}">
+                <StackPanel>
+                    <SymbolIcon Symbol="Edit"></SymbolIcon>
+                    <TextBlock Text="Editar" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
 
-        <Image RelativePanel.RightOf="ListView" Source="{Binding Imagen}" MaxHeight="200" MaxWidth="200"></Image>
+            <Button Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" Background="Transparent"
+                    Command="{Binding EditarCommand}">
+                <StackPanel>
+                    <SymbolIcon Symbol="Delete"></SymbolIcon>
+                    <TextBlock Text="Eliminar" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent">
+                <Image Source="{Binding Imagen,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxHeight="100" MaxWidth="100"></Image>
+            </Button>
+        </Grid>
     </RelativePanel>
 </Page>

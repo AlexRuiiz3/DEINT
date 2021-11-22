@@ -2,9 +2,7 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\netstandard2.0\CRUD_Personas_Dal.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\netstandard2.0\CRUD_Personas_Dal.pdb
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\netstandard2.0\CRUD_Personas_Entidades.dll
-C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\netstandard2.0\CRUD_Personas_Entidades.pdb
-C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Debug\netstandard2.0\System.Data.SqlClient.xml
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.csproj.AssemblyReference.cache
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.AssemblyInfoInputs.cache
@@ -24,3 +22,4 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Person
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.csproj.CopyComplete
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.csproj.CopyComplete
