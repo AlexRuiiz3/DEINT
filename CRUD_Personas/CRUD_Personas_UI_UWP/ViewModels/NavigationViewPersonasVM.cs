@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using CRUD_Personas_UI_UWP.ViewModels.Utilidades;
-using CRUD_Personas_UI_UWP.Models;
 using System.Collections.ObjectModel;
 
 namespace CRUD_Personas_UI_UWP.ViewModels
@@ -23,7 +22,9 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private ObservableCollection<ClsPersona> listaPersonas;
         private ObservableCollection<ClsDepartamento> listaDepartamentos;
-        private ClsPersonaModel personaSeleccionada;
+        private ClsPersona personaSeleccionada;
+        private ImageSource imagenPersona;
+        private Visibility visibilidadTextBox;
         private DelegateCommand editarCommand;
         private DelegateCommand eliminarCommand;
 
@@ -31,6 +32,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             listaPersonas = ListadosBL.obtenerPersonas();
             personaSeleccionada = null;
+            visibilidadTextBox = Visibility.Collapsed;
         }
 
         public DelegateCommand EditarCommand
@@ -41,8 +43,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             }
         }
 
-        private void EditarCommand_Executed() { 
-        
+        private void EditarCommand_Executed() {
+            visibilidadTextBox = Visibility.Visible;
+            NotifyPropertyChanged("VisibilidadTextBox");
+
         }
 
         private bool EditarCommand_CanExecuted() {
@@ -73,55 +77,56 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             set { listaPersonas = value; }
         }
 
-        public ClsPersonaModel PersonaSeleccionada
+        public ClsPersona PersonaSeleccionada
         {
             get { return personaSeleccionada; }
             set
             {
                 ClsPersona persona = value;
-                ClsPersonaModel personaModel = new ClsPersonaModel(persona.Nombre,persona.Apellidos,persona.Direccion);
-                personaModel.NombreDepartamento = "Se llama a un metodo que lo obtenga";
-                personaSeleccionada = personaModel;
-                cambiarImagen();
+                //ClsPersonaModel personaModel = new ClsPersonaModel(persona.Nombre,persona.Apellidos,persona.Direccion);
+                //persona.NombreDepartamento = "Se llama a un metodo que lo obtenga";
+                personaSeleccionada = persona;
+                NotifyPropertyChanged("PersonaSeleccionada");
+
+                cambiarImagenAsync();
+
                 editarCommand.RaiseCanExecuteChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
-                NotifyPropertyChanged("PersonaSeleccionada");
+                
             }
         }
 
-        public ImageSource Imagen { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private void cambiarImagen()
-        {
-            ImageSource imagen = null;
-            if (personaSeleccionada != null && personaSeleccionada.Foto.Length > 0)
-            {
-                imagen = prepararImagenAsync().Result;
-            }
-            else
-            {
-                imagen = new BitmapImage(new Uri("ms-appx:/Images/ImagenDefault.png", UriKind.RelativeOrAbsolute));
-            }
-            Imagen = imagen;
-            NotifyPropertyChanged("Imagen");
-        }
+        public ImageSource Imagen { get { return imagenPersona; } }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        private async Task<ImageSource> prepararImagenAsync()
+        private async void cambiarImagenAsync()
         {
-            using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+            BitmapImage imagen;
+            if (personaSeleccionada != null && personaSeleccionada.Foto.Length > 0)
             {
-                BitmapImage imagen = new BitmapImage();
-                await stream.WriteAsync(personaSeleccionada.Foto.AsBuffer());
-                stream.Seek(0);
-                imagen.SetSource(stream);
-                return imagen;
+                using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+                {
+                    imagen = new BitmapImage();
+                    await stream.WriteAsync(personaSeleccionada.Foto.AsBuffer());
+                    stream.Seek(0);
+                    imagen.SetSource(stream);
+                }
+            }
+            else {
+                imagen = new BitmapImage(new Uri("ms-appx:/Images/ImagenDefault.png", UriKind.RelativeOrAbsolute));
+            }
+            imagenPersona = imagen;
+            NotifyPropertyChanged("Imagen");
+        }
+
+        public Visibility VisibilidadTextBox
+        {
+            get 
+            {
+                return visibilidadTextBox;
             }
         }
     }

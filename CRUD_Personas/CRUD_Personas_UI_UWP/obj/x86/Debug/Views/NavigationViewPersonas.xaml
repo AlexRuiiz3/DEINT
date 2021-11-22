@@ -15,7 +15,7 @@
 
     <RelativePanel>
 
-        <ListView Name="ListView" ItemsSource="{Binding ListaPersonas}" 
+        <ListView x:ConnectionId='2' Name="ListView" ItemsSource="{Binding ListaPersonas}" 
                   SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -72,9 +72,10 @@
                     <TextBlock Text="Eliminar" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent" Click="ButtonImage_Click">
+            <Button x:ConnectionId='3' Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent"                          >
                 <Image Source="{Binding Imagen,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxHeight="100" MaxWidth="100"></Image>
             </Button>
         </Grid>
     </RelativePanel>
 </Page>
+

@@ -2,14 +2,15 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Imagen" />
-    <RootPropertyPathName Name="EditarCommand" />
     <RootPropertyPathName Name="EliminarCommand" />
+    <RootPropertyPathName Name="EditarCommand" />
     <RootPropertyPathName Name="PersonaSeleccionada" />
     <RootPropertyPathName Name="FechaNacimiento" />
     <RootPropertyPathName Name="Direccion" />
     <RootPropertyPathName Name="Telefono" />
     <RootPropertyPathName Name="Apellidos" />
     <RootPropertyPathName Name="Nombre" />
+    <RootPropertyPathName Name="VisibilidadTextBox" />
     <RootPropertyPathName Name="ListaPersonas" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -68,6 +69,7 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
@@ -78,6 +80,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Command" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
