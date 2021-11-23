@@ -22,4 +22,3 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Person
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.csproj.CopyComplete
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.pdb
-C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Debug\netstandard2.0\CRUD_Personas_Dal.csproj.CopyComplete

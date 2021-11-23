@@ -17,5 +17,15 @@ namespace CRUD_Personas_BL.Listados
         {
             return ListadosDAL.obtenerPersonas();
         }
+
+        public static ObservableCollection<ClsDepartamento> obtenerDepartamentos()
+        {
+            return ListadosDAL.obtenerDepartamentos();
+        }
+
+        public static String obtenerNombreDepartamento(int idDepartamento)
+        {
+            return ListadosDAL.obtenerNombreDepartamento(idDepartamento);
+        }
     }
 }

@@ -10,6 +10,10 @@ namespace CRUD_Personas_Entidades
         public int ID { get; set; }
         public string Nombre { get; set; }
 
+        public ClsDepartamento() {
+            ID = 0;
+            Nombre = "";
+        }
         public ClsDepartamento(int id, string nombre) {
             ID = id;
             Nombre = nombre;

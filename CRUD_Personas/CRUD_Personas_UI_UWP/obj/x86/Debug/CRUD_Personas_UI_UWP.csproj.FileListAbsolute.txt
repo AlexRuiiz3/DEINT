@@ -137,3 +137,4 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\resources.en-us.resfiles
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\resources.en-us.resfiles.intermediate
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\CRUD_Personas_UI_UWP.csproj.CopyComplete

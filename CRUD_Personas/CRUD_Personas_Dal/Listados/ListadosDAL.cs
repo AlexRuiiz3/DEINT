@@ -53,5 +53,68 @@ namespace CRUD_Personas_Dal
             }
             return listaPersonas;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static ObservableCollection<ClsDepartamento> obtenerDepartamentos()
+        {
+            ObservableCollection<ClsDepartamento> listaDepartamentos = new ObservableCollection<ClsDepartamento>();
+            try
+            {
+                SqlConnection conexion = clsMyConnection.establecerConexion();
+                SqlCommand sqlCommand;
+                SqlDataReader sqlDataReader;
+                ClsDepartamento departamento;
+
+                sqlCommand = new SqlCommand("SELECT * FROM Departamentos", conexion);
+                sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    departamento = new ClsDepartamento();
+                    departamento.ID = sqlDataReader.GetInt16(0);
+                    departamento.Nombre = sqlDataReader[1].ToString();
+                    listaDepartamentos.Add(departamento);
+                }
+                sqlDataReader.Close();
+                clsMyConnection.cerrarConexion(conexion);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            return listaDepartamentos;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idDepartamento"></param>
+        /// <returns></returns>
+        public static String obtenerNombreDepartamento(int idDepartamento)
+        {
+            SqlConnection conexion;
+            SqlCommand command;
+            SqlDataReader dataReader;
+            string nombre = "";
+
+            try
+            {
+                conexion = clsMyConnection.establecerConexion();
+                command = new SqlCommand("SELECT Nombre FROM DEPARTAMENTOS WHERE ID = @Id",conexion);
+                command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = idDepartamento;
+                dataReader = command.ExecuteReader();
+                dataReader.Read();
+                nombre = dataReader.GetString(0);
+
+                dataReader.Close();
+                clsMyConnection.cerrarConexion(conexion);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            return nombre;
+        }
     }
 }

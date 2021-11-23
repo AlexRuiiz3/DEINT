@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using CRUD_Personas_UI_ASP.Data;
 
 namespace CRUD_Personas_UI_ASP
 {
@@ -23,6 +25,9 @@ namespace CRUD_Personas_UI_ASP
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<CRUD_Personas_UI_ASPContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("CRUD_Personas_UI_ASPContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +51,7 @@ namespace CRUD_Personas_UI_ASP
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=ClsPersonaDepartamentos}/{action=Index}/{id?}");
             });
         }
     }
