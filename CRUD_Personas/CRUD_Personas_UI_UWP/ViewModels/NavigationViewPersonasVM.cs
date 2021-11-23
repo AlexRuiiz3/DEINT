@@ -5,8 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
-using CRUD_Personas_BL.Listados;
-using CRUD_Personas_Entidades;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -14,27 +12,41 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using CRUD_Personas_UI_UWP.ViewModels.Utilidades;
 using System.Collections.ObjectModel;
+using CRUD_Personas_UI_UWP.Models;
+using CRUD_Personas_BL.Listados;
+using CRUD_Personas_BL.Gestora;
+using CRUD_Personas_Entidades;
 
 namespace CRUD_Personas_UI_UWP.ViewModels
 {
     public class NavigationViewPersonasVM : clsVMBase
     {
 
-        private ObservableCollection<ClsPersona> listaPersonas;
+        private ObservableCollection<ClsPersonaConDepartamento> listaPersonas;
         private ObservableCollection<ClsDepartamento> listaDepartamentos;
-        private ClsPersona personaSeleccionada;
+        private ClsPersonaConDepartamento personaSeleccionada;
         private ImageSource imagenPersona;
+        private Visibility visibilidadCampos;
         private Visibility visibilidadTextBox;
         private DelegateCommand editarCommand;
         private DelegateCommand eliminarCommand;
+        private DelegateCommand guardarCommand;
 
         public NavigationViewPersonasVM()
         {
-            listaPersonas = ListadosBL.obtenerPersonas();
+            List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
+            listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
+            foreach (ClsPersona persona in personasBL)
+            {
+                listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+            }
+            listaDepartamentos = new ObservableCollection<ClsDepartamento>(ListadosBL.obtenerDepartamentos());
             personaSeleccionada = null;
+            visibilidadCampos = Visibility.Visible;
             visibilidadTextBox = Visibility.Collapsed;
         }
-
+         #region Commands
+        //Command editar
         public DelegateCommand EditarCommand
         {
             get
@@ -42,17 +54,22 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecuted);
             }
         }
-
-        private void EditarCommand_Executed() {
+       
+        private void EditarCommand_Executed()
+        {
+            visibilidadCampos = Visibility.Collapsed;
+            NotifyPropertyChanged("VisibilidadCampos");
             visibilidadTextBox = Visibility.Visible;
             NotifyPropertyChanged("VisibilidadTextBox");
+            guardarCommand.RaiseCanExecuteChanged();
 
         }
 
-        private bool EditarCommand_CanExecuted() {
-            return personaSeleccionada!=null;
+        private bool EditarCommand_CanExecuted()
+        {
+            return personaSeleccionada != null;
         }
-
+        //Command eliminar
         public DelegateCommand EliminarCommand
         {
             get
@@ -68,31 +85,58 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private bool EliminarCommand_CanExecuted()
         {
-            return personaSeleccionada!=null;
+            return personaSeleccionada != null;
+        }
+        //Command guardar
+        public DelegateCommand GuardarCommand
+        {
+            get
+            {
+                return guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecuted);
+            }
         }
 
-        public ObservableCollection<ClsPersona> ListaPersonas
+        private void GuardarCommand_Executed()
+        {
+            if (GestoraPersonasBL.editarPersona(personaSeleccionada) > 0) {
+                visibilidadCampos = Visibility.Visible;
+                NotifyPropertyChanged("VisibilidadCampos");
+                visibilidadTextBox = Visibility.Collapsed;
+                NotifyPropertyChanged("VisibilidadTextBox");
+                guardarCommand.RaiseCanExecuteChanged();
+
+                List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
+                listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
+                foreach (ClsPersona persona in personasBL)
+                {
+                    listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                }
+            }
+        }
+
+        private bool GuardarCommand_CanExecuted()
+        {
+            return visibilidadTextBox == Visibility.Visible;
+        }
+        #endregion
+        public ObservableCollection<ClsPersonaConDepartamento> ListaPersonas
         {
             get { return listaPersonas; }
             set { listaPersonas = value; }
         }
 
-        public ClsPersona PersonaSeleccionada
+        public ClsPersonaConDepartamento PersonaSeleccionada
         {
             get { return personaSeleccionada; }
             set
             {
-                ClsPersona persona = value;
-                //ClsPersonaModel personaModel = new ClsPersonaModel(persona.Nombre,persona.Apellidos,persona.Direccion);
-                //persona.NombreDepartamento = "Se llama a un metodo que lo obtenga";
-                personaSeleccionada = persona;
+                personaSeleccionada = value;
                 NotifyPropertyChanged("PersonaSeleccionada");
 
                 cambiarImagenAsync();
 
                 editarCommand.RaiseCanExecuteChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
-                
             }
         }
 
@@ -115,7 +159,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                     imagen.SetSource(stream);
                 }
             }
-            else {
+            else
+            {
                 imagen = new BitmapImage(new Uri("ms-appx:/Images/ImagenDefault.png", UriKind.RelativeOrAbsolute));
             }
             imagenPersona = imagen;
@@ -124,10 +169,11 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         public Visibility VisibilidadTextBox
         {
-            get 
-            {
-                return visibilidadTextBox;
-            }
+            get { return visibilidadTextBox; }
+        }
+        public Visibility VisibilidadCampos
+        {
+            get { return visibilidadCampos; }
         }
     }
 }

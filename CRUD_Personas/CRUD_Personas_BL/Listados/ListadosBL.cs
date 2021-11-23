@@ -13,12 +13,12 @@ namespace CRUD_Personas_BL.Listados
         /// 
         /// </summary>
         /// <returns></returns>
-        public static ObservableCollection<ClsPersona> obtenerPersonas()
+        public static List<ClsPersona> obtenerPersonas()
         {
             return ListadosDAL.obtenerPersonas();
         }
 
-        public static ObservableCollection<ClsDepartamento> obtenerDepartamentos()
+        public static List<ClsDepartamento> obtenerDepartamentos()
         {
             return ListadosDAL.obtenerDepartamentos();
         }

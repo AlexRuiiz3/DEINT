@@ -14,10 +14,10 @@ namespace CRUD_Personas_Dal
         /// <summary>
         /// 
         /// </summary>
-        /// <returns>ObservableCollection<ClsPersona> listaPersonas</returns>
-        public static ObservableCollection<ClsPersona> obtenerPersonas()
+        /// <returns>List<ClsPersona> listaPersonas</returns>
+        public static List<ClsPersona> obtenerPersonas()
         {
-            ObservableCollection<ClsPersona> listaPersonas = new ObservableCollection<ClsPersona>();
+            List<ClsPersona> listaPersonas = new List<ClsPersona>();
             try
             {
                 SqlConnection conexion = clsMyConnection.establecerConexion();
@@ -28,22 +28,29 @@ namespace CRUD_Personas_Dal
                 sqlCommand = new SqlCommand("SELECT * FROM Personas", conexion);
                 sqlDataReader = sqlCommand.ExecuteReader();
 
-                while (sqlDataReader.Read())
+                if (sqlDataReader.HasRows)
                 {
-                    persona = new ClsPersona();
-                    persona.ID = sqlDataReader.GetInt16(0);
-                    persona.Nombre = sqlDataReader[1].ToString();
-                    persona.Apellidos = sqlDataReader[2].ToString();
-                    persona.Telefono = sqlDataReader[3].ToString();
-                    persona.Direccion = sqlDataReader[4].ToString();
-                    if (sqlDataReader.GetValue(5) != System.DBNull.Value) { 
-                        persona.Foto = (byte[])sqlDataReader.GetValue(5); 
-                    }
-                    persona.FechaNacimiento = sqlDataReader[6].ToString();
+                    while (sqlDataReader.Read())
+                    {
+                        persona = new ClsPersona();
+                        persona.ID = sqlDataReader.GetInt16(0);
+                        persona.Nombre = sqlDataReader[1].ToString();
+                        persona.Apellidos = sqlDataReader[2].ToString();
+                        persona.Telefono = sqlDataReader[3].ToString();
+                        persona.Direccion = sqlDataReader[4].ToString();
+                        if (sqlDataReader.GetValue(5) != System.DBNull.Value)
+                        {
+                            persona.Foto = (byte[])sqlDataReader.GetValue(5);
+                        }
+                        if (sqlDataReader.GetValue(6) != System.DBNull.Value)
+                        {
+                            persona.FechaNacimiento = sqlDataReader.GetDateTime(6);
+                        }
 
-                    persona.IdDepartamento = sqlDataReader.GetInt16(7);
-                    
-                    listaPersonas.Add(persona);
+                        persona.IdDepartamento = sqlDataReader.GetInt16(7);
+
+                        listaPersonas.Add(persona);
+                    }
                 }
                 sqlDataReader.Close();
                 clsMyConnection.cerrarConexion(conexion);
@@ -57,9 +64,9 @@ namespace CRUD_Personas_Dal
         /// 
         /// </summary>
         /// <returns></returns>
-        public static ObservableCollection<ClsDepartamento> obtenerDepartamentos()
+        public static List<ClsDepartamento> obtenerDepartamentos()
         {
-            ObservableCollection<ClsDepartamento> listaDepartamentos = new ObservableCollection<ClsDepartamento>();
+            List<ClsDepartamento> listaDepartamentos = new List<ClsDepartamento>();
             try
             {
                 SqlConnection conexion = clsMyConnection.establecerConexion();
@@ -70,12 +77,15 @@ namespace CRUD_Personas_Dal
                 sqlCommand = new SqlCommand("SELECT * FROM Departamentos", conexion);
                 sqlDataReader = sqlCommand.ExecuteReader();
 
-                while (sqlDataReader.Read())
+                if (sqlDataReader.HasRows)
                 {
-                    departamento = new ClsDepartamento();
-                    departamento.ID = sqlDataReader.GetInt16(0);
-                    departamento.Nombre = sqlDataReader[1].ToString();
-                    listaDepartamentos.Add(departamento);
+                    while (sqlDataReader.Read())
+                    {
+                        departamento = new ClsDepartamento();
+                        departamento.ID = sqlDataReader.GetInt16(0);
+                        departamento.Nombre = sqlDataReader[1].ToString();
+                        listaDepartamentos.Add(departamento);
+                    }
                 }
                 sqlDataReader.Close();
                 clsMyConnection.cerrarConexion(conexion);

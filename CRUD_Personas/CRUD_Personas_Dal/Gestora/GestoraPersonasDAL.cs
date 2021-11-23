@@ -70,13 +70,14 @@ namespace CRUD_Personas_Dal.Gestora
         public static int editarPersona(ClsPersona persona)
         {
             SqlConnection conexion;
-            SqlCommand command;
+            SqlCommand command = new SqlCommand();
             int actualizaciones = 0;
             try
             {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("UPDATE PERSONAS SET Nombre = @Nombre, Apellidos = @Apellidos, Telefono = @Telefono, " +
-                    "Direccion = @Direccion,Foto = @Foto, FechaNacimiento = @FechaNacimiento, IdDepartamento = @IdDepartamento WHERE ID = @Id");
+                command.Connection = conexion;
+                command.CommandText ="UPDATE PERSONAS SET Nombre = @Nombre, Apellidos = @Apellidos, Telefono = @Telefono, " +
+                    "Direccion = @Direccion,Foto = @Foto, FechaNacimiento = @FechaNacimiento, IdDepartamento = @IdDepartamento WHERE ID = @Id";
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = persona.ID;
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
                 command.Parameters.Add("@Apellidos", System.Data.SqlDbType.VarChar).Value = persona.Apellidos;

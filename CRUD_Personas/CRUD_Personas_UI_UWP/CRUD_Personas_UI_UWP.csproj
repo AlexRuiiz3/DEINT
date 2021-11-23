@@ -119,7 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ClsPersonaModel.cs" />
+    <Compile Include="Models\ClsPersonaConDepartamento.cs" />
     <Compile Include="ViewModels\NavigationViewPersonasVM.cs" />
     <Compile Include="ViewModels\Utilidades\clsVMBase.cs" />
     <Compile Include="ViewModels\Utilidades\DelegateCommand.cs" />

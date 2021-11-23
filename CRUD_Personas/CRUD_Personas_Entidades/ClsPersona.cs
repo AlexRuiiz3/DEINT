@@ -14,11 +14,11 @@ namespace CRUD_Personas_Entidades
             Telefono = "";
             Direccion = "";
             Foto = new byte[0];
-            FechaNacimiento = "";
+            FechaNacimiento = new DateTime();
             IdDepartamento = 0;
         }
 
-        public ClsPersona(int id, string nombre, string apellidos, string telefono, string direccion, byte[] foto, string fechaNacimiento, int idDepartamento) {
+        public ClsPersona(int id, string nombre, string apellidos, string telefono, string direccion, byte[] foto, DateTime fechaNacimiento, int idDepartamento) {
             ID = id;
             Nombre = nombre;
             Apellidos = apellidos;
@@ -35,7 +35,7 @@ namespace CRUD_Personas_Entidades
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public byte[] Foto { get; set; }
-        public string FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public int IdDepartamento { get; set; }
     }
 }
