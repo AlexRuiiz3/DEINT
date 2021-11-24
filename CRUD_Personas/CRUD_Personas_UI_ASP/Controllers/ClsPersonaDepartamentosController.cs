@@ -24,7 +24,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
         // GET: ClsPersonaDepartamentoes--ClsPersonaDepartamentos/Index
         public IActionResult Index()
         {
-            List<ClsPersonaDepartamento> listaPersonaDepartamentos = new List<ClsPersonaDepartamento>();
+            List<ClsPersona2> listaPersonas2 = new List<ClsPersona2>();
             try
             {
                 List<ClsPersona> listaPersonas = new List<ClsPersona>(ListadosBL.obtenerPersonas());
@@ -32,7 +32,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
                 for (int i = 0; i < listaPersonas.Count; i++)
                 {
                     persona = listaPersonas.ElementAt(i);
-                    listaPersonaDepartamentos.Add(new ClsPersonaDepartamento(persona,
+                    listaPersonas2.Add(new ClsPersona2(persona,
                                                   ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
                 }
             }
@@ -41,7 +41,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
                 return View("Error");
             }
 
-            return View(listaPersonaDepartamentos);
+            return View(listaPersonas2);
         }
 
         // GET: ClsPersonaDepartamentoes/Details/5
@@ -49,23 +49,19 @@ namespace CRUD_Personas_UI_ASP.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return View("Error");
             }
 
-            ClsPersonaDepartamento clsPersonaDepartamento = null;
+            ClsPersonaNombreDepartamento clsPersonaDepartamento = null;
             try
             {
-                var clsPersonas = (from persona in ListadosBL.obtenerPersonas()
-                                   where persona.ID == id
-                                   select persona);
+                var clsPersonas = from persona in ListadosBL.obtenerPersonas()
+                                  where persona.ID == (int)id
+                                  select persona;
 
-                clsPersonaDepartamento = new ClsPersonaDepartamento(clsPersonas.ElementAt(0), 
-                    ListadosBL.obtenerNombreDepartamento(clsPersonas.ElementAt(0).IdDepartamento));
+                clsPersonaDepartamento = new ClsPersonaNombreDepartamento(clsPersonas.ElementAt(0), ListadosBL.obtenerNombreDepartamento(clsPersonas.ElementAt(0).IdDepartamento));
             }
             catch (Exception)
-            {
-            }
-            if (clsPersonaDepartamento == null)
             {
                 return View("ViewNotFound");
             }
@@ -84,7 +80,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("NombreDepartamento,ID,Nombre,Apellidos,Telefono,Direccion,Foto,FechaNacimiento,IdDepartamento")] ClsPersonaDepartamento clsPersonaDepartamento)
+        public async Task<IActionResult> Create([Bind("NombreDepartamento,ID,Nombre,Apellidos,Telefono,Direccion,Foto,FechaNacimiento,IdDepartamento")] ClsPersonaDepartamentosEdit clsPersonaDepartamento)
         {
             if (ModelState.IsValid)
             {
@@ -96,19 +92,25 @@ namespace CRUD_Personas_UI_ASP.Controllers
         }
 
         // GET: ClsPersonaDepartamentoes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            var clsPersonaDepartamento = await _context.ClsPersonaDepartamento.FindAsync(id);
-            if (clsPersonaDepartamento == null)
+            ClsPersonaDepartamentosEdit clsPersonaDepartamentos = null;
+            try
             {
-                return NotFound();
+                var clsPersonas = from persona in ListadosBL.obtenerPersonas()
+                                  where persona.ID == (int)id
+                                  select persona;
+                clsPersonaDepartamentos = new ClsPersonaDepartamentosEdit(clsPersonas.ElementAt(0), ListadosBL.obtenerDepartamentos());
             }
-            return View(clsPersonaDepartamento);
+            catch (Exception)
+            {
+                return View("ViewNotFound");
+            }
+            return View(clsPersonaDepartamentos);
         }
 
         // POST: ClsPersonaDepartamentoes/Edit/5
@@ -116,7 +118,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("NombreDepartamento,ID,Nombre,Apellidos,Telefono,Direccion,Foto,FechaNacimiento,IdDepartamento")] ClsPersonaDepartamento clsPersonaDepartamento)
+        public async Task<IActionResult> Edit(int id, [Bind("NombreDepartamento,ID,Nombre,Apellidos,Telefono,Direccion,Foto,FechaNacimiento,IdDepartamento")] ClsPersonaDepartamentosEdit clsPersonaDepartamento)
         {
             if (id != clsPersonaDepartamento.ID)
             {

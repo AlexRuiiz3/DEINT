@@ -39,7 +39,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private DelegateCommand cambiarFotoCommand;
         private DelegateCommand detallesCommand;
 
-
         public NavigationViewPersonasVM()
         {
             try
@@ -259,6 +258,11 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             set { listaPersonas = value; }
         }
 
+        public ObservableCollection<ClsDepartamento> ListaDepartamentos
+        {
+            get { return listaDepartamentos; }
+            set { listaDepartamentos= value; }
+        }
         public ClsPersonaConDepartamento PersonaSeleccionada
         {
             get { return personaSeleccionada; }

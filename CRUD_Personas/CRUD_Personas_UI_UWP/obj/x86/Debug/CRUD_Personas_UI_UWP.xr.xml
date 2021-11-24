@@ -1,22 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="CambiarFotoCommand" />
     <RootPropertyPathName Name="Imagen" />
-    <RootPropertyPathName Name="VisibilidadTextBox" />
     <RootPropertyPathName Name="DetallesCommand" />
     <RootPropertyPathName Name="EliminarCommand" />
     <RootPropertyPathName Name="GuardarCommand" />
     <RootPropertyPathName Name="EditarCommand" />
+    <RootPropertyPathName Name="VisibilidadTextBox" />
+    <RootPropertyPathName Name="ListaDepartamentos" />
     <RootPropertyPathName Name="PersonaSeleccionada" />
     <RootPropertyPathName Name="NombreDepartamento" />
+    <RootPropertyPathName Name="VisibilidadCampos" />
+    <RootPropertyPathName Name="SelectedItem" />
     <RootPropertyPathName Name="FechaNacimiento" />
     <RootPropertyPathName Name="Direccion" />
-    <RootPropertyPathName Name="VisibilidadCampos" />
     <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Telefono" />
     <RootPropertyPathName Name="Apellidos" />
-    <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="CrearCommand" />
     <RootPropertyPathName Name="ListaPersonas" />
   </Roots.PropertyPathNames>
@@ -85,12 +87,18 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Text" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="PlaceholderText" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Command" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />

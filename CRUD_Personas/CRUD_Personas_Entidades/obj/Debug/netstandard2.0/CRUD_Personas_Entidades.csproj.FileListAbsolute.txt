@@ -16,4 +16,3 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Person
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Entidades\obj\Debug\netstandard2.0\CRUD_Personas_Entidades.csproj.CoreCompileInputs.cache
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Entidades\obj\Debug\netstandard2.0\CRUD_Personas_Entidades.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Entidades\obj\Debug\netstandard2.0\CRUD_Personas_Entidades.pdb
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_Entidades\obj\Debug\netstandard2.0\CRUD_Personas_Entidades.csproj.AssemblyReference.cache

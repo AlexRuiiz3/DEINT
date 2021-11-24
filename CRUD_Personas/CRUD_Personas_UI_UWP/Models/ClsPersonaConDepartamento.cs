@@ -14,6 +14,7 @@ namespace CRUD_Personas_UI_UWP.Models
             persona.IdDepartamento) {
             NombreDepartamento = nombreDepartamento;
         }
-        public string NombreDepartamento {get;set;}
+        public string NombreDepartamento {get;
+            set;}
     }
 }
