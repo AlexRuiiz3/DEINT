@@ -16,6 +16,10 @@ using CRUD_Personas_UI_UWP.Models;
 using CRUD_Personas_BL.Listados;
 using CRUD_Personas_BL.Gestora;
 using CRUD_Personas_Entidades;
+using Windows.Storage;
+using System.Drawing;
+using Windows.UI.Popups;
+using System.Data.SqlClient;
 
 namespace CRUD_Personas_UI_UWP.ViewModels
 {
@@ -28,24 +32,34 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private ImageSource imagenPersona;
         private Visibility visibilidadCampos;
         private Visibility visibilidadTextBox;
+        private DelegateCommand crearCommand;
         private DelegateCommand editarCommand;
         private DelegateCommand eliminarCommand;
         private DelegateCommand guardarCommand;
+        private DelegateCommand cambiarFotoCommand;
+        private DelegateCommand detallesCommand;
+
 
         public NavigationViewPersonasVM()
         {
-            List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
-            listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
-            foreach (ClsPersona persona in personasBL)
+            try
             {
-                listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
+                listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
+                foreach (ClsPersona persona in personasBL)
+                {
+                    listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                }
+                listaDepartamentos = new ObservableCollection<ClsDepartamento>(ListadosBL.obtenerDepartamentos());
             }
-            listaDepartamentos = new ObservableCollection<ClsDepartamento>(ListadosBL.obtenerDepartamentos());
+            catch (SqlException) {
+                mostrarMensajeError();
+            }
             personaSeleccionada = null;
             visibilidadCampos = Visibility.Visible;
             visibilidadTextBox = Visibility.Collapsed;
         }
-         #region Commands
+        #region Commands
         //Command editar
         public DelegateCommand EditarCommand
         {
@@ -54,15 +68,17 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecuted);
             }
         }
-       
+
         private void EditarCommand_Executed()
         {
             visibilidadCampos = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCampos");
             visibilidadTextBox = Visibility.Visible;
             NotifyPropertyChanged("VisibilidadTextBox");
-            guardarCommand.RaiseCanExecuteChanged();
 
+            guardarCommand.RaiseCanExecuteChanged();
+            cambiarFotoCommand.RaiseCanExecuteChanged();
+            detallesCommand.RaiseCanExecuteChanged();
         }
 
         private bool EditarCommand_CanExecuted()
@@ -98,19 +114,27 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private void GuardarCommand_Executed()
         {
-            if (GestoraPersonasBL.editarPersona(personaSeleccionada) > 0) {
-                visibilidadCampos = Visibility.Visible;
-                NotifyPropertyChanged("VisibilidadCampos");
-                visibilidadTextBox = Visibility.Collapsed;
-                NotifyPropertyChanged("VisibilidadTextBox");
-                guardarCommand.RaiseCanExecuteChanged();
-
-                List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
-                listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
-                foreach (ClsPersona persona in personasBL)
+            try
+            {
+                if (GestoraPersonasBL.editarPersona(personaSeleccionada) > 0)
                 {
-                    listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                    visibilidadCampos = Visibility.Visible;
+                    NotifyPropertyChanged("VisibilidadCampos");
+                    visibilidadTextBox = Visibility.Collapsed;
+                    NotifyPropertyChanged("VisibilidadTextBox");
+                    guardarCommand.RaiseCanExecuteChanged();
+                    cambiarFotoCommand.RaiseCanExecuteChanged();
+
+                    List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
+                    listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
+                    foreach (ClsPersona persona in personasBL)
+                    {
+                        listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                    }
                 }
+            }
+            catch (SqlException) {
+                mostrarMensajeError();
             }
         }
 
@@ -118,7 +142,117 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             return visibilidadTextBox == Visibility.Visible;
         }
+
+        //Command cambiarFoto
+        public DelegateCommand CambiarFotoCommand
+        {
+            get
+            {
+                return cambiarFotoCommand = new DelegateCommand(CambiarFotoCommand_Executed, CambiarFotoCommand_CanExecuted);
+            }
+        }
+
+        private async void CambiarFotoCommand_Executed()
+        {
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+
+            StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
+            {
+                BitmapImage imagen = new BitmapImage();
+
+                //Se cambia el atributo imagen(Que sera visto en la vista)
+                using (var randomAccessStream = await file.OpenAsync(FileAccessMode.Read))
+                {
+                    imagen.SetSource(randomAccessStream);
+                    imagenPersona = imagen;
+                    NotifyPropertyChanged("Imagen");
+                }
+
+                //Se guarda en la propiedad Foto de la persona seleccionada la foto(En array de byte)
+                using (var inputStream = await file.OpenSequentialReadAsync())
+                {
+                    var readStream = inputStream.AsStreamForRead();
+
+                    //Crea un array de bytes con el tamaño del stream de lectura.
+                    var byteArray = new byte[readStream.Length];
+
+                    //Lee la secuencia de bytes del readStream (creo?) y lo va guardando en el array byteArray definido arriba.
+                    await readStream.ReadAsync(byteArray, 0, byteArray.Length);
+
+                    personaSeleccionada.Foto = byteArray;
+                }
+            }
+        }
+
+        private bool CambiarFotoCommand_CanExecuted()
+        {
+            return visibilidadTextBox == Visibility.Visible;
+        }
+
+        //Command detalles
+        public DelegateCommand DetallesCommand
+        {
+            get
+            {
+                return detallesCommand = new DelegateCommand(DetallesCommand_Executed, DetallesCommand_CanExecuted);
+            }
+        }
+
+        private void DetallesCommand_Executed()
+        {
+            visibilidadCampos = Visibility.Visible;
+            NotifyPropertyChanged("VisibilidadCampos");
+            visibilidadTextBox = Visibility.Collapsed;
+            NotifyPropertyChanged("VisibilidadTextBox");
+            guardarCommand.RaiseCanExecuteChanged();
+            detallesCommand.RaiseCanExecuteChanged();
+            cambiarFotoCommand.RaiseCanExecuteChanged();
+        }
+
+        private bool DetallesCommand_CanExecuted()
+        {
+            return visibilidadTextBox == Visibility.Visible;
+        }
+
+        //Command crear
+        public DelegateCommand CrearCommand
+        {
+            get
+            {
+                return crearCommand = new DelegateCommand(CrearCommand_Executed, CrearCommand_CanExecuted);
+            }
+        }
+
+        private void CrearCommand_Executed()
+        {
+            personaSeleccionada = null;
+            cambiarImagenAsync();
+
+            NotifyPropertyChanged("PersonaSeleccionada");
+            visibilidadCampos = Visibility.Collapsed;
+            NotifyPropertyChanged("VisibilidadCampos");
+            visibilidadTextBox = Visibility.Visible;
+            NotifyPropertyChanged("VisibilidadTextBox");
+
+            editarCommand.RaiseCanExecuteChanged();
+            guardarCommand.RaiseCanExecuteChanged();
+            eliminarCommand.RaiseCanExecuteChanged();
+
+
+        }
+
+        private bool CrearCommand_CanExecuted()
+        {
+            return true;
+        }
         #endregion
+
         public ObservableCollection<ClsPersonaConDepartamento> ListaPersonas
         {
             get { return listaPersonas; }
@@ -135,8 +269,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
                 cambiarImagenAsync();
 
+                crearCommand.RaiseCanExecuteChanged();
                 editarCommand.RaiseCanExecuteChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
+
             }
         }
 
@@ -166,7 +302,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             imagenPersona = imagen;
             NotifyPropertyChanged("Imagen");
         }
-
         public Visibility VisibilidadTextBox
         {
             get { return visibilidadTextBox; }
@@ -175,5 +310,13 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             get { return visibilidadCampos; }
         }
+
+        private async void mostrarMensajeError() {
+
+            var dialog = new MessageDialog("¡--ERROR-- Ha ocurrido un error en el acceso a la base datos!");
+
+            await dialog.ShowAsync();
+        }
+
     }
 }

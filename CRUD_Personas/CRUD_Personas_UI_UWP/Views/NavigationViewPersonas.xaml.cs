@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,11 +26,6 @@ namespace CRUD_Personas_UI_UWP.Views
         public NavigationViewPersonas()
         {
             this.InitializeComponent();
-        }
-
-        private void ButtonImage_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

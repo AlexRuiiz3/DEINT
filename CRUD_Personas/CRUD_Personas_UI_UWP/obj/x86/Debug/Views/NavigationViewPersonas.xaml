@@ -15,19 +15,30 @@
 
     <RelativePanel>
 
-        <ListView x:ConnectionId='2' Name="ListView" ItemsSource="{Binding ListaPersonas}" 
+        <StackPanel>
+            <ListView x:ConnectionId='6' Name="ListView" ItemsSource="{Binding ListaPersonas}" 
                   SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"/>
-                        <TextBlock Text="{Binding Apellidos}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"/>
+                            <TextBlock Text="{Binding Apellidos}"/>
+                        </StackPanel>
 
-        <Grid RelativePanel.RightOf="ListView">
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button HorizontalAlignment="Center" Background="Transparent"
+                    Command="{Binding CrearCommand}">
+                <StackPanel>
+                    <SymbolIcon Symbol="Add"></SymbolIcon>
+                    <TextBlock Text="Añadir" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <Grid RelativePanel.AlignHorizontalCenterWithPanel="True">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -46,22 +57,26 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: "></TextBlock>
             <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxNombre}"></TextBlock>
-            <TextBox x:ConnectionId='3' Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            
+            <TextBox x:ConnectionId='2' Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Apellidos: "></TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxApellidos}"></TextBlock>
+            <TextBox x:ConnectionId='3' Name="TextBoxApellidos" Grid.Row="1" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,5" Text="Telefono: "></TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Telefono}"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxTelefono}"></TextBlock>
+            <TextBox x:ConnectionId='4' Name="TextBoxTelefono" Grid.Row="2" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,5" Text="Direccion: "></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Direccion}"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxDireccion}"></TextBlock>
+            <TextBox x:ConnectionId='5' Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" Text="Fecha nacimiento: "></TextBlock>
             <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.FechaNacimiento}"></TextBlock>
 
             <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,5" Text="Departamento: "></TextBlock>
             <TextBlock Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.NombreDepartamento}"></TextBlock>
+
 
             <Button Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" Background="Transparent"
                     Command="{Binding EditarCommand}">
@@ -72,6 +87,14 @@
             </Button>
 
             <Button Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" Background="Transparent"
+                    Command="{Binding GuardarCommand}">
+                <StackPanel>
+                    <SymbolIcon Symbol="Save"></SymbolIcon>
+                    <TextBlock Text="Guardar" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" Background="Transparent"
                     Command="{Binding EliminarCommand}">
                 <StackPanel>
                     <SymbolIcon Symbol="Delete"></SymbolIcon>
@@ -79,14 +102,17 @@
                 </StackPanel>
             </Button>
 
-            <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding GuardarCommand}">
+            <Button Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Visibility="{Binding VisibilidadTextBox}" Background="Transparent"
+                    Command="{Binding DetallesCommand}">
                 <StackPanel>
-                    <SymbolIcon Symbol="Save"></SymbolIcon>
-                    <TextBlock Text="Guardar" HorizontalAlignment="Center"></TextBlock>
+                    <SymbolIcon Symbol="Back"></SymbolIcon>
+                    <TextBlock Text="Atras" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:ConnectionId='4' Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent"                          >
+
+
+
+            <Button Grid.Row="0"  Grid.Column="2" Grid.RowSpan="3" Background="Transparent" Command="{Binding CambiarFotoCommand}">
                 <Image Source="{Binding Imagen,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxHeight="100" MaxWidth="100"></Image>
             </Button>
         </Grid>

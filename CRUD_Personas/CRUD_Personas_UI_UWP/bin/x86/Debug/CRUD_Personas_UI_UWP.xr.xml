@@ -1,20 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CambiarFotoCommand" />
     <RootPropertyPathName Name="Imagen" />
-    <RootPropertyPathName Name="GuardarCommand" />
+    <RootPropertyPathName Name="VisibilidadTextBox" />
+    <RootPropertyPathName Name="DetallesCommand" />
     <RootPropertyPathName Name="EliminarCommand" />
+    <RootPropertyPathName Name="GuardarCommand" />
     <RootPropertyPathName Name="EditarCommand" />
     <RootPropertyPathName Name="PersonaSeleccionada" />
     <RootPropertyPathName Name="NombreDepartamento" />
     <RootPropertyPathName Name="FechaNacimiento" />
     <RootPropertyPathName Name="Direccion" />
-    <RootPropertyPathName Name="Telefono" />
-    <RootPropertyPathName Name="Apellidos" />
-    <RootPropertyPathName Name="VisibilidadTextBox" />
-    <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="VisibilidadCampos" />
     <RootPropertyPathName Name="Text" />
+    <RootPropertyPathName Name="Telefono" />
+    <RootPropertyPathName Name="Apellidos" />
+    <RootPropertyPathName Name="Nombre" />
+    <RootPropertyPathName Name="CrearCommand" />
     <RootPropertyPathName Name="ListaPersonas" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -31,8 +34,8 @@
       <RootMethod Name="SetAlignRightWithPanel" />
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
-      <RootMethod Name="GetRightOf" />
-      <RootMethod Name="SetRightOf" />
+      <RootMethod Name="GetAlignHorizontalCenterWithPanel" />
+      <RootMethod Name="SetAlignHorizontalCenterWithPanel" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
       <RootProperty Name="PaneDisplayMode" />
@@ -55,18 +58,14 @@
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="CRUD_Personas_UI_UWP.Views.NavigationViewDepartamentos" />
     <RootType FullName="CRUD_Personas_UI_UWP.ViewModels.NavigationViewPersonasVM" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Name" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
-      <RootProperty Name="ItemTemplate" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -91,24 +90,26 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Command" />
       <RootProperty Name="Content" />
-      <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Source" />
-      <RootProperty Name="MaxHeight" />
-      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="ElementName" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Children" />
-      <RootProperty Name="Orientation" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="MaxHeight" />
+      <RootProperty Name="MaxWidth" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
       <RootProperty Name="Symbol" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />

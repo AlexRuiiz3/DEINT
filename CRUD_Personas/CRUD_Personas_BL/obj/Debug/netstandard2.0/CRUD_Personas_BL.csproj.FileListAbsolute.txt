@@ -10,7 +10,6 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\n
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\netstandard2.0\CRUD_Personas_BL.AssemblyInfoInputs.cache
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\netstandard2.0\CRUD_Personas_BL.AssemblyInfo.cs
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\netstandard2.0\CRUD_Personas_BL.csproj.CoreCompileInputs.cache
-C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\netstandard2.0\CRUD_Personas_BL.csproj.CopyComplete
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\netstandard2.0\CRUD_Personas_BL.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_BL\obj\Debug\netstandard2.0\CRUD_Personas_BL.pdb
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_BL\bin\Debug\netstandard2.0\CRUD_Personas_BL.deps.json
