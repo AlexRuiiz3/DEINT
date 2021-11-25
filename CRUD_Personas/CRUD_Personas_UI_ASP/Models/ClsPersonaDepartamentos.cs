@@ -6,14 +6,14 @@ using CRUD_Personas_Entidades;
 
 namespace CRUD_Personas_UI_ASP.Models
 {
-    public class ClsPersonaDepartamentosEdit : ClsPersona
+    public class ClsPersonaDepartamentos : ClsPersona
     {
-        public ClsPersonaDepartamentosEdit() : base()
+        public ClsPersonaDepartamentos() : base()
         {
             ListaDepartamentos = new List<ClsDepartamento>();
         }
 
-        public ClsPersonaDepartamentosEdit(ClsPersona persona, List<ClsDepartamento> listaDepartamentos) : base(persona.ID, persona.Nombre, persona.Apellidos, persona.Telefono, persona.Direccion, persona.Foto, persona.FechaNacimiento, persona.IdDepartamento)
+        public ClsPersonaDepartamentos(ClsPersona persona, List<ClsDepartamento> listaDepartamentos) : base(persona.ID, persona.Nombre, persona.Apellidos, persona.Telefono, persona.Direccion, persona.Foto, persona.FechaNacimiento, persona.IdDepartamento)
         {
             ListaDepartamentos = listaDepartamentos;
         }

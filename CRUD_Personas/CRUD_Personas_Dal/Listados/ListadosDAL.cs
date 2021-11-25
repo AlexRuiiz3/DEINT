@@ -55,7 +55,8 @@ namespace CRUD_Personas_Dal
                 sqlDataReader.Close();
                 clsMyConnection.cerrarConexion(conexion);
             }
-            catch (SqlException) {
+            catch (SqlException)
+            {
                 throw;
             }
             return listaPersonas;
@@ -111,7 +112,7 @@ namespace CRUD_Personas_Dal
             try
             {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("SELECT Nombre FROM DEPARTAMENTOS WHERE ID = @Id",conexion);
+                command = new SqlCommand("SELECT Nombre FROM DEPARTAMENTOS WHERE ID = @Id", conexion);
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = idDepartamento;
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
@@ -125,6 +126,55 @@ namespace CRUD_Personas_Dal
                 throw;
             }
             return nombre;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static ClsPersona obtenerPersona(int id)
+        {
+            ClsPersona persona = null;
+            try
+            {
+                SqlConnection conexion = clsMyConnection.establecerConexion();
+                SqlDataReader dataReader;
+                SqlCommand command;
+
+                command = new SqlCommand("SELECT * FROM Personas WHERE ID = @Id", conexion);
+                command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
+                dataReader = command.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    dataReader.Read();
+                    persona = new ClsPersona();
+                    persona.ID = dataReader.GetInt16(0);
+                    persona.Nombre = dataReader[1].ToString();
+                    persona.Apellidos = dataReader[2].ToString();
+                    persona.Telefono = dataReader[3].ToString();
+                    persona.Direccion = dataReader[4].ToString();
+                    if (dataReader.GetValue(5) != System.DBNull.Value)
+                    {
+                        persona.Foto = (byte[])dataReader.GetValue(5);
+                    }
+                    if (dataReader.GetValue(6) != System.DBNull.Value)
+                    {
+                        persona.FechaNacimiento = dataReader.GetDateTime(6);
+                    }
+
+                    persona.IdDepartamento = dataReader.GetInt16(7);
+
+                }
+                dataReader.Close();
+                clsMyConnection.cerrarConexion(conexion);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            return persona;
         }
     }
 }

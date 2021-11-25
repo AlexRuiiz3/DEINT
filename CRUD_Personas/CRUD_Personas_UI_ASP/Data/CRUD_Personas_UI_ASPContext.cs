@@ -14,6 +14,6 @@ namespace CRUD_Personas_UI_ASP.Data
         {
         }
 
-        public DbSet<ClsPersonaDepartamentosEdit> ClsPersonaDepartamento { get; set; }
+        public DbSet<ClsPersonaDepartamentos> ClsPersonaDepartamento { get; set; }
     }
 }

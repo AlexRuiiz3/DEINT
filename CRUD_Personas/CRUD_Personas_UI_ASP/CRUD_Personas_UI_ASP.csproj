@@ -18,4 +18,8 @@
     <ProjectReference Include="..\CRUD_Personas_Entidades\CRUD_Personas_Entidades.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
+
 </Project>

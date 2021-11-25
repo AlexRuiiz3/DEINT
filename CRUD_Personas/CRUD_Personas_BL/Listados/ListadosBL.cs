@@ -60,5 +60,18 @@ namespace CRUD_Personas_BL.Listados
             }
             return nombre;
         }
+        public static ClsPersona obtenerPersona(int id)
+        {
+            ClsPersona persona;
+            try
+            {
+                persona = ListadosDAL.obtenerPersona(id);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            return persona;
+        }
     }
 }
