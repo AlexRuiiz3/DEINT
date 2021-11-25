@@ -13,10 +13,10 @@ namespace CRUD_Personas_BL.Gestora
         /// 
         /// </summary>
         /// <param name="persona"></param>
-        public static void guardarPersona(ClsPersona persona) {
+        public static void anhadirPersona(ClsPersona persona) {
             try
             {
-                GestoraPersonasDAL.guardarPersona(persona);
+                GestoraPersonasDAL.anhadirPersona(persona);
             }
             catch (SqlException)
             {

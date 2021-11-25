@@ -16,7 +16,7 @@
     <RelativePanel>
 
         <StackPanel>
-            <ListView Name="ListView" ItemsSource="{Binding ListaPersonas}" 
+            <ListView x:ConnectionId='7' Name="ListView" ItemsSource="{Binding ListaPersonas}" 
                   SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -58,19 +58,19 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: "></TextBlock>
             <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxNombre}"></TextBlock>
-            <TextBox Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='2' Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Apellidos: "></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxApellidos}"></TextBlock>
-            <TextBox Name="TextBoxApellidos" Grid.Row="1" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='3' Name="TextBoxApellidos" Grid.Row="1" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,5" Text="Telefono: "></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxTelefono}"></TextBlock>
-            <TextBox Name="TextBoxTelefono" Grid.Row="2" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='4' Name="TextBoxTelefono" Grid.Row="2" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,5" Text="Direccion: "></TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding Text,ElementName=TextBoxDireccion}"></TextBlock>
-            <TextBox Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='5' Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" Text="Fecha nacimiento: "></TextBlock>
             <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
@@ -78,7 +78,7 @@
             <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,5" Text="Departamento: "></TextBlock>
             <TextBlock Grid.Row="5" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" 
                        VerticalAlignment="Center"  Text="{Binding PersonaSeleccionada.NombreDepartamento}"></TextBlock>
-            <ComboBox Grid.Row="5" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadTextBox}" 
+            <ComboBox x:ConnectionId='6' Grid.Row="5" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadTextBox}" 
                       DisplayMemberPath="Nombre" 
                       ItemsSource="{Binding ListaDepartamentos}"
                       SelectedItem="{Binding DepartamentoSeleccionado,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
@@ -125,3 +125,4 @@
         </Grid>
     </RelativePanel>
 </Page>
+

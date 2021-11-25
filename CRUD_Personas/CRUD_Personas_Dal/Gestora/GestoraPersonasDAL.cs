@@ -13,14 +13,14 @@ namespace CRUD_Personas_Dal.Gestora
         /// 
         /// </summary>
         /// <param name="persona"></param>
-        public static void guardarPersona(ClsPersona persona)
+        public static void anhadirPersona(ClsPersona persona)
         {
             SqlConnection conexion;
             SqlCommand command;
             try
             {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("INSERT INTO Personas VALUES (@Nombre,@Apellidos,@Telefono,@Direccion,@Foto,@FechaNacimiento,@IdDepartamento)");
+                command = new SqlCommand("INSERT INTO Personas VALUES (@Nombre,@Apellidos,@Telefono,@Direccion,@Foto,@FechaNacimiento,@IdDepartamento)", conexion);
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
                 command.Parameters.Add("@Apellidos", System.Data.SqlDbType.VarChar).Value = persona.Apellidos;
                 command.Parameters.Add("@Telefono", System.Data.SqlDbType.VarChar).Value = persona.Telefono;
@@ -28,6 +28,7 @@ namespace CRUD_Personas_Dal.Gestora
                 command.Parameters.Add("@Foto", System.Data.SqlDbType.VarBinary).Value = persona.Foto;
                 command.Parameters.Add("@FechaNacimiento", System.Data.SqlDbType.Date).Value = persona.FechaNacimiento;
                 command.Parameters.Add("@IdDepartamento", System.Data.SqlDbType.Int).Value = persona.IdDepartamento;
+                command.ExecuteNonQuery();
 
                 clsMyConnection.cerrarConexion(conexion);
             }
@@ -50,7 +51,7 @@ namespace CRUD_Personas_Dal.Gestora
             try
             {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("DELETE Personas WHERE ID = @id");
+                command = new SqlCommand("DELETE Personas WHERE ID = @id", conexion);
                 command.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = idPersona;
                 eliminaciones = command.ExecuteNonQuery();
                 clsMyConnection.cerrarConexion(conexion);
@@ -75,9 +76,8 @@ namespace CRUD_Personas_Dal.Gestora
             try
             {
                 conexion = clsMyConnection.establecerConexion();
-                command.Connection = conexion;
-                command.CommandText ="UPDATE PERSONAS SET Nombre = @Nombre, Apellidos = @Apellidos, Telefono = @Telefono, " +
-                    "Direccion = @Direccion,Foto = @Foto, FechaNacimiento = @FechaNacimiento, IdDepartamento = @IdDepartamento WHERE ID = @Id";
+                command = new SqlCommand("UPDATE PERSONAS SET Nombre = @Nombre, Apellidos = @Apellidos, Telefono = @Telefono, " +
+                    "Direccion = @Direccion,Foto = @Foto, FechaNacimiento = @FechaNacimiento, IdDepartamento = @IdDepartamento WHERE ID = @Id", conexion);
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = persona.ID;
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
                 command.Parameters.Add("@Apellidos", System.Data.SqlDbType.VarChar).Value = persona.Apellidos;

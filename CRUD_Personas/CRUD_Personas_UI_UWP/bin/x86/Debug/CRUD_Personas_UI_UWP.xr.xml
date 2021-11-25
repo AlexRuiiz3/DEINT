@@ -4,16 +4,17 @@
     <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="CambiarFotoCommand" />
     <RootPropertyPathName Name="Imagen" />
-    <RootPropertyPathName Name="DetallesCommand" />
+    <RootPropertyPathName Name="VisibilidadCamposResultados" />
+    <RootPropertyPathName Name="AtrasCommand" />
     <RootPropertyPathName Name="EliminarCommand" />
     <RootPropertyPathName Name="GuardarCommand" />
     <RootPropertyPathName Name="EditarCommand" />
     <RootPropertyPathName Name="VisibilidadTextBox" />
     <RootPropertyPathName Name="ListaDepartamentos" />
+    <RootPropertyPathName Name="DepartamentoSeleccionado" />
     <RootPropertyPathName Name="PersonaSeleccionada" />
     <RootPropertyPathName Name="NombreDepartamento" />
     <RootPropertyPathName Name="VisibilidadCampos" />
-    <RootPropertyPathName Name="SelectedItem" />
     <RootPropertyPathName Name="FechaNacimiento" />
     <RootPropertyPathName Name="Direccion" />
     <RootPropertyPathName Name="Text" />
@@ -80,6 +81,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
@@ -92,6 +94,7 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
