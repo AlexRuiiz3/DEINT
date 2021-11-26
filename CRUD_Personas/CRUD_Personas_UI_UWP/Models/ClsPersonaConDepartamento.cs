@@ -18,6 +18,13 @@ namespace CRUD_Personas_UI_UWP.Models
             persona.IdDepartamento) {
             NombreDepartamento = nombreDepartamento;
         }
+
+        public ClsPersonaConDepartamento(ClsPersonaConDepartamento persona) : base(persona.ID, persona.
+            Nombre, persona.Apellidos, persona.Telefono, persona.Direccion, persona.Foto, persona.FechaNacimiento,
+            persona.IdDepartamento)
+        {
+            NombreDepartamento = persona.NombreDepartamento;
+        }
         public string NombreDepartamento {get;
             set;}
     }

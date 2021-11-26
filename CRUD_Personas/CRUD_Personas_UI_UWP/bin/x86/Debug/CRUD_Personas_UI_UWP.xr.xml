@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Nombre" />
+    <RootPropertyPathName Name="ID" />
     <RootPropertyPathName Name="CambiarFotoCommand" />
     <RootPropertyPathName Name="Imagen" />
     <RootPropertyPathName Name="VisibilidadCamposResultados" />
@@ -11,17 +11,17 @@
     <RootPropertyPathName Name="EditarCommand" />
     <RootPropertyPathName Name="VisibilidadTextBox" />
     <RootPropertyPathName Name="ListaDepartamentos" />
-    <RootPropertyPathName Name="DepartamentoSeleccionado" />
     <RootPropertyPathName Name="PersonaSeleccionada" />
-    <RootPropertyPathName Name="NombreDepartamento" />
+    <RootPropertyPathName Name="IdDepartamento" />
+    <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="VisibilidadCampos" />
+    <RootPropertyPathName Name="NombreDepartamento" />
     <RootPropertyPathName Name="FechaNacimiento" />
     <RootPropertyPathName Name="Direccion" />
-    <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Telefono" />
     <RootPropertyPathName Name="Apellidos" />
-    <RootPropertyPathName Name="CrearCommand" />
     <RootPropertyPathName Name="ListaPersonas" />
+    <RootPropertyPathName Name="CrearCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -92,10 +92,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
-      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="SelectedValuePath" />
+      <RootProperty Name="SelectedValue" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="HorizontalAlignment" />
@@ -106,7 +106,6 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -116,14 +115,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
       <RootProperty Name="Symbol" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="CRUD_Personas_UI_UWP.Views.NavigationViewPersonas" />
   </Roots.RootTypes>
