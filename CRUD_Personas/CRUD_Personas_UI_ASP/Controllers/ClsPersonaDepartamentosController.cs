@@ -9,6 +9,7 @@ using CRUD_Personas_UI_ASP.Data;
 using CRUD_Personas_UI_ASP.Models;
 using CRUD_Personas_BL.Listados;
 using CRUD_Personas_Entidades;
+using Microsoft.AspNetCore.Http;
 
 namespace CRUD_Personas_UI_ASP.Controllers
 {
@@ -76,6 +77,8 @@ namespace CRUD_Personas_UI_ASP.Controllers
             try
             {
                 clsPersonaDepartamentos.ListaDepartamentos = ListadosBL.obtenerDepartamentos();
+                ClsDepartamento a = null;
+                int b = a.ID;
             }
             catch (Exception)
             {
@@ -124,16 +127,21 @@ namespace CRUD_Personas_UI_ASP.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id,ClsPersonaDepartamentos clsPersonaDepartamento)
+        public IActionResult Edit(ClsPersonaDepartamentos clsPersonaDepartamento,IFormFile imagen)
         {
-            clsPersonaDepartamento.ListaDepartamentos = ListadosBL.obtenerDepartamentos();
-            if (id != clsPersonaDepartamento.ID)
-            {
-                return NotFound();
+            IActionResult action = null;
+            try {
+                ClsPersonaDepartamentos prueba = clsPersonaDepartamento;
+                /*int a = 0;
+
+                cuando sea la edicion correcta poner redirecToAction("Index");*/
+                action = View(); //Mejor con rediretoAction va al action en este caso Index, asi el action index se encarga ya de preparar la view
+            }
+            catch (Exception) {
+                action = View("ViewNotFound");
             }
 
-            return View(clsPersonaDepartamento);
+            return action;
         }
 
         // GET: ClsPersonaDepartamentoes/Delete/5

@@ -38,11 +38,11 @@ namespace CRUD_Personas_Dal
                         persona.Apellidos = sqlDataReader[2].ToString();
                         persona.Telefono = sqlDataReader[3].ToString();
                         persona.Direccion = sqlDataReader[4].ToString();
-                        if (sqlDataReader.GetValue(5) != System.DBNull.Value)
+                        if (sqlDataReader.GetValue(5) != DBNull.Value)
                         {
                             persona.Foto = (byte[])sqlDataReader.GetValue(5);
                         }
-                        if (sqlDataReader.GetValue(6) != System.DBNull.Value)
+                        if (sqlDataReader.GetValue(6) != DBNull.Value)
                         {
                             persona.FechaNacimiento = sqlDataReader.GetDateTime(6);
                         }
