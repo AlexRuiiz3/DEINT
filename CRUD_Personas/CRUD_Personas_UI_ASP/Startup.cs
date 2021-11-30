@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using CRUD_Personas_UI_ASP.Data;
 
 namespace CRUD_Personas_UI_ASP
 {
@@ -26,8 +25,7 @@ namespace CRUD_Personas_UI_ASP
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<CRUD_Personas_UI_ASPContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("CRUD_Personas_UI_ASPContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

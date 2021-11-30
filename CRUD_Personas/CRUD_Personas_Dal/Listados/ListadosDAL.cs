@@ -12,7 +12,13 @@ namespace CRUD_Personas_Dal
     public class ListadosDAL
     {
         /// <summary>
-        /// 
+        /// Cabecera: public static List<ClsPersona> obtenerPersonas()
+        /// Comentario: Este metodo se encarga de obtener todas las personas que hay en la tabla Persona de una base de datos.
+        /// Entradas: Ninguna
+        /// Salidas: List<ClsPersona> listaPersonas 
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra una lista con las personas que hay en una base de datos, si no hay ninguna persona o se produce 
+        ///                  alguna excepcion, se devolvera una lista con 0 elementos.
         /// </summary>
         /// <returns>List<ClsPersona> listaPersonas</returns>
         public static List<ClsPersona> obtenerPersonas()
@@ -28,7 +34,7 @@ namespace CRUD_Personas_Dal
                 sqlCommand = new SqlCommand("SELECT * FROM Personas", conexion);
                 sqlDataReader = sqlCommand.ExecuteReader();
 
-                if (sqlDataReader.HasRows)
+                if (sqlDataReader.HasRows) //Si hay filas 
                 {
                     while (sqlDataReader.Read())
                     {
@@ -62,9 +68,15 @@ namespace CRUD_Personas_Dal
             return listaPersonas;
         }
         /// <summary>
-        /// 
+        /// Cabecera: public static List<ClsDepartamento> obtenerDepartamentos()
+        /// Comentario: Este metodo se encarga de obtener todas los departamentos que hay en la tabla Departamentos de una base de datos.
+        /// Entradas: Ninguna
+        /// Salidas: List<ClsDepartamento> listaDepartamentos 
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra una lista con los departamentos que hay en una base de datos, si no hay ningun departamento o se produce 
+        ///                  alguna excepcion, se devolvera una lista con 0 elemenetos.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List<ClsDepartamento> listaDepartamentos </returns>
         public static List<ClsDepartamento> obtenerDepartamentos()
         {
             List<ClsDepartamento> listaDepartamentos = new List<ClsDepartamento>();
@@ -78,7 +90,7 @@ namespace CRUD_Personas_Dal
                 sqlCommand = new SqlCommand("SELECT * FROM Departamentos", conexion);
                 sqlDataReader = sqlCommand.ExecuteReader();
 
-                if (sqlDataReader.HasRows)
+                if (sqlDataReader.HasRows) //Si hay filas 
                 {
                     while (sqlDataReader.Read())
                     {
@@ -98,11 +110,17 @@ namespace CRUD_Personas_Dal
             return listaDepartamentos;
         }
         /// <summary>
-        /// 
+        /// Cabecera: public static String obtenerNombreDepartamento(int idDepartamento)
+        /// Comentario: Este metodo se encarga de obtener el nombre que tiene asociado un departamento apartir de su id, que se encuentra en la tabla Departamento en una base de datos.
+        /// Entradas: int id
+        /// Salidas: string nombre
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra una cadena que contendra el nombre que tiene un departamento, si el id que se recibe no corresponde con ningun departamento o se produce alguna 
+        ///                  excepcion, el valor de la cadena devuelta sera vacio.
         /// </summary>
-        /// <param name="idDepartamento"></param>
-        /// <returns></returns>
-        public static String obtenerNombreDepartamento(int idDepartamento)
+        /// <param name="id"></param>
+        /// <returns>string nombre</returns>
+        public static String obtenerNombreDepartamento(int id)
         {
             SqlConnection conexion;
             SqlCommand command;
@@ -113,7 +131,7 @@ namespace CRUD_Personas_Dal
             {
                 conexion = clsMyConnection.establecerConexion();
                 command = new SqlCommand("SELECT Nombre FROM DEPARTAMENTOS WHERE ID = @Id", conexion);
-                command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = idDepartamento;
+                command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
                 nombre = dataReader.GetString(0);
@@ -129,10 +147,16 @@ namespace CRUD_Personas_Dal
         }
 
         /// <summary>
-        /// 
+        /// Cabecera: public static ClsPersona obtenerPersona(int id)
+        /// Comentario: Este metodo se encarga de obtener de la tabla Persona de una base de datos, una persona determinada apartir del id.
+        /// Entradas: int id
+        /// Salidas: ClsPersona persona
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra objeto ClsPersona que sera una persona en especifico, si el id que se recibe no corresponde con ninguna persona o se produce alguna
+        ///                  excepcion, el valor del objeto ClsPersona sera null
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>ClsPersona persona</returns>
         public static ClsPersona obtenerPersona(int id)
         {
             ClsPersona persona = null;

@@ -44,13 +44,12 @@
                 <br />
                 <div class="form-group">
                     <label asp-for="Foto" class="control-label"></label>
-                    <input asp-for="Foto" class="form-control" />
-                    <span asp-validation-for="Foto" class="text-danger"></span>
+                    <input type="file" name="imagen" class="form-control" asp-for="Foto" accept=".png, .jpg">
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="FechaNacimiento" class="control-label"></label>
-                    <input asp-for="FechaNacimiento" class="form-control" />
+                    <input asp-for="FechaNacimiento" value="@DateTime.Now" class="form-control" />
                     <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
                 </div>
                 <br />

@@ -5,36 +5,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using CRUD_Personas_UI_ASP.Data;
 using CRUD_Personas_UI_ASP.Models;
 using CRUD_Personas_BL.Listados;
 using CRUD_Personas_Entidades;
+using CRUD_Personas_BL.Gestora;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace CRUD_Personas_UI_ASP.Controllers
 {
     public class ClsPersonaDepartamentosController : Controller
     {
-        private readonly CRUD_Personas_UI_ASPContext _context;
-
-        public ClsPersonaDepartamentosController(CRUD_Personas_UI_ASPContext context)
-        {
-            _context = context;
-        }
-
-        // GET: ClsPersonaDepartamentoes--ClsPersonaDepartamentos/Index
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             List<ClsPersonaSimplificada> listaClsPersonaSimplificada = new List<ClsPersonaSimplificada>();
             try
             {
-                List<ClsPersona> listaPersonas = new List<ClsPersona>(ListadosBL.obtenerPersonas());
+                List<ClsPersona> listaPersonas = ListadosBL.obtenerPersonas();
+                List<ClsDepartamento> listaDepartamentos = ListadosBL.obtenerDepartamentos();
                 ClsPersona persona;
                 for (int i = 0; i < listaPersonas.Count; i++)
                 {
                     persona = listaPersonas.ElementAt(i);
+
                     listaClsPersonaSimplificada.Add(new ClsPersonaSimplificada(persona,
-                                                  ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                                                  obtenerNombreDepartamento(listaDepartamentos,persona.IdDepartamento)));
                 }
             }
             catch (Exception)
@@ -45,14 +44,26 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return View(listaClsPersonaSimplificada);
         }
 
-        // GET: ClsPersonaDepartamentoes/Details/5
-        public IActionResult Details(int? id)
-        {
-            if (id == null)
+        private string obtenerNombreDepartamento(List<ClsDepartamento> listaDepartamentos,int id) {
+            string nombre = "";
+
+            for (int i = 0; i < listaDepartamentos.Count && nombre == ""; i++)
             {
-                return View("ViewNotFound");
+                if (listaDepartamentos.ElementAt(i).ID == id) {
+                    nombre = listaDepartamentos.ElementAt(i).Nombre;
+                }
             }
 
+            return nombre;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult Details(int id)
+        {
             ClsPersonaNombreDepartamento clsPersonaDepartamento = null;
             try
             {
@@ -77,8 +88,6 @@ namespace CRUD_Personas_UI_ASP.Controllers
             try
             {
                 clsPersonaDepartamentos.ListaDepartamentos = ListadosBL.obtenerDepartamentos();
-                ClsDepartamento a = null;
-                int b = a.ID;
             }
             catch (Exception)
             {
@@ -88,24 +97,31 @@ namespace CRUD_Personas_UI_ASP.Controllers
 
             return View(clsPersonaDepartamentos);
         }
-
-        // POST: ClsPersonaDepartamentoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="clsPersonaDepartamento"></param>
+        /// <returns></returns>
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("NombreDepartamento,ID,Nombre,Apellidos,Telefono,Direccion,Foto,FechaNacimiento,IdDepartamento")] ClsPersonaDepartamentos clsPersonaDepartamento)
+        [ActionName("Create")]
+        public IActionResult CreatePost(ClsPersonaDepartamentos personaDepartamentos)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(clsPersonaDepartamento);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            IActionResult action = null;
+            try {
+                GestoraPersonasBL.anhadirPersona(personaDepartamentos);
+                action = RedirectToAction("Index");
             }
-            return View(clsPersonaDepartamento);
+            catch (Exception) {
+                action = View("ViewNotFound");
+            }
+            return action;
         }
 
-        // GET: ClsPersonaDepartamentoes/Edit/5
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IActionResult Edit(int id)
         {
 
@@ -123,33 +139,46 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return View(clsPersonaDepartamentos);
         }
 
-        // POST: ClsPersonaDepartamentoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="clsPersonaDepartamento"></param>
+        /// <param name="imagen"></param>
+        /// <returns></returns>
         [HttpPost]
-        public IActionResult Edit(ClsPersonaDepartamentos clsPersonaDepartamento,IFormFile imagen)
+        public IActionResult Edit(ClsPersonaDepartamentos clsPersonaDepartamento)
         {
             IActionResult action = null;
-            try {
-                ClsPersonaDepartamentos prueba = clsPersonaDepartamento;
-                /*int a = 0;
+            int numActualizaciones;
 
-                cuando sea la edicion correcta poner redirecToAction("Index");*/
-                action = View(); //Mejor con rediretoAction va al action en este caso Index, asi el action index se encarga ya de preparar la view
+            try
+            {
+                numActualizaciones = GestoraPersonasBL.editarPersona(clsPersonaDepartamento);
+                if (numActualizaciones > 0)
+                {
+                    ViewBag.NumActualiazciones = numActualizaciones;
+                    action = RedirectToAction("Index");
+                }
             }
-            catch (Exception) {
-                action = View("ViewNotFound");
+            catch (Exception)
+            {
+                throw;
             }
 
             return action;
         }
 
-        // GET: ClsPersonaDepartamentoes/Delete/5
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IActionResult Delete(int? id)
         {
+            IActionResult action = null;
             if (id == null)
             {
-                return View("ViewNotFound");
+                action = View("ViewNotFound");
             }
 
             ClsPersonaNombreDepartamento clsPersonaDepartamento = null;
@@ -160,13 +189,14 @@ namespace CRUD_Personas_UI_ASP.Controllers
                                   select persona;
 
                 clsPersonaDepartamento = new ClsPersonaNombreDepartamento(clsPersonas.ElementAt(0), ListadosBL.obtenerNombreDepartamento(clsPersonas.ElementAt(0).IdDepartamento));
+                action = View(clsPersonaDepartamento);
             }
             catch (Exception)
             {
-                return View("ViewNotFound");
+                action = View("ViewNotFound");
             }
 
-            return View(clsPersonaDepartamento);
+            return action;
         }
 
         // POST: ClsPersonaDepartamentoes/Delete/5
@@ -177,9 +207,22 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ClsPersonaDepartamentoExists(int id)
+        public IActionResult CambiosRealizados()
         {
-            return _context.ClsPersonaDepartamento.Any(e => e.ID == id);
+            ClsPersonaDepartamentos clsPersonaDepartamentos = new ClsPersonaDepartamentos();
+            try
+            {
+                clsPersonaDepartamentos.ListaDepartamentos = ListadosBL.obtenerDepartamentos();
+                ClsDepartamento a = null;
+                int b = a.ID;
+            }
+            catch (Exception)
+            {
+                return View("ViewNotFound");
+            }
+
+
+            return View(clsPersonaDepartamentos);
         }
     }
 }
