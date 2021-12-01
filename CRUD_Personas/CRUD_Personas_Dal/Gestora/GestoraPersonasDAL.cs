@@ -115,7 +115,6 @@ namespace CRUD_Personas_Dal.Gestora
                 else {
                     command.Parameters.Add("@Foto", System.Data.SqlDbType.VarBinary).Value = DBNull.Value;
                 }
-
                 command.Parameters.Add("@FechaNacimiento", System.Data.SqlDbType.Date).Value = persona.FechaNacimiento;
                 command.Parameters.Add("@IdDepartamento", System.Data.SqlDbType.Int).Value = persona.IdDepartamento;
                 actualizaciones = command.ExecuteNonQuery();

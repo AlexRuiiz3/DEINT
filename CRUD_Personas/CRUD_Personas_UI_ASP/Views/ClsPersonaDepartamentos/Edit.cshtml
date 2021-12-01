@@ -18,7 +18,7 @@
     <hr />
     <div class="row">
         <div class="col-md-4">
-            <form asp-action="Edit">
+            <form asp-action="Edit" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="ID" />
                 <div class="form-group">
@@ -47,7 +47,7 @@
                     var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 
                     <div class="form-group">
-                        <label asp-for="Foto" class="control-label"></label>
+                        <label asp-for="Foto" class="control-label" ></label>
                         <img src="@imgSrc" wight width="80" height="80" />
                         <input type="file" name="imagen"class="form-control" accept=".png, .jpg">
                     </div>

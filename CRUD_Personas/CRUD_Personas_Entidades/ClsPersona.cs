@@ -14,7 +14,7 @@ namespace CRUD_Personas_Entidades
             Telefono = "";
             Direccion = "";
             Foto = new byte[0];
-            FechaNacimiento = new DateTime();
+            FechaNacimiento = DateTime.Now;
             IdDepartamento = 0;
         }
 

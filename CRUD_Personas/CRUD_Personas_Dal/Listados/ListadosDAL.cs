@@ -48,7 +48,7 @@ namespace CRUD_Personas_Dal
                         {
                             persona.Foto = (byte[])sqlDataReader.GetValue(5);
                         }
-                        if (sqlDataReader.GetValue(6) != DBNull.Value)
+                        if (sqlDataReader.GetValue(6) != DBNull.Value)//En el caso de que la persona tenga una Fecha de Nacimiento a null se le asignara la que tenga en el constructor por defecto.
                         {
                             persona.FechaNacimiento = sqlDataReader.GetDateTime(6);
                         }

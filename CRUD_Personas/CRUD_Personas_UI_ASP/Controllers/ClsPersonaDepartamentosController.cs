@@ -146,13 +146,14 @@ namespace CRUD_Personas_UI_ASP.Controllers
         /// <param name="imagen"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Edit(ClsPersonaDepartamentos clsPersonaDepartamento)
+        public IActionResult Edit(ClsPersonaDepartamentos clsPersonaDepartamento,IFormFile imagen)
         {
             IActionResult action = null;
             int numActualizaciones;
 
             try
             {
+                clsPersonaDepartamento.Foto = rellenarArrayByte(imagen);
                 numActualizaciones = GestoraPersonasBL.editarPersona(clsPersonaDepartamento);
                 if (numActualizaciones > 0)
                 {
@@ -168,6 +169,19 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return action;
         }
 
+        private byte[] rellenarArrayByte(IFormFile file) {
+            byte[] arrayByte = new byte[0];
+
+            if (file.Length > 0)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    file.CopyTo(ms);
+                    arrayByte = ms.ToArray();
+                }
+            }
+            return arrayByte;
+        }
         /// <summary>
         /// 
         /// </summary>

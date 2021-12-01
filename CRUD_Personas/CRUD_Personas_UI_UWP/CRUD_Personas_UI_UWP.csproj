@@ -122,7 +122,9 @@
     <Compile Include="Models\ClsPersonaConDepartamento.cs" />
     <Compile Include="ViewModels\NavigationViewPersonasVM.cs" />
     <Compile Include="ViewModels\Utilidades\clsVMBase.cs" />
+    <Compile Include="ViewModels\Utilidades\Converters\ConverterDateTimeSimplificado.cs" />
     <Compile Include="ViewModels\Utilidades\DelegateCommand.cs" />
+    <Compile Include="ViewModels\Utilidades\Converters\ConverterDateTimeOffSet.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

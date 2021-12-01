@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="ID" />
     <RootPropertyPathName Name="CambiarFotoCommand" />
@@ -9,7 +12,7 @@
     <RootPropertyPathName Name="EliminarCommand" />
     <RootPropertyPathName Name="GuardarCommand" />
     <RootPropertyPathName Name="EditarCommand" />
-    <RootPropertyPathName Name="VisibilidadTextBox" />
+    <RootPropertyPathName Name="VisibilidadCamposEditables" />
     <RootPropertyPathName Name="ListaDepartamentos" />
     <RootPropertyPathName Name="PersonaSeleccionada" />
     <RootPropertyPathName Name="IdDepartamento" />
@@ -29,6 +32,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
@@ -66,6 +70,8 @@
     </RootType>
     <RootType FullName="CRUD_Personas_UI_UWP.Views.NavigationViewDepartamentos" />
     <RootType FullName="CRUD_Personas_UI_UWP.ViewModels.NavigationViewPersonasVM" />
+    <RootType FullName="CRUD_Personas_UI_UWP.ViewModels.Utilidades.Converters.ConverterDateTimeSimplificado" />
+    <RootType FullName="CRUD_Personas_UI_UWP.ViewModels.Utilidades.Converters.ConverterDateTimeOffSet" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
@@ -89,6 +95,11 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Text" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="SelectedDate" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
@@ -102,10 +113,12 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Command" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -118,6 +131,7 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
       <RootProperty Name="ItemsSource" />

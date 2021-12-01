@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:CRUD_Personas_UI_UWP.ViewModels"
+    xmlns:converters="using:CRUD_Personas_UI_UWP.ViewModels.Utilidades.Converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -13,16 +14,22 @@
         <vm:NavigationViewPersonasVM/>
     </Page.DataContext>
 
+    <Page.Resources>
+        <converters:ConverterDateTimeSimplificado x:Key="converterDateTimeSimplificado"/>
+        <converters:ConverterDateTimeOffSet x:Key="converterDateTimeOffSet"/>
+    </Page.Resources>
+    
     <RelativePanel>
 
         <StackPanel>
             <Button HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding CrearCommand}">
+                    Command="{Binding CrearCommand}" Margin="0,10,0,-10">
                 <StackPanel>
                     <SymbolIcon Symbol="Add"></SymbolIcon>
                     <TextBlock Text="Añadir" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
             </Button>
+            
             <ListView x:ConnectionId='8' Name="ListView" ItemsSource="{Binding ListaPersonas}" 
                   SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
                 <ListView.ItemTemplate>
@@ -57,28 +64,29 @@
 
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: "></TextBlock>
             <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Nombre,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
-            <TextBox x:ConnectionId='2' Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='2' Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Apellidos: "></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBlock>
-            <TextBox x:ConnectionId='3' Name="TextBoxApellidos" Grid.Row="1" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='3' Name="TextBoxApellidos" Grid.Row="1" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,5" Text="Telefono: "></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Telefono}"></TextBlock>
-            <TextBox x:ConnectionId='4' Name="TextBoxTelefono" Grid.Row="2" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='4' Name="TextBoxTelefono" Grid.Row="2" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,5" Text="Direccion: "></TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Direccion}"></TextBlock>
-            <TextBox x:ConnectionId='5' Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadTextBox}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='5' Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" Text="Fecha nacimiento: "></TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCampos}" Text="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay}"></TextBlock>
+            <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCamposEditables}" SelectedDate="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource converterDateTimeOffSet}}"></DatePicker>
 
             <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,5" Text="Departamento: "></TextBlock>
             <TextBlock Grid.Row="5" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" 
                        VerticalAlignment="Center"  Text="{Binding PersonaSeleccionada.NombreDepartamento}"></TextBlock>
-            
-            <ComboBox x:ConnectionId='6' Grid.Row="5" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadTextBox}" 
+
+            <ComboBox x:ConnectionId='6' Grid.Row="5" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadCamposEditables}" 
                       ItemsSource="{Binding ListaDepartamentos}"
                       SelectedValuePath="ID"
                       SelectedValue="{Binding PersonaSeleccionada.IdDepartamento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">

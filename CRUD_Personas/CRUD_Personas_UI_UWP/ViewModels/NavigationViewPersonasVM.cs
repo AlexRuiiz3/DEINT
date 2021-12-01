@@ -31,7 +31,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private ClsPersonaConDepartamento personaSeleccionada;
         private ImageSource imagenPersona;
         private Visibility visibilidadCampos;
-        private Visibility visibilidadTextBox;
+        private Visibility visibilidadCamposEditables;
         private Visibility visibilidadCamposResultados;
         private DelegateCommand crearCommand;
         private DelegateCommand editarCommand;
@@ -48,7 +48,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
                 foreach (ClsPersona persona in personasBL)
                 {
-                    listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));
+                    listaPersonas.Add(new ClsPersonaConDepartamento(persona, ListadosBL.obtenerNombreDepartamento(persona.IdDepartamento)));//Cambiar se llama mucho a la BBDD
                 }
                 listaDepartamentos = new ObservableCollection<ClsDepartamento>(ListadosBL.obtenerDepartamentos());
             }
@@ -58,7 +58,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             }
             personaSeleccionada = new ClsPersonaConDepartamento();
             visibilidadCampos = Visibility.Visible;
-            visibilidadTextBox = Visibility.Collapsed;
+            visibilidadCamposEditables = Visibility.Collapsed;
             visibilidadCamposResultados = Visibility.Collapsed;
         }
         #region Commands
@@ -75,8 +75,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             visibilidadCampos = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCampos");
-            visibilidadTextBox = Visibility.Visible;
-            NotifyPropertyChanged("VisibilidadTextBox");
+            visibilidadCamposEditables = Visibility.Visible;
+            NotifyPropertyChanged("VisibilidadCamposEditables");
             visibilidadCamposResultados = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCamposResultados");
 
@@ -129,8 +129,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                     GestoraPersonasBL.anhadirPersona((ClsPersona)personaSeleccionada);
                 }
 
-                ClsPersonaConDepartamento personaaaaa = personaSeleccionada;
-
                 List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
                 listaPersonas = new ObservableCollection<ClsPersonaConDepartamento>();
                 foreach (ClsPersona persona in personasBL)
@@ -139,13 +137,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 }
                 NotifyPropertyChanged("ListaPersonas");
 
-                personaSeleccionada = new ClsPersonaConDepartamento(personaaaaa);
-                NotifyPropertyChanged("PersonaSeleccionada");
-
                 visibilidadCampos = Visibility.Visible;
                 NotifyPropertyChanged("VisibilidadCampos");
-                visibilidadTextBox = Visibility.Collapsed;
-                NotifyPropertyChanged("VisibilidadTextBox");
+                visibilidadCamposEditables = Visibility.Collapsed;
+                NotifyPropertyChanged("VisibilidadCamposEditables");
                 visibilidadCamposResultados = Visibility.Visible;
                 NotifyPropertyChanged("VisibilidadCamposResultados");
 
@@ -162,7 +157,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private bool GuardarCommand_CanExecuted()
         {
-            return visibilidadTextBox == Visibility.Visible;
+            return visibilidadCamposEditables == Visibility.Visible;
         }
 
        
@@ -179,8 +174,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             visibilidadCampos = Visibility.Visible;
             NotifyPropertyChanged("VisibilidadCampos");
-            visibilidadTextBox = Visibility.Collapsed;
-            NotifyPropertyChanged("VisibilidadTextBox");
+            visibilidadCamposEditables = Visibility.Collapsed;
+            NotifyPropertyChanged("VisibilidadCamposEditables");
 
             guardarCommand.RaiseCanExecuteChanged();
             atrasCommand.RaiseCanExecuteChanged();
@@ -189,7 +184,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private bool AtrasCommand_CanExecuted()
         {
-            return visibilidadTextBox == Visibility.Visible;
+            return visibilidadCamposEditables == Visibility.Visible;
         }
 
         //Command crear
@@ -207,8 +202,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             NotifyPropertyChanged("PersonaSeleccionada");
             visibilidadCampos = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCampos");
-            visibilidadTextBox = Visibility.Visible;
-            NotifyPropertyChanged("VisibilidadTextBox");
+            visibilidadCamposEditables = Visibility.Visible;
+            NotifyPropertyChanged("VisibilidadCamposEditables");
             visibilidadCamposResultados = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCamposResultados");
 
@@ -274,7 +269,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private bool CambiarFotoCommand_CanExecuted()
         {
-            return visibilidadTextBox == Visibility.Visible;
+            return visibilidadCamposEditables == Visibility.Visible;
         }
 
         #endregion
@@ -338,9 +333,9 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             imagenPersona = imagen;
             NotifyPropertyChanged("Imagen");
         }
-        public Visibility VisibilidadTextBox
+        public Visibility VisibilidadCamposEditables
         {
-            get { return visibilidadTextBox; }
+            get { return visibilidadCamposEditables; }
         }
         public Visibility VisibilidadCampos
         {
@@ -358,7 +353,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private async void mostrarMensajeError()
         {
 
-            var dialog = new MessageDialog("¡--ERROR-- Ha ocurrido un error en el acceso a la base datos!");
+            var dialog = new MessageDialog("¡--ERROR-- Ha ocurrido un error en el acceso a la base datos o algun dato no es correcto!");
 
             await dialog.ShowAsync();
         }
