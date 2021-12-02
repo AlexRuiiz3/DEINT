@@ -11,8 +11,12 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    @Html.ActionLink("Ir a personas", "Index", "Personas")
-    @Html.ActionLink("Ir a departamentos", "Index", "Departamentos")
+    <h1>Bienvenido al CRUD de Personas y Departamentos</h1>
+    <h2>Seleccione el CRUD que desee(Ambos disponibles)</h2>
+    <h3>Personas: </h3>
+    @Html.ActionLink("CRUD Personas", "Index", "Personas")
+    
+    <h3>Departamentos: </h3>
+    @Html.ActionLink("CRUD Departamentos", "Index", "Departamentos")
 </body>
 </html>

@@ -1,14 +1,10 @@
 ﻿using CRUD_Personas_Dal.Conexion;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace CRUD_Personas_Dal.Utilidades
 {
     public class UtilidadesDAL
     {
-
         /// <summary>
         /// Cabecera: public static bool comprobarDepartamentoTienePersonas(int id)
         /// Comentario: Este metodo se encarga de comprobar si en la base de datos un departamento en espeficico tiene asociado alguna persona.
@@ -32,10 +28,9 @@ namespace CRUD_Personas_Dal.Utilidades
                 SqlCommand sqlCommand;
                 SqlDataReader sqlDataReader;
 
-
                 sqlCommand = new SqlCommand("SELECT P.Nombre,P.Apellidos FROM Departamentos AS D INNER JOIN Personas AS P" +
                     " ON D.ID = P.iddepartamento WHERE D.ID = @Id", conexion);
-                sqlCommand.Parameters.Add("@Id",System.Data.SqlDbType.Int).Value = id;
+                sqlCommand.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
                 sqlDataReader = sqlCommand.ExecuteReader();
 
                 contienePersonas = sqlDataReader.HasRows;
@@ -49,6 +44,5 @@ namespace CRUD_Personas_Dal.Utilidades
             }
             return contienePersonas;
         }
-
     }
 }

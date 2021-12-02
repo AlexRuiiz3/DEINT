@@ -48,10 +48,10 @@ namespace CRUD_Personas_Dal
                         {
                             persona.Foto = (byte[])sqlDataReader.GetValue(5);
                         }
-                        if (sqlDataReader.GetValue(6) != DBNull.Value)//En el caso de que la persona tenga una Fecha de Nacimiento a null se le asignara la que tenga en el constructor por defecto.
+                        if (sqlDataReader.GetValue(6) != DBNull.Value)
                         {
                             persona.FechaNacimiento = sqlDataReader.GetDateTime(6);
-                        }
+                        }//En el caso de que la persona tenga una Fecha de Nacimiento a null se le asignara la que tenga en el constructor por defecto.
 
                         persona.IdDepartamento = sqlDataReader.GetInt16(7);
 
@@ -110,13 +110,14 @@ namespace CRUD_Personas_Dal
             return listaDepartamentos;
         }
         /// <summary>
-        /// Cabecera: public static String obtenerNombreDepartamento(int idDepartamento)
+        /// Cabecera: public static String obtenerNombreDepartamento(int id)
         /// Comentario: Este metodo se encarga de obtener el nombre que tiene asociado un departamento apartir de su id, que se encuentra en la tabla Departamento en una base de datos.
         /// Entradas: int id
         /// Salidas: string nombre
         /// Precondiciones: Ninguna
-        /// Postcondiciones: Se obtendra una cadena que contendra el nombre que tiene un departamento, si el id que se recibe no corresponde con ningun departamento o se produce alguna 
-        ///                  excepcion, el valor de la cadena devuelta sera vacio.
+        /// Postcondiciones: Se obtendra una cadena que contendra el nombre que tiene un departamento, si el id que se recibe
+        ///                  no corresponde con ningun departamento o se produce alguna excepcion, el valor de la cadena 
+        ///                  devuelta sera vacio.
         /// </summary>
         /// <param name="id"></param>
         /// <returns>string nombre</returns>
@@ -130,7 +131,7 @@ namespace CRUD_Personas_Dal
             try
             {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("SELECT Nombre FROM DEPARTAMENTOS WHERE ID = @Id", conexion);
+                command = new SqlCommand("SELECT Nombre FROM Departamentos WHERE ID = @Id", conexion);
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
@@ -155,7 +156,7 @@ namespace CRUD_Personas_Dal
         /// Salidas: ClsPersona persona
         /// Precondiciones: Ninguna
         /// Postcondiciones: Se obtendra objeto ClsPersona que sera una persona en especifico, si el id que se recibe no corresponde con ninguna persona o se produce alguna
-        ///                  excepcion, el valor del objeto ClsPersona sera null
+        ///                  excepcion, el valor del objeto ClsPersona sera null.
         /// </summary>
         /// <param name="id"></param>
         /// <returns>ClsPersona persona</returns>
@@ -189,9 +190,7 @@ namespace CRUD_Personas_Dal
                     {
                         persona.FechaNacimiento = dataReader.GetDateTime(6);
                     }
-
                     persona.IdDepartamento = dataReader.GetInt16(7);
-
                 }
                 dataReader.Close();
                 clsMyConnection.cerrarConexion(conexion);
@@ -204,12 +203,13 @@ namespace CRUD_Personas_Dal
         }
         /// <summary>
         /// Cabecera: public static ClsPersona obtenerPersona(int id)
-        /// Comentario: Este metodo se encarga de obtener de la tabla Persona de una base de datos, una persona determinada apartir del id.
+        /// Comentario: Este metodo se encarga de obtener de la tabla Departamento de una base de datos, una departamento determinado apartir del id.
         /// Entradas: int id
-        /// Salidas: ClsPersona persona
+        /// Salidas: ClsDepartamento departamento
         /// Precondiciones: Ninguna
-        /// Postcondiciones: Se obtendra objeto ClsPersona que sera una persona en especifico, si el id que se recibe no corresponde con ninguna persona o se produce alguna
-        ///                  excepcion, el valor del objeto ClsPersona sera null
+        /// Postcondiciones: Se obtendra objeto ClsDepartamento que sera un departamento en especifico, si el id que se
+        ///                                     recibe no corresponde con ningun departamento o se produce alguna excepcion, 
+        ///                                     el valor del objeto ClsDepartamento sera null.
         /// </summary>
         /// <param name="id"></param>
         /// <returns>ClsPersona persona</returns>
@@ -241,6 +241,64 @@ namespace CRUD_Personas_Dal
                 throw;
             }
             return departamento;
+        }
+        /// <summary>
+        /// Cabecera: public static List<ClsPersona> obtenerPersonasDeDepartamento(int idDepartamento)
+        /// Comentario: Este metodo se encarga de obtener todas las personas que tiene asociado un departamento en concreto, determindao por el id recibido.
+        /// Entradas: int idDepartamento
+        /// Salidas: List<ClsPersona> listaPersonas 
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra una lista con las personas que hay en una base de datos y que estan asociados
+        ///                  a un departamento, si no hay ninguna persona o el id no coincide con el de ningun 
+        ///                  departamento o se produce alguna excepcion, se devolvera una lista con 0 elementos.
+        /// </summary>
+        /// <returns>List<ClsPersona> listaPersonas</returns>
+        public static List<ClsPersona> obtenerPersonasDeDepartamento(int idDepartamento)
+        {
+            List<ClsPersona> listaPersonas = new List<ClsPersona>();
+            try
+            {
+                SqlConnection conexion = clsMyConnection.establecerConexion();
+                SqlCommand sqlCommand;
+                SqlDataReader sqlDataReader;
+                ClsPersona persona;
+
+                sqlCommand = new SqlCommand("SELECT * FROM Personas WHERE IDDepartamento = @Id", conexion);
+                sqlCommand.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = idDepartamento;
+                sqlDataReader = sqlCommand.ExecuteReader();
+
+                if (sqlDataReader.HasRows) //Si hay filas 
+                {
+                    while (sqlDataReader.Read())
+                    {
+                        persona = new ClsPersona();
+                        persona.ID = sqlDataReader.GetInt16(0);
+                        persona.Nombre = sqlDataReader[1].ToString();
+                        persona.Apellidos = sqlDataReader[2].ToString();
+                        persona.Telefono = sqlDataReader[3].ToString();
+                        persona.Direccion = sqlDataReader[4].ToString();
+                        if (sqlDataReader.GetValue(5) != DBNull.Value)
+                        {
+                            persona.Foto = (byte[])sqlDataReader.GetValue(5);
+                        }
+                        if (sqlDataReader.GetValue(6) != DBNull.Value)
+                        {
+                            persona.FechaNacimiento = sqlDataReader.GetDateTime(6);
+                        }//En el caso de que la persona tenga una Fecha de Nacimiento a null se le asignara la que tenga en el constructor por defecto.
+
+                        persona.IdDepartamento = sqlDataReader.GetInt16(7);
+
+                        listaPersonas.Add(persona);
+                    }
+                }
+                sqlDataReader.Close();
+                clsMyConnection.cerrarConexion(conexion);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            return listaPersonas;
         }
     }
 }

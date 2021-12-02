@@ -10,11 +10,11 @@ namespace CRUD_Personas_Dal.Conexion
     {
         /// <summary> 
         /// Cabecera: public static SqlConnection establecerConexion()
-        /// Comentario:
+        /// Comentario: Este metodo se encarga de establecer y abrir una conexion con una base de datos SQL.
         /// Entradas: Ninguna
         /// Salidas: SqlConnection conexion
         /// Precondiciones:
-        /// Postcondiciones:
+        /// Postcondiciones: Se devolvera un objeto de tipo SQLConnection con la conexion abierta.
         /// </summary>
         /// <returns>SqlConnection conexion</returns>
         public static SqlConnection establecerConexion(){
@@ -26,11 +26,11 @@ namespace CRUD_Personas_Dal.Conexion
         }
         /// <summary>
         /// Cabecera: public static void cerrarConexion(SqlConnection conexion)
-        /// Comentario:
+        /// Comentario: Este metodo se encarga de cerrar la conexion de un objeto SQLConnection.
         /// Entradas: SqlConnection conexion
         /// Salidas: Ninguna
         /// Precondiciones: Ninguna
-        /// Postcondiciones: Ninguna
+        /// Postcondiciones: El objeto SqlConnection recibido cerrara su conexion, si esta a null no se cerrar el objeto SqlConnection.
         /// </summary>
         /// <param name="conexion"></param>
         public static void cerrarConexion(SqlConnection conexion) {

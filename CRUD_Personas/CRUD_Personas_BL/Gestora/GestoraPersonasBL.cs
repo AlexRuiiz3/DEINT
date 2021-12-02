@@ -10,10 +10,16 @@ namespace CRUD_Personas_BL.Gestora
     public class GestoraPersonasBL
     {
         /// <summary>
-        /// 
+        /// Cabecera: public static void anhadirPersona(ClsPersona persona)
+        /// Comentario: Este metodo se encarga de llamar al metodo anhadirPersona de la clase GestoraPersonasDAL de la capa DAL.
+        /// Entradas: ClsPersona persona
+        /// Salidas: Ninguna
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Se realizara la tarea del metodo anhadirPersona de la clase GestoraPersonasDAL de la capa DAL.
         /// </summary>
         /// <param name="persona"></param>
-        public static void anhadirPersona(ClsPersona persona) {
+        public static void anhadirPersona(ClsPersona persona)
+        {
             try
             {
                 GestoraPersonasDAL.anhadirPersona(persona);
@@ -24,39 +30,50 @@ namespace CRUD_Personas_BL.Gestora
             }
         }
         /// <summary>
-        /// 
+        /// Cabecera: public static int eliminarPersona(int id)
+        /// Comentario: Este metodo se encarga de llamar al metodo eliminarPersona de la clase GestoraPersonasDAL de la capa DAL.
+        /// Entradas: int id
+        /// Salidas: int eliminaciones
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Se realizara la tarea del metodo eliminarPersona de la clase GestoraPersonasDAL de la capa DAL.
         /// </summary>
-        /// <param name="idPersona"></param>
-        /// <returns></returns>
-        public static int eliminarPersona(int idPersona)
+        /// <param name="id"></param>
+        /// <returns>int eliminaciones</returns>
+        public static int eliminarPersona(int id)
         {
-            int resultado = 0;
+            int eliminaciones = 0;
             try
             {
-                resultado = GestoraPersonasDAL.eliminarPersona(idPersona);
+                eliminaciones = GestoraPersonasDAL.eliminarPersona(id);
             }
             catch (SqlException)
             {
                 throw;
             }
-            return resultado;
+            return eliminaciones;
         }
         /// <summary>
-        /// 
+        /// Cabecera: public static int editarPersona(ClsPersona persona)
+        /// Comentario: Este metodo se encarga de llamar al metodo editarPersona de la clase GestoraPersonasDAL de la capa DAL.
+        /// Entradas: ClsPersona persona
+        /// Salidas: int actualizaciones
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Se realizara la tarea del metodo editarPersona de la clase GestoraPersonasDAL de la capa DAL.
         /// </summary>
         /// <param name="persona"></param>
-        /// <returns></returns>
+        /// <returns>int actualizaciones</returns>
         public static int editarPersona(ClsPersona persona)
         {
-            int resultado = 0;
+            int actualizaciones = 0;
             try
             {
-                resultado = GestoraPersonasDAL.editarPersona(persona);
+                actualizaciones = GestoraPersonasDAL.editarPersona(persona);
             }
-            catch (SqlException) {
+            catch (SqlException)
+            {
                 throw;
             }
-            return resultado;
+            return actualizaciones;
         }
     }
 }

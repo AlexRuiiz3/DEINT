@@ -1,0 +1,19 @@
+Capa Entidades:
+
+Capa DAL:
+
+Capa BL:
+
+Capa UI:
+	  Models: - ClsPeronaNombreApellidos
+		  - ClsPeronsaNombreDepartamento
+		  - ClsPersonaSimplificadaNombreDepartamento
+		  - ViewModels:
+				-ClsDepartamentoConPersonaSimplificada
+				-ClsPersonaListaDepartamento
+
+	  Controllers:  - Departamentos
+			- Home
+			-Personas
+
+	  Views:

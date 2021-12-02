@@ -12,34 +12,34 @@
     <title>Create</title>
 </head>
 <body>
-    Rellene los campos para crear una persona nueva.
+    <h1>Create Persona</h1>
+    <h3>Rellene los campos para crear una persona nueva</h3>
     <hr />
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Create" enctype="multipart/form-data">
-
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
-                    <input asp-for="Nombre"  class="form-control" />
+                    <input asp-for="Nombre" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Nombre)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Apellidos" class="control-label"></label>
-                    <input asp-for="Apellidos"  class="form-control" />
+                    <input asp-for="Apellidos" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Apellidos)
 
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
-                    <input asp-for="Telefono"  class="form-control" />
+                    <input asp-for="Telefono" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Telefono)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Direccion" class="control-label"></label>
-                    <input asp-for="Direccion"  class="form-control" />
+                    <input asp-for="Direccion" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Direccion)
 
                 </div>
@@ -65,7 +65,7 @@
                         }
                     </select>
                 </div>
-
+                <br />
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
                 </div>

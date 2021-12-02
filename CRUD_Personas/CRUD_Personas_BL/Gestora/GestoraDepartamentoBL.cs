@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
+﻿using System.Data.SqlClient;
 using CRUD_Personas_Dal.Gestora;
 using CRUD_Personas_Entidades;
 
@@ -11,7 +8,12 @@ namespace CRUD_Personas_BL.Gestora
     {
 
         /// <summary>
-        /// 
+        /// Cabecera: public static void anhadirDepartamento(ClsDepartamento departamento)
+        /// Comentario: Este metodo se encarga de llamar al metodo anhadirDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
+        /// Entradas: ClsDepartamento departamento
+        /// Salidas: Ninguna
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Se realizara la tarea del metodo anhadirDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
         /// </summary>
         /// <param name="persona"></param>
         public static void anhadirDepartamento(ClsDepartamento departamento)
@@ -26,40 +28,50 @@ namespace CRUD_Personas_BL.Gestora
             }
         }
         /// <summary>
-        /// 
+        /// Cabecera: public static int eliminarDeparmaento(int id)
+        /// Comentario: Este metodo se encarga de llamar al metodo anhadirDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
+        /// Entradas: int id
+        /// Salidas: int eliminaciones
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Se realizara la tarea del metodo eliminarDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
         /// </summary>
-        /// <param name="idPersona"></param>
-        /// <returns></returns>
+        /// <param name="id"></param>
+        /// <returns>int eliminaciones</returns>
         public static int eliminarDeparmaento(int id)
         {
-            int resultado = 0;
+            int eliminaciones = 0;
             try
             {
-                resultado = GestoraDepartamentoDAL.eliminarDepartamento(id);
+                eliminaciones = GestoraDepartamentoDAL.eliminarDepartamento(id);
             }
             catch (SqlException)
             {
                 throw;
             }
-            return resultado;
+            return eliminaciones;
         }
         /// <summary>
-        /// 
+        /// Cabecera: public static int eliminarDeparmaento(int id)
+        /// Comentario: Este metodo se encarga de llamar al metodo editarDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
+        /// Entradas: ClsDepartamento departamento
+        /// Salidas: int actualizaciones
+        /// Precondiciones: Ninguna
+        /// PostCondiciones: Se realizara la tarea del metodo editarDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
         /// </summary>
-        /// <param name="persona"></param>
-        /// <returns></returns>
+        /// <param name="departamento"></param>
+        /// <returns>int actualizaciones</returns>
         public static int editarDepartamento(ClsDepartamento departamento)
         {
-            int resultado = 0;
+            int actualizaciones = 0;
             try
             {
-                resultado = GestoraDepartamentoDAL.editarDepartamento(departamento);
+                actualizaciones = GestoraDepartamentoDAL.editarDepartamento(departamento);
             }
             catch (SqlException)
             {
                 throw;
             }
-            return resultado;
+            return actualizaciones;
         }
     }
 }

@@ -1,13 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CRUD_Personas_BL.Listados;
 using CRUD_Personas_BL.Gestora;
 using CRUD_Personas_BL.Utilidades;
+using CRUD_Personas_UI_ASP.Models.ViewModels;
 using CRUD_Personas_Entidades;
+using CRUD_Personas_UI_ASP.Models;
 
 namespace CRUD_Personas_UI_ASP.Controllers
 {
@@ -25,7 +24,6 @@ namespace CRUD_Personas_UI_ASP.Controllers
                 ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
                 action = View("ViewNotFoundDepartamentos");
             }
-
             return action;
         }
 
@@ -35,8 +33,15 @@ namespace CRUD_Personas_UI_ASP.Controllers
             ActionResult action;
             try
             {
-                ClsDepartamento departamento = ListadosBL.obtenerDepartamento(id);
-                action = View(departamento);
+                List<ClsPersonaNombreApellidos> personasDepartamentoSimplificada = new List<ClsPersonaNombreApellidos>();
+                List<ClsPersona> personasDeDepartamento =  ListadosBL.obtenerPersonasDeDepartamento(id);
+                foreach (ClsPersona persona in personasDeDepartamento) {
+                    personasDepartamentoSimplificada.Add(new ClsPersonaNombreApellidos(persona));
+                }
+
+                ClsDepartamentoConPersonasSimplificadasVM departamentoVM = new ClsDepartamentoConPersonasSimplificadasVM
+                                                                          (ListadosBL.obtenerDepartamento(id), personasDepartamentoSimplificada);
+                action = View(departamentoVM);
             }
             catch (Exception)
             {
@@ -56,17 +61,19 @@ namespace CRUD_Personas_UI_ASP.Controllers
         [HttpPost]
         public ActionResult Create(ClsDepartamento clsDepartamento)
         {
-            ActionResult action;
+            ActionResult action = View();
             try
             {
-                GestoraDepartamentoBL.anhadirDepartamento(clsDepartamento);
-                action = RedirectToAction("Index");
+                if (ModelState.IsValid) {
+                    GestoraDepartamentoBL.anhadirDepartamento(clsDepartamento);
+                    action = RedirectToAction("Index");
+                }
             }
-            catch(Exception e)
-            {/*
+            catch(Exception)
+            {
                 ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
-                action = View("ViewNotFoundDepartamentos");*/
-                throw;
+                action = View("ViewNotFoundDepartamentos");
+
             }
             return action;
         }
@@ -95,11 +102,19 @@ namespace CRUD_Personas_UI_ASP.Controllers
             ActionResult action;
             try
             {
-                GestoraDepartamentoBL.editarDepartamento(clsDepartamento);
-                action = RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    GestoraDepartamentoBL.editarDepartamento(clsDepartamento);
+                    action = RedirectToAction("Index");
+                }
+                else {
+                    ClsDepartamento departamento = ListadosBL.obtenerDepartamento(clsDepartamento.ID);
+                    action = View(departamento);
+                }
             }
-            catch
+            catch(Exception)
             {
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
                 action = View("ViewNotFoundDepartamentos");
             }
             return action;
@@ -136,7 +151,6 @@ namespace CRUD_Personas_UI_ASP.Controllers
                     GestoraDepartamentoBL.eliminarDeparmaento(id);
                     action = RedirectToAction("Index");
                 }
-
             }
             catch(Exception)
             {
