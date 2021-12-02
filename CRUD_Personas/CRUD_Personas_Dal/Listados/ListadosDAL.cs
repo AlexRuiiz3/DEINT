@@ -133,9 +133,11 @@ namespace CRUD_Personas_Dal
                 command = new SqlCommand("SELECT Nombre FROM DEPARTAMENTOS WHERE ID = @Id", conexion);
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
                 dataReader = command.ExecuteReader();
-                dataReader.Read();
-                nombre = dataReader.GetString(0);
-
+                if (dataReader.HasRows)
+                {
+                    dataReader.Read();
+                    nombre = dataReader.GetString(0);
+                }
                 dataReader.Close();
                 clsMyConnection.cerrarConexion(conexion);
             }

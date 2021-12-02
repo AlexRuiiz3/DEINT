@@ -141,3 +141,4 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\FxResources.System.Drawing.Common.SR.resw
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\bin\x86\Debug\System.Drawing.Common.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\FxResources.System.Drawing.Common.SR.resw
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_UWP\obj\x86\Debug\CRUD_Personas_UI_UWP.csproj.CopyComplete

@@ -6,10 +6,13 @@ using CRUD_Personas_Entidades;
 
 namespace CRUD_Personas_UI_ASP.Models
 {
-    public class ClsPersonaSimplificada : ClsPersona
+    public class ClsPersonaSimplificadaNombreDepartamento
     {
+        public int ID { get; set; }
+        public string Nombre { get; set; }
+        public string Apellidos { get; set; }
         public string NombreDepartamento { get; set; }
-        public ClsPersonaSimplificada(ClsPersona persona, string nombreDepartamento):base()
+        public ClsPersonaSimplificadaNombreDepartamento(ClsPersona persona, string nombreDepartamento)
         {
             ID = persona.ID;
             Nombre = persona.Nombre;

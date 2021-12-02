@@ -13,15 +13,14 @@ namespace CRUD_Personas_Dal.Gestora
         /// 
         /// </summary>
         /// <param name="departamento"></param>
-        public void guardarDepartamento(ClsDepartamento departamento) {
+        public static void anhadirDepartamento(ClsDepartamento departamento) {
             SqlConnection conexion;
             SqlCommand command;
            
             try {
                 conexion = clsMyConnection.establecerConexion();
 
-                command = new SqlCommand("INSERT INTO DEPARTAMENTOS VALUES(@Id,@Nombre)");
-                command.Parameters.Add("@Id",System.Data.SqlDbType.Int).Value = departamento.ID;
+                command = new SqlCommand("INSERT INTO DEPARTAMENTOS VALUES(@Nombre)");
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = departamento.Nombre;
 
                 clsMyConnection.cerrarConexion(conexion);
@@ -34,7 +33,7 @@ namespace CRUD_Personas_Dal.Gestora
         /// 
         /// </summary>
         /// <returns></returns>
-        public int editarDepartamento(ClsDepartamento departamento) {
+        public static int editarDepartamento(ClsDepartamento departamento) {
             SqlConnection conexion;
             SqlCommand command;
             int actualizaciones = 0;
@@ -57,7 +56,7 @@ namespace CRUD_Personas_Dal.Gestora
         /// 
         /// </summary>
         /// <returns></returns>
-        public int eliminarDepartamento(int idDepartamento) {
+        public static int eliminarDepartamento(int idDepartamento) {
             SqlConnection conexion;
             SqlCommand command;
             int eliminaciones = 0;

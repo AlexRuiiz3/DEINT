@@ -1,9 +1,8 @@
-﻿@model CRUD_Personas_UI_ASP.Models.ClsPersonaDepartamentos
+﻿@model CRUD_Personas_UI_ASP.Models.ViewModels.ClsPersonaListaDepartamentosVM
 
 @{
     Layout = null;
 }
-
 
 <!DOCTYPE html>
 
@@ -20,45 +19,50 @@
         <div class="col-md-4">
             <form asp-action="Edit" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="ID" />
+
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
                     <input asp-for="Nombre" class="form-control" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Apellidos" class="control-label"></label>
                     <input asp-for="Apellidos" class="form-control" />
                     <span asp-validation-for="Apellidos" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
                     <input asp-for="Telefono" class="form-control" />
                     <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Direccion" class="control-label"></label>
                     <input asp-for="Direccion" class="form-control" />
                     <span asp-validation-for="Direccion" class="text-danger"></span>
                 </div>
 
+                <!--Foto-->
                 @{
                     var base64 = Convert.ToBase64String(Model.Foto);
                     var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 
                     <div class="form-group">
-                        <label asp-for="Foto" class="control-label" ></label>
+                        <label asp-for="Foto" class="control-label"></label>
                         <img src="@imgSrc" wight width="80" height="80" />
-                        <input type="file" name="imagen"class="form-control" accept=".png, .jpg">
+                        <input type="file" name="imagen" class="form-control" accept=".png, .jpg">
                     </div>
                 }
+                <!--FechaNacimiento-->
                 <div class="form-group">
                     <label asp-for="FechaNacimiento" class="control-label"></label>
-                    <input asp-for="FechaNacimiento" class="form-control" />
+                    <input type="date" value="@Model.FechaNacimiento.ToString("yyyy-MM-dd")" asp-for="FechaNacimiento" class="form-control" />
                     <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
                 </div>
+                <!--Desplegable Lista Departamentos-->
                 <div class="form-group">
-                    <!--TODO buscar como se hace el select con los helpers de Razor-->
                     <select name="IdDepartamento">
 
                         @{
@@ -66,7 +70,7 @@
                             {
                                 if (departamento.ID == Model.IdDepartamento)
                                 {
-                                    <option selected="selected">@departamento.Nombre</option>
+                                    <option selected="selected" value="@departamento.ID">@departamento.Nombre</option>
                                 }
                                 else
                                 {
@@ -76,6 +80,7 @@
                         }
                     </select>
                 </div>
+
                 <div class="form-group">
                     <input type="submit" value="Save" class="btn btn-primary" />
                 </div>
