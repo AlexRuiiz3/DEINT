@@ -15,12 +15,14 @@ namespace CRUD_Personas_BL.Utilidades
         /// <returns></returns>
         public static bool comprobarDepartamentoTienePersonas(int id)
         {
+            bool contienePersonas = false;
             try {
-                return UtilidadesDAL.comprobarDepartamentoTienePersonas(id);
+                contienePersonas = UtilidadesDAL.comprobarDepartamentoTienePersonas(id);
             }
             catch (SqlException) {
                 throw;
             }
+            return contienePersonas;
         }
     }
 }

@@ -20,28 +20,26 @@
 
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
-                    <input asp-for="Nombre" required class="form-control" />
-              
+                    <input asp-for="Nombre"  class="form-control" />
                     @Html.ValidationMessageFor(model => model.Nombre)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Apellidos" class="control-label"></label>
-                    <input asp-for="Apellidos" class="form-control" />
+                    <input asp-for="Apellidos"  class="form-control" />
                     @Html.ValidationMessageFor(model => model.Apellidos)
 
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
-                    <input asp-for="Telefono" class="form-control" />
+                    <input asp-for="Telefono"  class="form-control" />
                     @Html.ValidationMessageFor(model => model.Telefono)
-
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Direccion" class="control-label"></label>
-                    <input asp-for="Direccion" class="form-control" />
+                    <input asp-for="Direccion"  class="form-control" />
                     @Html.ValidationMessageFor(model => model.Direccion)
 
                 </div>
@@ -53,7 +51,7 @@
                 <br />
                 <div class="form-group">
                     <label asp-for="FechaNacimiento" class="control-label"></label>
-                    <input type="date" value="@Model.FechaNacimiento" asp-for="FechaNacimiento" class="form-control" />
+                    <input type="date" value="@Model.FechaNacimiento.ToString("yyyy-MM-dd")" asp-for="FechaNacimiento" class="form-control" />
                 </div>
                 <br />
                 <div class="form-group">

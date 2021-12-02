@@ -23,35 +23,35 @@
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
                     <input asp-for="Nombre" class="form-control" />
-                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                    @Html.ValidationMessageFor(model => model.Nombre)
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Apellidos" class="control-label"></label>
                     <input asp-for="Apellidos" class="form-control" />
-                    <span asp-validation-for="Apellidos" class="text-danger"></span>
+                    @Html.ValidationMessageFor(model => model.Apellidos)
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
                     <input asp-for="Telefono" class="form-control" />
-                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                    @Html.ValidationMessageFor(model => model.Telefono)
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Direccion" class="control-label"></label>
                     <input asp-for="Direccion" class="form-control" />
-                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                    @Html.ValidationMessageFor(model => model.Direccion)
                 </div>
 
                 <!--Foto-->
                 @{
-                    var base64 = Convert.ToBase64String(Model.Foto);
-                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-
+                        var base64 = Convert.ToBase64String(Model.Foto);
+                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+           
                     <div class="form-group">
                         <label asp-for="Foto" class="control-label"></label>
-                        <img src="@imgSrc" wight width="80" height="80" />
+                        <img src="@imgSrc" width="80" height="80" />
                         <input type="file" name="imagen" class="form-control" accept=".png, .jpg">
                     </div>
                 }
@@ -59,7 +59,6 @@
                 <div class="form-group">
                     <label asp-for="FechaNacimiento" class="control-label"></label>
                     <input type="date" value="@Model.FechaNacimiento.ToString("yyyy-MM-dd")" asp-for="FechaNacimiento" class="form-control" />
-                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
                 </div>
                 <!--Desplegable Lista Departamentos-->
                 <div class="form-group">
@@ -70,7 +69,7 @@
                             {
                                 if (departamento.ID == Model.IdDepartamento)
                                 {
-                                    <option selected="selected" value="@departamento.ID">@departamento.Nombre</option>
+                                    <option value="@departamento.ID" selected="selected">@departamento.Nombre</option>
                                 }
                                 else
                                 {

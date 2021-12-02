@@ -202,5 +202,45 @@ namespace CRUD_Personas_Dal
             }
             return persona;
         }
+        /// <summary>
+        /// Cabecera: public static ClsPersona obtenerPersona(int id)
+        /// Comentario: Este metodo se encarga de obtener de la tabla Persona de una base de datos, una persona determinada apartir del id.
+        /// Entradas: int id
+        /// Salidas: ClsPersona persona
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra objeto ClsPersona que sera una persona en especifico, si el id que se recibe no corresponde con ninguna persona o se produce alguna
+        ///                  excepcion, el valor del objeto ClsPersona sera null
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>ClsPersona persona</returns>
+        public static ClsDepartamento obtenerDepartamento(int id)
+        {
+            ClsDepartamento departamento = null;
+            try
+            {
+                SqlConnection conexion = clsMyConnection.establecerConexion();
+                SqlDataReader dataReader;
+                SqlCommand command;
+
+                command = new SqlCommand("SELECT * FROM Departamentos WHERE ID = @Id", conexion);
+                command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
+                dataReader = command.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    dataReader.Read();
+                    departamento = new ClsDepartamento();
+                    departamento.ID = dataReader.GetInt16(0);
+                    departamento.Nombre = dataReader[1].ToString();
+                }
+                dataReader.Close();
+                clsMyConnection.cerrarConexion(conexion);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            return departamento;
+        }
     }
 }

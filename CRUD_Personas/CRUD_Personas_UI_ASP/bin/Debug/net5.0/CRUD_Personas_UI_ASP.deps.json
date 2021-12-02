@@ -1891,6 +1891,9 @@
         }
       },
       "CRUD_Personas_Entidades/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "runtime": {
           "CRUD_Personas_Entidades.dll": {}
         },

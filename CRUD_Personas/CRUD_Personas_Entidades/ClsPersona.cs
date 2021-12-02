@@ -29,18 +29,21 @@ namespace CRUD_Personas_Entidades
             FechaNacimiento = fechaNacimiento;
             IdDepartamento = idDepartamento;
         }
-        
+
 
         public int ID { get; set; }
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Nombre")]
         public string Nombre { get; set; }
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Apellidos")]
         public string Apellidos { get; set; }
-        [Required,RegularExpression(@"(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}", ErrorMessage = "Formato de telefono no español")]
+        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Telefono"),
+        RegularExpression(@"(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}", ErrorMessage = "Formato de telefono no español")]
         public string Telefono { get; set; }
-        [Required(ErrorMessage = "Campo obligatorio")]
+        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Direccion")]
         public string Direccion { get; set; }
+        [Display(Name = "Foto")]
         public byte[] Foto { get; set; }
+        [Display(Name = "Fecha Nacimiento")]
         public DateTime FechaNacimiento { get; set; }
         public int IdDepartamento { get; set; }
     }

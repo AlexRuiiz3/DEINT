@@ -307,6 +307,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -423,6 +432,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -916,6 +928,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -1016,6 +1037,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -1510,6 +1534,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -1610,6 +1643,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -2104,6 +2140,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -2204,6 +2249,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -2697,6 +2745,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -2797,6 +2854,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -3291,6 +3351,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -3391,6 +3460,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -3884,6 +3956,15 @@
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -3984,6 +4065,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -4478,6 +4562,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "System.ComponentModel.Annotations/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
@@ -4578,6 +4671,9 @@
       "CRUD_Personas_Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/CRUD_Personas_Entidades.dll": {}
         },
@@ -9025,6 +9121,96 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Data.SqlClient/4.8.3": {
       "sha512": "yERfVLXAY0QbylAgaGLByYN0hFxX28aeEQ0hUgJO+Ntn1AfmWl5HHUoYJA0Yl9HhIUUJHVaS/Sw/RLZr5aaC+A==",
       "type": "package",
@@ -9288,31 +9474,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aruiz\\.nuget\\packages\\": {},
+    "C:\\Users\\AlexRuiz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_UI_UWP\\CRUD_Personas_UI_UWP.csproj",
+      "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_UI_UWP\\CRUD_Personas_UI_UWP.csproj",
       "projectName": "CRUD_Personas_UI_UWP",
-      "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_UI_UWP\\CRUD_Personas_UI_UWP.csproj",
-      "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_UI_UWP\\obj\\",
+      "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_UI_UWP\\CRUD_Personas_UI_UWP.csproj",
+      "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_UI_UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
@@ -9324,11 +9507,11 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_BL\\CRUD_Personas_BL.csproj": {
-              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_BL\\CRUD_Personas_BL.csproj"
+            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_BL\\CRUD_Personas_BL.csproj": {
+              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_BL\\CRUD_Personas_BL.csproj"
             },
-            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_Entidades\\CRUD_Personas_Entidades.csproj": {
-              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\CRUD_Personas\\CRUD_Personas_Entidades\\CRUD_Personas_Entidades.csproj"
+            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_Entidades\\CRUD_Personas_Entidades.csproj": {
+              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\CRUD_Personas\\CRUD_Personas_Entidades\\CRUD_Personas_Entidades.csproj"
             }
           }
         }

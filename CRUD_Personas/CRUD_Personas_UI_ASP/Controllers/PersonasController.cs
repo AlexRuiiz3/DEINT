@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using CRUD_Personas_UI_ASP.Models;
 using CRUD_Personas_UI_ASP.Models.ViewModels;
 using CRUD_Personas_BL.Listados;
@@ -12,6 +8,7 @@ using CRUD_Personas_Entidades;
 using CRUD_Personas_BL.Gestora;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using System.Linq;
 
 namespace CRUD_Personas_UI_ASP.Controllers
 {
@@ -45,7 +42,8 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                action = View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
             return action;
         }
@@ -70,7 +68,8 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                action = View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
 
             return action;
@@ -85,15 +84,17 @@ namespace CRUD_Personas_UI_ASP.Controllers
         public IActionResult Create()
         {
             IActionResult action;
-            ClsPersonaListaDepartamentosVM clsPersonaDepartamentos = new ClsPersonaListaDepartamentosVM();
+           
             try
             {
+                ClsPersonaListaDepartamentosVM clsPersonaDepartamentos = new ClsPersonaListaDepartamentosVM();
                 clsPersonaDepartamentos.ListaDepartamentos = ListadosBL.obtenerDepartamentos();
                 action = View(clsPersonaDepartamentos);
             }
             catch (Exception)
             {
-                action = View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
             return action;
         }
@@ -119,12 +120,15 @@ namespace CRUD_Personas_UI_ASP.Controllers
                     action = RedirectToAction("Index");
                 }
                 else {
-                    action = View(clsPersonaDepartamento);
+                    ClsPersonaListaDepartamentosVM clsPersonaDepartamentos = new ClsPersonaListaDepartamentosVM();
+                    clsPersonaDepartamentos.ListaDepartamentos = ListadosBL.obtenerDepartamentos();
+                    action = View("Create", clsPersonaDepartamentos);
                 }
             }
             catch (Exception)
             {
-                action = View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
             return action;
         }
@@ -138,18 +142,19 @@ namespace CRUD_Personas_UI_ASP.Controllers
         /// <returns></returns>
         public IActionResult Edit(int id)
         {
-            ClsPersonaListaDepartamentosVM clsPersonaDepartamentos = null;
+            IActionResult action;
             try
             {
-
-                clsPersonaDepartamentos = new ClsPersonaListaDepartamentosVM(ListadosBL.obtenerPersona(id),
-                                                                             ListadosBL.obtenerDepartamentos());
+               ClsPersonaListaDepartamentosVM clsPersonaDepartamentos = new ClsPersonaListaDepartamentosVM(ListadosBL.obtenerPersona(id),
+                                                                                                           ListadosBL.obtenerDepartamentos());
+                action = View(clsPersonaDepartamentos);
             }
             catch (Exception)
             {
-                return View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
-            return View(clsPersonaDepartamentos);
+            return action;
         }
 
         /// <summary>
@@ -161,30 +166,29 @@ namespace CRUD_Personas_UI_ASP.Controllers
         [HttpPost]
         public IActionResult Edit(ClsPersona clsPersona, IFormFile imagen)
         {
-            IActionResult action = null;
+            IActionResult action;
             int numActualizaciones;
-
             try
             {
-                if (ModelState.IsValid) {
-
-                    if (imagen != null)
+                if (ModelState.IsValid)
+                {
+                    if (imagen != null) //Si el usuario a ingresado una imagen
                     {
                         clsPersona.Foto = rellenarArrayByte(imagen);
                     }
                     numActualizaciones = GestoraPersonasBL.editarPersona(clsPersona);
-                    if (numActualizaciones > 0)
-                    {
-                        ViewBag.NumActualiazciones = numActualizaciones;
-                        action = RedirectToAction("Index");
-                    }
+                    action = RedirectToAction("Index");
+                }
+                else {
+                    //Hay que hacerlo con View y no con RedirectToAction("Edit"), por que con RedirectToAction no salen los mensajes de validacion(Ej: Campo obligatorio)
+                    action = View("Edit",new ClsPersonaListaDepartamentosVM(clsPersona, ListadosBL.obtenerDepartamentos()));
                 }
             }
             catch (Exception)
             {
-                action = View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
-
             return action;
         }
 
@@ -197,7 +201,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
         /// <returns></returns>
         public IActionResult Delete(int id)
         {
-            IActionResult action = null;
+            IActionResult action;
             try
             {
                 ClsPersona clsPersona = ListadosBL.obtenerPersona(id);
@@ -207,7 +211,8 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                action = View("ViewNotFound");
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
             }
 
             return action;
@@ -215,8 +220,19 @@ namespace CRUD_Personas_UI_ASP.Controllers
 
         // POST: ClsPersonaDepartamentoes/Delete/5
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteConfirmed(int id)
+        public IActionResult DeletePost(int id)
         {
+            IActionResult action;
+
+            try {
+                GestoraPersonasBL.eliminarPersona(id);
+                action = RedirectToAction("Index");
+            }
+            catch (Exception) {
+                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                action = View("ViewNotFoundPersonas");
+            }
+
             return RedirectToAction(nameof(Index));
         }
         #endregion

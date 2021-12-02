@@ -20,8 +20,9 @@ namespace CRUD_Personas_Dal.Gestora
             try {
                 conexion = clsMyConnection.establecerConexion();
 
-                command = new SqlCommand("INSERT INTO DEPARTAMENTOS VALUES(@Nombre)");
+                command = new SqlCommand("INSERT INTO Departamentos VALUES(@Nombre)",conexion);
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = departamento.Nombre;
+                command.ExecuteNonQuery();
 
                 clsMyConnection.cerrarConexion(conexion);
             }
@@ -40,9 +41,11 @@ namespace CRUD_Personas_Dal.Gestora
 
             try {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("UPDATE DEPARTAMENTOS SET Nombre = @Nombre WHERE ID = @Id");
+                command = new SqlCommand("UPDATE DEPARTAMENTOS SET Nombre = @Nombre WHERE ID = @Id",conexion);
                 command.Parameters.Add("@Id",System.Data.SqlDbType.Int).Value = departamento.ID;
                 command.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar).Value = departamento.Nombre;
+                actualizaciones = command.ExecuteNonQuery();
+
                 clsMyConnection.cerrarConexion(conexion);
             }
             catch (Exception) 
@@ -63,8 +66,10 @@ namespace CRUD_Personas_Dal.Gestora
 
             try {
                 conexion = clsMyConnection.establecerConexion();
-                command = new SqlCommand("DELETE DEPARTAMENTOS WHERE ID = @Id");
+                command = new SqlCommand("DELETE DEPARTAMENTOS WHERE ID = @Id",conexion);
                 command.Parameters.Add("@Id",System.Data.SqlDbType.Int).Value = idDepartamento;
+                eliminaciones = command.ExecuteNonQuery();
+                    
                 clsMyConnection.cerrarConexion(conexion);
             }
             catch (SqlException) {

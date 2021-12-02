@@ -35,9 +35,6 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Person
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\CRUD_Personas_UI_ASP.TagHelpers.input.cache
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\CRUD_Personas_UI_ASP.TagHelpers.output.cache
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\CRUD_Personas_UI_ASP.RazorCoreGenerate.cache
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\CRUD_Personas_UI_ASP.RazorTargetAssemblyInfo.cache
@@ -199,12 +196,6 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Deb
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\ref\CRUD_Personas_UI_ASP.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\CRUD_Personas_UI_ASP.pdb
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\CRUD_Personas_UI_ASP.genruntimeconfig.cache
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\ClsPersonaDepartamentos\Create.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\ClsPersonaDepartamentos\Delete.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\ClsPersonaDepartamentos\Details.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\ClsPersonaDepartamentos\Edit.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\ClsPersonaDepartamentos\Index.cshtml.g.cs
-C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\ViewNotFound.cshtml.g.cs
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\bin\Debug\net5.0\Humanizer.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -328,3 +319,16 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Deb
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Departamentos\Create.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Departamentos\Delete.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Departamentos\Details.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Departamentos\Edit.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Departamentos\Index.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Personas\Create.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Personas\Delete.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Personas\Details.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Personas\Edit.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Personas\Index.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\ViewNotFoundDepartamentos.cshtml.g.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\CRUD_Personas\CRUD_Personas_UI_ASP\obj\Debug\net5.0\Razor\Views\Shared\ViewNotFoundPersonas.cshtml.g.cs

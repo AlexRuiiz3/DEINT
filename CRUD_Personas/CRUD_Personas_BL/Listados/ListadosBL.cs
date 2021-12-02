@@ -60,6 +60,11 @@ namespace CRUD_Personas_BL.Listados
             }
             return nombre;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static ClsPersona obtenerPersona(int id)
         {
             ClsPersona persona;
@@ -72,6 +77,23 @@ namespace CRUD_Personas_BL.Listados
                 throw;
             }
             return persona;
+        }
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static ClsDepartamento obtenerDepartamento(int id) {
+
+            ClsDepartamento departamento;
+
+            try {
+                departamento = ListadosDAL.obtenerDepartamento(id);
+            }
+            catch (SqlException) {
+                throw;
+            }
+            return departamento;
         }
     }
 }
