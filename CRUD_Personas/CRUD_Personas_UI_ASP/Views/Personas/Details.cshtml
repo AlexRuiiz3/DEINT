@@ -12,62 +12,48 @@
     <title>Details</title>
 </head>
 <body>
-
     <div>
         <h1>Details Persona</h1>
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Nombre)
+                <strong>@Html.DisplayNameFor(model => model.Nombre)</strong> @Html.DisplayFor(model => model.Nombre)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Nombre)
-            </dd>
+            <dd><br /></dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Apellidos)
+                <strong>@Html.DisplayNameFor(model => model.Apellidos)</strong> @Html.DisplayFor(model => model.Apellidos)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Apellidos)
-            </dd>
+            <dd><br /></dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Telefono)
+                <strong>@Html.DisplayNameFor(model => model.Telefono)</strong> @Html.DisplayFor(model => model.Telefono)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Telefono)
-            </dd>
+            <dd><br /></dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Direccion)
+                <strong>@Html.DisplayNameFor(model => model.Direccion)</strong> @Html.DisplayFor(model => model.Direccion)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Direccion)
-            </dd>
+            <dd><br /></dd>
             @{
                 var base64 = Convert.ToBase64String(Model.Foto);
                 var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
                 <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Foto)
+                    <strong>@Html.DisplayNameFor(model => model.Foto)</strong>
                 </dt>
-                <dd class="col-sm-10">
-                    <img src="@imgSrc" wight width="80" height="80" />
-                </dd>
+                <img src="@imgSrc" wight width="80" height="80" />
             }
+            <dd><br /></dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.FechaNacimiento)
+                <strong>@Html.DisplayNameFor(model => model.FechaNacimiento)</strong>  @Model.FechaNacimiento.ToString("dd-MM-yyyy")
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.FechaNacimiento)
-            </dd>
+            <dd><br /></dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.NombreDepartamento)
+                <strong>@Html.DisplayNameFor(model => model.NombreDepartamento)</strong> @Html.DisplayFor(model => model.NombreDepartamento)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.NombreDepartamento)
-            </dd>
         </dl>
     </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <br />
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
 </body>
 </html>

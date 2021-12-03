@@ -1,0 +1,12 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Release\netstandard2.0\CRUD_Personas_Dal.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Release\netstandard2.0\CRUD_Personas_Dal.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Release\netstandard2.0\CRUD_Personas_Dal.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Release\netstandard2.0\CRUD_Personas_Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\bin\Release\netstandard2.0\CRUD_Personas_Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.pdb

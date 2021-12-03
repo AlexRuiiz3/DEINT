@@ -12,7 +12,13 @@ namespace CRUD_Personas_UI_ASP.Controllers
 {
     public class DepartamentosController : Controller
     {
-        // GET: DepartamentosController
+        #region Actions
+        //Index
+
+        /// <summary>
+        ///  Action Index que prepara una lista de departamentos. Si se produce cualquier tipo de error se prepara una view de error
+        /// </summary>
+        /// <returns>ActionResult action</returns>
         public ActionResult Index()
         {
             ActionResult action;
@@ -27,20 +33,27 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return action;
         }
 
-        // GET: DepartamentosController/Details/5
+        //Details
+
+        /// <summary>
+        ///  Action Details que prepara un departamento con una lista de personas con nombre y apellidos. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>ActionResult action</returns>
         public ActionResult Details(int id)
         {
             ActionResult action;
             try
             {
-                List<ClsPersonaNombreApellidos> personasDepartamentoSimplificada = new List<ClsPersonaNombreApellidos>();
+                List<ClsPersonaNombreApellidos> personasConNombreApellidos = new List<ClsPersonaNombreApellidos>();
                 List<ClsPersona> personasDeDepartamento =  ListadosBL.obtenerPersonasDeDepartamento(id);
+
                 foreach (ClsPersona persona in personasDeDepartamento) {
-                    personasDepartamentoSimplificada.Add(new ClsPersonaNombreApellidos(persona));
+                    personasConNombreApellidos.Add(new ClsPersonaNombreApellidos(persona));
                 }
 
                 ClsDepartamentoConPersonasSimplificadasVM departamentoVM = new ClsDepartamentoConPersonasSimplificadasVM
-                                                                          (ListadosBL.obtenerDepartamento(id), personasDepartamentoSimplificada);
+                                                                          (ListadosBL.obtenerDepartamento(id), personasConNombreApellidos);
                 action = View(departamentoVM);
             }
             catch (Exception)
@@ -51,13 +64,22 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return action;
         }
 
-        // GET: DepartamentosController/Create
+        //Create//
+
+        /// <summary>
+        /// Action Create que devuelve un ActionResult a una view Create. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <returns>ActionResult</returns>
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: DepartamentosController/Create
+        /// <summary>
+        /// Action HttpPost Create que prepara las cosas necesarias para una funcion que añadira una departamento a la BBDD. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="clsDepartamento"></param>
+        /// <returns>ActionResult action</returns>
         [HttpPost]
         public ActionResult Create(ClsDepartamento clsDepartamento)
         {
@@ -78,7 +100,11 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return action;
         }
 
-        // GET: DepartamentosController/Edit/5
+        /// <summary>
+        /// Action Edit que prepara un departamento concreto. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>ActionResult action</returns>
         public ActionResult Edit(int id)
         {
             ActionResult action;
@@ -95,7 +121,11 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return action;
         }
 
-        // POST: DepartamentosController/Edit/5
+        /// <summary>
+        ///  Action HttpPost Edit que prepara las cosas necesarias para una funcion que actualizara un departamento a la BBDD. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="clsDepartamento"></param>
+        /// <returns>ActionResult action</returns>
         [HttpPost]
         public ActionResult Edit(ClsDepartamento clsDepartamento)
         {
@@ -104,8 +134,9 @@ namespace CRUD_Personas_UI_ASP.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    GestoraDepartamentoBL.editarDepartamento(clsDepartamento);
-                    action = RedirectToAction("Index");
+                    int numActualizaciones = GestoraDepartamentoBL.editarDepartamento(clsDepartamento);
+                    ViewBag.NumCambios = numActualizaciones;
+                    action = View("ViewExitoDepartamentos");
                 }
                 else {
                     ClsDepartamento departamento = ListadosBL.obtenerDepartamento(clsDepartamento.ID);
@@ -120,7 +151,11 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return action;
         }
 
-        // GET: DepartamentosController/Delete/5
+        /// <summary>
+        /// Action Delete que prepara un departamento en concreto. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>ActionResult action</returns>
         public ActionResult Delete(int id)
         {
             ActionResult action;
@@ -135,7 +170,11 @@ namespace CRUD_Personas_UI_ASP.Controllers
             return View();
         }
 
-
+        /// <summary>
+        /// Action HttpPost DeletePost que prepara las cosas necesarias para una funcion que eliminara un departamento a la BBDD. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>ActionResult action</returns>
         [HttpPost, ActionName("Delete")]
         public ActionResult DeletePost(int id)
         {
@@ -148,8 +187,9 @@ namespace CRUD_Personas_UI_ASP.Controllers
                     action = View("ViewNotFoundDepartamentos");
                 }
                 else {
-                    GestoraDepartamentoBL.eliminarDeparmaento(id);
-                    action = RedirectToAction("Index");
+                    int numEliminaciones = GestoraDepartamentoBL.eliminarDeparmaento(id);
+                    ViewBag.NumCambios = numEliminaciones;
+                    action = View("ViewExitoDepartamentos");
                 }
             }
             catch(Exception)
@@ -159,5 +199,6 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             return action;
         }
+        #endregion
     }
 }

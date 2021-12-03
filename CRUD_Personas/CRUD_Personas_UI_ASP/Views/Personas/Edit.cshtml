@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Edit Persona</h1>
-    <h3>Edite los campos de la persona disponibles</h3>
+    <h3>Edite los campos de la persona</h3>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -22,25 +22,25 @@
 
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
-                    <input asp-for="Nombre" class="form-control" />
+                    <input asp-for="Nombre" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Nombre)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Apellidos" class="control-label"></label>
-                    <input asp-for="Apellidos" class="form-control" />
+                    <input asp-for="Apellidos" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Apellidos)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
-                    <input asp-for="Telefono" class="form-control" />
+                    <input asp-for="Telefono" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Telefono)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Direccion" class="control-label"></label>
-                    <input asp-for="Direccion" class="form-control" />
+                    <input asp-for="Direccion" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Direccion)
                 </div>
                 <br />
@@ -53,6 +53,7 @@
                         <label asp-for="Foto" class="control-label"></label>
                         <img src="@imgSrc" width="80" height="80" />
                         <input type="file" name="imagen" class="form-control" accept=".png, .jpg">
+                        <input hidden name="Foto" value="@base64"/>
                     </div>
                 }
                 <br />
@@ -92,6 +93,5 @@
     <div>
         <a asp-action="Index">Back to List</a>
     </div>
-
 </body>
 </html>

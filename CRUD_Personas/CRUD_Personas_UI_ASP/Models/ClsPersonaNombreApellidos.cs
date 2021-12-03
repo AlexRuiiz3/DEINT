@@ -1,4 +1,22 @@
-﻿using CRUD_Personas_Entidades;
+﻿/*
+ * Nombre: ClsPersonaNombreApellidos
+ * 
+ * Comentario: Esta clase representa a una persona de ClsPersona(Capa entidades) pero simplificandola a solo nombre y apellidos
+ * 
+ * Atributos:   Basicos: Definido por propiedades autoimplementadas.
+ *              Derivados: Ninguno.
+ *              Compartidos: Ninguno.
+ * 
+ * Metodos Fundamentales:
+ *                Propiedades: -public string Nombre
+ *                             -public string Apellidos
+ *                          
+ * 
+ * Metodos heredados: Ninguno.
+ * Metodos añadidos: Ninguno.
+ */
+
+using CRUD_Personas_Entidades;
 
 namespace CRUD_Personas_UI_ASP.Models
 {

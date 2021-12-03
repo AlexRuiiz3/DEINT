@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewNotFoundPersonas</title>
+</head>
+<body>
+    <h1>Gestión Personas</h1>
+    <h2 style="color:red">404.Error. Algo salio mal!</h2>
+    Detalles del error: @ViewBag.Mensaje
+    <br/>
+    @Html.ActionLink("Inicio Personas", "Index", "Personas")
+</body>
+</html>

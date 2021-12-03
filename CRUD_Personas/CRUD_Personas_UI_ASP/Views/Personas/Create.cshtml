@@ -20,26 +20,26 @@
             <form asp-action="Create" enctype="multipart/form-data">
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
-                    <input asp-for="Nombre" class="form-control" />
+                    <input asp-for="Nombre" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Nombre)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Apellidos" class="control-label"></label>
-                    <input asp-for="Apellidos" class="form-control" />
+                    <input asp-for="Apellidos" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Apellidos)
 
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
-                    <input asp-for="Telefono" class="form-control" />
+                    <input asp-for="Telefono" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Telefono)
                 </div>
                 <br />
                 <div class="form-group">
                     <label asp-for="Direccion" class="control-label"></label>
-                    <input asp-for="Direccion" class="form-control" />
+                    <input asp-for="Direccion" required class="form-control" />
                     @Html.ValidationMessageFor(model => model.Direccion)
 
                 </div>
@@ -55,7 +55,6 @@
                 </div>
                 <br />
                 <div class="form-group">
-                    <!--TODO buscar como se hace el select con los helpers de Razor-->
                     <select name="IdDepartamento">
                         @{
                             foreach (CRUD_Personas_Entidades.ClsDepartamento departamento in Model.ListaDepartamentos)

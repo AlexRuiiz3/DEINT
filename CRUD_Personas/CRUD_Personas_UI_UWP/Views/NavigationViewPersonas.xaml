@@ -63,7 +63,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: "></TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Nombre,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Nombre}"></TextBlock>
             <TextBox Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Apellidos: "></TextBlock>
@@ -79,7 +79,7 @@
             <TextBox Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" Text="Fecha nacimiento: "></TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCampos}" Text="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay}"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCampos}" Text="{Binding PersonaSeleccionada.FechaNacimiento}"></TextBlock>
             <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCamposEditables}" SelectedDate="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource converterDateTimeOffSet}}"></DatePicker>
 
             <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,5" Text="Departamento: "></TextBlock>

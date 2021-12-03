@@ -1,4 +1,27 @@
-﻿using System;
+﻿/*
+ * Nombre: ClsPersona
+ * 
+ * Comentario: Esta clase representa a una persona de la tabla Persona de una BBDD, siendo cada atributo una columna que esta definida en la tabla Persona
+ * 
+ * Atributos:   Basicos: Definido por propiedades autoimplementadas.
+ *              Derivados: Ninguno.
+ *              Compartidos: Ninguno.
+ * 
+ * Metodos Fundamentales:
+ *                Propiedades: -public int ID
+ *                             -public string Nombre
+ *                             -public string Apellidos
+ *                             -public string Telefono
+ *                             -public string Direccion
+ *                             -public byte[] Foto
+ *                             -public DateTime FechaNacimiento
+ *                             -public int IdDepartamento
+ *                          
+ * 
+ * Metodos heredados: Ninguno.
+ * Metodos añadidos: Ninguno.
+ */
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace CRUD_Personas_Entidades
@@ -36,23 +59,23 @@ namespace CRUD_Personas_Entidades
         //ID
         public int ID { get; set; } 
         //Nombre
-        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Nombre")]
+        [Required(ErrorMessage = "Campo obligatorio"), MaxLength(20, ErrorMessage = "Longitud maxima 20 caracteres"), Display(Name = "Nombre:")]
         public string Nombre { get; set; }
         //Apellidos
-        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Apellidos")]
+        [Required(ErrorMessage = "Campo obligatorio"), MaxLength(30, ErrorMessage = "Longitud maxima 30 caracteres"), Display(Name = "Apellidos:")]
         public string Apellidos { get; set; }
         //Telefono
-        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Telefono"),
+        [Required(ErrorMessage = "Campo obligatorio"), MaxLength(9, ErrorMessage = "Longitud maxima 9 caracteres"), Display(Name = "Telefono:"),
         RegularExpression(@"(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}", ErrorMessage = "Formato de telefono no español")]
         public string Telefono { get; set; }
         //Direccion
-        [Required(ErrorMessage = "Campo obligatorio"), Display(Name = "Direccion")]
+        [Required(ErrorMessage = "Campo obligatorio"), MaxLength(35, ErrorMessage = "Longitud maxima 35 caracteres"), Display(Name = "Direccion:")]
         public string Direccion { get; set; }
         //Foto
-        [Display(Name = "Foto")]
+        [Display(Name = "Foto:")]
         public byte[] Foto { get; set; }
         //FechaNacimiento
-        [Display(Name = "Fecha Nacimiento")]
+        [Display(Name = "Fecha Nacimiento:")]
         public DateTime FechaNacimiento { get; set; }
         //IdDepartamento
         public int IdDepartamento { get; set; }

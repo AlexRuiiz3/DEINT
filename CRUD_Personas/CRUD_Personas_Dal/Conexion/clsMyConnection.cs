@@ -39,5 +39,4 @@ namespace CRUD_Personas_Dal.Conexion
             }
         }
     }
-
 }

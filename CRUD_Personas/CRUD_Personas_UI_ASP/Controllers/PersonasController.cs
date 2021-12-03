@@ -15,13 +15,14 @@ namespace CRUD_Personas_UI_ASP.Controllers
     public class PersonasController : Controller
     {
 
+        private readonly string mensajeError = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
         #region Actions
         //Index
 
         /// <summary>
-        /// 
+        ///  Action Index que prepara una lista de personas simplificadas(Nombre, Apellidos) con nombre de departamento. Si se produce cualquier tipo de error se prepara una view de error
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         public IActionResult Index()
         {
             IActionResult action;
@@ -42,7 +43,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = mensajeError;
                 action = View("ViewNotFoundPersonas");
             }
             return action;
@@ -51,10 +52,10 @@ namespace CRUD_Personas_UI_ASP.Controllers
         //Details
 
         /// <summary>
-        /// 
+        ///  Action Details que prepara una persona con nombre de departamento. Si se produce cualquier tipo de error se prepara una view de error.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         public IActionResult Details(int id)
         {
             IActionResult action;
@@ -64,11 +65,11 @@ namespace CRUD_Personas_UI_ASP.Controllers
                 ClsPersona clsPersona = ListadosBL.obtenerPersona(id);
 
                 clsPersonaDepartamento = new ClsPersonaNombreDepartamento(clsPersona, ListadosBL.obtenerNombreDepartamento(clsPersona.IdDepartamento));
-                action = View(clsPersonaDepartamento);
+                action = View(clsPersonaDepartamento); 
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = mensajeError;
                 action = View("ViewNotFoundPersonas");
             }
 
@@ -78,9 +79,9 @@ namespace CRUD_Personas_UI_ASP.Controllers
         //Create//
 
         /// <summary>
-        /// 
+        /// Action Create que prepara una persona con lista de departamentos. Si se produce cualquier tipo de error se prepara una view de error.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         public IActionResult Create()
         {
             IActionResult action;
@@ -93,18 +94,18 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = mensajeError;
                 action = View("ViewNotFoundPersonas");
             }
             return action;
         }
 
         /// <summary>
-        /// 
+        /// Action HttpPost Create que prepara las cosas necesarias para una funcion que añadira una persona a la BBDD. Si se produce cualquier tipo de error se prepara una view de error.
         /// </summary>
         /// <param name="clsPersonaDepartamento"></param>
         /// <param name="imagen"></param>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         [HttpPost]
         public IActionResult Create(ClsPersonaListaDepartamentosVM clsPersonaDepartamento, IFormFile imagen)
         {
@@ -127,7 +128,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = "Algo ocurrio al intentar guardar la persona nueva en la base de datos.";
                 action = View("ViewNotFoundPersonas");
             }
             return action;
@@ -136,10 +137,10 @@ namespace CRUD_Personas_UI_ASP.Controllers
         //Edit
 
         /// <summary>
-        /// 
+        /// Action Edit que prepara una persona con lista de departamentos. Si se produce cualquier tipo de error se prepara una view de error.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         public IActionResult Edit(int id)
         {
             IActionResult action;
@@ -151,18 +152,18 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = mensajeError;
                 action = View("ViewNotFoundPersonas");
             }
             return action;
         }
 
         /// <summary>
-        /// 
+        /// Action HttpPost Edit que prepara las cosas necesarias para una funcion que actualizara una persona a la BBDD. Si se produce cualquier tipo de error se prepara una view de error.
         /// </summary>
         /// <param name="clsPersonaDepartamento"></param>
         /// <param name="imagen"></param>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         [HttpPost]
         public IActionResult Edit(ClsPersona clsPersona, IFormFile imagen)
         {
@@ -177,7 +178,8 @@ namespace CRUD_Personas_UI_ASP.Controllers
                         clsPersona.Foto = rellenarArrayByte(imagen);
                     }
                     numActualizaciones = GestoraPersonasBL.editarPersona(clsPersona);
-                    action = RedirectToAction("Index");
+                    ViewBag.NumCambios = numActualizaciones;
+                    action = View("ViewExitoPersonas");
                 }
                 else {
                     //Hay que hacerlo con View y no con RedirectToAction("Edit"), por que con RedirectToAction no salen los mensajes de validacion(Ej: Campo obligatorio)
@@ -186,7 +188,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = "Algo ocurrio al intentar actualizar la persona en la base de datos.";
                 action = View("ViewNotFoundPersonas");
             }
             return action;
@@ -195,10 +197,10 @@ namespace CRUD_Personas_UI_ASP.Controllers
         //Delete
 
         /// <summary>
-        /// 
+        /// Action Delete que prepara una persona con nombre de departamento. Si se produce cualquier tipo de error se prepara una view de error.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>IActionResult action</returns>
         public IActionResult Delete(int id)
         {
             IActionResult action;
@@ -211,40 +213,50 @@ namespace CRUD_Personas_UI_ASP.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = mensajeError;
                 action = View("ViewNotFoundPersonas");
             }
 
             return action;
         }
 
-        // POST: ClsPersonaDepartamentoes/Delete/5
+        /// <summary>
+        /// Action HttpPost DeletePost que prepara las cosas necesarias para una funcion que eliminara una persona a la BBDD. Si se produce cualquier tipo de error se prepara una view de error.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>IActionResult action</returns>
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int id)
         {
             IActionResult action;
-
             try {
-                GestoraPersonasBL.eliminarPersona(id);
-                action = RedirectToAction("Index");
+                int numEliminaciones = GestoraPersonasBL.eliminarPersona(id);
+                ViewBag.NumCambios = numEliminaciones;
+                action = View("ViewExitoPersonas");
             }
             catch (Exception) {
-                ViewBag.Mensaje = "Algo ocurrio al acceder a la base de datos o algun error extraño ocurrio.";
+                ViewBag.Mensaje = "Algo ocurrio al intentar eliminar la persona en la base de datos.";
                 action = View("ViewNotFoundPersonas");
             }
 
-            return RedirectToAction(nameof(Index));
+            return action;
         }
         #endregion
 
 
         #region Metodos Privados
         /// <summary>
-        /// 
+        /// Cabecera: private string obtenerNombreDepartamento(List<ClsDepartamento> listaDepartamentos, int id)
+        /// Comentario: Este metodo se obtener el nombre de un departamento de una lista de departamentos a partir del id recibido
+        /// Entradas: List<ClsDepartamento> listaDepartamentos, int id
+        /// Salidas: string nombre
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se el nombre de un departamento si coincide su id con el id recibido, si no se encuentra un departamento 
+        ///                  que conincida con el id recibido, el valor de la cadena devuelta sera "" vacio.
         /// </summary>
         /// <param name="listaDepartamentos"></param>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>string nombre</returns>
         private string obtenerNombreDepartamento(List<ClsDepartamento> listaDepartamentos, int id)
         {
             string nombre = "";
@@ -261,10 +273,16 @@ namespace CRUD_Personas_UI_ASP.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Cabecera: private byte[] rellenarArrayByte(IFormFile file)
+        /// Comentario: Este metodo se encarga rellenar un array de byte a partir de un IFormFile
+        /// Entradas: IFormFile file
+        /// Salidas: byte[] arrayByte
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se obtendra un array de byte a partir del IFormFile recibido, si el objeto IFormFile tiene una longitud menor o igual que 0, 
+        ///                  el valor devuelto del array de byte tendra una longitud de 0, estara vacio.
         /// </summary>
         /// <param name="file"></param>
-        /// <returns></returns>
+        /// <returns>byte[] arrayByte</returns>
         private byte[] rellenarArrayByte(IFormFile file)
         {
             byte[] arrayByte = new byte[0];

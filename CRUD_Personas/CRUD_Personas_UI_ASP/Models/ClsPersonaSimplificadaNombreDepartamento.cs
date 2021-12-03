@@ -1,8 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * Nombre: ClsPersonaSimplificadaNombreDepartamento
+ * 
+ * Comentario: Esta clase representa a una persona de ClsPersona(Capa entidades) pero simplificandola a solo id, nombre, apellidos y nombre del departamento.
+ * 
+ * Atributos:   Basicos: Definido por propiedades autoimplementadas.
+ *              Derivados: Ninguno.
+ *              Compartidos: Ninguno.
+ * 
+ * Metodos Fundamentales:
+ *                Propiedades: -public int ID
+ *                             -public string Nombre
+ *                             -public string Apellidos
+ *                             -public string NombreDepartamento
+ *                          
+ * 
+ * Metodos heredados: Ninguno.
+ * Metodos añadidos: Ninguno.
+ */
+
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 using CRUD_Personas_Entidades;
 
 namespace CRUD_Personas_UI_ASP.Models

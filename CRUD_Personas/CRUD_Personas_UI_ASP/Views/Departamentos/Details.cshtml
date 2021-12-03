@@ -14,18 +14,14 @@
 <body>
 
     <div>
-        <h4>Details Departamento</h4>
+        <h1>Details Departamento</h1>
+        
         <hr />
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Nombre)
+                <strong>@Html.DisplayNameFor(model => model.Nombre)</strong> @Html.DisplayFor(model => model.Nombre)
             </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Nombre)
-            </dd>
-
-
-            @Html.DisplayNameFor(model => model.ListaPersonas)
+            <strong>@Html.DisplayNameFor(model => model.ListaPersonas)</strong>
             @{
                 if (Model.ListaPersonas.Count > 0) //Si el departamento tiene asignado alguna persona
                 {

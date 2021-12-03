@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using CRUD_Personas_Entidades;
 using CRUD_Personas_Dal;
-using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 
 namespace CRUD_Personas_BL.Listados
