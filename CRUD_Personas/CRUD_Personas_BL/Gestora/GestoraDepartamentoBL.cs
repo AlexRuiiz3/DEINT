@@ -28,7 +28,7 @@ namespace CRUD_Personas_BL.Gestora
             }
         }
         /// <summary>
-        /// Cabecera: public static int eliminarDeparmaento(int id)
+        /// Cabecera: public static int eliminarDepartamento(int id)
         /// Comentario: Este metodo se encarga de llamar al metodo anhadirDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
         /// Entradas: int id
         /// Salidas: int eliminaciones
@@ -37,7 +37,7 @@ namespace CRUD_Personas_BL.Gestora
         /// </summary>
         /// <param name="id"></param>
         /// <returns>int eliminaciones</returns>
-        public static int eliminarDeparmaento(int id)
+        public static int eliminarDepartamento(int id)
         {
             int eliminaciones = 0;
             try
@@ -51,7 +51,7 @@ namespace CRUD_Personas_BL.Gestora
             return eliminaciones;
         }
         /// <summary>
-        /// Cabecera: public static int eliminarDeparmaento(int id)
+        /// Cabecera:  public static int editarDepartamento(ClsDepartamento departamento)
         /// Comentario: Este metodo se encarga de llamar al metodo editarDepartamento de la clase GestoraDepartamentoDAL de la capa DAL.
         /// Entradas: ClsDepartamento departamento
         /// Salidas: int actualizaciones

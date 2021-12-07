@@ -119,7 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClsDepartamentoConPersonas.cs" />
     <Compile Include="Models\ClsPersonaConDepartamento.cs" />
+    <Compile Include="ViewModels\NavigationViewDepartamentosVM.cs" />
     <Compile Include="ViewModels\NavigationViewPersonasVM.cs" />
     <Compile Include="ViewModels\Utilidades\clsVMBase.cs" />
     <Compile Include="ViewModels\Utilidades\Converters\ConverterDateTimeSimplificado.cs" />

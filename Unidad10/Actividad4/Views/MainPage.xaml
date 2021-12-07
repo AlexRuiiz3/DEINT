@@ -14,23 +14,11 @@
     </Page.DataContext>
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:Name="AnchoMayor550">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="550"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="GridDatosPersona.(RelativePanel.RightOf)" Value="LstPersonas"/>
-                        <Setter Target="GridDatosPersona.(RelativePanel.AlignTopWith)" Value="LstPersonas"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+
 
         <RelativePanel>
             <ListView Name="LstPersonas" ItemsSource="{Binding ListaPersonas}" BorderBrush="Black" 
-                  BorderThickness="1" SelectedItem="{Binding PersonaSeleccionada, Mode=TwoWay}">
+                  BorderThickness="1" SelectedItem="{Binding PersonaSeleccionada, Mode=TwoWay}" MaxHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <!--DataTyper es para definir que en la plantilla de datos se usara una ClsPersona entonces hay que usar x:Bind -->

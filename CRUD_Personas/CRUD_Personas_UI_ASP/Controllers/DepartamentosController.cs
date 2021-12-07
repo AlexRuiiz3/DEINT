@@ -187,7 +187,7 @@ namespace CRUD_Personas_UI_ASP.Controllers
                     action = View("ViewNotFoundDepartamentos");
                 }
                 else {
-                    int numEliminaciones = GestoraDepartamentoBL.eliminarDeparmaento(id);
+                    int numEliminaciones = GestoraDepartamentoBL.eliminarDepartamento(id);
                     ViewBag.NumCambios = numEliminaciones;
                     action = View("ViewExitoDepartamentos");
                 }

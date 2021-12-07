@@ -1,0 +1,68 @@
+Capa Entidades: -ClsPersona --> Atributos: 
+					-ID int
+					-Nombre string
+					-Apellidos string
+					-Telefono string
+					-Direccion string 
+					-Foto byte[]
+					-FechaNacimiento DateTime
+					-IDDepartamento int
+
+		-ClsDepartamento --> Atributos:
+					-ID int
+					-Nombre string
+
+Capa DAL:
+	  - Conexion: - ClsMyConnection --> Metodos: -SqlConnection establecerConexion()
+						     -void cerrarConexion(SqlConnection conexion)
+
+	  - Gestora:  - GestoraDepartamentoDAL --> Metodos: -void anhadirDepartamento(ClsDepartamento departamento) 
+							    -int editarDepartamento(ClsDepartamento departamento) 
+							    -int eliminarDepartamento(int id)	
+						
+		      - GestoraPersonasDAL --> Metodos: -void anhadirPersona(ClsPersona persona)
+							-int editarPersona(ClsPersona persona)
+							-int eliminarPersona(int id)
+
+	  - Listados: -ListadosDAL --> Metodos: -List<ClsPersona> obtenerPersonas()
+						-List<ClsDepartamento> obtenerDepartamentos()
+						-String obtenerNombreDepartamento(int id)
+						-ClsPersona obtenerPersona(int id)
+						-ClsDepartamento obtenerDepartamento(int id)
+						-List<ClsPersona> obtenerPersonasDeDepartamento(int idDepartamento)
+
+	  - Utilidades: -UtilidadesDAL --> Metodos: bool comprobarDepartamentoTienePersonas(int id)
+
+
+Capa BL: 
+	  - Gestora:  - GestoraDepartamentoBL --> Metodos: -void anhadirDepartamento(ClsDepartamento departamento) 
+							    -int editarDepartamento(ClsDepartamento departamento) 
+							    -int eliminarDepartamento(int id)	
+
+		      - GestoraPersonaBL --> Metodos: -void anhadirPersona(ClsPersona persona)
+							-int editarPersona(ClsPersona persona)
+							-int eliminarPersona(int id)
+
+	  - Listados: -ListadosBL --> -List<ClsPersona> obtenerPersonas()
+						-List<ClsDepartamento> obtenerDepartamentos()
+						-String obtenerNombreDepartamento(int id)
+						-ClsPersona obtenerPersona(int id)
+						-ClsDepartamento obtenerDepartamento(int id)
+						-List<ClsPersona> obtenerPersonasDeDepartamento(int idDepartamento)
+
+	  - Utilidades: -UtilidadesBL --> Metodos: bool comprobarDepartamentoTienePersonas(int id)
+	  
+
+Capa UI:  -Models: -ClsPersonaConDepartamento--> Hereda de ClsPersona(Capa Entidades) Atributos: -NombreDepartamento string
+	  
+	  -ViewModels: -NavigationViewPersonasVM
+ 		       -NavigationViewDepartamentosVM
+		       -Carpeta Utiliades: -ClsVMBase
+						 -DelegateCommand
+						 -Carpeta Converters: -CoverterDateTimeOffSet
+								      -ConverterDateTimeSimplificado
+			     
+	  -Views: -MainPage
+		  -NavigationViewPersonas
+		  -NavigationViewDepartamentos
+		

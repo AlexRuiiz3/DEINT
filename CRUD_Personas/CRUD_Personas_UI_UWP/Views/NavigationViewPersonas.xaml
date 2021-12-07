@@ -18,33 +18,85 @@
         <converters:ConverterDateTimeSimplificado x:Key="converterDateTimeSimplificado"/>
         <converters:ConverterDateTimeOffSet x:Key="converterDateTimeOffSet"/>
     </Page.Resources>
-    
+
     <RelativePanel>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="AnchorMayorIgua0">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="StackBotones.Visibility" Value="Visible"></Setter>
+                        <Setter Target="ButtonEditar.Visibility" Value="Collapsed"></Setter>
+                        <Setter Target="ButtonGuardar.Visibility" Value="Collapsed"></Setter>
+                        <Setter Target="ButtonEliminar.Visibility" Value="Collapsed"></Setter>
+                        <Setter Target="ButtonAtras.Visibility" Value="Collapsed"></Setter>
 
-        <StackPanel>
-            <Button HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding CrearCommand}" Margin="0,10,0,-10">
-                <StackPanel>
-                    <SymbolIcon Symbol="Add"></SymbolIcon>
-                    <TextBlock Text="Añadir" HorizontalAlignment="Center"></TextBlock>
-                </StackPanel>
-            </Button>
-            
-            <ListView Name="ListView" ItemsSource="{Binding ListaPersonas}" 
-                  SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"/>
-                            <TextBlock Text="{Binding Apellidos}"/>
-                        </StackPanel>
+                        <Setter Target="ButtonImagen.(Grid.Row)" Value="6"></Setter>
+                        <Setter Target="ButtonImagen.(Grid.Column)" Value="1"></Setter>
+                        <Setter Target="ButtonImagen.(Grid.RowSpan)" Value="1"></Setter>
+                        
+                        <Setter Target="ButtonCambiarImagen.(Grid.Row)" Value="6"></Setter>
+                        <Setter Target="ButtonCambiarImagen.(Grid.Column)" Value="0"></Setter>
+                        <Setter Target="ButtonCambiarImagen.(Grid.RowSpan)" Value="1"></Setter>
 
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                        <Setter Target="ListaPersonas.MaxHeight" Value="90"></Setter>
+                        <Setter Target="ListaPersonas.(RelativePanel.AlignBottomWithPanel)" Value="False"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="AnchorMayorIgual550">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="550"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ListaPersonas.(RelativePanel.AlignBottomWithPanel)" Value="False"></Setter>
+                        <Setter Target="ListaPersonas.MaxHeight" Value="90"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="AnchorMayorIgual940">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="940"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="GridDatosPersona.(RelativePanel.AlignTopWith)" Value="ListaPersonas"></Setter>
+                        <Setter Target="GridDatosPersona.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True"></Setter>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <TextBox Name="TextBoxBuscar" Width="200" MinHeight="45" TextWrapping="NoWrap"
+                 Text="{Binding TextBoxBuscar,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <StackPanel MinHeight="40" RelativePanel.RightOf="TextBoxBuscar" RelativePanel.AlignVerticalCenterWith="TextBoxBuscar" Orientation="Horizontal">
+            <AppBarButton Icon="Find" Command="{Binding BuscarCommand}"/>
+            <AppBarButton Icon="Add" Label="Añadir" Command="{Binding AnhadirCommand}"/>
         </StackPanel>
 
-        <Grid RelativePanel.AlignHorizontalCenterWithPanel="True">
+        <ListView Name="ListaPersonas" RelativePanel.Below="TextBoxBuscar" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="TextBoxBuscar"
+                  MinHeight="80" RelativePanel.AlignBottomWithPanel="True" ItemsSource="{Binding ListaPersonasBuscadas}" 
+                  SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"/>
+                        <TextBlock Text="{Binding Apellidos}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Name="StackBotones" Orientation="Horizontal" Visibility="Collapsed" RelativePanel.Below="ListaPersonas">
+            <AppBarButton Command="{Binding EditarCommand}" Icon="Edit" />
+            <AppBarButton Command="{Binding GuardarCommand}" Icon="Save" />
+            <AppBarButton Command="{Binding EliminarCommand}" Icon="Delete" />
+            <AppBarButton Command="{Binding AtrasCommand}" Icon="Cancel"/>
+        </StackPanel>
+        
+        <Grid Name="GridDatosPersona" Margin="0,5,0,0"
+                  RelativePanel.Below="StackBotones" BorderBrush="Moccasin" BorderThickness="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -62,34 +114,52 @@
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: "></TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Nombre}"></TextBlock>
-            <TextBox Name="TextBoxNombre" Grid.Row="0" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!--Nombre-->
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: " Visibility="{Binding VisibilidadCampos}"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="*Nombre: " Visibility="{Binding VisibilidadCamposEditables}"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}"
+                       VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Nombre}"/>
+            <TextBox MaxWidth="295" Grid.Row="0" Grid.Column="1"  Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}"
+                     Text="{Binding PersonaSeleccionada.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Apellidos: "></TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBlock>
-            <TextBox Name="TextBoxApellidos" Grid.Row="1" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!--Apellidos-->
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Apellidos: " Visibility="{Binding VisibilidadCampos}"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="*Apellidos: " Visibility="{Binding VisibilidadCamposEditables}"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" 
+                       VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Apellidos}"></TextBlock>
+            <TextBox MaxWidth="295" Grid.Row="1" Grid.Column="1" Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}" 
+                     Text="{Binding PersonaSeleccionada.Apellidos,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,5" Text="Telefono: "></TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Telefono}"></TextBlock>
-            <TextBox Name="TextBoxTelefono" Grid.Row="2" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!--Telefono-->
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,5" Text="Telefono: " Visibility="{Binding VisibilidadCampos}"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,5" Text="*Telefono: " Visibility="{Binding VisibilidadCamposEditables}"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" 
+                       VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Telefono}"/>
+            <TextBox MaxWidth="295" Grid.Row="2" Grid.Column="1" Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}" 
+                     Text="{Binding PersonaSeleccionada.Telefono,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,5" Text="Direccion: "></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Direccion}"></TextBlock>
-            <TextBox Name="TextBoxDireccion" Grid.Row="3" Grid.Column="1"  Visibility="{Binding VisibilidadCamposEditables}" Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!--Direccion-->
+            <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,5" Text="Direccion: " Visibility="{Binding VisibilidadCampos}"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,5" Text="*Direccion: " Visibility="{Binding VisibilidadCamposEditables}"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" 
+                       VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Direccion}"/>
+            <TextBox MaxWidth="295" Grid.Row="3" Grid.Column="1" Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}" 
+                     Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" Text="Fecha nacimiento: "></TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCampos}" Text="{Binding PersonaSeleccionada.FechaNacimiento}"></TextBlock>
-            <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCamposEditables}" SelectedDate="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource converterDateTimeOffSet}}"></DatePicker>
+            <!--Fecha Nacimiento-->
+            <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" Text="Fecha nacimiento: "/>
+            <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCampos}" 
+                       Text="{Binding PersonaSeleccionada.FechaNacimiento,Converter={StaticResource converterDateTimeSimplificado}}"/>
+            <DatePicker Grid.Row="4" Grid.Column="1" Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}" SelectedDate="{Binding PersonaSeleccionada.FechaNacimiento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource converterDateTimeOffSet}}"></DatePicker>
 
-            <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,5" Text="Departamento: "></TextBlock>
+            <!--Departamento-->
+            <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,5" Text="Departamento: "/>
             <TextBlock Grid.Row="5" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" 
                        VerticalAlignment="Center"  Text="{Binding PersonaSeleccionada.NombreDepartamento}"></TextBlock>
-
             <ComboBox Grid.Row="5" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadCamposEditables}" 
                       ItemsSource="{Binding ListaDepartamentos}"
                       SelectedValuePath="ID"
-                      SelectedValue="{Binding PersonaSeleccionada.IdDepartamento,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                      SelectedValue="{Binding PersonaSeleccionada.IdDepartamento,Mode=TwoWay}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Nombre}"></TextBlock>
@@ -97,43 +167,21 @@
                 </ComboBox.ItemTemplate>
             </ComboBox>
 
-            <Button Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding EditarCommand}">
-                <StackPanel>
-                    <SymbolIcon Symbol="Edit"></SymbolIcon>
-                    <TextBlock Text="Editar" HorizontalAlignment="Center"></TextBlock>
-                </StackPanel>
-            </Button>
+            <AppBarButton Name="ButtonEditar" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding EditarCommand}" Icon="Edit" Label="Editar"/>
 
-            <Button Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding GuardarCommand}">
-                <StackPanel>
-                    <SymbolIcon Symbol="Save"></SymbolIcon>
-                    <TextBlock Text="Guardar" HorizontalAlignment="Center"></TextBlock>
-                </StackPanel>
-            </Button>
+            <AppBarButton Name="ButtonGuardar" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding GuardarCommand}" Icon="Save" Label="Guardar"/>
 
-            <Button Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding EliminarCommand}">
-                <StackPanel>
-                    <SymbolIcon Symbol="Delete"></SymbolIcon>
-                    <TextBlock Text="Eliminar" HorizontalAlignment="Center"></TextBlock>
-                </StackPanel>
-            </Button>
+            <AppBarButton Name="ButtonEliminar" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" Command="{Binding EliminarCommand}" Icon="Delete" Label="Eliminar"/>
 
-            <Button Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Background="Transparent"
-                    Command="{Binding AtrasCommand}">
-                <StackPanel>
-                    <SymbolIcon Symbol="Back"></SymbolIcon>
-                    <TextBlock Text="Atras" HorizontalAlignment="Center"></TextBlock>
-                </StackPanel>
-            </Button>
+            <AppBarButton Name="ButtonAtras" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding AtrasCommand}" Icon="Back" Label="Atras"/>
 
-            <TextBlock Grid.Row="8" Grid.Column="1" Visibility="{Binding VisibilidadCamposResultados}" Text="Persona guardada con exito" Foreground="Green"></TextBlock>
-            
-            <Button Grid.Row="0"  Grid.Column="2" Grid.RowSpan="3" Background="Transparent" Command="{Binding CambiarFotoCommand}">
+            <Button Name="ButtonImagen" HorizontalAlignment="Center"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Background="Transparent" Command="{Binding CambiarFotoCommand}">
                 <Image Source="{Binding Imagen,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxHeight="100" MaxWidth="100"></Image>
             </Button>
+            <AppBarButton Name="ButtonCambiarImagen" Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" HorizontalAlignment="Center" Visibility="{Binding VisibilidadCamposEditables}"  Command="{Binding CambiarFotoCommand}" Icon="Camera" Label="Cambiar foto"/>
+
+            <TextBlock Name="TextBlockResultado" Grid.Row="8" Grid.Column="1" Visibility="{Binding VisibilidadCamposResultados}" Text="Cambios realizados con exito." Foreground="Green"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="0" VerticalAlignment="Bottom" Visibility="{Binding VisibilidadCamposEditables}" Text="* Campos obligatorios" FontSize="10"/>
         </Grid>
     </RelativePanel>
 </Page>
