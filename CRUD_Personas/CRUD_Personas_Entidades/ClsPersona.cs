@@ -39,7 +39,7 @@ namespace CRUD_Personas_Entidades
             Direccion = "";
             Foto = new byte[0];
             FechaNacimiento = DateTime.Now;
-            IdDepartamento = 1;
+            IdDepartamento = 0;
         }
         //Constructor con parametros
         public ClsPersona(int id, string nombre, string apellidos, string telefono, string direccion, byte[] foto, DateTime fechaNacimiento, int idDepartamento)

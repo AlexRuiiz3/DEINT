@@ -31,7 +31,7 @@ namespace CRUD_Personas_UI_UWP.Models
             persona.IdDepartamento) {
             NombreDepartamento = nombreDepartamento;
         }
-        //Constructor sin parametros
+        //Constructor de copia
         public ClsPersonaConDepartamento(ClsPersonaConDepartamento otra)
         {
             ID = otra.ID;

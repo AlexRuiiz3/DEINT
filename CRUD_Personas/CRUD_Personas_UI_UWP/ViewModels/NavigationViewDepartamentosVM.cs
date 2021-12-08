@@ -15,6 +15,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 {
     public class NavigationViewDepartamentosVM : clsVMBase
     {
+        #region Atributos
+        private readonly string MENSAJE_DATO_INVALIDO = "Ha ocurrido un error. Algunos datos son obligatorios\n-Nombre.";
+        private readonly string MENSAJE_ERROR_ELIMINAR = "Ha ocurrido un error. No se puede eliminar un departamento que tiene personas asociadas.";
+        private readonly string MENSAJE_ERROR_CONEXION_BBDD = "¡Ha ocurrido un error al establecer la conexion a la base de datos!.\n-El servicio puede no estar disponible.\n-Asegurece de estar conectado a una red Wifi.";
 
         private ObservableCollection<ClsDepartamentoConPersonas> listaDepartamentosOriginal;
         private ObservableCollection<ClsDepartamentoConPersonas> listaDepartamentosBuscados;
@@ -32,7 +36,9 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private DelegateCommand guardarCommand;
         private DelegateCommand atrasCommand;
         private DelegateCommand buscarCommand;
+        #endregion
 
+        #region Constructores
         public NavigationViewDepartamentosVM()
         {
             try
@@ -41,9 +47,9 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 llenarListaDepartamentosOriginal();
                 listaDepartamentosBuscados = listaDepartamentosOriginal;
             }
-            catch (Exception)
+            catch (SqlException)
             {
-                mostrarMensajeErrorAsync();
+                mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
             }
 
             //Inicializacion Commands
@@ -52,11 +58,11 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecuted);
             editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecuted);
 
-
             visibilidadCampos = Visibility.Visible;
             visibilidadCamposEditables = Visibility.Collapsed;
             visibilidadCamposResultados = Visibility.Collapsed;
         }
+        #endregion
 
         #region Commands
         //Command editar
@@ -70,7 +76,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private void EditarCommand_Executed()
         {
-            departamentoSeleccionadoSinModificar = departamentoSeleccionado;
+            departamentoSeleccionadoSinModificar = new ClsDepartamentoConPersonas(departamentoSeleccionado);
             visibilidadCampos = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCampos");
             visibilidadCamposEditables = Visibility.Visible;
@@ -102,20 +108,20 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 try
                 {
                     GestoraDepartamentoBL.eliminarDepartamento(departamentoSeleccionado.ID);
-                    llenarListaPersonasOriginal();
-                    listaPersonasBuscadas = listaPersonasOriginal;
-                    NotifyPropertyChanged("ListaPersonasBuscadas");
+                    llenarListaDepartamentosOriginal();
+                    listaDepartamentosBuscados = listaDepartamentosOriginal;
+                    NotifyPropertyChanged("ListaDepartamentosBuscados");
 
-                    if (listaPersonasOriginal.Count > 0)
+                    if (listaDepartamentosOriginal.Count > 0)
                     {
-                        personaSeleccionada = listaPersonasOriginal.ElementAt(0);
+                        departamentoSeleccionado = listaDepartamentosOriginal.ElementAt(0);
                     }
                     else
                     { //Cuando sea haya eliminado la ultima persona de la lista, se mostrara una por defecto
-                        personaSeleccionada = new ClsPersonaConDepartamento();
+                        departamentoSeleccionado = new ClsDepartamentoConPersonas();
                     }
-                    NotifyPropertyChanged("PersonaSeleccionada");
-                    cambiarImagenAsync();
+                    NotifyPropertyChanged("DepartamentoSeleccionado");
+
 
                     //Modificacion visibilidad campos
                     visibilidadCampos = Visibility.Visible;
@@ -133,12 +139,12 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 }
                 catch (SqlException)
                 {
-                    mostrarMensajeErrorAsync();
+                    mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
                 }
             }
             else
             {
-                mostrarMensajeErrorEliminarAsync();
+                mostrarMensajeAsync(MENSAJE_ERROR_ELIMINAR);
             }
         }
 
@@ -151,7 +157,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             get
             {
-                return guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecuted);
+                return guardarCommand;
             }
         }
 
@@ -159,32 +165,52 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             try
             {
-                if (departamentoSeleccionado.ID != 0) //Si el id de la persona es distinto de 0, significa que es una persona que ya existe y no una nueva
+                int idDepartamentoSeleccionado = departamentoSeleccionado.ID;
+                if (string.IsNullOrEmpty(departamentoSeleccionado.Nombre.Trim()))
                 {
-                    GestoraDepartamentoBL.editarDepartamento(departamentoSeleccionado);
+                    mostrarMensajeAsync(MENSAJE_DATO_INVALIDO);
                 }
                 else
                 {
-                    GestoraDepartamentoBL.anhadirDepartamento(departamentoSeleccionado);
+                    if (departamentoSeleccionado.ID != 0) //Si el id del departamento es distinto de 0, significa que es una persona que ya existe y no una nueva
+                    {
+                        GestoraDepartamentoBL.editarDepartamento(departamentoSeleccionado);
+                    }
+                    else
+                    {
+                        GestoraDepartamentoBL.anhadirDepartamento(departamentoSeleccionado);
+                    }
+                    llenarListaDepartamentosOriginal();
+                    listaDepartamentosBuscados = listaDepartamentosOriginal;
+                    NotifyPropertyChanged("ListaDepartamentosBuscados");
+
+
+                    if (idDepartamentoSeleccionado == 0)
+                    {
+                        idDepartamentoSeleccionado = listaDepartamentosOriginal.ElementAt(listaDepartamentosOriginal.Count() - 1).ID;
+                    }
+                    departamentoSeleccionado = (from departamento in listaDepartamentosOriginal
+                                                where departamento.ID == idDepartamentoSeleccionado
+                                                select departamento).ElementAt(0);
+                    NotifyPropertyChanged("DepartamentoSeleccionado");
+                    
+
+                    visibilidadCampos = Visibility.Visible;
+                    NotifyPropertyChanged("VisibilidadCampos");
+                    visibilidadCamposEditables = Visibility.Collapsed;
+                    NotifyPropertyChanged("VisibilidadCamposEditables");
+                    visibilidadCamposResultados = Visibility.Visible;
+                    NotifyPropertyChanged("VisibilidadCamposResultados");
+
+                    guardarCommand.RaiseCanExecuteChanged();
+                    editarCommand.RaiseCanExecuteChanged();
+                    eliminarCommand.RaiseCanExecuteChanged();
+                    atrasCommand.RaiseCanExecuteChanged();
                 }
-                llenarListaDepartamentosOriginal();
-                listaDepartamentosBuscados = listaDepartamentosOriginal;
-                NotifyPropertyChanged("ListaDepartamentosBuscados");
-
-                visibilidadCampos = Visibility.Visible;
-                NotifyPropertyChanged("VisibilidadCampos");
-                visibilidadCamposEditables = Visibility.Collapsed;
-                NotifyPropertyChanged("VisibilidadCamposEditables");
-                visibilidadCamposResultados = Visibility.Visible;
-                NotifyPropertyChanged("VisibilidadCamposResultados");
-
-                guardarCommand.RaiseCanExecuteChanged();
-                atrasCommand.RaiseCanExecuteChanged();
             }
-
             catch (SqlException)
             {
-                mostrarMensajeDatoInvalidoAsync();
+                mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
             }
         }
 
@@ -194,17 +220,20 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         }
 
 
-        //Command detalles
+        //Command Atras
         public DelegateCommand AtrasCommand
         {
             get
             {
-                return atrasCommand = new DelegateCommand(AtrasCommand_Executed, AtrasCommand_CanExecuted);
+                return atrasCommand;
             }
         }
 
         private void AtrasCommand_Executed()
         {
+            departamentoSeleccionado.Nombre = departamentoSeleccionadoSinModificar.Nombre;
+            NotifyPropertyChanged("DepartamentoSeleccionado");
+            
             visibilidadCampos = Visibility.Visible;
             NotifyPropertyChanged("VisibilidadCampos");
             visibilidadCamposEditables = Visibility.Collapsed;
@@ -240,7 +269,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             visibilidadCamposResultados = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCamposResultados");
 
-            TextBoxBuscar = "";//Se resetea el texto del textBox
+            TextBoxBuscar = string.Empty;//Se resetea el texto del textBox
 
             editarCommand.RaiseCanExecuteChanged();
             guardarCommand.RaiseCanExecuteChanged();
@@ -290,7 +319,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             set
             {
                 departamentoSeleccionado = value;
-                NotifyPropertyChanged("DepartamentoSelccionado");
+                NotifyPropertyChanged("DepartamentoSeleccionado");
 
                 visibilidadCampos = Visibility.Visible;
                 NotifyPropertyChanged("VisibilidadCampos");
@@ -339,40 +368,33 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         }
         #endregion
 
+        #region Metodos privados
         /// <summary>
-        /// Cabecera: private async void mostrarMensajeErrorAsync()
+        /// Cabecera: private async void mostrarMensajeAsync(string mensaje)
         /// Comentario: Este metodo se encarga de mostrar un MessageDialog con un mensaje que tendra una opcion de cerrar.
-        /// Entradas: Ninguna
+        /// Entradas: string mensaje
         /// Salidas: Ninguna
         /// Precondiciones: Ninguna
         /// Postcondiciones: Se mostrara un mensaje al usuario en un MessageDialog, que contentra una opcion de cerrar.
         /// </summary>
-        private async void mostrarMensajeErrorAsync()
+        /// <param name="mensaje"></param>
+        private async void mostrarMensajeAsync(string mensaje)
         {
-            var dialog = new MessageDialog("¡Ha ocurrido un error al establecer la conexion a la base de datos!.\n-El servicio puede no estar disponible.\n-Asegurece de estar conectado a una red Wifi.");
+            var dialog = new MessageDialog(mensaje);
             await dialog.ShowAsync();
         }
+
         /// <summary>
-        /// Cabecera: private async void mostrarMensajeDatoInvalidoAsync()
-        /// Comentario: Este metodo se encarga de mostrar un MessageDialog con un mensaje que tendra una opcion de cerrar.
+        /// Cabecera: private void llenarListaDepartamentosOriginal()
+        /// Comentario: Este metodo se encarga de llenar una lista con departamentos ClsDepartamentoConPersonas en funcion 
+        ///             de una lista de departamentos que se obtenga de la tabla Departamentos de una base de datos
         /// Entradas: Ninguna
         /// Salidas: Ninguna
         /// Precondiciones: Ninguna
-        /// Postcondiciones: Se mostrara un mensaje al usuario en un MessageDialog, que contentra una opcion de cerrar.
+        /// Postcondiciones: Se llenara una lista con objetos de tipo ClsPersonasConDepartamentos, en funcion
+        ///                  de los departamentos que se obtenga de la tabla Departamentos de una base de datos, si la lista de 
+        ///                  departamentos que se obtienen de la base de datos esta vacia listaDepartamentosOriginal estara vacia. 
         /// </summary>
-        private async void mostrarMensajeDatoInvalidoAsync()
-        {
-            var dialog = new MessageDialog("Ha ocurrido un error. Estos pueden ser alguno de los motivos: \n-Algun dato ingresado no es valido o es obligatorio.\n-Error al establecer la conexion a la base de datos.");
-            await dialog.ShowAsync();
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        private async void mostrarMensajeErrorEliminarAsync()
-        {
-            var dialog = new MessageDialog("Ha ocurrido un error. No se puede eliminar un departamento que tiene personas asociadas.");
-            await dialog.ShowAsync();
-        }
         private void llenarListaDepartamentosOriginal()
         {
 
@@ -391,5 +413,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 listaDepartamentosOriginal.Add(new ClsDepartamentoConPersonas(departamento, listaPersonasDeUnDepartamento));
             }
         }
+        #endregion
     }
 }

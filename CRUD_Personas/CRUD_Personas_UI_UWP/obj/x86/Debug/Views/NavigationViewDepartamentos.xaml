@@ -16,7 +16,7 @@
     <RelativePanel>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:ConnectionId='2' x:Name="AnchorMayorIgual0">
+                <VisualState x:ConnectionId='2' x:Name="AnchoMayorIgual0">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -31,7 +31,7 @@
                         <Setter Target="ListaDepartamentos.(RelativePanel.AlignBottomWithPanel)" Value="False"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='3' x:Name="AnchorMayorIgual550">
+                <VisualState x:ConnectionId='3' x:Name="AnchoMayorIgual550">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="550"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -40,7 +40,7 @@
                         <Setter Target="ListaDepartamentos.MaxHeight" Value="90"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='4' x:Name="AnchorMayorIgual940">
+                <VisualState x:ConnectionId='4' x:Name="AnchoMayorIgual940">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="940"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -61,7 +61,7 @@
         </StackPanel>
 
         <ListView x:ConnectionId='6' Name="ListaDepartamentos" RelativePanel.Below="TextBoxBuscar" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWith="TextBoxBuscar"
-                  MinHeight="80" RelativePanel.AlignBottomWithPanel="True" ItemsSource="{Binding ListaDepartamentosBuscados}" DisplayMemberPath="Nombre"
+                  RelativePanel.AlignBottomWithPanel="True" ItemsSource="{Binding ListaDepartamentosBuscados}" DisplayMemberPath="Nombre"
                   SelectedItem="{Binding DepartamentoSeleccionado,Mode=TwoWay}">
         </ListView>
 
@@ -72,9 +72,9 @@
             <AppBarButton Command="{Binding AtrasCommand}" Icon="Cancel"/>
         </StackPanel>
 
-        <Grid x:ConnectionId='8' Name="GridDatosDepartamento" RelativePanel.Below="StackBotones">
+        <Grid x:ConnectionId='8' Name="GridDatosDepartamento" Background="SkyBlue"
+                  RelativePanel.Below="StackBotones" BorderBrush="gray" BorderThickness="2" CornerRadius="3">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -83,18 +83,17 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
-                <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: " Visibility="{Binding VisibilidadCampos}"/>
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="*Nombre: " Visibility="{Binding VisibilidadCamposEditables}"/>
-            <TextBlock Grid.Row="0" Grid.Column="1" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" 
+            <TextBlock Grid.Row="0" Grid.Column="1" Margin="5,5" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" 
                        Text="{Binding DepartamentoSeleccionado.Nombre}"/>
-            <TextBox x:ConnectionId='9' Name="TextBoxNombre" Grid.Row="0" Grid.Column="1" Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}" 
+            <TextBox x:ConnectionId='10' MaxWidth="295" MinWidth="100" Name="TextBoxNombre" Grid.Row="0" Grid.Column="1" Margin="5,5" Visibility="{Binding VisibilidadCamposEditables}" 
                      Text="{Binding DepartamentoSeleccionado.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Personas del departamento: "/>
-            <ListView x:ConnectionId='10' MaxHeight="50" Grid.Row="1" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadCampos}" 
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Personas del departamento: " Visibility="{Binding VisibilidadCampos}" />
+            <ListView x:ConnectionId='11' MaxHeight="50" Grid.Row="1" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadCampos}" 
                       ItemsSource="{Binding DepartamentoSeleccionado.ListaPersonas}">
                 <ListView.ItemTemplate>
                 <DataTemplate>
@@ -106,17 +105,20 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <AppBarButton x:ConnectionId='11' Name="ButtonEditar" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding EditarCommand}" Icon="Edit" Label="Editar"/>
+            <AppBarButton x:ConnectionId='12' Name="ButtonEditar" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding EditarCommand}" Icon="Edit" Label="Editar"/>
 
-            <AppBarButton x:ConnectionId='12' Name="ButtonGuardar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding GuardarCommand}" Icon="Save" Label="Guardar"/>
+            <AppBarButton x:ConnectionId='13' Name="ButtonEliminar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding EliminarCommand}" Icon="Delete" Label="Eliminar"/>
 
-            <AppBarButton x:ConnectionId='13' Name="ButtonEliminar" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Command="{Binding EliminarCommand}" Icon="Delete" Label="Eliminar"/>
+            <AppBarButton x:ConnectionId='14' Name="ButtonGuardar" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding GuardarCommand}" Icon="Save" Label="Guardar"/>
 
-            <AppBarButton x:ConnectionId='14' Name="ButtonAtras" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding AtrasCommand}" Icon="Back" Label="Atras"/>
+            <AppBarButton x:ConnectionId='15' Name="ButtonAtras" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding AtrasCommand}" Icon="Back" Label="Atras"/>
 
-            <TextBlock Grid.Row="4" Grid.Column="1" Visibility="{Binding VisibilidadCamposResultados}" Text="Cambios realizados con exito" Foreground="Green"/>
-            <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Bottom" Visibility="{Binding VisibilidadCamposEditables}" Text="* Campos obligatorios" FontSize="10"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,60,0,0" VerticalAlignment="Bottom" Visibility="{Binding VisibilidadCamposEditables}" Text="* Campos obligatorios" FontSize="10"/>
         </Grid>
+
+        <Border x:ConnectionId='9' Name="TextBlockResultado" Background="LimeGreen" CornerRadius="3" Padding="2"  RelativePanel.Below="GridDatosDepartamento" RelativePanel.AlignHorizontalCenterWith="GridDatosDepartamento" Visibility="{Binding VisibilidadCamposResultados}">
+            <TextBlock  Text="Cambios realizados con exito." Foreground="White"></TextBlock>
+        </Border>
     </RelativePanel>
 </Page>
 

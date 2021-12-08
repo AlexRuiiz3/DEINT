@@ -22,6 +22,9 @@ namespace CRUD_Personas_UI_UWP.ViewModels
     public class NavigationViewPersonasVM : clsVMBase
     {
         #region Atributos
+        private readonly string MENSAJE_DATO_INVALIDO = "Ha ocurrido un error. Algunos datos son obligatorios\n-Nombre.\n-Apellidos.\n-Telefono.\n-Direccion.";
+        private readonly string MENSAJE_ERROR_CONEXION_BBDD = "¡Ha ocurrido un error al establecer la conexion a la base de datos!.\n-El servicio puede no estar disponible.\n-Asegurese de estar conectado a una red Wifi.";
+
         private ObservableCollection<ClsPersonaConDepartamento> listaPersonasOriginal;
         private ObservableCollection<ClsPersonaConDepartamento> listaPersonasBuscadas;
         private ObservableCollection<ClsDepartamento> listaDepartamentos;
@@ -43,6 +46,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private DelegateCommand buscarCommand;
         #endregion
 
+        #region Constructores
+        //Constructor sin parametros
         public NavigationViewPersonasVM()
         {
             try
@@ -54,20 +59,21 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             }
             catch (SqlException)
             {
-                mostrarMensajeErrorAsync();
+                mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
             }
 
             //Inicializacion Commands
-            atrasCommand = new DelegateCommand(AtrasCommand_Executed, AtrasCommand_CanExecuted);
-            guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecuted);
-            cambiarFotoCommand = new DelegateCommand(CambiarFotoCommand_Executed, CambiarFotoCommand_CanExecuted);
-            eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecuted);
             editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecuted);
+            guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecuted);
+            eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecuted);
+            cambiarFotoCommand = new DelegateCommand(CambiarFotoCommand_Executed, CambiarFotoCommand_CanExecuted);
+            atrasCommand = new DelegateCommand(AtrasCommand_Executed, AtrasCommand_CanExecuted);
 
             visibilidadCampos = Visibility.Visible;
             visibilidadCamposEditables = Visibility.Collapsed;
             visibilidadCamposResultados = Visibility.Collapsed;
         }
+        #endregion
 
         #region Commands
         //Command editar
@@ -78,10 +84,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return editarCommand;
             }
         }
-
         private void EditarCommand_Executed()
         {
             personaSeleccionadaSinModificar = new ClsPersonaConDepartamento(personaSeleccionada);//Se guarda la persona seleccionada con los valores sin editar, por que puede ser que el usuario edite algun campo pero luego haga click en Atras por lo tanto, personaSeleccionada tiene que volver a tener los mismos valores que antes de entrar en el modo editar
+
             visibilidadCampos = Visibility.Collapsed;
             NotifyPropertyChanged("VisibilidadCampos");
             visibilidadCamposEditables = Visibility.Visible;
@@ -109,7 +115,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
         private void EliminarCommand_Executed()
         {
-            try {
+            try
+            {
                 GestoraPersonasBL.eliminarPersona(personaSeleccionada.ID);
                 llenarListaPersonasOriginal();
                 listaPersonasBuscadas = listaPersonasOriginal;
@@ -119,7 +126,8 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 {
                     personaSeleccionada = listaPersonasOriginal.ElementAt(0);
                 }
-                else { //Cuando sea haya eliminado la ultima persona de la lista, se mostrara una por defecto
+                else
+                { //Cuando sea haya eliminado la ultima persona de la lista, se mostrara una por defecto
                     personaSeleccionada = new ClsPersonaConDepartamento();
                 }
                 NotifyPropertyChanged("PersonaSeleccionada");
@@ -140,10 +148,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 cambiarFotoCommand.RaiseCanExecuteChanged();
                 atrasCommand.RaiseCanExecuteChanged();
             }
-            catch (SqlException) {
-                mostrarMensajeErrorAsync();
+            catch (SqlException)
+            {
+                mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
             }
-
         }
 
         private bool EliminarCommand_CanExecuted()
@@ -163,15 +171,17 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         {
             try
             {
-
                 int idPersonaSeleccionada = personaSeleccionada.ID;
+
                 //Si el nombre o apellido o direccion o telefono de la persona estan vacios
                 //Trim() Elimina los espacios es blanco tanto del principio como del final
                 if (string.IsNullOrEmpty(personaSeleccionada.Nombre.Trim()) || string.IsNullOrEmpty(personaSeleccionada.Apellidos.Trim())
-                    || string.IsNullOrEmpty(personaSeleccionada.Telefono.Trim()) || string.IsNullOrEmpty(personaSeleccionada.Direccion.Trim())) {
-                    mostrarMensajeDatoInvalidoAsync();
+                    || string.IsNullOrEmpty(personaSeleccionada.Telefono.Trim()) || string.IsNullOrEmpty(personaSeleccionada.Direccion.Trim()))
+                {
+                    mostrarMensajeAsync(MENSAJE_DATO_INVALIDO);
                 }
-                else { 
+                else
+                {
                     if (personaSeleccionada.ID != 0) //Si el id de la persona es distinto de 0, significa que es una persona que ya existe y no una nueva
                     {
                         GestoraPersonasBL.editarPersona(personaSeleccionada);
@@ -184,18 +194,16 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                     listaPersonasBuscadas = listaPersonasOriginal;
                     NotifyPropertyChanged("ListaPersonasBuscadas");
 
-                    
-
                     //Al volver a obtener las listas, personaSeleccionada es igual a null, por lo tanto se busca cual es la persona seleccionada editada o añadida
-                    if (idPersonaSeleccionada == 0) { //Si es igual a 0 significa que se añadio una persona, por lo tanto hay que buscar en la lista de personas original la ultima persona añadida y coger su ID
-                        idPersonaSeleccionada = listaPersonasOriginal.ElementAt(listaPersonasOriginal.Count()-1).ID;
+                    if (idPersonaSeleccionada == 0)
+                    { //Si es igual a 0 significa que se añadio una persona, por lo tanto hay que buscar en la lista de personas original la ultima persona añadida y coger su ID
+                        idPersonaSeleccionada = listaPersonasOriginal.ElementAt(listaPersonasOriginal.Count() - 1).ID;
                     }
                     personaSeleccionada = (from persona in listaPersonasOriginal
                                            where persona.ID == idPersonaSeleccionada
                                            select persona).ElementAt(0);
                     NotifyPropertyChanged("PersonaSeleccionada");
                     cambiarImagenAsync();
-
 
                     visibilidadCampos = Visibility.Visible;
                     NotifyPropertyChanged("VisibilidadCampos");
@@ -213,7 +221,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             }
             catch (SqlException)
             {
-                mostrarMensajeErrorAsync();
+                mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
             }
         }
 
@@ -222,7 +230,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             return visibilidadCamposEditables == Visibility.Visible;
         }
 
-        //Command detalles
+        //Command Atras
         public DelegateCommand AtrasCommand
         {
             get
@@ -236,7 +244,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             /* Cuando se modifica un atributo de la personaSelecionada en los Texbox, por referencia se modifica 
              * en la persona que esta en la listaPersonasBuscada y listaPersonasOriginal. Por eso tengo que modificar 
              * la persona seleccionada de esta manera, para que asi por referencia se modifique en la persona que esta tanto
-             * en listaPersonasBuscada como den ListaPersonasOriginal
+             * en listaPersonasBuscada como en ListaPersonasOriginal
              */
             personaSeleccionada.Nombre = personaSeleccionadaSinModificar.Nombre;
             personaSeleccionada.Apellidos = personaSeleccionadaSinModificar.Apellidos;
@@ -276,6 +284,11 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         private void anhadirCommand_Executed()
         {
             personaSeleccionada = new ClsPersonaConDepartamento();
+            //A la nueva persona se le asigna por defecto el id departamento que este primero en la lista de departamentos, siempre y cuando haya departamentos en la lista
+            if (listaDepartamentos.Count > 0)
+            {
+                personaSeleccionada.IdDepartamento = listaDepartamentos.ElementAt(0).ID;
+            }
             NotifyPropertyChanged("PersonaSeleccionada");
 
             visibilidadCampos = Visibility.Collapsed;
@@ -429,7 +442,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             {
                 textBoxBuscar = value;
                 NotifyPropertyChanged("TextBoxBuscar");
-
                 buscarCommand.RaiseCanExecuteChanged();
             }
         }
@@ -487,55 +499,61 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             NotifyPropertyChanged("Imagen");
         }
         /// <summary>
-        /// Cabecera: private async void mostrarMensajeErrorAsync()
+        /// Cabecera: private async void mostrarMensajeAsync(string mensaje)
         /// Comentario: Este metodo se encarga de mostrar un MessageDialog con un mensaje que tendra una opcion de cerrar.
-        /// Entradas: Ninguna
+        /// Entradas: string mensaje
         /// Salidas: Ninguna
         /// Precondiciones: Ninguna
         /// Postcondiciones: Se mostrara un mensaje al usuario en un MessageDialog, que contentra una opcion de cerrar.
         /// </summary>
-        private async void mostrarMensajeErrorAsync()
+        /// <param name="mensaje"></param>
+        private async void mostrarMensajeAsync(string mensaje)
         {
-            var dialog = new MessageDialog("¡Ha ocurrido un error al establecer la conexion a la base de datos!.\n-El servicio puede no estar disponible.\n-Asegurece de estar conectado a una red Wifi.");
+            var dialog = new MessageDialog(mensaje);
             await dialog.ShowAsync();
         }
         /// <summary>
-        /// Cabecera: private async void mostrarMensajeDatoInvalidoAsync()
-        /// Comentario: Este metodo se encarga de mostrar un MessageDialog con un mensaje que tendra una opcion de cerrar.
+        /// Cabecera: private void llenarListaPersonasOriginal()
+        /// Comentario: Este metodo se encarga de llenar una lista con personas ClsPersonasConDepartamento en funcion de una lista de personas que se obtenga de la tabla Persona de una base de datos
         /// Entradas: Ninguna
         /// Salidas: Ninguna
         /// Precondiciones: Ninguna
-        /// Postcondiciones: Se mostrara un mensaje al usuario en un MessageDialog, que contentra una opcion de cerrar.
+        /// Postcondiciones: Se llenara una lista con objetos de tipo ClsPersonasConDepartamentos, en funcion
+        ///                  de las personas que se obtenga de la tabla Personas de una base de datos, si la lista de 
+        ///                  personas que se obtienen de la base de datos esta vacia listaPersonasOriginal estara vacia. 
         /// </summary>
-        private async void mostrarMensajeDatoInvalidoAsync()
-        {
-            var dialog = new MessageDialog("Ha ocurrido un error. Algunos datos son obligatorios: \n-Nombre.\n-Apellidos.\n-Telefono.\n-Direccion.");
-            await dialog.ShowAsync();
-        }
         private void llenarListaPersonasOriginal()
         {
             List<ClsPersona> personasBL = ListadosBL.obtenerPersonas();
             listaPersonasOriginal = new ObservableCollection<ClsPersonaConDepartamento>();
             foreach (ClsPersona persona in personasBL)
             {
-                listaPersonasOriginal.Add(new ClsPersonaConDepartamento(persona, encontrarYObtenerNombreDepartamento(persona.IdDepartamento)));
+                listaPersonasOriginal.Add(new ClsPersonaConDepartamento(persona, obtenerNombreDepartamento(persona.IdDepartamento)));
             }
         }
-
-        private string encontrarYObtenerNombreDepartamento(int idDepartamento)
+        /// <summary>
+        /// Cabecera: private string obtenerNombreDepartamento(int idDepartamento)
+        /// Comentario: Este metodo se encarga de obtener de una lista de objetos ClsDepartamento, el nombre del departamento cuyo id sea igual al recibido.
+        /// Entradas: int idDepartamento
+        /// Salidas: string nombreDepartamento 
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se devolvera un string que cuyo valor sera el nombre de un departamento cuyo id sea igual al recibido.
+        ///                  Si el id recibido no coincide con el de ningun departamento, el valor del string devuelto sera vacio.
+        /// </summary>
+        /// <param name="idDepartamento"></param>
+        /// <returns>string nombreDepartamento</returns>
+        private string obtenerNombreDepartamento(int idDepartamento)
         {
-            string nombreDepatamento = "";
+            string nombreDepartamento = "";
 
-            for (int i = 0; i < listaDepartamentos.Count && nombreDepatamento.Equals(""); i++)
+            for (int i = 0; i < listaDepartamentos.Count && nombreDepartamento.Equals(""); i++)
             {
                 if (listaDepartamentos.ElementAt(i).ID == idDepartamento)
                 {
-                    nombreDepatamento = listaDepartamentos.ElementAt(i).Nombre;
+                    nombreDepartamento = listaDepartamentos.ElementAt(i).Nombre;
                 }
             }
-
-
-            return nombreDepatamento;
+            return nombreDepartamento;
         }
         #endregion
     }

@@ -5,11 +5,11 @@
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Nombre" />
-    <RootPropertyPathName Name="VisibilidadCamposEditables" />
     <RootPropertyPathName Name="VisibilidadCamposResultados" />
+    <RootPropertyPathName Name="VisibilidadCamposEditables" />
     <RootPropertyPathName Name="AtrasCommand" />
-    <RootPropertyPathName Name="EliminarCommand" />
     <RootPropertyPathName Name="GuardarCommand" />
+    <RootPropertyPathName Name="EliminarCommand" />
     <RootPropertyPathName Name="EditarCommand" />
     <RootPropertyPathName Name="VisibilidadCampos" />
     <RootPropertyPathName Name="DepartamentoSeleccionado" />
@@ -56,6 +56,8 @@
       <RootMethod Name="SetAlignLeftWithPanel" />
       <RootMethod Name="GetAlignRightWith" />
       <RootMethod Name="SetAlignRightWith" />
+      <RootMethod Name="GetAlignHorizontalCenterWith" />
+      <RootMethod Name="SetAlignHorizontalCenterWith" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
@@ -96,9 +98,10 @@
       <RootProperty Name="MinHeight" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="MinWidth" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="MaxWidth" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="MinHeight" />
@@ -106,25 +109,30 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
-      <RootProperty Name="MinHeight" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="MaxHeight" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="MinHeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Name" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="CornerRadius" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
@@ -132,20 +140,32 @@
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Name" />
@@ -154,11 +174,6 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
       <RootProperty Name="Visibility" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -182,6 +197,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Command" />
@@ -189,8 +205,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
-      <RootProperty Name="MaxHeight" />
       <RootProperty Name="MaxWidth" />
+      <RootProperty Name="MaxHeight" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="CRUD_Personas_UI_UWP.Views.NavigationViewPersonas" />

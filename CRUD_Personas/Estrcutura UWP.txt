@@ -53,7 +53,8 @@ Capa BL:
 	  - Utilidades: -UtilidadesBL --> Metodos: bool comprobarDepartamentoTienePersonas(int id)
 	  
 
-Capa UI:  -Models: -ClsPersonaConDepartamento--> Hereda de ClsPersona(Capa Entidades) Atributos: -NombreDepartamento string
+Capa UI:  -Models: -ClsDepartamentoConPersonas--> Hereda de ClsDepartamento(Capa Entidades) Atributos: -ListaPersonas List<ClsPersona>
+		   -ClsPersonaConDepartamento--> Hereda de ClsPersona(Capa Entidades) Atributos: -NombreDepartamento string
 	  
 	  -ViewModels: -NavigationViewPersonasVM
  		       -NavigationViewDepartamentosVM

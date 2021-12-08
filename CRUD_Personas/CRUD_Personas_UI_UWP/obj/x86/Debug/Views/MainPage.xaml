@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    
+    <!--La idea es añadir un ScrollViewer vertical, pero no se porque al añadirlo los visual state manager no funcionan correctamente-->
     <RelativePanel>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -23,17 +24,15 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
         <NavigationView x:ConnectionId='3' Name="NavigationView" PaneDisplayMode="LeftCompact" IsBackButtonVisible="Collapsed" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" 
                                                                                                 >
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Personas" Icon="Contact"/>
                 <NavigationViewItem Content="Departamentos" Icon="Home"/>
             </NavigationView.MenuItems>
-            <Frame x:ConnectionId='4' x:Name="ContNavigationView"/>
+            <Frame x:ConnectionId='4' x:Name="FrameNavigationView"/>
         </NavigationView>
-
-
     </RelativePanel>
 </Page>
 
