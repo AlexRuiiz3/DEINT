@@ -88,6 +88,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
       <RootProperty Name="Content" />
       <RootProperty Name="Icon" />
+      <RootProperty Name="FontWeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="CRUD_Personas_UI_UWP.MainPage" />
@@ -96,12 +97,11 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Width" />
       <RootProperty Name="MinHeight" />
-      <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="MaxWidth" />
-      <RootProperty Name="MinWidth" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
+      <RootEvent Name="BeforeTextChanging" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="MinHeight" />
@@ -109,9 +109,6 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Name" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="CornerRadius" />
-      <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
@@ -157,6 +154,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
@@ -171,6 +169,7 @@
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Command" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
       <RootProperty Name="Visibility" />

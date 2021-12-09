@@ -22,8 +22,14 @@ namespace CRUD_Personas_UI_UWP.ViewModels
     public class NavigationViewPersonasVM : clsVMBase
     {
         #region Atributos
-        private readonly string MENSAJE_DATO_INVALIDO = "Ha ocurrido un error. Algunos datos son obligatorios\n-Nombre.\n-Apellidos.\n-Telefono.\n-Direccion.";
-        private readonly string MENSAJE_ERROR_CONEXION_BBDD = "¡Ha ocurrido un error al establecer la conexion a la base de datos!.\n-El servicio puede no estar disponible.\n-Asegurese de estar conectado a una red Wifi.";
+        private const string MENSAJE_DATO_INVALIDO = "Ha ocurrido un error. Algunos datos son obligatorios\n-Nombre (Maximo 20 caracteres).\n-Apellidos (Maximo 30 caracteres).\n-Telefono (9 Digitos numericos y debe comenzar por 6 o 9).\n-Direccion (Maximo 35 caracteres).";
+        private const string MENSAJE_ERROR_CONEXION_BBDD = "¡Ha ocurrido un error al establecer la conexion a la base de datos!.\n-El servicio puede no estar disponible.\n-Asegurese de estar conectado a una red Wifi.";
+      
+        //Expecifico las longitudes maximas de estos campos de la tabla Persona de la base de datos para asi poder mostrar el mensaje de error correspondiente
+        private const int LONGITUD_MAXIMA_NOMBRE = 20;
+        private const int LONGITUD_MAXIMA_APELLIDOS = 30;
+        private const int LONGITUD_MAXIMA_DIRECCION = 35;
+
 
         private ObservableCollection<ClsPersonaConDepartamento> listaPersonasOriginal;
         private ObservableCollection<ClsPersonaConDepartamento> listaPersonasBuscadas;
@@ -56,6 +62,17 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 listaDepartamentos = new ObservableCollection<ClsDepartamento>(ListadosBL.obtenerDepartamentos());
                 llenarListaPersonasOriginal();
                 listaPersonasBuscadas = listaPersonasOriginal;
+
+                //Inicializacion personaSeleccionada
+                if (listaPersonasOriginal.Count > 0)
+                {
+                    personaSeleccionada = listaPersonasOriginal.ElementAt(0);
+                }
+                else
+                {
+                    personaSeleccionada = new ClsPersonaConDepartamento();
+                }
+                cambiarImagenAsync();
             }
             catch (SqlException)
             {
@@ -65,7 +82,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             //Inicializacion Commands
             editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecuted);
             guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecuted);
-            eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecuted);
+            eliminarCommand = new DelegateCommand(EliminarCommand_ExecutedAsync, EliminarCommand_CanExecuted);
             cambiarFotoCommand = new DelegateCommand(CambiarFotoCommand_Executed, CambiarFotoCommand_CanExecuted);
             atrasCommand = new DelegateCommand(AtrasCommand_Executed, AtrasCommand_CanExecuted);
 
@@ -112,52 +129,61 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return eliminarCommand;
             }
         }
-
-        private void EliminarCommand_Executed()
+        private async void EliminarCommand_ExecutedAsync()
         {
-            try
-            {
-                GestoraPersonasBL.eliminarPersona(personaSeleccionada.ID);
-                llenarListaPersonasOriginal();
-                listaPersonasBuscadas = listaPersonasOriginal;
-                NotifyPropertyChanged("ListaPersonasBuscadas");
+            MessageDialog dialog = new MessageDialog("¿Esta seguro de eliminar la persona?", "Eliminar persona");
+            dialog.Commands.Add(new UICommand("Yes", null));
+            dialog.Commands.Add(new UICommand("No", null));
+            dialog.DefaultCommandIndex = 0;
+            dialog.CancelCommandIndex = 1;
+            var dialogCommand = await dialog.ShowAsync();
 
-                if (listaPersonasOriginal.Count > 0)
+            if (dialogCommand.Label == "Yes")
+            {
+                try
                 {
-                    personaSeleccionada = listaPersonasOriginal.ElementAt(0);
-                }
-                else
-                { //Cuando sea haya eliminado la ultima persona de la lista, se mostrara una por defecto
-                    personaSeleccionada = new ClsPersonaConDepartamento();
-                }
-                NotifyPropertyChanged("PersonaSeleccionada");
-                cambiarImagenAsync();
+                    GestoraPersonasBL.eliminarPersona(personaSeleccionada.ID);
+                    llenarListaPersonasOriginal();
+                    listaPersonasBuscadas = listaPersonasOriginal;
+                    NotifyPropertyChanged("ListaPersonasBuscadas");
 
-                //Modificacion visibilidad campos
-                visibilidadCampos = Visibility.Visible;
-                NotifyPropertyChanged("VisibilidadCampos");
-                visibilidadCamposEditables = Visibility.Collapsed;
-                NotifyPropertyChanged("VisibilidadCamposEditables");
-                visibilidadCamposResultados = Visibility.Visible;
-                NotifyPropertyChanged("VisibilidadCamposResultados");
+                    if (listaPersonasOriginal.Count > 0)
+                    {
+                        personaSeleccionada = listaPersonasOriginal.ElementAt(0);
+                    }
+                    else
+                    { //Cuando sea haya eliminado la ultima persona de la lista, se mostrara una por defecto
+                        personaSeleccionada = new ClsPersonaConDepartamento();
+                    }
+                    NotifyPropertyChanged("PersonaSeleccionada");
+                    cambiarImagenAsync();
 
-                //Comprobacion estado Commands
-                guardarCommand.RaiseCanExecuteChanged();
-                eliminarCommand.RaiseCanExecuteChanged();
-                editarCommand.RaiseCanExecuteChanged();
-                cambiarFotoCommand.RaiseCanExecuteChanged();
-                atrasCommand.RaiseCanExecuteChanged();
-            }
-            catch (SqlException)
-            {
-                mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
+                    //Modificacion visibilidad campos
+                    visibilidadCampos = Visibility.Visible;
+                    NotifyPropertyChanged("VisibilidadCampos");
+                    visibilidadCamposEditables = Visibility.Collapsed;
+                    NotifyPropertyChanged("VisibilidadCamposEditables");
+                    visibilidadCamposResultados = Visibility.Visible;
+                    NotifyPropertyChanged("VisibilidadCamposResultados");
+
+                    //Comprobacion estado Commands
+                    guardarCommand.RaiseCanExecuteChanged();
+                    eliminarCommand.RaiseCanExecuteChanged();
+                    editarCommand.RaiseCanExecuteChanged();
+                    cambiarFotoCommand.RaiseCanExecuteChanged();
+                    atrasCommand.RaiseCanExecuteChanged();
+                }
+                catch (SqlException)
+                {
+                    mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
+                }
             }
         }
-
         private bool EliminarCommand_CanExecuted()
         {
             return personaSeleccionada != null && personaSeleccionada.ID != 0;
         }
+
         //Command guardar
         public DelegateCommand GuardarCommand
         {
@@ -166,7 +192,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return guardarCommand;
             }
         }
-
         private void GuardarCommand_Executed()
         {
             try
@@ -175,8 +200,10 @@ namespace CRUD_Personas_UI_UWP.ViewModels
 
                 //Si el nombre o apellido o direccion o telefono de la persona estan vacios
                 //Trim() Elimina los espacios es blanco tanto del principio como del final
-                if (string.IsNullOrEmpty(personaSeleccionada.Nombre.Trim()) || string.IsNullOrEmpty(personaSeleccionada.Apellidos.Trim())
-                    || string.IsNullOrEmpty(personaSeleccionada.Telefono.Trim()) || string.IsNullOrEmpty(personaSeleccionada.Direccion.Trim()))
+                if (string.IsNullOrEmpty(personaSeleccionada.Nombre.Trim()) || personaSeleccionada.Nombre.Length > LONGITUD_MAXIMA_NOMBRE
+                    || string.IsNullOrEmpty(personaSeleccionada.Apellidos.Trim()) || personaSeleccionada.Apellidos.Length > LONGITUD_MAXIMA_APELLIDOS
+                    || !validarNumeroTelefono(personaSeleccionada.Telefono) 
+                    || string.IsNullOrEmpty(personaSeleccionada.Direccion.Trim()) || personaSeleccionada.Direccion.Length > LONGITUD_MAXIMA_DIRECCION)
                 {
                     mostrarMensajeAsync(MENSAJE_DATO_INVALIDO);
                 }
@@ -224,7 +251,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 mostrarMensajeAsync(MENSAJE_ERROR_CONEXION_BBDD);
             }
         }
-
         private bool GuardarCommand_CanExecuted()
         {
             return visibilidadCamposEditables == Visibility.Visible;
@@ -238,7 +264,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return atrasCommand;
             }
         }
-
         private void AtrasCommand_Executed()
         {
             /* Cuando se modifica un atributo de la personaSelecionada en los Texbox, por referencia se modifica 
@@ -266,7 +291,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             atrasCommand.RaiseCanExecuteChanged();
             cambiarFotoCommand.RaiseCanExecuteChanged();
         }
-
         private bool AtrasCommand_CanExecuted()
         {
             return visibilidadCamposEditables == Visibility.Visible;
@@ -280,7 +304,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return new DelegateCommand(anhadirCommand_Executed);
             }
         }
-
         private void anhadirCommand_Executed()
         {
             personaSeleccionada = new ClsPersonaConDepartamento();
@@ -307,6 +330,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             cambiarFotoCommand.RaiseCanExecuteChanged();
             cambiarImagenAsync();
         }
+
         //Command buscar
         public DelegateCommand BuscarCommand
         {
@@ -315,16 +339,14 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return buscarCommand = new DelegateCommand(bucarCommand_Executed, buscarCommand_CanExecuted);
             }
         }
-
         private void bucarCommand_Executed()
         {
             listaPersonasBuscadas = new ObservableCollection<ClsPersonaConDepartamento>(from persona in listaPersonasOriginal
-                                                                                        where persona.Nombre.ToLower().Contains(textBoxBuscar) ||
-                                                                                        persona.Apellidos.ToLower().Contains(textBoxBuscar)
+                                                                                        where persona.Nombre.ToLower().Contains(textBoxBuscar.ToLower()) ||
+                                                                                        persona.Apellidos.ToLower().Contains(textBoxBuscar.ToLower())
                                                                                         select persona);
             NotifyPropertyChanged("ListaPersonasBuscadas");
         }
-
         private bool buscarCommand_CanExecuted()
         {
             bool textBoxLleno = true;
@@ -345,7 +367,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 return cambiarFotoCommand;
             }
         }
-
         private async void CambiarFotoCommand_Executed()
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -383,7 +404,6 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 }
             }
         }
-
         private bool CambiarFotoCommand_CanExecuted()
         {
             return visibilidadCamposEditables == Visibility.Visible;
@@ -554,6 +574,22 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 }
             }
             return nombreDepartamento;
+        }
+        /// <summary>
+        /// Cabecera: private bool validarNumeroTelefono(string telefono)
+        /// Comentario: Este metodo se encarga de validar que la cadena que recibe sea un numero de telefono valido.
+        /// Entradas: string telefono
+        /// Salidas: bool 
+        /// Precondiciones: Ninguna
+        /// Postcondiciones: Se devuelve un booleano que tomara dos valores:
+        ///                  -true: Cuando el string recibido tenga una longitud de 9 caracteres y comience por 6 o 9.
+        ///                  -false: Cuando el string recibido no tenga una longitud de 9 caracteres o no comience ni por 6 o 9.
+        /// </summary>
+        /// <param name="telefono"></param>
+        /// <returns>bool</returns>
+        private bool validarNumeroTelefono(string telefono)
+        {
+            return !string.IsNullOrEmpty(telefono.Trim()) && telefono.Length == 9 && (telefono.StartsWith("6") || telefono.StartsWith("9"));
         }
         #endregion
     }

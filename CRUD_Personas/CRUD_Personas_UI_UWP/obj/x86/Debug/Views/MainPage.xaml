@@ -28,8 +28,8 @@
         <NavigationView x:ConnectionId='3' Name="NavigationView" PaneDisplayMode="LeftCompact" IsBackButtonVisible="Collapsed" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" 
                                                                                                 >
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Personas" Icon="Contact"/>
-                <NavigationViewItem Content="Departamentos" Icon="Home"/>
+                <NavigationViewItem Content="Personas" Icon="Contact" FontWeight="Medium"/>
+                <NavigationViewItem Content="Departamentos" Icon="Home" FontWeight="Medium"/>
             </NavigationView.MenuItems>
             <Frame x:ConnectionId='4' x:Name="FrameNavigationView"/>
         </NavigationView>

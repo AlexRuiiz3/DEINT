@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System.Linq;
+using Windows.UI.Xaml.Controls;
 
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -13,6 +14,16 @@ namespace CRUD_Personas_UI_UWP.Views
         public NavigationViewPersonas()
         {
             this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Metodo asociado a un Evento de un textBox que solo permite la entrada de numeros
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void TextBoxTelefono_TextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            args.Cancel = args.NewText.Any(c => !char.IsDigit(c));
         }
     }
 }

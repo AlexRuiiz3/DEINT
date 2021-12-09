@@ -52,8 +52,7 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <TextBox Name="TextBoxBuscar" Width="200" MinHeight="45" TextWrapping="NoWrap"
-                 Text="{Binding TextBoxBuscar,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Name="TextBoxBuscar" Width="200" MinHeight="45" Text="{Binding TextBoxBuscar,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
         <StackPanel MinHeight="40" RelativePanel.RightOf="TextBoxBuscar" RelativePanel.AlignVerticalCenterWith="TextBoxBuscar" Orientation="Horizontal">
             <AppBarButton Icon="Find" Command="{Binding BuscarCommand}"/>
@@ -72,8 +71,8 @@
             <AppBarButton Command="{Binding AtrasCommand}" Icon="Cancel"/>
         </StackPanel>
 
-        <Grid Name="GridDatosDepartamento" Background="SkyBlue"
-                  RelativePanel.Below="StackBotones" BorderBrush="gray" BorderThickness="2" CornerRadius="3">
+        <Grid Name="GridDatosDepartamento" Background="LightSkyBlue"
+                  RelativePanel.Below="StackBotones" BorderBrush="Gray" BorderThickness="2" CornerRadius="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -85,14 +84,14 @@
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: " Visibility="{Binding VisibilidadCampos}"/>
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="*Nombre: " Visibility="{Binding VisibilidadCamposEditables}"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="Nombre: " FontWeight="Medium" Visibility="{Binding VisibilidadCampos}"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5" Text="*Nombre: " FontWeight="Medium" Visibility="{Binding VisibilidadCamposEditables}"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Margin="5,5" Visibility="{Binding VisibilidadCampos}" VerticalAlignment="Center" 
                        Text="{Binding DepartamentoSeleccionado.Nombre}"/>
-            <TextBox MaxWidth="295" MinWidth="100" Name="TextBoxNombre" Grid.Row="0" Grid.Column="1" Margin="5,5" Visibility="{Binding VisibilidadCamposEditables}" 
+            <TextBox MaxWidth="295" Name="TextBoxNombre" Grid.Row="0" Grid.Column="1" Margin="5,5" Visibility="{Binding VisibilidadCamposEditables}" 
                      Text="{Binding DepartamentoSeleccionado.Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" Text="Personas del departamento: " Visibility="{Binding VisibilidadCampos}" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5,5" FontWeight="Medium" Text="Personas del departamento: " Visibility="{Binding VisibilidadCampos}" />
             <ListView MaxHeight="50" Grid.Row="1" Grid.Column="1" Name="ComboBox" Visibility="{Binding VisibilidadCampos}" 
                       ItemsSource="{Binding DepartamentoSeleccionado.ListaPersonas}">
                 <ListView.ItemTemplate>
@@ -105,19 +104,19 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <AppBarButton Name="ButtonEditar" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding EditarCommand}" Icon="Edit" Label="Editar"/>
+            <AppBarButton Name="ButtonEditar" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding EditarCommand}" FontWeight="Medium" Icon="Edit" Label="Editar"/>
 
-            <AppBarButton Name="ButtonEliminar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding EliminarCommand}" Icon="Delete" Label="Eliminar"/>
+            <AppBarButton Name="ButtonEliminar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding EliminarCommand}" FontWeight="Medium" Icon="Delete" Label="Eliminar"/>
 
-            <AppBarButton Name="ButtonGuardar" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding GuardarCommand}" Icon="Save" Label="Guardar"/>
+            <AppBarButton Name="ButtonGuardar" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding GuardarCommand}" FontWeight="Medium" Icon="Save" Label="Guardar"/>
 
-            <AppBarButton Name="ButtonAtras" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding AtrasCommand}" Icon="Back" Label="Atras"/>
+            <AppBarButton Name="ButtonAtras" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Command="{Binding AtrasCommand}" FontWeight="Medium" Icon="Back" Label="Atras"/>
 
             <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,60,0,0" VerticalAlignment="Bottom" Visibility="{Binding VisibilidadCamposEditables}" Text="* Campos obligatorios" FontSize="10"/>
         </Grid>
 
         <Border Name="TextBlockResultado" Background="LimeGreen" CornerRadius="3" Padding="2"  RelativePanel.Below="GridDatosDepartamento" RelativePanel.AlignHorizontalCenterWith="GridDatosDepartamento" Visibility="{Binding VisibilidadCamposResultados}">
-            <TextBlock  Text="Cambios realizados con exito." Foreground="White"></TextBlock>
+            <TextBlock  Text="Cambios realizados con exito." Foreground="White"/>
         </Border>
     </RelativePanel>
 </Page>
