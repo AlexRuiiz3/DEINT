@@ -44,11 +44,11 @@ Capa BL:
 							-int eliminarPersona(int id)
 
 	  - Listados: -ListadosBL --> -List<ClsPersona> obtenerPersonas()
-						-List<ClsDepartamento> obtenerDepartamentos()
-						-String obtenerNombreDepartamento(int id)
-						-ClsPersona obtenerPersona(int id)
-						-ClsDepartamento obtenerDepartamento(int id)
-						-List<ClsPersona> obtenerPersonasDeDepartamento(int idDepartamento)
+				      -List<ClsDepartamento> obtenerDepartamentos()
+				      -String obtenerNombreDepartamento(int id)
+				      -ClsPersona obtenerPersona(int id)
+				      -ClsDepartamento obtenerDepartamento(int id)
+				      -List<ClsPersona> obtenerPersonasDeDepartamento(int idDepartamento)
 
 	  - Utilidades: -UtilidadesBL --> Metodos: bool comprobarDepartamentoTienePersonas(int id)
 	  
@@ -59,8 +59,8 @@ Capa UI:  -Models: -ClsDepartamentoConPersonas--> Hereda de ClsDepartamento(Capa
 	  -ViewModels: -NavigationViewPersonasVM
  		       -NavigationViewDepartamentosVM
 		       -Carpeta Utiliades: -ClsVMBase
-						 -DelegateCommand
-						 -Carpeta Converters: -CoverterDateTimeOffSet
+					   -DelegateCommand
+					   -Carpeta Converters: -CoverterDateTimeOffSet
 								      -ConverterDateTimeSimplificado
 			     
 	  -Views: -MainPage

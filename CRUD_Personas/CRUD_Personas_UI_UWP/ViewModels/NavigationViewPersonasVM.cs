@@ -418,7 +418,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
             get { return listaPersonasBuscadas; }
             set { listaPersonasBuscadas = value; }
         }
-        //ListaDepatamentos
+        //ListaDepartamentos
         public ObservableCollection<ClsDepartamento> ListaDepartamentos
         {
             get { return listaDepartamentos; }

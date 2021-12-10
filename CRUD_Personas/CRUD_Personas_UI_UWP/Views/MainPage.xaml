@@ -9,29 +9,30 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <!--La idea es añadir un ScrollViewer vertical, pero no se porque al añadirlo los visual state manager no funcionan correctamente-->
-    <RelativePanel>
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:Name="AnchorMayorIgual550">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="550"></AdaptiveTrigger>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="NavigationView.PaneDisplayMode" Value="Top"></Setter>
-                        <Setter Target="NavigationView.(RelativePanel.AlignLeftWithPanel)" Value="True"></Setter>
-                        <Setter Target="NavigationView.(RelativePanel.AlignRightWithPanel)" Value="True"></Setter>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+    <!--<ScrollViewer VerticalScrollBarVisibility="Auto">-->
+        <RelativePanel>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState x:Name="AnchorMayorIgual550">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="550"></AdaptiveTrigger>
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="NavigationView.PaneDisplayMode" Value="Top"></Setter>
+                            <Setter Target="NavigationView.(RelativePanel.AlignLeftWithPanel)" Value="True"></Setter>
+                            <Setter Target="NavigationView.(RelativePanel.AlignRightWithPanel)" Value="True"></Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
 
-        <NavigationView Name="NavigationView" PaneDisplayMode="LeftCompact" IsBackButtonVisible="Collapsed" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" 
+            <NavigationView Name="NavigationView" PaneDisplayMode="LeftCompact" IsBackButtonVisible="Collapsed" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" 
                          ItemInvoked="NavigationView_ItemInvoked" Loaded="NavigationView_Loaded" >
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="Personas" Icon="Contact" FontWeight="Medium"/>
-                <NavigationViewItem Content="Departamentos" Icon="Home" FontWeight="Medium"/>
-            </NavigationView.MenuItems>
-            <Frame x:Name="FrameNavigationView"/>
-        </NavigationView>
-    </RelativePanel>
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Content="Personas" Icon="Contact" FontWeight="Medium"/>
+                    <NavigationViewItem Content="Departamentos" Icon="Home" FontWeight="Medium"/>
+                </NavigationView.MenuItems>
+                <Frame x:Name="FrameNavigationView"/>
+            </NavigationView>
+        </RelativePanel>
 </Page>
