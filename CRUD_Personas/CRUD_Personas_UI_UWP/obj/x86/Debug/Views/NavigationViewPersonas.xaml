@@ -144,7 +144,7 @@
                        VerticalAlignment="Center" Text="{Binding PersonaSeleccionada.Direccion}"/>
             <TextBox MaxWidth="295" Grid.Row="3" Grid.Column="1" Margin="0,5" Visibility="{Binding VisibilidadCamposEditables}" 
                      Text="{Binding PersonaSeleccionada.Direccion,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
-            
+
             <!--Fecha Nacimiento-->
             <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,5" FontWeight="Medium" Text="Fecha nacimiento: "/>
             <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding VisibilidadCampos}" 
@@ -177,7 +177,7 @@
             </Button>
             <AppBarButton x:ConnectionId='17' Name="ButtonCambiarImagen" Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" HorizontalAlignment="Center" Visibility="{Binding VisibilidadCamposEditables}"
                           Command="{Binding CambiarFotoCommand}" Icon="Camera" Label="Cambiar foto"/>
-            
+
             <TextBlock Grid.Row="8" Grid.Column="0" VerticalAlignment="Bottom" Visibility="{Binding VisibilidadCamposEditables}" Text="* Campos obligatorios" FontSize="10"/>
         </Grid>
 

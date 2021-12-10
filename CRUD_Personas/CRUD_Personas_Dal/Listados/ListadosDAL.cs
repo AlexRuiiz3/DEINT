@@ -2,10 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using CRUD_Personas_Dal.Conexion;
-using System.Collections.ObjectModel;
 
 namespace CRUD_Personas_Dal
 {

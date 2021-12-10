@@ -131,14 +131,14 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         }
         private async void EliminarCommand_ExecutedAsync()
         {
-            MessageDialog dialog = new MessageDialog("¿Esta seguro de eliminar la persona?", "Eliminar persona");
-            dialog.Commands.Add(new UICommand("Yes", null));
-            dialog.Commands.Add(new UICommand("No", null));
-            dialog.DefaultCommandIndex = 0;
-            dialog.CancelCommandIndex = 1;
-            var dialogCommand = await dialog.ShowAsync();
+            MessageDialog messageDialog = new MessageDialog("¿Esta seguro de eliminar la persona?", "Eliminar persona");
+            messageDialog.Commands.Add(new UICommand("Si", null));
+            messageDialog.Commands.Add(new UICommand("No", null));
+            messageDialog.DefaultCommandIndex = 0;
+            messageDialog.CancelCommandIndex = 1;
+            var dialogCommand = await messageDialog.ShowAsync();
 
-            if (dialogCommand.Label == "Yes")
+            if (dialogCommand.Label == "Si")
             {
                 try
                 {

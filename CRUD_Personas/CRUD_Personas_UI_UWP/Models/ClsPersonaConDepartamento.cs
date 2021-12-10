@@ -1,7 +1,7 @@
 ﻿/*
  * Nombre: ClsPersonaConNombreDepartamento
  * 
- * Comentario: Esta clase representa a una persona que hereda de CLSPersona y se le añade el nombre del departamento que tiene asignado.
+ * Comentario: Esta clase representa a una persona que hereda de ClsPersona y se le añade el nombre del departamento que tiene asignado.
  * 
  * Atributos:   Basicos: Definido por propiedades autoimplementadas.
  *              Derivados: Ninguno.

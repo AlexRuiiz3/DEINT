@@ -14,7 +14,7 @@ namespace CRUD_Personas_Dal.Gestora
         /// Salidas: Ninguna
         /// Precondiciones: El departamento recibido no debera de estar a null, sino se producira una excepcion.
         /// Postcondiciones: Se insertara en la tabla Departamento de una base de datos un departamento, si el departamento recibido esta a
-        ///                  null o se produce alguna excepcion no se insertara la persona en la base de datos.
+        ///                  null o se produce alguna excepcion no se insertara el departamento en la base de datos.
         /// </summary>
         /// <param name="departamento"></param>
         public static void anhadirDepartamento(ClsDepartamento departamento)

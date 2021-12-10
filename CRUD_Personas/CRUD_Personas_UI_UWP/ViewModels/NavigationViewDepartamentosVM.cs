@@ -100,7 +100,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
         }
         private bool EditarCommand_CanExecuted()
         {
-            return departamentoSeleccionado != null && departamentoSeleccionado.ID != 0; //La persona que tenga el id 0 sera una persona por defecto(Cuando se quiera añadir una persona)
+            return departamentoSeleccionado != null && departamentoSeleccionado.ID != 0; //El departamento que tenga el id 0 sera un departamento por defecto(Cuando se quiera añadir un departamento)
         }
 
         //Command eliminar
@@ -190,7 +190,7 @@ namespace CRUD_Personas_UI_UWP.ViewModels
                 }
                 else
                 {
-                    if (departamentoSeleccionado.ID != 0) //Si el id del departamento es distinto de 0, significa que es una persona que ya existe y no una nueva
+                    if (departamentoSeleccionado.ID != 0) //Si el id del departamento es distinto de 0, significa que es un departamento que ya existe y no una nueva
                     {
                         GestoraDepartamentoBL.editarDepartamento(departamentoSeleccionado);
                     }
