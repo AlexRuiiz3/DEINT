@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Examen1DEINT_UI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Examen1DEINT_UI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Examen1DEINT_UI.ViewModels"
+    xmlns:converters="using:Examen1DEINT_UI.ViewModels.Utilidades.Converters"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:MainPageVM/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <converters:ConverterDateTimeSimplificado x:Key="converterDateTimeSimplificado"/>
+    </Page.Resources>
+    <RelativePanel>
+
+        <StackPanel x:ConnectionId='2' Name="stackFecha" Orientation="Horizontal">
+            <SymbolIcon Symbol="GoToToday"></SymbolIcon>
+            <TextBlock Text="Hoy es:"></TextBlock>
+            <TextBlock Margin="5,0" Text="{Binding Contabilidad.Fecha}"></TextBlock>
+        </StackPanel>
+
+        <ListView x:ConnectionId='3' Name="ListaPlantas" RelativePanel.Below="stackFecha"  BorderBrush="SkyBlue" BorderThickness="2" CornerRadius="3"
+                  ItemsSource="{Binding ListaPLantas}" RelativePanel.AlignLeftWithPanel="True" Width="Auto">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="{Binding Nombre}" Margin="0,0,5,0"/>
+                        <TextBlock Text="{Binding Precio}"/>
+                        <TextBox MaxHeight="100" MaxWidth="100" Text="{Binding Cantidad,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid x:ConnectionId='4' Name="GridRecaudaciones" RelativePanel.AlignTopWith="ListaPlantas" RelativePanel.AlignBottomWith="ListaPlantas" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"  BorderBrush="SkyBlue" BorderThickness="2" CornerRadius="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Dinero recibido por Adso: "/>
+            <TextBox Grid.Column="1" Grid.Row="0" MaxHeight="100" MaxWidth="100" Text="{Binding Contabilidad.RecaudacionesDada,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Button Background="SkyBlue" Content="Calcular recaudacion" Grid.Column="0" Grid.Row="1" Command="{Binding CalcularRecaudacionCommand}"></Button>
+            <StackPanel Grid.Column="1" Grid.Row="1" >
+                <TextBlock Text="Recaudado" HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Contabilidad.RecaudacionesReal,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <AppBarButton Label="Guardar" Icon="Save" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                       Command="{Binding GuardarCommand}"></AppBarButton>
+        </Grid>
+
+
+
+    </RelativePanel>
+</Page>
+

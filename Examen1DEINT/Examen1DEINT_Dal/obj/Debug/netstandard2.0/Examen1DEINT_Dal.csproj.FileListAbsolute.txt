@@ -1,0 +1,14 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\Examen1DEINT_Dal.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\Examen1DEINT_Dal.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\Examen1DEINT_Dal.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\Examen1DEINT_Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\Examen1DEINT_Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\bin\Debug\netstandard2.0\System.Data.SqlClient.xml
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Dal\obj\Debug\netstandard2.0\Examen1DEINT_Dal.pdb

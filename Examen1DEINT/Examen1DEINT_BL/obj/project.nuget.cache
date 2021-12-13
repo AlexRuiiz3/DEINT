@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kz14G89xC7qS61+j2ZDtT6Z5B5INc4+vy6aEDugKfBFJboZseSl0hchTK3xyxakw6L/NBdO267S2fVL3pNOJ5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Examen1DEINT\\Examen1DEINT_BL\\Examen1DEINT_BL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aruiz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\bin\Debug\netstandard2.0\Examen1DEINT_Entidades.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\bin\Debug\netstandard2.0\Examen1DEINT_Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\bin\Debug\netstandard2.0\Examen1DEINT_Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Examen1DEINT\Examen1DEINT_Entidades\obj\Debug\netstandard2.0\Examen1DEINT_Entidades.csproj.AssemblyReference.cache
