@@ -39,9 +39,13 @@ namespace Examen1DEINT_Dal.Listados
                     {
                         planta = new ClsPlanta();
                         planta.Id = sqlDataReader.GetInt32(0);
+                        //COMPROBAR LOS DBNULL DE TODOS LOS CAMPOS
                         planta.Nombre = sqlDataReader[1].ToString();
+                        //COMPROBAR LOS DBNULL DE TODOS LOS CAMPOS
                         planta.Descripcion = sqlDataReader[2].ToString();
+                        //COMPROBAR LOS DBNULL DE TODOS LOS CAMPOS
                         planta.IdCategoria = sqlDataReader.GetInt32(3);
+                        //COMPROBAR LOS DBNULL DE TODOS LOS CAMPOS
                         planta.Precio = sqlDataReader.GetDouble(4) ; 
 
                         listaPlantas.Add(planta);

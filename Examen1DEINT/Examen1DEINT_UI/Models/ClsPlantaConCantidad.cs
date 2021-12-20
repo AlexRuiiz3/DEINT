@@ -13,7 +13,7 @@ namespace Examen1DEINT_UI.Models
             Cantidad = cantidad;
         }
 
-        public int Cantidad;
+        public int Cantidad;//El binding no funcionaba por que no habia puesto ni get ni set
 
     }
 }

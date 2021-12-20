@@ -114,7 +114,7 @@ namespace Examen1DEINT_UI.ViewModels
         public ObservableCollection<ClsPlantaConCantidad> ListaPLantas
         {
             get { return listaPlantas; }
-            set { listaPlantas = value; }
+            set { listaPlantas = value; }//No se hace set(modifica) de la lista entonces no deberia de tener set //////IMPORTANTE
         }
 
         //Contabilidad

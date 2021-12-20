@@ -24,29 +24,40 @@ namespace Examen1DEINT_Dal.Utilidades
         /// <returns> bool existe </returns>
         public static bool comprobarExistenciaContabilidad(DateTime fecha)
         {
+            SqlConnection conexion = null;
+            SqlDataReader sqlDataReader = null;
+
             bool existe = false;
             try
             {
-                SqlConnection conexion = clsMyConnection.establecerConexion();
+                conexion = clsMyConnection.establecerConexion();
                 SqlCommand sqlCommand;
-                SqlDataReader sqlDataReader;
-
                 DateTime fechaDateTime = fecha;
-
                 DateTimeOffset fechaDateTimeOffset = fechaDateTime;
 
                 sqlCommand = new SqlCommand("SELECT * FROM Contabilidad WHERE Fecha = @Fecha", conexion);
                 sqlCommand.Parameters.Add("@Fecha", System.Data.SqlDbType.Date).Value = fechaDateTime;
                 sqlDataReader = sqlCommand.ExecuteReader();
-
-                existe = sqlDataReader.HasRows;
-
-                sqlDataReader.Close();
-                clsMyConnection.cerrarConexion(conexion);
+                //sqlCommand.ExecuteScalar(); para comprobar la existencia de algo mejor hacerlo con executeReader
+                if (sqlCommand.ExecuteScalar() != null)
+                {
+                    existe = true;
+                }
             }
             catch (SqlException)
             {
                 throw;
+            }
+            finally {
+                if (conexion != null) 
+                {              
+                    clsMyConnection.cerrarConexion(conexion);
+                }
+
+                if (sqlDataReader != null)
+                {
+                    sqlDataReader.Close();
+                }
             }
             return existe;
         }
