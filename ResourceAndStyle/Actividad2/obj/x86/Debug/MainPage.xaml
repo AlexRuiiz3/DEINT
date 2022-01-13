@@ -29,3 +29,4 @@
         <Button Width="100" Height="100" Content="Boton3" Style="{StaticResource BotonesAzules2.0}"></Button>
     </StackPanel>
 </Page>
+

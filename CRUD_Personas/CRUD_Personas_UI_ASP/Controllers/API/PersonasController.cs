@@ -1,4 +1,5 @@
 ﻿using CRUD_Personas_BL.Listados;
+using CRUD_Personas_BL.Gestora;
 using CRUD_Personas_Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -18,34 +19,74 @@ namespace CRUD_Personas_UI_ASP.Controllers.API
         [HttpGet]
         public IEnumerable<ClsPersona> Get()
         {
-            List<ClsPersona> listaPersonas = ListadosBL.obtenerPersonas();
+            List<ClsPersona> listaPersonas = new List<ClsPersona>();
+            try
+            {
+                listaPersonas = ListadosBL.obtenerPersonas();  
+            }
+            catch (Exception)
+            {
 
+            }
             return listaPersonas;
         }
         // GET api/<PersonasController>/5
         //Documentar la ruta que tiene cada parte 
         [HttpGet("{id}")]
-        public string Get(int id) //
+        public ClsPersona Get(int id) //
         {
-            return "value";
+            ClsPersona persona = new ClsPersona();
+            try
+            {
+                persona = ListadosBL.obtenerPersona(id);
+            }
+            catch (Exception)
+            {
+
+            }
+            return persona;
         }
 
         // POST api/<PersonasController>
         [HttpPost]
-        public void Post([FromBody] string value) //Para crear recuros
+        public void Post([FromBody] ClsPersona persona) //Para crear recuros
         {
+            try
+            {
+                GestoraPersonasBL.anhadirPersona(persona);
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         // PUT api/<PersonasController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value) //Para editar recursos
+        public void Put(int id, [FromBody] ClsPersona persona) //Para editar recursos
         {
+            try
+            {
+                GestoraPersonasBL.editarPersona(persona);
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         // DELETE api/<PersonasController>/5
         [HttpDelete("{id}")]
         public void Delete(int id) //Eliminar Recursos
         {
+            try
+            {
+                GestoraPersonasBL.eliminarPersona(id);
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

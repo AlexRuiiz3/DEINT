@@ -19,7 +19,7 @@ namespace CRUD_Personas_Dal.Gestora
         /// <param name="persona"></param>
         public static void anhadirPersona(ClsPersona persona)
         {
-            SqlConnection conexion;
+            SqlConnection conexion = null;
             SqlCommand command;
 
             try
@@ -42,6 +42,9 @@ namespace CRUD_Personas_Dal.Gestora
             {
                 throw;
             }
+            finally {
+                clsMyConnection.cerrarConexion(conexion);
+            }
         }
 
         /// <summary>
@@ -57,7 +60,7 @@ namespace CRUD_Personas_Dal.Gestora
         /// <returns>bool editada</returns>
         public static int editarPersona(ClsPersona persona)
         {
-            SqlConnection conexion;
+            SqlConnection conexion = null;
             SqlCommand command;
 
             int actualizaciones = 0;
@@ -83,12 +86,13 @@ namespace CRUD_Personas_Dal.Gestora
                 command.Parameters.Add("@FechaNacimiento", System.Data.SqlDbType.Date).Value = persona.FechaNacimiento;
                 command.Parameters.Add("@IdDepartamento", System.Data.SqlDbType.Int).Value = persona.IdDepartamento;
                 actualizaciones = command.ExecuteNonQuery();
-
-                clsMyConnection.cerrarConexion(conexion);
             }
             catch (Exception)
             {
                 throw;
+            }
+            finally {
+                clsMyConnection.cerrarConexion(conexion);
             }
             return actualizaciones;
         }
@@ -106,7 +110,7 @@ namespace CRUD_Personas_Dal.Gestora
         /// <returns>int eliminaciones</returns>
         public static int eliminarPersona(int id)
         {
-            SqlConnection conexion;
+            SqlConnection conexion = null;
             SqlCommand command;
 
             int eliminaciones = 0;
@@ -123,6 +127,9 @@ namespace CRUD_Personas_Dal.Gestora
             catch (Exception)
             {
                 throw;
+            }
+            finally {
+                clsMyConnection.cerrarConexion(conexion);
             }
             return eliminaciones;
         }
