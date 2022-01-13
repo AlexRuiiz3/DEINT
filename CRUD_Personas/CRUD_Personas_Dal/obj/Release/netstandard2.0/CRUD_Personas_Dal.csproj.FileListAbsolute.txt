@@ -10,3 +10,4 @@ C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Releas
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.csproj.CoreCompileInputs.cache
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.dll
 C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\CRUD_Personas\CRUD_Personas_Dal\obj\Release\netstandard2.0\CRUD_Personas_Dal.csproj.CopyComplete

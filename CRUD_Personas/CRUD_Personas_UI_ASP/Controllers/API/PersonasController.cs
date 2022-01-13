@@ -14,7 +14,7 @@ namespace CRUD_Personas_UI_ASP.Controllers.API
     [ApiController]
     public class PersonasController : ControllerBase
     {
-        // GET: api/<PersonasController>
+        // GET: api/<PersonasController> ruta para acceder a la api con localHost/...
         [HttpGet]
         public IEnumerable<ClsPersona> Get()
         {
@@ -23,27 +23,28 @@ namespace CRUD_Personas_UI_ASP.Controllers.API
             return listaPersonas;
         }
         // GET api/<PersonasController>/5
+        //Documentar la ruta que tiene cada parte 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(int id) //
         {
             return "value";
         }
 
         // POST api/<PersonasController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] string value) //Para crear recuros
         {
         }
 
         // PUT api/<PersonasController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] string value) //Para editar recursos
         {
         }
 
         // DELETE api/<PersonasController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(int id) //Eliminar Recursos
         {
         }
     }
