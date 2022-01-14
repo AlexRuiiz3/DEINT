@@ -1,0 +1,15 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\bin\Debug\netstandard2.0\HolaMundoUI.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\bin\Debug\netstandard2.0\HolaMundoUI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\bin\Debug\netstandard2.0\ref\HolaMundoUI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\bin\Debug\netstandard2.0\HolaMundoUI.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\ref\HolaMundoUI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI\obj\Debug\netstandard2.0\HolaMundoUI.pdb

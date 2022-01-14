@@ -1,0 +1,1 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad15\HolaMundoUI\HolaMundoUI.UWP\HolaMundoUI.UWP.csproj;x86
