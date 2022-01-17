@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1QurQaNxFoEE6bRnHj3Po7op0a3g0qLqEsXjfGlHS9+Sl9I+wKYBxIyE65+Ujs7ITr0XTJC1iBnL/idSk46xuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1DAL\\Unidad16Ejercicio1DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aruiz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aruiz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
