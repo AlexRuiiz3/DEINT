@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad16Ejercicio1UI.MainPage"
+             xmlns:vm="using:Unidad16Ejercicio1UI.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageVM/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Button Text="Listar" Command="{Binding ListarCommand}"></Button>
+        <Button Text="Eliminar" Command="{Binding EliminarCommand}"></Button>
+        
+        <ListView HeightRequest="100" WidthRequest="100" ItemsSource="{Binding ListaPersonas,Mode=TwoWay}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Label Grid.Column="1" Text="{Binding Nombre}"></Label>
+                            <Label Grid.Column="2" Text="{Binding Apellidos}"></Label>
+                        </Grid>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ActivityIndicator HeightRequest="200"  IsEnabled="True" IsRunning="True" IsVisible="{Binding VisibilidadIndicadorCargando}"></ActivityIndicator>
+    </StackLayout>
+
+</ContentPage>

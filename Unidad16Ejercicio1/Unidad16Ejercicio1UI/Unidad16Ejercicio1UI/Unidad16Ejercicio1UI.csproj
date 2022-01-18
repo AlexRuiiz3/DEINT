@@ -14,4 +14,13 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Unidad16Ejercicio1BL\Unidad16Ejercicio1BL.csproj" />
+    <ProjectReference Include="..\..\Unidad16Ejercicio1Entidades\Unidad16Ejercicio1Entidades.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,8 @@
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.deps.json
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.pdb
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\obj\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.AssemblyInfoInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\obj\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.AssemblyInfo.cs
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\obj\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.csproj.CoreCompileInputs.cache
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\obj\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.dll
+C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1Entidades\obj\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.pdb
