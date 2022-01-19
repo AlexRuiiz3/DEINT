@@ -64,7 +64,7 @@ namespace Unidad16Ejercicio1UI.ViewModels
         public async void EliminarCommand_Executed()
         {
             try
-            {//Preguntar borrar y el estado.En funcion del estado devuelto informar mensaje determinado
+            {   //Preguntar borrar y el estado.En funcion del estado devuelto informar mensaje determinado
                 HttpStatusCode estadoRespuesta = await GestoraPersonasBL.eliminarPersona(personaSeleccionada.ID);
                 if (estadoRespuesta == HttpStatusCode.NotFound)
                 {

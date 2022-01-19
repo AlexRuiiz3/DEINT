@@ -12,16 +12,15 @@
         <Button Text="Listar" Command="{Binding ListarCommand}"></Button>
         <Button Text="Eliminar" Command="{Binding EliminarCommand}"></Button>
         
-        <ListView HeightRequest="100" WidthRequest="100" ItemsSource="{Binding ListaPersonas,Mode=TwoWay}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
+        <ListView HeightRequest="100" WidthRequest="100" ItemsSource="{Binding ListaPersonas}" SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}">
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
-                            <Label Grid.Column="1" Text="{Binding Nombre}"></Label>
-                            <Label Grid.Column="2" Text="{Binding Apellidos}"></Label>
-                        </Grid>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nombre}"></Label>
+                            <Label Text="{Binding Apellidos}"></Label>
+                        </StackLayout>
                     </ViewCell>
-
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
