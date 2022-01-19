@@ -12,3 +12,18 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.csproj.CopyComplete
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1BL.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1BL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1BL.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1DAL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1DAL.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.csproj.CopyComplete
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1BL\obj\Debug\netstandard2.0\Unidad16Ejercicio1BL.pdb

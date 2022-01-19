@@ -9487,28 +9487,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AlexRuiz\\.nuget\\packages\\": {},
+    "C:\\Users\\aruiz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.UWP\\Unidad16Ejercicio1UI.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.UWP\\Unidad16Ejercicio1UI.UWP.csproj",
       "projectName": "Unidad16Ejercicio1UI.UWP",
-      "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.UWP\\Unidad16Ejercicio1UI.UWP.csproj",
-      "packagesPath": "C:\\Users\\AlexRuiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.UWP\\obj\\",
+      "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.UWP\\Unidad16Ejercicio1UI.UWP.csproj",
+      "packagesPath": "C:\\Users\\aruiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\AlexRuiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.16299"
@@ -9520,8 +9523,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.csproj": {
-              "projectPath": "C:\\Users\\AlexRuiz\\Desktop\\Ciclo DAM\\Repositorios\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.csproj"
+            "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.csproj": {
+              "projectPath": "C:\\Users\\aruiz\\Documents\\GitHub\\DEINT\\Unidad16Ejercicio1\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI\\Unidad16Ejercicio1UI.csproj"
             }
           }
         }

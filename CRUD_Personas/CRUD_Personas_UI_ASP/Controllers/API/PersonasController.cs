@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,7 +23,7 @@ namespace CRUD_Personas_UI_ASP.Controllers.API
             List<ClsPersona> listaPersonas = new List<ClsPersona>();
             try
             {
-                listaPersonas = ListadosBL.obtenerPersonas();  
+                listaPersonas = ListadosBL.obtenerPersonas();
             }
             catch (Exception)
             {
@@ -77,16 +78,22 @@ namespace CRUD_Personas_UI_ASP.Controllers.API
 
         // DELETE api/<PersonasController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id) //Eliminar Recursos
+        public HttpStatusCode Delete(int id) //Eliminar Recursos
         {
+            HttpStatusCode httpStatusCode = HttpStatusCode.Created;
             try
             {
-                GestoraPersonasBL.eliminarPersona(id);
+                if (GestoraPersonasBL.eliminarPersona(id) == 0)
+                {
+                    httpStatusCode = HttpStatusCode.Created;
+                }
             }
             catch (Exception)
             {
-
+                httpStatusCode = HttpStatusCode.ServiceUnavailable;
             }
+
+            return httpStatusCode;
         }
     }
 }

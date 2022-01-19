@@ -1,0 +1,1 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_UI.csproj;x86

@@ -1,0 +1,12 @@
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\bin\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\bin\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\bin\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\bin\Debug\netstandard2.0\ProbarConectarPokeApi_Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\bin\Debug\netstandard2.0\ProbarConectarPokeApi_Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\ProbarConectarPokeApi_UI\ProbarConectarPokeApi_DAL\obj\Debug\netstandard2.0\ProbarConectarPokeApi_DAL.pdb

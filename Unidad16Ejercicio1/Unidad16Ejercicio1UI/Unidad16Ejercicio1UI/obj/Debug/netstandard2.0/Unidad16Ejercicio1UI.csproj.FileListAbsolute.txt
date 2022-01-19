@@ -19,3 +19,25 @@ C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\ref\Unidad16Ejercicio1UI.dll
 C:\Users\AlexRuiz\Desktop\Ciclo DAM\Repositorios\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1UI.deps.json
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1UI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\ref\Unidad16Ejercicio1UI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1UI.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1BL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1DAL.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1BL.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1Entidades.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\bin\Debug\netstandard2.0\Unidad16Ejercicio1DAL.pdb
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.csproj.AssemblyReference.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.AssemblyInfoInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.AssemblyInfo.cs
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.csproj.CoreCompileInputs.cache
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.csproj.CopyComplete
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\ref\Unidad16Ejercicio1UI.dll
+C:\Users\aruiz\Documents\GitHub\DEINT\Unidad16Ejercicio1\Unidad16Ejercicio1UI\Unidad16Ejercicio1UI\obj\Debug\netstandard2.0\Unidad16Ejercicio1UI.pdb

@@ -8,6 +8,7 @@ using Unidad16Ejercicio1BL.Gestora;
 using Unidad16Ejercicio1BL.Listados;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 
 namespace Unidad16Ejercicio1UI.ViewModels
 {
@@ -63,12 +64,19 @@ namespace Unidad16Ejercicio1UI.ViewModels
         public async void EliminarCommand_Executed()
         {
             try
-            {
-                await GestoraPersonasBL.eliminarPersona(personaSeleccionada.ID);
-                listaPersonas = new List<ClsPersona>(from persona in listaPersonas
-                                                     where persona.ID != personaSeleccionada.ID
-                                                     select persona);
-                NotifyPropertyChanged("ListaPersonas");
+            {//Preguntar borrar y el estado.En funcion del estado devuelto informar mensaje determinado
+                HttpStatusCode estadoRespuesta = await GestoraPersonasBL.eliminarPersona(personaSeleccionada.ID);
+                if (estadoRespuesta == HttpStatusCode.NotFound)
+                {
+                    //Recurso no encontrado
+                }
+                else if(estadoRespuesta == HttpStatusCode.OK)
+                {
+                    listaPersonas = new List<ClsPersona>(from persona in listaPersonas
+                                                         where persona.ID != personaSeleccionada.ID
+                                                         select persona);
+                    NotifyPropertyChanged("ListaPersonas");
+                }
             }
             catch (Exception)
             {
